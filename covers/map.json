@@ -1,0 +1,1986 @@
+{
+ "mastersystem|aladdin": {
+  "archivo": "covers/mastersystem/aladdin.jpg",
+  "ssid": 765,
+  "nombre": "Aladdin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|alex kidd in high tech world": {
+  "estado": "no encontrado",
+  "buscado": "Alex Kidd in High Tech World"
+ },
+ "mastersystem|alex kidd in shinobi world": {
+  "archivo": "covers/mastersystem/alex-kidd-in-shinobi-world.jpg",
+  "ssid": 778,
+  "nombre": "Alex Kidd in Shinobi World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|alex kidd miracle world": {
+  "estado": "no encontrado",
+  "buscado": "Alex Kidd Miracle World"
+ },
+ "mastersystem|alien 3": {
+  "archivo": "covers/mastersystem/alien-3.jpg",
+  "ssid": 797,
+  "nombre": "Alien 3",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|altered beast": {
+  "archivo": "covers/mastersystem/altered-beast.jpg",
+  "ssid": 772,
+  "nombre": "Altered Beast",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|asterix": {
+  "estado": "no encontrado",
+  "buscado": "Asterix"
+ },
+ "mastersystem|basketball nightmare": {
+  "archivo": "covers/mastersystem/basketball-nightmare.jpg",
+  "ssid": 929,
+  "nombre": "Basketball Nightmare",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|batman returns": {
+  "archivo": "covers/mastersystem/batman-returns.jpg",
+  "ssid": 789,
+  "nombre": "Batman Returns",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|bonanza bros": {
+  "archivo": "covers/mastersystem/bonanza-bros.jpg",
+  "ssid": 952,
+  "nombre": "Bonanza Bros.",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|bubble bobble": {
+  "archivo": "covers/mastersystem/bubble-bobble.jpg",
+  "ssid": 770,
+  "nombre": "Bubble Bobble",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|california games": {
+  "archivo": "covers/mastersystem/california-games.jpg",
+  "ssid": 840,
+  "nombre": "California Games",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|castle of illusion": {
+  "archivo": "covers/mastersystem/castle-of-illusion.jpg",
+  "ssid": 759,
+  "nombre": "Castle of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|cloud master": {
+  "archivo": "covers/mastersystem/cloud-master.jpg",
+  "ssid": 861,
+  "nombre": "Cloud Master",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|cyborg hunter": {
+  "archivo": "covers/mastersystem/cyborg-hunter.jpg",
+  "ssid": 854,
+  "nombre": "Cyborg Hunter",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|daffy duck": {
+  "archivo": "covers/mastersystem/daffy-duck.jpg",
+  "ssid": 850,
+  "nombre": "Daffy Duck in Hollywood",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|deep duck trouble": {
+  "archivo": "covers/mastersystem/deep-duck-trouble.jpg",
+  "ssid": 779,
+  "nombre": "Deep Duck Trouble Starring Donald Duck",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|desert speedtrap": {
+  "archivo": "covers/mastersystem/desert-speedtrap.jpg",
+  "ssid": 968,
+  "nombre": "Desert Speedtrap Starring Road Runner and Wile E. ",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|double dragon": {
+  "archivo": "covers/mastersystem/double-dragon.jpg",
+  "ssid": 762,
+  "nombre": "Double Dragon",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|dragon crystal": {
+  "archivo": "covers/mastersystem/dragon-crystal.jpg",
+  "ssid": 820,
+  "nombre": "Dragon Crystal",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|dynamite dux": {
+  "archivo": "covers/mastersystem/dynamite-dux.jpg",
+  "ssid": 868,
+  "nombre": "Dynamite Dux",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|enduro racer": {
+  "archivo": "covers/mastersystem/enduro-racer.jpg",
+  "ssid": 844,
+  "nombre": "Enduro Racer",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|fantasy zone": {
+  "archivo": "covers/mastersystem/fantasy-zone.jpg",
+  "ssid": 801,
+  "nombre": "Fantasy Zone",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|g-loc air battle": {
+  "archivo": "covers/mastersystem/g-loc-air-battle.jpg",
+  "ssid": 18493,
+  "nombre": "G-LOC Air Battle",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|galaxy force": {
+  "archivo": "covers/mastersystem/galaxy-force.jpg",
+  "ssid": 863,
+  "nombre": "Galaxy Force",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|ghouls'n ghosts": {
+  "archivo": "covers/mastersystem/ghouls-n-ghosts.jpg",
+  "ssid": 810,
+  "nombre": "Ghouls'n Ghosts",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|golden axe warrior": {
+  "archivo": "covers/mastersystem/golden-axe-warrior.jpg",
+  "ssid": 794,
+  "nombre": "Golden Axe Warrior",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|golvellius": {
+  "archivo": "covers/mastersystem/golvellius.jpg",
+  "ssid": 862,
+  "nombre": "Golvellius : Valley of Doom",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|great golf": {
+  "archivo": "covers/mastersystem/great-golf.jpg",
+  "ssid": 1003,
+  "nombre": "Great Golf",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|hang on": {
+  "archivo": "covers/mastersystem/hang-on.jpg",
+  "ssid": 925,
+  "nombre": "Hang On And Safari Hunt",
+  "region": "us",
+  "estado": "auto"
+ },
+ "mastersystem|joe montana football": {
+  "archivo": "covers/mastersystem/joe-montana-football.jpg",
+  "ssid": 18502,
+  "nombre": "Joe Montana Football",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|jurassic park": {
+  "archivo": "covers/mastersystem/jurassic-park.jpg",
+  "ssid": 782,
+  "nombre": "Jurassic Park",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|kenseiden": {
+  "archivo": "covers/mastersystem/kenseiden.jpg",
+  "ssid": 822,
+  "nombre": "Kenseiden",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|kung fu kid": {
+  "archivo": "covers/mastersystem/kung-fu-kid.jpg",
+  "ssid": 827,
+  "nombre": "Kung Fu Kid",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|land of illusion": {
+  "archivo": "covers/mastersystem/land-of-illusion.jpg",
+  "ssid": 771,
+  "nombre": "Land of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|lemmings": {
+  "archivo": "covers/mastersystem/lemmings.jpg",
+  "ssid": 780,
+  "nombre": "Lemmings",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|lord of sword": {
+  "archivo": "covers/mastersystem/lord-of-sword.jpg",
+  "ssid": 881,
+  "nombre": "Lord of the Sword",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|lucky dime caper donald duck": {
+  "archivo": "covers/mastersystem/lucky-dime-caper-donald-duck.jpg",
+  "ssid": 781,
+  "nombre": "The Lucky Dime Caper Starring Donald Duck",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|master of darkness": {
+  "archivo": "covers/mastersystem/master-of-darkness.jpg",
+  "ssid": 809,
+  "nombre": "Master of Darkness",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|masters of combat": {
+  "archivo": "covers/mastersystem/masters-of-combat.jpg",
+  "ssid": 44274,
+  "nombre": "Masters of Combat",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|mercs": {
+  "archivo": "covers/mastersystem/mercs.jpg",
+  "ssid": 932,
+  "nombre": "Mercs",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|michael jackson: moonwalker": {
+  "archivo": "covers/mastersystem/michael-jackson-moonwalker.jpg",
+  "ssid": 800,
+  "nombre": "Michael Jackson's Moonwalker",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|missile defense 3d": {
+  "archivo": "covers/mastersystem/missile-defense-3d.jpg",
+  "ssid": 18505,
+  "nombre": "Missile Defense 3-D",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|monopoly": {
+  "archivo": "covers/mastersystem/monopoly.jpg",
+  "ssid": 18507,
+  "nombre": "Monopoly",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|ninja gaiden": {
+  "archivo": "covers/mastersystem/ninja-gaiden.jpg",
+  "ssid": 788,
+  "nombre": "Ninja Gaiden",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|operation wolf": {
+  "archivo": "covers/mastersystem/operation-wolf.jpg",
+  "ssid": 930,
+  "nombre": "Operation Wolf",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|pac-mania": {
+  "archivo": "covers/mastersystem/pac-mania.jpg",
+  "ssid": 942,
+  "nombre": "Pac-Mania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|penguin land": {
+  "archivo": "covers/mastersystem/penguin-land.jpg",
+  "ssid": 877,
+  "nombre": "Penguin Land",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|phantasy star": {
+  "archivo": "covers/mastersystem/phantasy-star.jpg",
+  "ssid": 768,
+  "nombre": "Phantasy Star",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|power strike": {
+  "archivo": "covers/mastersystem/power-strike.jpg",
+  "ssid": 835,
+  "nombre": "Power Strike",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|power strike ii": {
+  "archivo": "covers/mastersystem/power-strike-ii.jpg",
+  "ssid": 835,
+  "nombre": "Power Strike",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|psychic world": {
+  "archivo": "covers/mastersystem/psychic-world.jpg",
+  "ssid": 897,
+  "nombre": "Psychic World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|psycho fox": {
+  "archivo": "covers/mastersystem/psycho-fox.jpg",
+  "ssid": 785,
+  "nombre": "Psycho Fox",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|r-type": {
+  "archivo": "covers/mastersystem/r-type.jpg",
+  "ssid": 814,
+  "nombre": "R-Type",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|rainbow islands": {
+  "archivo": "covers/mastersystem/rainbow-islands.jpg",
+  "ssid": 873,
+  "nombre": "Rainbow Islands : Story of the Bubble Bobble 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|rambo iii": {
+  "archivo": "covers/mastersystem/rambo-iii.jpg",
+  "ssid": 815,
+  "nombre": "Rambo III",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|rastan": {
+  "archivo": "covers/mastersystem/rastan.jpg",
+  "ssid": 839,
+  "nombre": "Rastan",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|renegade": {
+  "archivo": "covers/mastersystem/renegade.jpg",
+  "ssid": 941,
+  "nombre": "Renegade",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|rescue mission": {
+  "archivo": "covers/mastersystem/rescue-mission.jpg",
+  "ssid": 879,
+  "nombre": "Rescue Mission",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|sagaia": {
+  "archivo": "covers/mastersystem/sagaia.jpg",
+  "ssid": 18516,
+  "nombre": "Sagaia",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|shinobi": {
+  "archivo": "covers/mastersystem/shinobi.jpg",
+  "ssid": 761,
+  "nombre": "Shinobi",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|sonic": {
+  "archivo": "covers/mastersystem/sonic.jpg",
+  "ssid": 755,
+  "nombre": "Sonic the Hedgehog",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|sonic 2": {
+  "archivo": "covers/mastersystem/sonic-2.jpg",
+  "ssid": 755,
+  "nombre": "Sonic the Hedgehog",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|sonic chaos": {
+  "archivo": "covers/mastersystem/sonic-chaos.jpg",
+  "ssid": 775,
+  "nombre": "Sonic Chaos",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|star wars": {
+  "archivo": "covers/mastersystem/star-wars.jpg",
+  "ssid": 787,
+  "nombre": "Star Wars",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|streets of rage": {
+  "archivo": "covers/mastersystem/streets-of-rage.jpg",
+  "ssid": 773,
+  "nombre": "Streets of Rage",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|strider": {
+  "archivo": "covers/mastersystem/strider.jpg",
+  "ssid": 871,
+  "nombre": "Strider",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|submarine attack": {
+  "archivo": "covers/mastersystem/submarine-attack.jpg",
+  "ssid": 920,
+  "nombre": "Submarine Attack",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|super kick off": {
+  "archivo": "covers/mastersystem/super-kick-off.jpg",
+  "ssid": 18532,
+  "nombre": "Super Kick Off",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|taz-mania": {
+  "archivo": "covers/mastersystem/taz-mania.jpg",
+  "ssid": 836,
+  "nombre": "Taz-Mania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|tecmo world cup 93": {
+  "archivo": "covers/mastersystem/tecmo-world-cup-93.jpg",
+  "ssid": 18535,
+  "nombre": "Tecmo World Cup '93",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|the new zealand story": {
+  "archivo": "covers/mastersystem/the-new-zealand-story.jpg",
+  "ssid": 906,
+  "nombre": "The New Zealand Story",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|tom and jerry the movie": {
+  "estado": "no encontrado",
+  "buscado": "Tom and Jerry the Movie"
+ },
+ "mastersystem|ultima iv": {
+  "archivo": "covers/mastersystem/ultima-iv.jpg",
+  "ssid": 818,
+  "nombre": "Ultima IV : Quest of the Avatar",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|vigilante": {
+  "archivo": "covers/mastersystem/vigilante.jpg",
+  "ssid": 857,
+  "nombre": "Vigilante",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|wolfchild": {
+  "archivo": "covers/mastersystem/wolfchild.jpg",
+  "ssid": 910,
+  "nombre": "Wolfchild",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|wonder boy": {
+  "archivo": "covers/mastersystem/wonder-boy.jpg",
+  "ssid": 758,
+  "nombre": "Wonder Boy III : The Dragon's Trap",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|wonder boy iii the dragon's trap": {
+  "estado": "no encontrado",
+  "buscado": "Wonder Boy III The Dragon's Trap"
+ },
+ "mastersystem|wonder boy in monster land": {
+  "archivo": "covers/mastersystem/wonder-boy-in-monster-land.jpg",
+  "ssid": 764,
+  "nombre": "Wonder Boy in Monster Land",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|wonder boy in monster world": {
+  "archivo": "covers/mastersystem/wonder-boy-in-monster-world.jpg",
+  "ssid": 774,
+  "nombre": "Wonder Boy in Monster World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|world class leader board": {
+  "archivo": "covers/mastersystem/world-class-leader-board.jpg",
+  "ssid": 1001,
+  "nombre": "World Class Leader Board",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|world cup italia '90": {
+  "archivo": "covers/mastersystem/world-cup-italia-90.jpg",
+  "ssid": 858,
+  "nombre": "World Cup Italia '90",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|world grand prix": {
+  "archivo": "covers/mastersystem/world-grand-prix.jpg",
+  "ssid": 924,
+  "nombre": "World Grand Prix",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|world soccer": {
+  "archivo": "covers/mastersystem/world-soccer.jpg",
+  "ssid": 898,
+  "nombre": "World Soccer",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|y's: the vanished omens": {
+  "estado": "no encontrado",
+  "buscado": "Y's: The Vanished Omens"
+ },
+ "mastersystem|zillion": {
+  "archivo": "covers/mastersystem/zillion.jpg",
+  "ssid": 915,
+  "nombre": "Zillion II : The Tri Formation",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "mastersystem|zillion ii": {
+  "archivo": "covers/mastersystem/zillion-ii.jpg",
+  "ssid": 915,
+  "nombre": "Zillion II : The Tri Formation",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|addams family values": {
+  "archivo": "covers/megadrive/addams-family-values.jpg",
+  "ssid": 195,
+  "nombre": "Addams Family Values",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|after burner ii": {
+  "archivo": "covers/megadrive/after-burner-ii.jpg",
+  "ssid": 198,
+  "nombre": "After Burner II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|aladdin": {
+  "archivo": "covers/megadrive/aladdin.jpg",
+  "ssid": 8,
+  "nombre": "Aladdin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|alien soldier": {
+  "archivo": "covers/megadrive/alien-soldier.jpg",
+  "ssid": 36,
+  "nombre": "Alien Soldier",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|alien storm": {
+  "archivo": "covers/megadrive/alien-storm.jpg",
+  "ssid": 106,
+  "nombre": "Alien Storm",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|alisia dragoon": {
+  "archivo": "covers/megadrive/alisia-dragoon.jpg",
+  "ssid": 53,
+  "nombre": "Alisia Dragoon",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|altered beast": {
+  "archivo": "covers/megadrive/altered-beast.jpg",
+  "ssid": 15,
+  "nombre": "Altered Beast",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|another world": {
+  "archivo": "covers/megadrive/another-world.jpg",
+  "ssid": 10,
+  "nombre": "Another World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ariel the little mermaid": {
+  "archivo": "covers/megadrive/ariel-the-little-mermaid.jpg",
+  "ssid": 137,
+  "nombre": "Ariel the Little Mermaid",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|arrow flash": {
+  "archivo": "covers/megadrive/arrow-flash.jpg",
+  "ssid": 212,
+  "nombre": "Arrow Flash",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|asterix": {
+  "archivo": "covers/megadrive/asterix.jpg",
+  "ssid": 100,
+  "nombre": "Astérix and the Power of the Gods",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|bare knuckle iii": {
+  "archivo": "covers/megadrive/bare-knuckle-iii.jpg",
+  "ssid": 143230,
+  "nombre": "Streets of Rage 3",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|batman": {
+  "archivo": "covers/megadrive/batman.jpg",
+  "ssid": 52,
+  "nombre": "The Adventures of Batman & Robin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|batman returns": {
+  "archivo": "covers/megadrive/batman-returns.jpg",
+  "ssid": 103,
+  "nombre": "Batman Returns",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|bio hazard battle": {
+  "archivo": "covers/megadrive/bio-hazard-battle.jpg",
+  "ssid": 152,
+  "nombre": "Bio Hazard Battle",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|boogerman": {
+  "archivo": "covers/megadrive/boogerman.jpg",
+  "ssid": 18371,
+  "nombre": "Boogerman : A Pick and Flick Adventure",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|boogerman: a pick and flick adventure": {
+  "archivo": "covers/megadrive/boogerman-a-pick-and-flick-adventure.jpg",
+  "ssid": 18371,
+  "nombre": "Boogerman : A Pick and Flick Adventure",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|bram stoker's dracula": {
+  "archivo": "covers/megadrive/bram-stoker-s-dracula.jpg",
+  "ssid": 268,
+  "nombre": "Bram Stoker's Dracula",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|bubsy ii": {
+  "archivo": "covers/megadrive/bubsy-ii.jpg",
+  "ssid": 279,
+  "nombre": "Bubsy in : Claws Encounters of the Furred Kind",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|castle of illusion": {
+  "archivo": "covers/megadrive/castle-of-illusion.jpg",
+  "ssid": 22,
+  "nombre": "Castle of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|castlevania the new generation": {
+  "archivo": "covers/megadrive/castlevania-the-new-generation.jpg",
+  "ssid": 40,
+  "nombre": "Castlevania : The New Generation",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|chakan": {
+  "archivo": "covers/megadrive/chakan.jpg",
+  "ssid": 133,
+  "nombre": "Chakan",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|chiki chiki boys": {
+  "archivo": "covers/megadrive/chiki-chiki-boys.jpg",
+  "ssid": 320,
+  "nombre": "Chiki Chiki Boys",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|columns": {
+  "archivo": "covers/megadrive/columns.jpg",
+  "ssid": 264,
+  "nombre": "Columns",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|comix zone": {
+  "archivo": "covers/megadrive/comix-zone.jpg",
+  "ssid": 35,
+  "nombre": "Comix Zone",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|cool spot": {
+  "archivo": "covers/megadrive/cool-spot.jpg",
+  "ssid": 104,
+  "nombre": "Cool Spot",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|daffy duck in hollywood": {
+  "archivo": "covers/megadrive/daffy-duck-in-hollywood.jpg",
+  "ssid": 274,
+  "nombre": "Daffy Duck in Hollywood",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|decap attack": {
+  "archivo": "covers/megadrive/decap-attack.jpg",
+  "ssid": 1046,
+  "nombre": "DEcapAttack",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|donald in maui mallard": {
+  "archivo": "covers/megadrive/donald-in-maui-mallard.jpg",
+  "ssid": 70,
+  "nombre": "Donald in Maui Mallard",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|dr. robotnik's mean bean machine": {
+  "archivo": "covers/megadrive/dr-robotnik-s-mean-bean-machine.jpg",
+  "ssid": 71,
+  "nombre": "Dr. Robotnik's Mean Bean Machine",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|dragon ball l'appel du destin": {
+  "archivo": "covers/megadrive/dragon-ball-l-appel-du-destin.jpg",
+  "ssid": 21,
+  "nombre": "Dragon Ball Z - Buyuu Retsuden",
+  "region": "fr",
+  "estado": "auto"
+ },
+ "megadrive|dynamite headdy": {
+  "archivo": "covers/megadrive/dynamite-headdy.jpg",
+  "ssid": 157,
+  "nombre": "Dynamite Headdy",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|earthworm jim": {
+  "archivo": "covers/megadrive/earthworm-jim.jpg",
+  "ssid": 31,
+  "nombre": "Earthworm Jim",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|earthworm jim 2": {
+  "archivo": "covers/megadrive/earthworm-jim-2.jpg",
+  "ssid": 31,
+  "nombre": "Earthworm Jim",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ecco the dolphin": {
+  "archivo": "covers/megadrive/ecco-the-dolphin.jpg",
+  "ssid": 26,
+  "nombre": "Ecco the Dolphin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ecco the dolphin: the tides of time": {
+  "estado": "no encontrado",
+  "buscado": "Ecco the Dolphin: The Tides of Time"
+ },
+ "megadrive|el rey león": {
+  "archivo": "covers/megadrive/el-rey-leon.jpg",
+  "ssid": 9,
+  "nombre": "Lion King The",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|empire of steel": {
+  "archivo": "covers/megadrive/empire-of-steel.jpg",
+  "ssid": 188,
+  "nombre": "Empire of Steel",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|eswat: city under siege": {
+  "archivo": "covers/megadrive/eswat-city-under-siege.jpg",
+  "ssid": 103616,
+  "nombre": "ESWAT : City Under Siege",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|eternal champions": {
+  "archivo": "covers/megadrive/eternal-champions.jpg",
+  "ssid": 83,
+  "nombre": "Eternal Champions",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|european club soccer": {
+  "archivo": "covers/megadrive/european-club-soccer.jpg",
+  "ssid": 344,
+  "nombre": "European Club Soccer",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|f1": {
+  "estado": "no encontrado",
+  "buscado": "F1"
+ },
+ "megadrive|fantasia": {
+  "archivo": "covers/megadrive/fantasia.jpg",
+  "ssid": 58,
+  "nombre": "Fantasia",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|fifa 95": {
+  "archivo": "covers/megadrive/fifa-95.jpg",
+  "ssid": 109,
+  "nombre": "FIFA Soccer 95",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|fifa 97": {
+  "archivo": "covers/megadrive/fifa-97.jpg",
+  "ssid": 109,
+  "nombre": "FIFA Soccer 95",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|fifa soccer": {
+  "archivo": "covers/megadrive/fifa-soccer.jpg",
+  "ssid": 109,
+  "nombre": "FIFA Soccer 95",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|flashback": {
+  "archivo": "covers/megadrive/flashback.jpg",
+  "ssid": 32,
+  "nombre": "Flashback",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|flink": {
+  "archivo": "covers/megadrive/flink.jpg",
+  "ssid": 96,
+  "nombre": "Flink",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|gain ground": {
+  "archivo": "covers/megadrive/gain-ground.jpg",
+  "ssid": 238,
+  "nombre": "Gain Ground",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ghostbusters": {
+  "archivo": "covers/megadrive/ghostbusters.jpg",
+  "ssid": 85,
+  "nombre": "Ghostbusters",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ghouls'n and ghosts": {
+  "estado": "no encontrado",
+  "buscado": "Ghouls'n and Ghosts"
+ },
+ "megadrive|global gladiators": {
+  "archivo": "covers/megadrive/global-gladiators.jpg",
+  "ssid": 39838,
+  "nombre": "McDonald's Global Gladiators",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|golden axe": {
+  "archivo": "covers/megadrive/golden-axe.jpg",
+  "ssid": 28,
+  "nombre": "Golden Axe",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|golden axe ii": {
+  "archivo": "covers/megadrive/golden-axe-ii.jpg",
+  "ssid": 28,
+  "nombre": "Golden Axe",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|golden axe iii": {
+  "archivo": "covers/megadrive/golden-axe-iii.jpg",
+  "ssid": 61,
+  "nombre": "Golden Axe III",
+  "region": "jp",
+  "estado": "auto"
+ },
+ "megadrive|gunstar heroes": {
+  "archivo": "covers/megadrive/gunstar-heroes.jpg",
+  "ssid": 89,
+  "nombre": "Gunstar Heroes",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|gynoug": {
+  "archivo": "covers/megadrive/gynoug.jpg",
+  "ssid": 111,
+  "nombre": "Gynoug",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|haunting starring polterguy": {
+  "archivo": "covers/megadrive/haunting-starring-polterguy.jpg",
+  "ssid": 364,
+  "nombre": "Haunting Starring Polterguy",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|hellfire": {
+  "archivo": "covers/megadrive/hellfire.jpg",
+  "ssid": 196,
+  "nombre": "Hellfire",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|hook": {
+  "archivo": "covers/megadrive/hook.jpg",
+  "ssid": 305,
+  "nombre": "Hook",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|indiana jones and the last crusade": {
+  "archivo": "covers/megadrive/indiana-jones-and-the-last-crusade.jpg",
+  "ssid": 183,
+  "nombre": "Indiana Jones and the Last Crusade",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|international superstar soccer deluxe": {
+  "archivo": "covers/megadrive/international-superstar-soccer-deluxe.jpg",
+  "ssid": 134,
+  "nombre": "International Superstar Soccer Deluxe",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|james pond 2 codename robocod": {
+  "archivo": "covers/megadrive/james-pond-2-codename-robocod.jpg",
+  "ssid": 171,
+  "nombre": "James Pond II : Codename, Robocod",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|jewel master": {
+  "archivo": "covers/megadrive/jewel-master.jpg",
+  "ssid": 366,
+  "nombre": "Jewel Master",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|jurassic park": {
+  "archivo": "covers/megadrive/jurassic-park.jpg",
+  "ssid": 49,
+  "nombre": "Jurassic Park",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|kid chameleon": {
+  "archivo": "covers/megadrive/kid-chameleon.jpg",
+  "ssid": 38,
+  "nombre": "Kid Chameleon",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|landstalker: the treasures of king nole": {
+  "archivo": "covers/megadrive/landstalker-the-treasures-of-king-nole.jpg",
+  "ssid": 6,
+  "nombre": "Landstalker : The Treasures of King Nole",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|last battle": {
+  "archivo": "covers/megadrive/last-battle.jpg",
+  "ssid": 76,
+  "nombre": "Last Battle",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|leader board": {
+  "archivo": "covers/megadrive/leader-board.jpg",
+  "ssid": 654,
+  "nombre": "World Class Leader Board",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|light crusader": {
+  "archivo": "covers/megadrive/light-crusader.jpg",
+  "ssid": 50,
+  "nombre": "Light Crusader",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|los pitufos": {
+  "archivo": "covers/megadrive/los-pitufos.jpg",
+  "ssid": 56,
+  "nombre": "The Smurfs",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|lost world: jurassic park": {
+  "estado": "no encontrado",
+  "buscado": "Lost World: Jurassic Park"
+ },
+ "megadrive|madden 97": {
+  "archivo": "covers/megadrive/madden-97.jpg",
+  "ssid": 322,
+  "nombre": "John Madden Football '93",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|marsupilami": {
+  "archivo": "covers/megadrive/marsupilami.jpg",
+  "ssid": 215,
+  "nombre": "Marsupilami",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mcdonald's treasure land adventure": {
+  "archivo": "covers/megadrive/mcdonald-s-treasure-land-adventure.jpg",
+  "ssid": 261,
+  "nombre": "McDonald's Treasure Land Adventure",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mega bomberman": {
+  "archivo": "covers/megadrive/mega-bomberman.jpg",
+  "ssid": 154,
+  "nombre": "Mega Bomberman",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mega games 2": {
+  "archivo": "covers/megadrive/mega-games-2.jpg",
+  "ssid": 416,
+  "nombre": "Mega Games I",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mega games i": {
+  "archivo": "covers/megadrive/mega-games-i.jpg",
+  "ssid": 416,
+  "nombre": "Mega Games I",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mega man: the wily wars": {
+  "archivo": "covers/megadrive/mega-man-the-wily-wars.jpg",
+  "ssid": 151,
+  "nombre": "Mega Man : The Wily Wars",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mega turrican": {
+  "archivo": "covers/megadrive/mega-turrican.jpg",
+  "ssid": 231,
+  "nombre": "Mega Turrican",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mercs": {
+  "archivo": "covers/megadrive/mercs.jpg",
+  "ssid": 118,
+  "nombre": "Mercs",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|michael jackson: moonwalker": {
+  "archivo": "covers/megadrive/michael-jackson-moonwalker.jpg",
+  "ssid": 41,
+  "nombre": "Michael Jackson's Moonwalker",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mickey mania": {
+  "archivo": "covers/megadrive/mickey-mania.jpg",
+  "ssid": 37,
+  "nombre": "Mickey Mania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mighty morphin power rangers: the movie": {
+  "archivo": "covers/megadrive/mighty-morphin-power-rangers-the-movie.jpg",
+  "ssid": 123,
+  "nombre": "Mighty Morphin Power Rangers",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mortal kombat": {
+  "archivo": "covers/megadrive/mortal-kombat.jpg",
+  "ssid": 12,
+  "nombre": "Mortal Kombat",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mr. nutz": {
+  "archivo": "covers/megadrive/mr-nutz.jpg",
+  "ssid": 67,
+  "nombre": "Mr. Nutz",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|mystic defender": {
+  "archivo": "covers/megadrive/mystic-defender.jpg",
+  "ssid": 117,
+  "nombre": "Mystic Defender",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|nba jam": {
+  "archivo": "covers/megadrive/nba-jam.jpg",
+  "ssid": 138,
+  "nombre": "NBA Jam",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|nba live 95": {
+  "archivo": "covers/megadrive/nba-live-95.jpg",
+  "ssid": 308,
+  "nombre": "NBA Live 96",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|nba live 97": {
+  "archivo": "covers/megadrive/nba-live-97.jpg",
+  "ssid": 308,
+  "nombre": "NBA Live 96",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|outrun": {
+  "archivo": "covers/megadrive/outrun.jpg",
+  "ssid": 162,
+  "nombre": "OutRun",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|pac-mania": {
+  "archivo": "covers/megadrive/pac-mania.jpg",
+  "ssid": 458,
+  "nombre": "Pac-Mania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|paperboy": {
+  "archivo": "covers/megadrive/paperboy.jpg",
+  "ssid": 250,
+  "nombre": "Paperboy",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|pelé": {
+  "archivo": "covers/megadrive/pele.jpg",
+  "ssid": 1144,
+  "nombre": "Pelé's World Tournament Soccer",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|phantasy star iv": {
+  "archivo": "covers/megadrive/phantasy-star-iv.jpg",
+  "ssid": 30,
+  "nombre": "Phantasy Star IV",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|pitfall: mayan adventure": {
+  "archivo": "covers/megadrive/pitfall-mayan-adventure.jpg",
+  "ssid": 249,
+  "nombre": "Pitfall : The Mayan Adventure",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|probotector": {
+  "archivo": "covers/megadrive/probotector.jpg",
+  "ssid": 69,
+  "nombre": "Probotector",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|quackshot": {
+  "archivo": "covers/megadrive/quackshot.jpg",
+  "ssid": 27,
+  "nombre": "QuackShot Starring Donald Duck",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ranger x": {
+  "archivo": "covers/megadrive/ranger-x.jpg",
+  "ssid": 227,
+  "nombre": "Ranger X",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|risky woods": {
+  "archivo": "covers/megadrive/risky-woods.jpg",
+  "ssid": 488,
+  "nombre": "Risky Woods",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|ristar": {
+  "archivo": "covers/megadrive/ristar.jpg",
+  "ssid": 42,
+  "nombre": "Ristar",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|robocop versus the terminator": {
+  "archivo": "covers/megadrive/robocop-versus-the-terminator.jpg",
+  "ssid": 84,
+  "nombre": "RoboCop versus The Terminator",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|rocket knight adventures": {
+  "archivo": "covers/megadrive/rocket-knight-adventures.jpg",
+  "ssid": 72,
+  "nombre": "Rocket Knight Adventures",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|rolling thunder 2": {
+  "archivo": "covers/megadrive/rolling-thunder-2.jpg",
+  "ssid": 310,
+  "nombre": "Rolling Thunder 3",
+  "region": "us",
+  "estado": "auto"
+ },
+ "megadrive|sampras": {
+  "archivo": "covers/megadrive/sampras.jpg",
+  "ssid": 371,
+  "nombre": "Pete Sampras Tennis",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shadow dancer": {
+  "archivo": "covers/megadrive/shadow-dancer.jpg",
+  "ssid": 82,
+  "nombre": "Shadow Dancer : The Secret of Shinobi",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shadow of the beast": {
+  "archivo": "covers/megadrive/shadow-of-the-beast.jpg",
+  "ssid": 246,
+  "nombre": "Shadow of the Beast",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shaq-fu": {
+  "archivo": "covers/megadrive/shaq-fu.jpg",
+  "ssid": 1172,
+  "nombre": "Shaq-Fu",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shining force": {
+  "archivo": "covers/megadrive/shining-force.jpg",
+  "ssid": 44,
+  "nombre": "Shining Force II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shining force ii": {
+  "archivo": "covers/megadrive/shining-force-ii.jpg",
+  "ssid": 44,
+  "nombre": "Shining Force II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|shinobi iii": {
+  "archivo": "covers/megadrive/shinobi-iii.jpg",
+  "ssid": 11,
+  "nombre": "Shinobi III : Return of the Ninja Master",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|soleil": {
+  "archivo": "covers/megadrive/soleil.jpg",
+  "ssid": 13,
+  "nombre": "Soleil",
+  "region": "sp",
+  "estado": "auto"
+ },
+ "megadrive|sonic & knuckles": {
+  "archivo": "covers/megadrive/sonic-knuckles.jpg",
+  "ssid": 14,
+  "nombre": "Sonic & Knuckles",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sonic 2": {
+  "archivo": "covers/megadrive/sonic-2.jpg",
+  "ssid": 3,
+  "nombre": "Sonic The Hedgehog 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sonic 3": {
+  "archivo": "covers/megadrive/sonic-3.jpg",
+  "ssid": 3,
+  "nombre": "Sonic The Hedgehog 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sonic 3d": {
+  "archivo": "covers/megadrive/sonic-3d.jpg",
+  "ssid": 3,
+  "nombre": "Sonic The Hedgehog 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sonic spinball": {
+  "archivo": "covers/megadrive/sonic-spinball.jpg",
+  "ssid": 115,
+  "nombre": "Sonic the Hedgehog Spinball",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sonic the hedgehog": {
+  "archivo": "covers/megadrive/sonic-the-hedgehog.jpg",
+  "ssid": 3,
+  "nombre": "Sonic The Hedgehog 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|space harrier ii": {
+  "archivo": "covers/megadrive/space-harrier-ii.jpg",
+  "ssid": 168,
+  "nombre": "Space Harrier II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|speedball 2": {
+  "archivo": "covers/megadrive/speedball-2.jpg",
+  "ssid": 223,
+  "nombre": "Speedball 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|spiderman": {
+  "estado": "no encontrado",
+  "buscado": "Spiderman"
+ },
+ "megadrive|splatterhouse 2": {
+  "archivo": "covers/megadrive/splatterhouse-2.jpg",
+  "ssid": 120,
+  "nombre": "Splatterhouse 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|street fighter 2: special champion edition": {
+  "archivo": "covers/megadrive/street-fighter-2-special-champion-edition.jpg",
+  "ssid": 57,
+  "nombre": "Street Fighter II' : Special Champion Edition",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|street fighter ii": {
+  "archivo": "covers/megadrive/street-fighter-ii.jpg",
+  "ssid": 57,
+  "nombre": "Street Fighter II' : Special Champion Edition",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|streets of rage": {
+  "archivo": "covers/megadrive/streets-of-rage.jpg",
+  "ssid": 7,
+  "nombre": "Streets of Rage",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|streets of rage 2": {
+  "archivo": "covers/megadrive/streets-of-rage-2.jpg",
+  "ssid": 20,
+  "nombre": "Streets of Rage II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|streets of rage 3": {
+  "archivo": "covers/megadrive/streets-of-rage-3.jpg",
+  "ssid": 143230,
+  "nombre": "Streets of Rage 3",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|strider": {
+  "archivo": "covers/megadrive/strider.jpg",
+  "ssid": 78,
+  "nombre": "Strider",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sub-terrania": {
+  "archivo": "covers/megadrive/sub-terrania.jpg",
+  "ssid": 1194,
+  "nombre": "Sub-Terrania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|sunset riders": {
+  "archivo": "covers/megadrive/sunset-riders.jpg",
+  "ssid": 81,
+  "nombre": "Sunset Riders",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|super hang-on": {
+  "archivo": "covers/megadrive/super-hang-on.jpg",
+  "ssid": 114,
+  "nombre": "Super Hang-On",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|super monaco gp": {
+  "archivo": "covers/megadrive/super-monaco-gp.jpg",
+  "ssid": 263,
+  "nombre": "Super Monaco GP",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|superman the man of steel": {
+  "archivo": "covers/megadrive/superman-the-man-of-steel.jpg",
+  "ssid": 262,
+  "nombre": "Death And Return Of Superman The",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|talespin": {
+  "archivo": "covers/megadrive/talespin.jpg",
+  "ssid": 142,
+  "nombre": "TaleSpin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|talmit's adventure": {
+  "archivo": "covers/megadrive/talmit-s-adventure.jpg",
+  "ssid": 381,
+  "nombre": "Talmit's Adventure",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|taz in escape from mars": {
+  "archivo": "covers/megadrive/taz-in-escape-from-mars.jpg",
+  "ssid": 161,
+  "nombre": "Taz in Escape from Mars",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|taz-mania": {
+  "archivo": "covers/megadrive/taz-mania.jpg",
+  "ssid": 136,
+  "nombre": "Taz-Mania",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|teenage mutant ninja turtles: the hyperstone heist": {
+  "archivo": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist.jpg",
+  "ssid": 60,
+  "nombre": "Teenage Mutant Hero Turtles : The Hyperstone Heist",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the adventures of batman & robin": {
+  "archivo": "covers/megadrive/the-adventures-of-batman-robin.jpg",
+  "ssid": 52,
+  "nombre": "The Adventures of Batman & Robin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the flintstones": {
+  "archivo": "covers/megadrive/the-flintstones.jpg",
+  "ssid": 324,
+  "nombre": "The Flintstones",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the revenge of shinobi": {
+  "archivo": "covers/megadrive/the-revenge-of-shinobi.jpg",
+  "ssid": 39,
+  "nombre": "The Revenge of Shinobi",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the simpsons: bart's nightmare": {
+  "archivo": "covers/megadrive/the-simpsons-bart-s-nightmare.jpg",
+  "ssid": 235,
+  "nombre": "The Simpsons : Bart's Nightmare",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the story of thor": {
+  "archivo": "covers/megadrive/the-story-of-thor.jpg",
+  "ssid": 24,
+  "nombre": "The Story of Thor",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|the terminator": {
+  "archivo": "covers/megadrive/the-terminator.jpg",
+  "ssid": 84,
+  "nombre": "RoboCop versus The Terminator",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|thunder force ii": {
+  "archivo": "covers/megadrive/thunder-force-ii.jpg",
+  "ssid": 55,
+  "nombre": "Thunder Force IV",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|thunder force iv": {
+  "archivo": "covers/megadrive/thunder-force-iv.jpg",
+  "ssid": 55,
+  "nombre": "Thunder Force IV",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|tiny toon adventures: acme all stars": {
+  "estado": "no encontrado",
+  "buscado": "Tiny Toon Adventures: Acme All Stars"
+ },
+ "megadrive|tiny toon adventures: buster's hidden treasure": {
+  "estado": "no encontrado",
+  "buscado": "Tiny Toon Adventures: Buster's Hidden Treasure"
+ },
+ "megadrive|toe jam & earl": {
+  "estado": "no encontrado",
+  "buscado": "Toe Jam & Earl"
+ },
+ "megadrive|toe jam & earl panic on funkotron": {
+  "estado": "no encontrado",
+  "buscado": "Toe Jam & Earl Panic on Funkotron"
+ },
+ "megadrive|toki": {
+  "archivo": "covers/megadrive/toki.jpg",
+  "ssid": 54,
+  "nombre": "Phantasy Star II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|toy story": {
+  "archivo": "covers/megadrive/toy-story.jpg",
+  "ssid": 74,
+  "nombre": "Toy Story",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|truxton": {
+  "archivo": "covers/megadrive/truxton.jpg",
+  "ssid": 299,
+  "nombre": "Truxton",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|turbo outrun": {
+  "archivo": "covers/megadrive/turbo-outrun.jpg",
+  "ssid": 424,
+  "nombre": "Turbo Out Run",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|two tribes": {
+  "archivo": "covers/megadrive/two-tribes.jpg",
+  "ssid": 323,
+  "nombre": "Two Tribes : Populous II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|vectorman": {
+  "archivo": "covers/megadrive/vectorman.jpg",
+  "ssid": 140,
+  "nombre": "Vectorman",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|virtua racing": {
+  "archivo": "covers/megadrive/virtua-racing.jpg",
+  "ssid": 97,
+  "nombre": "Virtua Racing",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|wonder boy iii: monster lair": {
+  "archivo": "covers/megadrive/wonder-boy-iii-monster-lair.jpg",
+  "ssid": 29,
+  "nombre": "Wonder Boy in Monster World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|wonder boy in monster world": {
+  "archivo": "covers/megadrive/wonder-boy-in-monster-world.jpg",
+  "ssid": 29,
+  "nombre": "Wonder Boy in Monster World",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|world championship soccer 2": {
+  "archivo": "covers/megadrive/world-championship-soccer-2.jpg",
+  "ssid": 657,
+  "nombre": "World Championship Soccer II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|world cup italia '90": {
+  "archivo": "covers/megadrive/world-cup-italia-90.jpg",
+  "ssid": 18452,
+  "nombre": "World Cup Italia '90",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|world cup usa '94": {
+  "archivo": "covers/megadrive/world-cup-usa-94.jpg",
+  "ssid": 484,
+  "nombre": "World Cup USA 94",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|world of illusion": {
+  "archivo": "covers/megadrive/world-of-illusion.jpg",
+  "ssid": 46,
+  "nombre": "World of Illusion Starring Mickey Mouse and Donald",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|zombies ate my neighbors": {
+  "archivo": "covers/megadrive/zombies-ate-my-neighbors.jpg",
+  "ssid": 87,
+  "nombre": "Zombies",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|adventures of lolo": {
+  "archivo": "covers/nes/adventures-of-lolo.jpg",
+  "ssid": 1311,
+  "nombre": "Adventures of Lolo",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|adventures of lolo 2": {
+  "archivo": "covers/nes/adventures-of-lolo-2.jpg",
+  "ssid": 1411,
+  "nombre": "Adventures of Lolo 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|adventures of rad gravity": {
+  "archivo": "covers/nes/adventures-of-rad-gravity.jpg",
+  "ssid": 1397,
+  "nombre": "The Adventures of Rad Gravity",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|aladdin": {
+  "archivo": "covers/nes/aladdin.jpg",
+  "ssid": 1319,
+  "nombre": "Aladdin",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|asterix": {
+  "estado": "no encontrado",
+  "buscado": "Asterix"
+ },
+ "nes|blades of steel": {
+  "archivo": "covers/nes/blades-of-steel.jpg",
+  "ssid": 1514,
+  "nombre": "Blades of Steel",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|captain skyhawk": {
+  "archivo": "covers/nes/captain-skyhawk.jpg",
+  "ssid": 1385,
+  "nombre": "Captain Skyhawk",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|chip and dale rescue rangers": {
+  "estado": "no encontrado",
+  "buscado": "Chip and Dale Rescue Rangers"
+ },
+ "nes|donkey kong classics": {
+  "archivo": "covers/nes/donkey-kong-classics.jpg",
+  "ssid": 18641,
+  "nombre": "Donkey Kong Classics",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|double dragon ii": {
+  "archivo": "covers/nes/double-dragon-ii.jpg",
+  "ssid": 1249,
+  "nombre": "Battletoads & Double Dragon",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|dr. mario": {
+  "archivo": "covers/nes/dr-mario.jpg",
+  "ssid": 1340,
+  "nombre": "Dr. Mario",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|dragon ball": {
+  "archivo": "covers/nes/dragon-ball.jpg",
+  "ssid": 1283,
+  "nombre": "Dragon Ball - Shen Long No Nazo",
+  "region": "fr",
+  "estado": "auto"
+ },
+ "nes|duck tales": {
+  "estado": "no encontrado",
+  "buscado": "Duck Tales"
+ },
+ "nes|faxanadu": {
+  "archivo": "covers/nes/faxanadu.jpg",
+  "ssid": 1303,
+  "nombre": "Faxanadu",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|flintstones the rescue of dino and hoppy": {
+  "archivo": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy.jpg",
+  "ssid": 1512,
+  "nombre": "The Flintstones : The Rescue of Dino & Hoppy",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|gremlins 2": {
+  "archivo": "covers/nes/gremlins-2.jpg",
+  "ssid": 1300,
+  "nombre": "Gremlins 2 : The New Batch",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|jackie chan's action kung fu": {
+  "archivo": "covers/nes/jackie-chan-s-action-kung-fu.jpg",
+  "ssid": 1406,
+  "nombre": "Jackie Chan's Action Kung Fu",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|kung-fu": {
+  "archivo": "covers/nes/kung-fu.jpg",
+  "ssid": 1695,
+  "nombre": "Kung Fu Heroes",
+  "region": "us",
+  "estado": "auto"
+ },
+ "nes|little nemo the dream master": {
+  "archivo": "covers/nes/little-nemo-the-dream-master.jpg",
+  "ssid": 1366,
+  "nombre": "Little Nemo : The Dream Master",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|maniac mansion": {
+  "archivo": "covers/nes/maniac-mansion.jpg",
+  "ssid": 1336,
+  "nombre": "Maniac Mansion",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|marble madness": {
+  "archivo": "covers/nes/marble-madness.jpg",
+  "ssid": 1471,
+  "nombre": "Marble Madness",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|mega man": {
+  "archivo": "covers/nes/mega-man.jpg",
+  "ssid": 1255,
+  "nombre": "Mega Man 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|mega man 2": {
+  "archivo": "covers/nes/mega-man-2.jpg",
+  "ssid": 1255,
+  "nombre": "Mega Man 2",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|new ghostbusters ii": {
+  "archivo": "covers/nes/new-ghostbusters-ii.jpg",
+  "ssid": 1378,
+  "nombre": "New Ghostbusters II",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|nintendo world cup": {
+  "archivo": "covers/nes/nintendo-world-cup.jpg",
+  "ssid": 1299,
+  "nombre": "Nintendo World Cup",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|robocop": {
+  "archivo": "covers/nes/robocop.jpg",
+  "ssid": 1325,
+  "nombre": "RoboCop",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|rygar": {
+  "archivo": "covers/nes/rygar.jpg",
+  "ssid": 1391,
+  "nombre": "Rygar",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|snake rattle n roll": {
+  "archivo": "covers/nes/snake-rattle-n-roll.jpg",
+  "ssid": 71514,
+  "nombre": "Snake Rattle n Roll",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|soccer": {
+  "archivo": "covers/nes/soccer.jpg",
+  "ssid": 1299,
+  "nombre": "Nintendo World Cup",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|solstice": {
+  "archivo": "covers/nes/solstice.jpg",
+  "ssid": 1301,
+  "nombre": "Solstice : The Quest for the Staff of Demnos",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|super mario bros": {
+  "archivo": "covers/nes/super-mario-bros.jpg",
+  "ssid": 1245,
+  "nombre": "Super Mario Bros.",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|super mario bros 2": {
+  "archivo": "covers/nes/super-mario-bros-2.jpg",
+  "ssid": 1245,
+  "nombre": "Super Mario Bros.",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|super mario bros 3": {
+  "archivo": "covers/nes/super-mario-bros-3.jpg",
+  "ssid": 1245,
+  "nombre": "Super Mario Bros.",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|tale spin": {
+  "estado": "no encontrado",
+  "buscado": "Tale Spin"
+ },
+ "nes|teenage mutant hero turtles": {
+  "archivo": "covers/nes/teenage-mutant-hero-turtles.jpg",
+  "ssid": 1253,
+  "nombre": "Teenage Mutant Hero Turtles",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|teenage mutant hero turtles ii": {
+  "archivo": "covers/nes/teenage-mutant-hero-turtles-ii.jpg",
+  "ssid": 1253,
+  "nombre": "Teenage Mutant Hero Turtles",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|tetris": {
+  "archivo": "covers/nes/tetris.jpg",
+  "ssid": 1291,
+  "nombre": "Tetris",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|the simpsons: bart vs. the space mutants": {
+  "estado": "no encontrado",
+  "buscado": "The Simpsons: BART vs. the Space Mutants"
+ },
+ "nes|top gun": {
+  "archivo": "covers/nes/top-gun.jpg",
+  "ssid": 1420,
+  "nombre": "Top Gun",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|willow": {
+  "archivo": "covers/nes/willow.jpg",
+  "ssid": 1479,
+  "nombre": "Willow",
+  "region": "eu",
+  "estado": "auto"
+ },
+ "nes|wrecking crew": {
+  "archivo": "covers/nes/wrecking-crew.jpg",
+  "ssid": 1383,
+  "nombre": "Wrecking Crew",
+  "region": "eu",
+  "estado": "auto"
+ }
+}
