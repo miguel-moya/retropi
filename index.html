@@ -103,18 +103,20 @@ body.sin-scroll{overflow:hidden}
 .demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
 /* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
 #nav{view-transition-name:menu}
-::view-transition-group(*){animation-duration:.34s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
-::view-transition-old(root),::view-transition-new(root){animation-duration:.34s;animation-timing-function:cubic-bezier(.2,.8,.2,1);animation-fill-mode:both}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.42s;animation-timing-function:cubic-bezier(.32,.72,0,1);animation-fill-mode:both;mix-blend-mode:normal}
+/* como en iOS: la pantalla nueva entra desde la derecha por encima; al volver, la de arriba sale por la derecha */
+html[data-dir=pop]::view-transition-old(root){z-index:2}
+html[data-dir=push]::view-transition-new(root),html[data-dir=pop]::view-transition-old(root){box-shadow:-12px 0 30px rgba(0,0,0,.35)}
 html[data-dir=push]::view-transition-old(root){animation-name:vt-sale-izq}
 html[data-dir=push]::view-transition-new(root){animation-name:vt-entra-der}
 html[data-dir=pop]::view-transition-old(root){animation-name:vt-sale-der}
 html[data-dir=pop]::view-transition-new(root){animation-name:vt-entra-izq}
 html[data-dir=tab]::view-transition-old(root){animation:.18s ease both vt-fuera}
 html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-dentro}
-@keyframes vt-sale-izq{to{transform:translateX(-18%);opacity:0}}
-@keyframes vt-entra-der{from{transform:translateX(28%);opacity:0}}
-@keyframes vt-sale-der{to{transform:translateX(28%);opacity:0}}
-@keyframes vt-entra-izq{from{transform:translateX(-18%);opacity:0}}
+@keyframes vt-sale-izq{to{transform:translateX(-28%);filter:brightness(.72)}}
+@keyframes vt-entra-der{from{transform:translateX(100%)}}
+@keyframes vt-sale-der{to{transform:translateX(100%)}}
+@keyframes vt-entra-izq{from{transform:translateX(-28%);filter:brightness(.72)}}
 @keyframes vt-fuera{to{opacity:0}}
 @keyframes vt-dentro{from{opacity:0;transform:translateY(6px)}}
 @media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
@@ -630,13 +632,12 @@ function vJuego(gid) {
 
   const otras = IDX.juegos.filter(x => x._c === g._c && x.ID !== g.ID && String(x['Título']).toLowerCase() === String(g['Título']).toLowerCase());
 
-  const vtHero = S.vt === g.ID ? ' style="view-transition-name:portada"' : '';
   return `${cab({ flota: true, volver: '#/c/' + g._c,
       titulo: `<span class="cab-mini">${img ? `<img alt="" src="${esc(img)}">` : ''}<span>${esc(g['Nombre clave'] || g['Título'])}</span></span>`,
       derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
     <section class="hero" style="--h:${hue(g.ID)}">
       <div class="hero-bg" aria-hidden="true">${img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
-      <div${vtHero}>${cover(g, 'xl')}</div>
+      <div>${cover(g, 'xl')}</div>
       <h1>${esc(g['Título'])}</h1>
       <div class="hero-meta">
         <span class="status" title="Situación en la hoja"><i style="background:${sitCol}"></i>${esc(g['Situación'] || 'Sin situación')}</span>
@@ -863,7 +864,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v27 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v28 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1046,12 +1047,6 @@ function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') ren
 
 /* ============ eventos ============ */
 document.addEventListener('click', e => {
-  const enlace = e.target.closest('a.g, a.box');
-  if (enlace) {
-    document.querySelectorAll('[style*="view-transition-name"]').forEach(x => { if (x.id !== 'nav') x.style.viewTransitionName = ''; });
-    const id = decodeURIComponent((enlace.getAttribute('href') || '').split('/').pop());
-    S.vt = id; const c = enlace.querySelector('.cov') || enlace; c.style.viewTransitionName = 'portada';
-  }
   const t = e.target.closest('[data-act]'); if (!t) return;
   const act = t.dataset.act, v = t.dataset.v;
   if (['view', 'filtro', 'tema', 'bfparte'].includes(act)) ULTIMO = { act, v };   // para animar el botón recién activado
@@ -1110,8 +1105,6 @@ window.addEventListener('hashchange', e => {
   // gesto del sistema: ya anima él → sin animación propia. Gesto nuestro: misma animación que la flecha, sin viaje de portada.
   const propio = GESTO_PROPIO; GESTO_PROPIO = false;
   const porGesto = !propio && Date.now() - BORDE_T < 1500;
-  if (propio) { document.querySelectorAll('[style*="view-transition-name"]').forEach(x => x.style.viewTransitionName = ''); S.vt = null; }
-  if (porGesto) { document.querySelectorAll('[style*="view-transition-name"]').forEach(x => x.style.viewTransitionName = ''); S.vt = null; }
   if (e.hasUAVisualTransition || porGesto || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     render();
     if (!e.hasUAVisualTransition && !porGesto && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
