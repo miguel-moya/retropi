@@ -43,11 +43,18 @@ function elegirPortada(jeu, japones) {
   return cajas[0] || null;
 }
 // Palabras significativas de un título, para comparar con los nombres que devuelve ScreenScraper
-const palabras = t => new Set(String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-  .replace(/'n\b/g, 'n').match(/[a-z0-9]+/g)?.filter(w => !['the', 'of', 'and', 'in', 'a', 'de', 'la', 'el', 'n'].includes(w)) || []);
+const ROMANOS = { ii: '2', iii: '3', iv: '4', v: '5', vi: '6' };
+const palabras = t => new Set((String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  .replace(/'n\b/g, 'n').match(/[a-z0-9]+/g) || []).map(w => ROMANOS[w] || w)
+  .filter(w => !['the', 'of', 'and', 'in', 'a', 'de', 'la', 'el', 'n', '1'].includes(w)));
+const numeros = set => [...set].filter(w => /^\d+$/.test(w)).sort().join(',');
 function parecido(termino, jeu) {
   const a = palabras(termino); if (!a.size) return 0;
-  return Math.max(0, ...(jeu.noms || []).map(n => { const b = palabras(n.text); let k = 0; a.forEach(w => b.has(w) && k++); return k / Math.max(a.size, b.size); }));
+  return Math.max(0, ...(jeu.noms || []).map(n => {
+    const b = palabras(n.text); let k = 0; a.forEach(w => b.has(w) && k++);
+    const p = k / Math.max(a.size, b.size);
+    return numeros(a) === numeros(b) ? p : p * 0.3;   // «Mega Man» ≠ «Mega Man 2», «Super Mario Bros 3» ≠ «Super Mario Bros»
+  }));
 }
 // Variantes del título para buscar: tal cual, sin signos, antes y después de «:», sin «The»
 function variantes(t, nc, extra) {
@@ -78,7 +85,7 @@ for (const [k, j] of titulos) {
   const aj = ajustes[k];
   if (aj === 'no') { mapa[k] = { estado: 'omitido' }; continue; }
   const previo = mapa[k];
-  if (previo && previo.archivo && (!aj || previo.ssid === aj || previo.buscado === aj)) continue;     // ya está y no hay corrección nueva
+  if (!E.FORZAR && previo && previo.archivo && (!aj || previo.ssid === aj || previo.buscado === aj)) continue;     // ya está y no hay corrección nueva
   if (previo && previo.estado === 'no encontrado' && !aj && !E.REINTENTAR) continue;
   if (nuevos++ >= LIMITE) break;
   try {
@@ -97,7 +104,7 @@ for (const [k, j] of titulos) {
         }
         if (nota >= 0.99 || (typeof aj === 'string' && mejor)) break;
       }
-      jeu = nota >= 0.34 ? mejor : null;
+      jeu = nota >= 0.6 ? mejor : null;
     }
     const m = jeu && elegirPortada(jeu, j.regiones.size === 1 && j.regiones.has('JP'));
     if (!m) { mapa[k] = { estado: 'no encontrado', buscado: j.t }; fallos++; console.log(`✗ ${j.c} · ${j.t}`); continue; }
