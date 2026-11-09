@@ -6,8 +6,9 @@
 //   covers/<consola>/<slug>.jpg     una portada por título
 //   covers/map.json                 qué se encontró para cada título (la app lo lee)
 // Correcciones a mano en covers/ajustes.json:
-//   { "megadrive|ariel the little mermaid": 12345 }   → usar ese id de juego de ScreenScraper
-//   { "nes|soccer": "no" }                            → no buscar portada para ese título
+//   { "megadrive|ariel the little mermaid": 12345 }        → usar ese id de juego de ScreenScraper
+//   { "megadrive|toki": "Toki Going Ape Spit" }            → buscar con ese texto
+//   { "nes|soccer": "no" }                                 → no buscar portada para ese título
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -36,10 +37,23 @@ async function ss(endpoint, params) {
   }
   return { aviso: 'sin respuesta' };
 }
-function elegirPortada(jeu) {
+function elegirPortada(jeu, japones) {
   const cajas = (jeu.medias || []).filter(m => m.type === 'box-2D');
-  for (const reg of REGIONES) { const m = cajas.find(x => x.region === reg); if (m) return m; }
+  for (const reg of (japones ? ['jp', ...REGIONES] : REGIONES)) { const m = cajas.find(x => x.region === reg); if (m) return m; }
   return cajas[0] || null;
+}
+// Palabras significativas de un título, para comparar con los nombres que devuelve ScreenScraper
+const palabras = t => new Set(String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+  .replace(/'n\b/g, 'n').match(/[a-z0-9]+/g)?.filter(w => !['the', 'of', 'and', 'in', 'a', 'de', 'la', 'el', 'n'].includes(w)) || []);
+function parecido(termino, jeu) {
+  const a = palabras(termino); if (!a.size) return 0;
+  return Math.max(0, ...(jeu.noms || []).map(n => { const b = palabras(n.text); let k = 0; a.forEach(w => b.has(w) && k++); return k / Math.max(a.size, b.size); }));
+}
+// Variantes del título para buscar: tal cual, sin signos, antes y después de «:», sin «The»
+function variantes(t, nc, extra) {
+  const limpio = x => String(x).replace(/[:'’&!.,\-]/g, ' ').replace(/\s+/g, ' ').trim();
+  const v = [extra, t, limpio(t), t.includes(':') ? t.split(':')[1] : '', t.includes(':') ? t.split(':')[0] : '', limpio(t).replace(/^the /i, ''), nc];
+  return v.map(x => x && String(x).trim()).filter((x, i, a) => x && x.length > 1 && a.indexOf(x) === i);
 }
 const nombreJuego = jeu => { const ns = jeu.noms || []; return (ns.find(n => n.region === 'eu') || ns.find(n => n.region === 'wor') || ns[0] || {}).text || ''; };
 
@@ -49,7 +63,11 @@ if (!datos.ok) { console.error('El Apps Script no devolvió datos'); process.exi
 const titulos = new Map();
 for (const c of datos.consolas) {
   if (!SISTEMA[c.id]) continue;
-  for (const g of c.juegos) { const k = clave(c.id, g['Título']); if (!titulos.has(k)) titulos.set(k, { c: c.id, t: g['Título'], nc: g['Nombre clave'] }); }
+  for (const g of c.juegos) {
+    const k = clave(c.id, g['Título']);
+    if (!titulos.has(k)) titulos.set(k, { c: c.id, t: g['Título'], nc: g['Nombre clave'], regiones: new Set() });
+    titulos.get(k).regiones.add(String(g['Región'] || '').slice(0, 2).toUpperCase());
+  }
 }
 
 // 2) buscar y descargar lo que falte
@@ -60,28 +78,35 @@ for (const [k, j] of titulos) {
   const aj = ajustes[k];
   if (aj === 'no') { mapa[k] = { estado: 'omitido' }; continue; }
   const previo = mapa[k];
-  if (previo && previo.archivo && (!aj || previo.ssid === aj)) continue;     // ya está y no hay corrección nueva
+  if (previo && previo.archivo && (!aj || previo.ssid === aj || previo.buscado === aj)) continue;     // ya está y no hay corrección nueva
   if (previo && previo.estado === 'no encontrado' && !aj && !E.REINTENTAR) continue;
   if (nuevos++ >= LIMITE) break;
   try {
     let jeu = null;
-    if (aj) jeu = (await ss('jeuInfos.php', { gameid: aj, systemeid: SISTEMA[j.c] })).response?.jeu || null;
+    let buscado = j.t;
+    if (typeof aj === 'number') jeu = (await ss('jeuInfos.php', { gameid: aj, systemeid: SISTEMA[j.c] })).response?.jeu || null;
     else {
-      for (const termino of [j.t, j.nc].filter((x, i, a) => x && a.indexOf(x) === i)) {
+      // prueba variantes y se queda con el resultado cuyo nombre más se parece (no el primero sin más)
+      let mejor = null, nota = 0;
+      for (const termino of variantes(j.t, j.nc, typeof aj === 'string' ? aj : '')) {
         const r = await ss('jeuRecherche.php', { recherche: termino, systemeid: SISTEMA[j.c] });
-        jeu = (r.response?.jeux || []).find(x => x && x.id) || null;
         await espera(1200);
-        if (jeu) break;
+        for (const x of (r.response?.jeux || []).filter(x => x && x.id)) {
+          const p = Math.max(parecido(termino, x), parecido(j.t, x));
+          if (p > nota) { mejor = x; nota = p; buscado = termino; }
+        }
+        if (nota >= 0.99 || (typeof aj === 'string' && mejor)) break;
       }
+      jeu = nota >= 0.34 ? mejor : null;
     }
-    const m = jeu && elegirPortada(jeu);
+    const m = jeu && elegirPortada(jeu, j.regiones.size === 1 && j.regiones.has('JP'));
     if (!m) { mapa[k] = { estado: 'no encontrado', buscado: j.t }; fallos++; console.log(`✗ ${j.c} · ${j.t}`); continue; }
     const rel = `${DIR}/${j.c}/${slug(j.t)}.jpg`;
     const img = await fetch(`${m.url}&maxwidth=600&outputformat=jpg`);
     if (!img.ok) throw new Error('descarga ' + img.status);
     await fs.mkdir(path.dirname(rel), { recursive: true });
     await fs.writeFile(rel, Buffer.from(await img.arrayBuffer()));
-    mapa[k] = { archivo: rel, ssid: Number(jeu.id), nombre: nombreJuego(jeu), region: m.region, estado: aj ? 'corregido' : 'auto' };
+    mapa[k] = { archivo: rel, ssid: Number(jeu.id), nombre: nombreJuego(jeu), region: m.region, buscado: typeof aj === 'string' ? aj : buscado, estado: aj ? 'corregido' : 'auto' };
     ok++; console.log(`✓ ${j.c} · ${j.t} → ${mapa[k].nombre} [${m.region}]`);
     await espera(1200);
   } catch (e) { fallos++; console.log(`! ${j.c} · ${j.t}: ${e.message}`); if (/quota|429/.test(e.message)) break; }

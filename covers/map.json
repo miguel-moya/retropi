@@ -667,13 +667,6 @@
   "region": "eu",
   "estado": "auto"
  },
- "megadrive|bare knuckle iii": {
-  "archivo": "covers/megadrive/bare-knuckle-iii.jpg",
-  "ssid": 143230,
-  "nombre": "Streets of Rage 3",
-  "region": "eu",
-  "estado": "auto"
- },
  "megadrive|batman": {
   "archivo": "covers/megadrive/batman.jpg",
   "ssid": 52,
@@ -1499,13 +1492,6 @@
   "region": "eu",
   "estado": "auto"
  },
- "megadrive|superman the man of steel": {
-  "archivo": "covers/megadrive/superman-the-man-of-steel.jpg",
-  "ssid": 262,
-  "nombre": "Death And Return Of Superman The",
-  "region": "eu",
-  "estado": "auto"
- },
  "megadrive|talespin": {
   "archivo": "covers/megadrive/talespin.jpg",
   "ssid": 142,
@@ -1612,13 +1598,6 @@
  "megadrive|toe jam & earl panic on funkotron": {
   "estado": "no encontrado",
   "buscado": "Toe Jam & Earl Panic on Funkotron"
- },
- "megadrive|toki": {
-  "archivo": "covers/megadrive/toki.jpg",
-  "ssid": 54,
-  "nombre": "Phantasy Star II",
-  "region": "eu",
-  "estado": "auto"
  },
  "megadrive|toy story": {
   "archivo": "covers/megadrive/toy-story.jpg",
@@ -1895,13 +1874,6 @@
   "archivo": "covers/nes/snake-rattle-n-roll.jpg",
   "ssid": 71514,
   "nombre": "Snake Rattle n Roll",
-  "region": "eu",
-  "estado": "auto"
- },
- "nes|soccer": {
-  "archivo": "covers/nes/soccer.jpg",
-  "ssid": 1299,
-  "nombre": "Nintendo World Cup",
   "region": "eu",
   "estado": "auto"
  },
