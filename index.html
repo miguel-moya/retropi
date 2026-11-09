@@ -121,7 +121,12 @@ body.sin-scroll{overflow:hidden}
 .cab-bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;min-height:54px}
 .cab-l{justify-self:start;display:flex}.cab-r{justify-self:end;display:flex;align-items:center;gap:8px}
 .cab-t{margin:0;font-size:16px;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
-.cab.flota{position:fixed;left:0;right:0;max-width:560px;margin:0 auto;background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;padding-bottom:0}
+.cab.flota{position:fixed;left:0;right:0;max-width:560px;margin:0 auto;background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;padding-bottom:6px;transition:background .2s}
+.cab.flota.solida{background:rgba(var(--bgrgb),.86);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(var(--ink),.06)}
+.cab-mini{display:flex;align-items:center;gap:10px;justify-content:center;font-size:15px;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;min-width:0}
+.cab-mini img{height:40px;width:auto;border-radius:2px;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.cab-mini span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cab.flota.solida .cab-mini{opacity:1;transform:none}
 .avatar-btn{display:block;width:40px;height:40px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 2px var(--acc)}
 .avatar-btn img{width:100%;height:100%;object-fit:cover}
 .head{display:flex;align-items:center;gap:10px}
@@ -148,7 +153,7 @@ body.sin-scroll{overflow:hidden}
 .cov{position:relative;flex:none;overflow:hidden;display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800}
 .cov img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .cov.sm{width:46px;height:64px;border-radius:3px;font-size:13px}
-.cov.xl{width:160px;height:222px;border-radius:3px;font-size:38px;box-shadow:0 24px 50px rgba(0,0,0,.55),0 0 0 1px rgba(var(--ink),.08)}
+.cov.xl{width:236px;height:331px;max-width:62vw;max-height:87vw;border-radius:4px;font-size:44px;transform-origin:50% 0;will-change:transform;box-shadow:0 24px 50px rgba(0,0,0,.55),0 0 0 1px rgba(var(--ink),.08)}
 /* game row */
 .list{display:flex;flex-direction:column;gap:8px;padding-top:12px}
 .g{display:flex;gap:12px;align-items:center;width:100%;padding:8px 12px 8px 8px;border-radius:16px;text-align:left}
@@ -182,7 +187,9 @@ body.sin-scroll{overflow:hidden}
 .tag svg{opacity:.8}
 .hero-meta .tag{height:28px;padding:0 11px;font-size:13px;font-weight:500;gap:5px}
 .hero .cov.xl{margin:2px auto 0}
-.hero h1{margin:16px 0 10px;font-size:19px;font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.hero h1{margin:20px 0 12px;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.01em}
+.hero-bg img.fanart{inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);filter:blur(6px) brightness(.55) saturate(1.2)}
+:root[data-tema=claro] .hero-bg img.fanart{filter:blur(6px) brightness(1.05) saturate(1.1);opacity:.5}
 .hero-meta{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
 .status{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 11px;border-radius:999px;font-size:13px;font-weight:500;color:var(--tx2)}
 .status i{width:8px;height:8px;border-radius:50%}
@@ -308,6 +315,7 @@ const coverBg = g => `background:hsl(${hue(g.ID)},38%,28%)`;
 // Portada: primero la descargada de ScreenScraper (covers/map.json, en el propio repositorio); si no, la URL de la hoja
 let PORTADAS = {};
 fetch('covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).then(m => { PORTADAS = m || {}; if (Object.keys(PORTADAS).length) render(); }).catch(() => {});
+const extras = g => PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
 const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? p.archivo : (isImg(g.Portada) ? g.Portada : ''); };
 const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
@@ -537,7 +545,7 @@ function vJuego(gid) {
   const g = IDX.porId[gid];
   if (!g) return vNoEncontrado();
   const p = plus(g); const vend = g['Situación'] === 'Vendido';
-  const img = portada(g);
+  const img = portada(g), fondo = extras(g).fondo || '';
   const sitCol = (SIT[g['Situación']] || ['', '#C3C8D1'])[1];
   const sub = [g._cn, g['Región']].filter(Boolean).map(esc).join(' · ');
   const ids = contexto(g); const pos = { i: ids.indexOf(g.ID), total: ids.length };
@@ -575,9 +583,11 @@ function vJuego(gid) {
 
   const otras = IDX.juegos.filter(x => x._c === g._c && x.ID !== g.ID && String(x['Título']).toLowerCase() === String(g['Título']).toLowerCase());
 
-  return `${cab({ flota: true, volver: '#/c/' + g._c, titulo: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
+  return `${cab({ flota: true, volver: '#/c/' + g._c,
+      titulo: `<span class="cab-mini">${img ? `<img alt="" src="${esc(img)}">` : ''}<span>${esc(g['Nombre clave'] || g['Título'])}</span></span>`,
+      derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
     <section class="hero" style="--h:${hue(g.ID)}">
-      <div class="hero-bg" aria-hidden="true">${img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
+      <div class="hero-bg" aria-hidden="true">${fondo ? `<img class="fanart" alt="" src="${esc(fondo)}" onerror="this.remove()">` : img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
       ${cover(g, 'xl')}
       <h1>${esc(g['Título'])}</h1>
       <div class="hero-meta">
@@ -804,7 +814,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v19 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v20 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -910,6 +920,21 @@ document.addEventListener('touchend', e => {
 }, { passive: true });
 document.addEventListener('keydown', e => { if (ruta().a === 'j' && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) irJuego(e.key === 'ArrowRight' ? 1 : -1); });
 
+/* ============ ficha: la portada se encoge al bajar ============ */
+let rafFicha = 0;
+function ajustarFicha() {
+  rafFicha = 0;
+  const cov = document.querySelector('.hero .cov.xl'), cabF = document.querySelector('.cab.flota');
+  if (!cov || !cabF) return;
+  const y = Math.max(0, window.scrollY), alto = cov.offsetHeight;
+  const k = Math.min(1, y / (alto * 0.9));
+  cov.style.transform = `translateY(${y * 0.35}px) scale(${1 - k * 0.45})`;
+  cov.style.opacity = String(1 - Math.max(0, (k - 0.55) / 0.45));
+  cabF.classList.toggle('solida', y > alto * 0.75);
+  const bg = document.querySelector('.hero-bg'); if (bg) bg.style.opacity = String(1 - Math.min(1, y / (alto * 1.6)) * 0.75);  // el fondo se apaga al bajar para que se lean bien las tarjetas
+}
+window.addEventListener('scroll', () => { if (ruta().a === 'j' && !rafFicha) rafFicha = requestAnimationFrame(ajustarFicha); }, { passive: true });
+
 /* ============ tema ============ */
 const mqClaro = matchMedia('(prefers-color-scheme: light)');
 function aplicarTema() {
@@ -945,6 +970,7 @@ function render() {
   const nav = $('#nav'); nav.hidden = sinConfig;
   const tab = ['buscar', 'finanzas'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : 'home';
   nav.querySelectorAll('[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
+  if (r.a === 'j') ajustarFicha();
 }
 function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') render(); }
 
