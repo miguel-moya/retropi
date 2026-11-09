@@ -4,7 +4,7 @@
  "megadrive|spiderman": "Spider-Man",
  "nes|tale spin": "TaleSpin",
  "nes|duck tales": "DuckTales",
- "nes|chip and dale rescue rangers": "Chip n Dale Rescue Rangers",
+ "nes|chip and dale rescue rangers": 1314,
  "megadrive|toe jam & earl": "ToeJam & Earl",
  "megadrive|toe jam & earl panic on funkotron": "ToeJam & Earl in Panic on Funkotron",
  "megadrive|two tribes": "Two Tribes Populous II",
@@ -13,5 +13,13 @@
  "megadrive|lost world: jurassic park": "The Lost World Jurassic Park",
  "megadrive|ecco the dolphin: the tides of time": "Ecco The Tides of Time",
  "nes|dragon ball": "Dragon Ball Le Secret du Dragon",
- "mastersystem|hang on": "Hang-On"
+ "mastersystem|hang on": "Hang-On",
+ "megadrive|ghouls'n and ghosts": 45,
+ "megadrive|f1": 337,
+ "mastersystem|wonder boy iii the dragon's trap": 758,
+ "mastersystem|asterix": 769,
+ "mastersystem|alex kidd miracle world": 754,
+ "mastersystem|alex kidd in high tech world": 763,
+ "mastersystem|tom and jerry the movie": 939,
+ "nes|asterix": 1331
 }

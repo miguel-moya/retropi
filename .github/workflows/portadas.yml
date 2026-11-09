@@ -8,6 +8,10 @@ on:
         description: 'Volver a buscar los que no se encontraron'
         type: boolean
         default: false
+      extras:
+        description: 'Descargar también logo, fondo y captura'
+        type: boolean
+        default: false
       forzar:
         description: 'Volver a buscar todos los títulos'
         type: boolean
@@ -36,6 +40,7 @@ jobs:
           RETROPI_KEY: ${{ secrets.RETROPI_KEY }}
           REINTENTAR: ${{ inputs.reintentar && '1' || '' }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
+          EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras) && '1' || '' }}
         run: node scripts/portadas.mjs
       - name: Guardar en el repositorio
         run: |

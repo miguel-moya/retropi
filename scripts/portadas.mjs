@@ -128,6 +128,36 @@ for (const [k, j] of titulos) {
     await espera(1200);
   } catch (e) { fallos++; console.log(`! ${j.c} · ${j.t}: ${e.message}`); if (/quota|429/.test(e.message)) break; }
 }
+// 3) extras (EXTRAS=1): logo, fondo (fanart) y captura de pantalla de cada juego ya identificado
+if (E.EXTRAS) {
+  const media = (jeu, tipos, regiones) => { const ms = jeu.medias || [];
+    for (const t of tipos) { const c = ms.filter(m => m.type === t); if (!c.length) continue;
+      for (const r of regiones) { const m = c.find(x => x.region === r); if (m) return m; } return c[0]; } return null; };
+  let hechos = 0;
+  for (const [k, v] of Object.entries(mapa)) {
+    if (!v.ssid || (v.extras && !E.FORZAR_EXTRAS)) continue;
+    const c = k.split('|')[0];
+    try {
+      const jeu = (await ss('jeuInfos.php', { gameid: v.ssid, systemeid: SISTEMA[c] })).response?.jeu;
+      await espera(1200);
+      if (!jeu) continue;
+      const base = v.archivo.replace(/\.jpg$/, '');
+      const bajar = async (m, sufijo, extra) => {
+        if (!m) return undefined;
+        const r = await fetch(`${m.url}&${extra}`); await espera(600);
+        if (!r.ok) return undefined;
+        const f = `${base}${sufijo}`; await fs.writeFile(f, Buffer.from(await r.arrayBuffer())); return f;
+      };
+      v.logo = await bajar(media(jeu, ['wheel-hd', 'wheel'], REGIONES), '-logo.png', 'maxwidth=600&outputformat=png');
+      v.fondo = await bajar(media(jeu, ['fanart'], ['wor', ...REGIONES]), '-fondo.jpg', 'maxwidth=1100&outputformat=jpg');
+      v.captura = await bajar(media(jeu, ['ss'], REGIONES), '-captura.jpg', 'maxwidth=640&outputformat=jpg');
+      v.extras = true; hechos++;
+      console.log(`+ ${k}: ${[v.logo && 'logo', v.fondo && 'fondo', v.captura && 'captura'].filter(Boolean).join(', ') || 'nada'}`);
+    } catch (e) { console.log(`! extras ${k}: ${e.message}`); }
+  }
+  console.log(`Extras: ${hechos}`);
+}
+
 await fs.mkdir(DIR, { recursive: true });
 const orden = Object.fromEntries(Object.entries(mapa).sort(([a], [b]) => a.localeCompare(b)));
 await fs.writeFile(path.join(DIR, 'map.json'), JSON.stringify(orden, null, 1) + '\n');
