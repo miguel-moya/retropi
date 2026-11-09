@@ -126,7 +126,7 @@ svg{pointer-events:none}
 .rows small{color:var(--mut);font-size:12px}
 .tiendas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .tterm{display:flex;align-items:center;gap:8px;padding:0 12px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--gline);color:var(--tx2)}
-.tterm small{flex:none;font-size:12px;color:var(--mut)}
+.tterm small{flex:none;font-size:11px;color:var(--tx2);padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.08)}
 .tterm input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--tx);font:inherit;font-size:14px}
 .tienda{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;text-decoration:none;color:var(--tx);background:color-mix(in srgb,var(--c) 18%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
 .tienda b{font-size:14px}
@@ -415,7 +415,7 @@ function tiendas(g) {
   const plat = PLAT[g._c] || g._cn;
   const btn = (k, nombre, color, sub) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
-    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small>+ ${esc(plat)}</small></label>
+    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small class="tplat">${esc(plat)}</small></label>
     <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn('vinted', 'Vinted', '#09B1BA', barato ? 'En venta' : 'Más nuevos')}${btn('walla', 'Wallapop', '#13C1AC', 'Videojuegos')}</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="pill ${barato ? 'on' : ''}" data-act="opt" data-v="barato">Más baratos primero</button>
