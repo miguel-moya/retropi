@@ -219,14 +219,6 @@
   "buscado": "Great Golf",
   "estado": "auto"
  },
- "mastersystem|hang on": {
-  "archivo": "covers/mastersystem/hang-on.jpg",
-  "ssid": 925,
-  "nombre": "Hang On And Safari Hunt",
-  "region": "us",
-  "buscado": "Hang On",
-  "estado": "auto"
- },
  "mastersystem|joe montana football": {
   "archivo": "covers/mastersystem/joe-montana-football.jpg",
   "ssid": 18502,
@@ -951,14 +943,6 @@
   "buscado": "Ecco the Dolphin",
   "estado": "auto"
  },
- "megadrive|ecco the dolphin: the tides of time": {
-  "archivo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time.jpg",
-  "ssid": 26,
-  "nombre": "Ecco the Dolphin",
-  "region": "eu",
-  "buscado": "Ecco the Dolphin",
-  "estado": "auto"
- },
  "megadrive|el rey león": {
   "archivo": "covers/megadrive/el-rey-leon.jpg",
   "ssid": 9,
@@ -1225,14 +1209,6 @@
   "nombre": "The Smurfs",
   "region": "eu",
   "buscado": "Los Pitufos",
-  "estado": "auto"
- },
- "megadrive|lost world: jurassic park": {
-  "archivo": "covers/megadrive/lost-world-jurassic-park.jpg",
-  "ssid": 49,
-  "nombre": "Jurassic Park",
-  "region": "eu",
-  "buscado": "Jurassic Park",
   "estado": "auto"
  },
  "megadrive|madden 97": {
@@ -2045,14 +2021,6 @@
   "nombre": "Dr. Mario",
   "region": "eu",
   "buscado": "Dr. Mario",
-  "estado": "auto"
- },
- "nes|dragon ball": {
-  "archivo": "covers/nes/dragon-ball.jpg",
-  "ssid": 1387,
-  "nombre": "Dragon Ball - Daimaou Fukkatsu",
-  "region": "jp",
-  "buscado": "Dragon Ball",
   "estado": "auto"
  },
  "nes|duck tales": {

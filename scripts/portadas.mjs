@@ -102,7 +102,9 @@ for (const [k, j] of titulos) {
         if (r.aviso) vistos.push(`«${termino}»: ${r.aviso.replace(/\s+/g, ' ').slice(0, 60)}`);
         for (const x of (r.response?.jeux || []).filter(x => x && x.id)) {
           if (vistos.length < 6) vistos.push(nombreJuego(x));
-          const p = Math.max(parecido(termino, x), parecido(j.t, x));
+          // se compara con el título completo (o el nombre clave / el ajuste), nunca solo con un trozo:
+          // así «Lost World: Jurassic Park» no acaba siendo «Jurassic Park»
+          const p = Math.max(parecido(j.t, x), j.nc ? parecido(j.nc, x) : 0, typeof aj === 'string' ? parecido(aj, x) : 0);
           if (p > nota) { mejor = x; nota = p; buscado = termino; }
         }
         if (nota >= 0.99 || (typeof aj === 'string' && mejor)) break;
