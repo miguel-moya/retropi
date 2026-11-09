@@ -84,8 +84,12 @@
   "estado": "auto"
  },
  "mastersystem|castle of illusion": {
-  "estado": "no encontrado",
-  "buscado": "Castle of Illusion"
+  "archivo": "covers/mastersystem/castle-of-illusion.jpg",
+  "ssid": 759,
+  "nombre": "Castle of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "buscado": "Castle of Illusion",
+  "estado": "auto"
  },
  "mastersystem|cloud master": {
   "archivo": "covers/mastersystem/cloud-master.jpg",
@@ -120,8 +124,12 @@
   "estado": "auto"
  },
  "mastersystem|desert speedtrap": {
-  "estado": "no encontrado",
-  "buscado": "Desert Speedtrap"
+  "archivo": "covers/mastersystem/desert-speedtrap.jpg",
+  "ssid": 968,
+  "nombre": "Desert Speedtrap Starring Road Runner and Wile E. ",
+  "region": "eu",
+  "buscado": "Desert Speedtrap",
+  "estado": "auto"
  },
  "mastersystem|double dragon": {
   "archivo": "covers/mastersystem/double-dragon.jpg",
@@ -196,8 +204,12 @@
   "estado": "auto"
  },
  "mastersystem|golvellius": {
-  "estado": "no encontrado",
-  "buscado": "Golvellius"
+  "archivo": "covers/mastersystem/golvellius.jpg",
+  "ssid": 862,
+  "nombre": "Golvellius : Valley of Doom",
+  "region": "eu",
+  "buscado": "Golvellius",
+  "estado": "auto"
  },
  "mastersystem|great golf": {
   "archivo": "covers/mastersystem/great-golf.jpg",
@@ -208,8 +220,12 @@
   "estado": "auto"
  },
  "mastersystem|hang on": {
-  "estado": "no encontrado",
-  "buscado": "Hang On"
+  "archivo": "covers/mastersystem/hang-on.jpg",
+  "ssid": 925,
+  "nombre": "Hang On And Safari Hunt",
+  "region": "us",
+  "buscado": "Hang On",
+  "estado": "auto"
  },
  "mastersystem|joe montana football": {
   "archivo": "covers/mastersystem/joe-montana-football.jpg",
@@ -244,8 +260,12 @@
   "estado": "auto"
  },
  "mastersystem|land of illusion": {
-  "estado": "no encontrado",
-  "buscado": "Land of Illusion"
+  "archivo": "covers/mastersystem/land-of-illusion.jpg",
+  "ssid": 771,
+  "nombre": "Land of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "buscado": "Land of Illusion",
+  "estado": "auto"
  },
  "mastersystem|lemmings": {
   "archivo": "covers/mastersystem/lemmings.jpg",
@@ -452,8 +472,12 @@
   "estado": "auto"
  },
  "mastersystem|sonic": {
-  "estado": "no encontrado",
-  "buscado": "Sonic"
+  "archivo": "covers/mastersystem/sonic.jpg",
+  "ssid": 755,
+  "nombre": "Sonic the Hedgehog",
+  "region": "eu",
+  "buscado": "Sonic",
+  "estado": "auto"
  },
  "mastersystem|sonic 2": {
   "archivo": "covers/mastersystem/sonic-2.jpg",
@@ -540,8 +564,12 @@
   "buscado": "Tom and Jerry the Movie"
  },
  "mastersystem|ultima iv": {
-  "estado": "no encontrado",
-  "buscado": "Ultima IV"
+  "archivo": "covers/mastersystem/ultima-iv.jpg",
+  "ssid": 818,
+  "nombre": "Ultima IV : Quest of the Avatar",
+  "region": "eu",
+  "buscado": "Ultima IV",
+  "estado": "auto"
  },
  "mastersystem|vigilante": {
   "archivo": "covers/mastersystem/vigilante.jpg",
@@ -636,8 +664,12 @@
   "estado": "auto"
  },
  "mastersystem|zillion ii": {
-  "estado": "no encontrado",
-  "buscado": "Zillion II"
+  "archivo": "covers/mastersystem/zillion-ii.jpg",
+  "ssid": 915,
+  "nombre": "Zillion II : The Tri Formation",
+  "region": "eu",
+  "buscado": "Zillion II",
+  "estado": "auto"
  },
  "megadrive|addams family values": {
   "archivo": "covers/megadrive/addams-family-values.jpg",
@@ -720,8 +752,12 @@
   "estado": "auto"
  },
  "megadrive|asterix": {
-  "estado": "no encontrado",
-  "buscado": "Asterix"
+  "archivo": "covers/megadrive/asterix.jpg",
+  "ssid": 100,
+  "nombre": "Astérix and the Power of the Gods",
+  "region": "eu",
+  "buscado": "Asterix",
+  "estado": "auto"
  },
  "megadrive|bare knuckle iii": {
   "archivo": "covers/megadrive/bare-knuckle-iii.jpg",
@@ -756,8 +792,12 @@
   "estado": "auto"
  },
  "megadrive|boogerman": {
-  "estado": "no encontrado",
-  "buscado": "Boogerman"
+  "archivo": "covers/megadrive/boogerman.jpg",
+  "ssid": 18371,
+  "nombre": "Boogerman : A Pick and Flick Adventure",
+  "region": "eu",
+  "buscado": "Boogerman",
+  "estado": "auto"
  },
  "megadrive|boogerman: a pick and flick adventure": {
   "archivo": "covers/megadrive/boogerman-a-pick-and-flick-adventure.jpg",
@@ -784,8 +824,12 @@
   "estado": "auto"
  },
  "megadrive|castle of illusion": {
-  "estado": "no encontrado",
-  "buscado": "Castle of Illusion"
+  "archivo": "covers/megadrive/castle-of-illusion.jpg",
+  "ssid": 22,
+  "nombre": "Castle of Illusion Starring Mickey Mouse",
+  "region": "eu",
+  "buscado": "Castle of Illusion",
+  "estado": "auto"
  },
  "megadrive|castlevania the new generation": {
   "archivo": "covers/megadrive/castlevania-the-new-generation.jpg",
@@ -1160,8 +1204,12 @@
   "estado": "auto"
  },
  "megadrive|leader board": {
-  "estado": "no encontrado",
-  "buscado": "Leader Board"
+  "archivo": "covers/megadrive/leader-board.jpg",
+  "ssid": 654,
+  "nombre": "World Class Leader Board",
+  "region": "eu",
+  "buscado": "Leader Board",
+  "estado": "auto"
  },
  "megadrive|light crusader": {
   "archivo": "covers/megadrive/light-crusader.jpg",
@@ -1356,8 +1404,12 @@
   "estado": "auto"
  },
  "megadrive|pelé": {
-  "estado": "no encontrado",
-  "buscado": "Pelé"
+  "archivo": "covers/megadrive/pele.jpg",
+  "ssid": 1144,
+  "nombre": "Pelé's World Tournament Soccer",
+  "region": "eu",
+  "buscado": "Pelé",
+  "estado": "auto"
  },
  "megadrive|phantasy star iv": {
   "archivo": "covers/megadrive/phantasy-star-iv.jpg",
@@ -1384,8 +1436,12 @@
   "estado": "auto"
  },
  "megadrive|quackshot": {
-  "estado": "no encontrado",
-  "buscado": "Quackshot"
+  "archivo": "covers/megadrive/quackshot.jpg",
+  "ssid": 27,
+  "nombre": "QuackShot Starring Donald Duck",
+  "region": "eu",
+  "buscado": "Quackshot",
+  "estado": "auto"
  },
  "megadrive|ranger x": {
   "archivo": "covers/megadrive/ranger-x.jpg",
@@ -1444,8 +1500,12 @@
   "estado": "auto"
  },
  "megadrive|shadow dancer": {
-  "estado": "no encontrado",
-  "buscado": "Shadow Dancer"
+  "archivo": "covers/megadrive/shadow-dancer.jpg",
+  "ssid": 82,
+  "nombre": "Shadow Dancer : The Secret of Shinobi",
+  "region": "eu",
+  "buscado": "Shadow Dancer",
+  "estado": "auto"
  },
  "megadrive|shadow of the beast": {
   "archivo": "covers/megadrive/shadow-of-the-beast.jpg",
@@ -1480,8 +1540,12 @@
   "estado": "auto"
  },
  "megadrive|shinobi iii": {
-  "estado": "no encontrado",
-  "buscado": "Shinobi III"
+  "archivo": "covers/megadrive/shinobi-iii.jpg",
+  "ssid": 11,
+  "nombre": "Shinobi III : Return of the Ninja Master",
+  "region": "eu",
+  "buscado": "Shinobi III",
+  "estado": "auto"
  },
  "megadrive|soleil": {
   "archivo": "covers/megadrive/soleil.jpg",
@@ -1796,8 +1860,12 @@
   "estado": "corregido"
  },
  "megadrive|toki": {
-  "estado": "no encontrado",
-  "buscado": "Toki"
+  "archivo": "covers/megadrive/toki.jpg",
+  "ssid": 101,
+  "nombre": "Toki : Going Ape Spit",
+  "region": "eu",
+  "buscado": "Toki Going Ape Spit",
+  "estado": "corregido"
  },
  "megadrive|toy story": {
   "archivo": "covers/megadrive/toy-story.jpg",
@@ -1884,8 +1952,12 @@
   "estado": "auto"
  },
  "megadrive|world of illusion": {
-  "estado": "no encontrado",
-  "buscado": "World of Illusion"
+  "archivo": "covers/megadrive/world-of-illusion.jpg",
+  "ssid": 46,
+  "nombre": "World of Illusion Starring Mickey Mouse and Donald",
+  "region": "eu",
+  "buscado": "World of Illusion",
+  "estado": "auto"
  },
  "megadrive|zombies ate my neighbors": {
   "archivo": "covers/megadrive/zombies-ate-my-neighbors.jpg",
@@ -1976,12 +2048,20 @@
   "estado": "auto"
  },
  "nes|dragon ball": {
-  "estado": "no encontrado",
-  "buscado": "Dragon Ball"
+  "archivo": "covers/nes/dragon-ball.jpg",
+  "ssid": 1387,
+  "nombre": "Dragon Ball - Daimaou Fukkatsu",
+  "region": "jp",
+  "buscado": "Dragon Ball",
+  "estado": "auto"
  },
  "nes|duck tales": {
-  "estado": "no encontrado",
-  "buscado": "Duck Tales"
+  "archivo": "covers/nes/duck-tales.jpg",
+  "ssid": 1263,
+  "nombre": "Disney's DuckTales",
+  "region": "eu",
+  "buscado": "DuckTales",
+  "estado": "corregido"
  },
  "nes|faxanadu": {
   "archivo": "covers/nes/faxanadu.jpg",
@@ -2000,8 +2080,12 @@
   "estado": "auto"
  },
  "nes|gremlins 2": {
-  "estado": "no encontrado",
-  "buscado": "Gremlins 2"
+  "archivo": "covers/nes/gremlins-2.jpg",
+  "ssid": 1300,
+  "nombre": "Gremlins 2 : The New Batch",
+  "region": "eu",
+  "buscado": "Gremlins 2",
+  "estado": "auto"
  },
  "nes|jackie chan's action kung fu": {
   "archivo": "covers/nes/jackie-chan-s-action-kung-fu.jpg",
@@ -2140,8 +2224,12 @@
   "estado": "auto"
  },
  "nes|tale spin": {
-  "estado": "no encontrado",
-  "buscado": "Tale Spin"
+  "archivo": "covers/nes/tale-spin.jpg",
+  "ssid": 1477,
+  "nombre": "Disney's TaleSpin",
+  "region": "eu",
+  "buscado": "TaleSpin",
+  "estado": "corregido"
  },
  "nes|teenage mutant hero turtles": {
   "archivo": "covers/nes/teenage-mutant-hero-turtles.jpg",
