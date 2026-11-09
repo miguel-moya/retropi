@@ -25,6 +25,8 @@
   --font:'Manrope',system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box}
+html{height:100%}
+#app{min-height:calc(100vh + 1px)}
 html,body{margin:0;background:var(--bg);color:var(--tx);font-family:var(--font);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 body{background:radial-gradient(120% 60% at 50% -10%,#1C2230 0%,var(--bg) 60%) fixed,var(--bg)}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
@@ -60,9 +62,9 @@ svg{pointer-events:none}
 .small-btn{min-height:36px;padding:0 12px;display:flex;align-items:center;gap:6px;border-radius:999px;font-size:13px;color:var(--tx)}
 /* tiles */
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.tile{display:flex;flex-direction:column;gap:12px;padding:10px 10px 14px;border-radius:20px;text-align:left}
-.tile .img{height:86px;border-radius:14px;display:grid;place-items:center;overflow:hidden}
-.tile .img img{max-width:88%;max-height:84px;object-fit:contain}
+.tile{display:flex;flex-direction:column;gap:8px;padding:12px 12px 14px;border-radius:20px;text-align:left;aspect-ratio:1/1}
+.tile .img{flex:1;min-height:0;border-radius:14px;display:grid;place-items:center;overflow:hidden}
+.tile .img img{max-width:92%;max-height:100%;object-fit:contain}
 .tile b{font-family:var(--font);font-size:15px;line-height:1.1}
 .tile small{font-size:11px;color:var(--mut)}
 /* cover */
@@ -135,7 +137,8 @@ svg{pointer-events:none}
 .tterm{display:flex;align-items:center;gap:8px;padding:0 12px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--gline);color:var(--tx2)}
 .tterm small{flex:none;font-size:11px;color:var(--tx2);padding:3px 8px;border-radius:999px;background:rgba(255,255,255,.08)}
 .tterm input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--tx);font:inherit;font-size:14px}
-.tienda{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;text-decoration:none;color:var(--tx);background:color-mix(in srgb,var(--c) 18%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
+.tienda{display:flex;align-items:center;justify-content:center;height:46px;border-radius:14px;text-decoration:none;color:var(--tx);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.tienda:active{background:rgba(255,255,255,.16)}
 .tienda b{font-size:14px}
 .tienda small{font-size:11px;color:var(--tx2)}
 .clamp{padding:16px;font-size:13px;line-height:1.5;position:relative}
@@ -424,11 +427,10 @@ function tiendas(g) {
   const term = TERM[g.ID] ?? base;
   const u = tUrls(term, g._c);
   const plat = PLAT[g._c] || g._cn;
-  const btn = (k, nombre, color, sub) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
+  const btn = (k, nombre) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda"><b>${nombre}</b></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
     <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small class="tplat">${esc(plat)}</small></label>
-    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', 'Más nuevos')}${btn('vinted', 'Vinted', '#09B1BA', 'Más nuevos')}${btn('walla', 'Wallapop', '#13C1AC', 'Más nuevos')}</div>
-    <div class="muted" style="font-size:11px">Retoca el texto solo para esta búsqueda; para siempre, cambia «Nombre clave» en la hoja.</div></div>`;
+    <div class="tiendas">${btn('ebay', 'eBay')}${btn('vinted', 'Vinted')}${btn('walla', 'Wallapop')}</div></div>`;
 }
 document.addEventListener('input', e => {
   const el = e.target;
@@ -500,7 +502,7 @@ function vJuego(gid) {
       <section class="sec"><h2>Valor</h2>${dinero}</section>
       ${conDato ? `<section class="sec"><h2>Estado</h2><div class="card bars">${bars}</div></section>` : ''}
       ${g['Comentarios'] ? `<section class="sec"><h2>Comentarios</h2><div class="card clamp open"><p>${esc(g['Comentarios'])}</p></div></section>` : ''}
-      <section class="sec"><h2>Buscar en tiendas</h2>${tiendas(g)}</section>
+      <section class="sec"><h2>Segunda mano</h2>${tiendas(g)}</section>
       <section class="sec"><h2>Detalles</h2><div class="card rows">${filas}</div></section>
       ${otras.length ? `<section class="sec"><h2>Otras unidades</h2><div class="list" style="padding-top:0">${otras.map(x => filaJuego(x, false)).join('')}</div></section>` : ''}
       <p class="muted" style="font-size:12px;margin-top:22px;text-align:center">Solo lectura · para editar, usa la hoja</p>
@@ -575,7 +577,7 @@ function vAjustes() {
     <p class="muted" style="margin:-8px 4px 0;font-size:12px;line-height:1.5">Para recargar la app, desliza hacia abajo desde arriba en cualquier pantalla.</p>
     <a class="btn sec2" href="#/conectar" style="text-decoration:none">Cambiar URL o clave</a>
     <button class="btn sec2" data-act="olvidar" style="color:var(--red)">Olvidar la clave en este dispositivo</button>
-    <p class="muted" style="font-size:12px;line-height:1.5">La clave y la copia de tus datos se guardan solo en este dispositivo. RetroPi v13 · solo lectura.</p>
+    <p class="muted" style="font-size:12px;line-height:1.5">La clave y la copia de tus datos se guardan solo en este dispositivo. RetroPi v14 · solo lectura.</p>
   </div>`;
 }
 
