@@ -126,6 +126,7 @@ svg{pointer-events:none}
 .rows small{color:var(--mut);font-size:12px}
 .tiendas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .tterm{display:flex;align-items:center;gap:8px;padding:0 12px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--gline);color:var(--tx2)}
+.tterm small{flex:none;font-size:12px;color:var(--mut)}
 .tterm input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--tx);font:inherit;font-size:14px}
 .tienda{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;text-decoration:none;color:var(--tx);background:color-mix(in srgb,var(--c) 18%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
 .tienda b{font-size:14px}
@@ -393,34 +394,41 @@ const ROWICON = {
 
 const PLAT = { megadrive: 'Mega Drive', mastersystem: 'Master System', nes: 'NES' };
 const TERM = {}; // ajustes puntuales del término, solo en esta sesión
-function tUrls(term) {
-  const q = encodeURIComponent(term), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+const VINTED_PLAT = { megadrive: 1285, mastersystem: 1285, nes: 1268 }; // Master System se publica en Mega Drive
+const sinAcentos = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
+function tUrls(nombre, c) {
+  const plat = PLAT[c] || '', barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+  const q = encodeURIComponent(sinAcentos(`${nombre} ${plat}`));
+  // Vinted ya filtra por plataforma: solo añadimos la consola si comparte categoría (Master System)
+  const qv = encodeURIComponent(sinAcentos(c === 'mastersystem' ? `${nombre} ${plat}` : nombre));
+  const vp = VINTED_PLAT[c];
   return {
     ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}${vendidos ? '&LH_Sold=1&LH_Complete=1' : ''}${barato ? '&_sop=15' : ''}`,
-    vinted: `https://www.vinted.es/catalog?search_text=${q}${barato ? '&order=price_low_to_high' : ''}`,
-    walla: `https://es.wallapop.com/app/search?keywords=${q}${barato ? '&order_by=price_low_to_high' : ''}`,
+    vinted: `https://www.vinted.es/catalog?search_text=${qv}&catalog[]=3026${vp ? `&video_game_platform_ids[]=${vp}` : ''}&order=${barato ? 'price_low_to_high' : 'newest_first'}`,
+    walla: `https://es.wallapop.com/app/search?keywords=${q}&category_id=24200&subcategory_ids=24131${barato ? '&order_by=price_low_to_high' : ''}`,
   };
 }
 function tiendas(g) {
-  const base = `${g['Nombre clave'] || g['Título']} ${PLAT[g._c] || g._cn}`;
+  const base = g['Nombre clave'] || g['Título'];
   const term = TERM[g.ID] ?? base;
-  const u = tUrls(term), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+  const u = tUrls(term, g._c), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+  const plat = PLAT[g._c] || g._cn;
   const btn = (k, nombre, color, sub) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
-    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label>
-    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn('vinted', 'Vinted', '#09B1BA', 'En venta')}${btn('walla', 'Wallapop', '#13C1AC', 'En venta')}</div>
+    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small>+ ${esc(plat)}</small></label>
+    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn('vinted', 'Vinted', '#09B1BA', barato ? 'En venta' : 'Más nuevos')}${btn('walla', 'Wallapop', '#13C1AC', 'Videojuegos')}</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="pill ${barato ? 'on' : ''}" data-act="opt" data-v="barato">Más baratos primero</button>
       <button class="pill ${vendidos ? 'on' : ''}" data-act="opt" data-v="vendidos">eBay: ya vendidos</button>
     </div>
-    <div class="muted" style="font-size:11px">Puedes retocar el texto para esta búsqueda. Para cambiarlo siempre, edita «Nombre clave» en la hoja.</div></div>`;
+    <div class="muted" style="font-size:11px">Retoca el texto solo para esta búsqueda; para siempre, cambia «Nombre clave» en la hoja.</div></div>`;
 }
 document.addEventListener('input', e => {
   const el = e.target;
   if (el.id !== 'tterm') return;
   const v = el.value;
   if (v.trim() && v !== el.dataset.base) TERM[el.dataset.id] = v; else delete TERM[el.dataset.id];
-  const u = tUrls(v.trim() || el.dataset.base);
+  const u = tUrls(v.trim() || el.dataset.base, el.dataset.c);
   document.querySelectorAll('.tienda[data-t]').forEach(a => { a.href = u[a.dataset.t]; });
 });
 
