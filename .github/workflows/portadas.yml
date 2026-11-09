@@ -27,6 +27,11 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      # las imágenes van en la rama «portadas», separada de la web para que publicar la app sea rápido
+      - uses: actions/checkout@v4
+        with:
+          ref: portadas
+          path: datos
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -41,8 +46,10 @@ jobs:
           REINTENTAR: ${{ inputs.reintentar && '1' || '' }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
           EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras) && '1' || '' }}
-        run: node scripts/portadas.mjs
-      - name: Guardar en el repositorio
+        working-directory: datos
+        run: node ../scripts/portadas.mjs
+      - name: Guardar en la rama portadas
+        working-directory: datos
         run: |
           git config user.name "RetroPi portadas"
           git config user.email "actions@users.noreply.github.com"

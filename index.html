@@ -314,9 +314,20 @@ const chip = s => { const c = SIT[s] || ['#2A2D33', '#C3C8D1']; return `<span cl
 const coverBg = g => `background:hsl(${hue(g.ID)},38%,28%)`;
 // Portada: primero la descargada de ScreenScraper (covers/map.json, en el propio repositorio); si no, la URL de la hoja
 let PORTADAS = {};
-fetch('covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).then(m => { PORTADAS = m || {}; if (Object.keys(PORTADAS).length) render(); }).catch(() => {});
-const extras = g => PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
-const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? p.archivo : (isImg(g.Portada) ? g.Portada : ''); };
+// Las imágenes viven en la rama «portadas» (fuera de la web publicada, así cada cambio de la app se publica en segundos).
+// La lista se lee de GitHub directamente (siempre al día) y las imágenes por la CDN de jsDelivr.
+const RAMA_RAW = 'https://raw.githubusercontent.com/miguel-moya/retropi/portadas/';
+const RAMA_CDN = 'https://cdn.jsdelivr.net/gh/miguel-moya/retropi@portadas/';
+try { PORTADAS = JSON.parse(localStorage.getItem('rp.portadas')) || {}; } catch (_) {}
+fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).then(m => {
+  if (!m) return; const cambio = JSON.stringify(m) !== JSON.stringify(PORTADAS); PORTADAS = m;
+  try { localStorage.setItem('rp.portadas', JSON.stringify(m)); } catch (_) {}
+  if (cambio) render();
+}).catch(() => {});
+const urlMedia = (f, v) => f ? RAMA_CDN + f + (v ? '?v=' + v : '') : '';
+const extras = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
+  return { fondo: urlMedia(p.fondo, p.ssid), logo: urlMedia(p.logo, p.ssid), captura: urlMedia(p.captura, p.ssid) }; };
+const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia(p.archivo, p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
 const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
   const coste = n(g['Compra + Envío']);
@@ -817,7 +828,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v21 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v22 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
