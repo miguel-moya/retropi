@@ -399,8 +399,10 @@ const sinAcentos = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').repla
 function tUrls(nombre, c) {
   const plat = PLAT[c] || '', barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
   const q = encodeURIComponent(sinAcentos(`${nombre} ${plat}`));
-  // Vinted ya filtra por plataforma: solo añadimos la consola si comparte categoría (Master System)
-  const qv = encodeURIComponent(sinAcentos(c === 'mastersystem' ? `${nombre} ${plat}` : nombre));
+  // Vinted web filtra por plataforma; la app del móvil ignora ese filtro, así que en móvil
+  // (y siempre en Master System, que comparte categoría con Mega Drive) añadimos la consola al texto
+  const movil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+  const qv = encodeURIComponent(sinAcentos(movil || c === 'mastersystem' ? `${nombre} ${plat}` : nombre));
   const vp = VINTED_PLAT[c];
   return {
     ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}${vendidos ? '&LH_Sold=1&LH_Complete=1' : ''}${barato ? '&_sop=15' : ''}`,
