@@ -219,6 +219,14 @@
   "buscado": "Great Golf",
   "estado": "auto"
  },
+ "mastersystem|hang on": {
+  "archivo": "covers/mastersystem/hang-on.jpg",
+  "ssid": 845,
+  "nombre": "Hang-On",
+  "region": "eu",
+  "buscado": "Hang-On",
+  "estado": "corregido"
+ },
  "mastersystem|joe montana football": {
   "archivo": "covers/mastersystem/joe-montana-football.jpg",
   "ssid": 18502,
@@ -316,8 +324,12 @@
   "estado": "auto"
  },
  "mastersystem|missile defense 3d": {
-  "estado": "no encontrado",
-  "buscado": "Missile Defense 3D"
+  "archivo": "covers/mastersystem/missile-defense-3d.jpg",
+  "ssid": 18505,
+  "nombre": "Missile Defense 3-D",
+  "region": "eu",
+  "buscado": "Missile Defense 3-D",
+  "estado": "corregido"
  },
  "mastersystem|monopoly": {
   "archivo": "covers/mastersystem/monopoly.jpg",
@@ -943,6 +955,14 @@
   "buscado": "Ecco the Dolphin",
   "estado": "auto"
  },
+ "megadrive|ecco the dolphin: the tides of time": {
+  "archivo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time.jpg",
+  "ssid": 95,
+  "nombre": "Ecco : The Tides of Time",
+  "region": "eu",
+  "buscado": "Ecco The Tides of Time",
+  "estado": "corregido"
+ },
  "megadrive|el rey león": {
   "archivo": "covers/megadrive/el-rey-leon.jpg",
   "ssid": 9,
@@ -1012,8 +1032,12 @@
   "estado": "auto"
  },
  "megadrive|fifa soccer": {
-  "estado": "no encontrado",
-  "buscado": "FIFA Soccer"
+  "archivo": "covers/megadrive/fifa-soccer.jpg",
+  "ssid": 221,
+  "nombre": "FIFA International Soccer",
+  "region": "eu",
+  "buscado": "FIFA International Soccer",
+  "estado": "corregido"
  },
  "megadrive|flashback": {
   "archivo": "covers/megadrive/flashback.jpg",
@@ -1210,6 +1234,14 @@
   "region": "eu",
   "buscado": "Los Pitufos",
   "estado": "auto"
+ },
+ "megadrive|lost world: jurassic park": {
+  "archivo": "covers/megadrive/lost-world-jurassic-park.jpg",
+  "ssid": 107,
+  "nombre": "The Lost World : Jurassic Park",
+  "region": "eu",
+  "buscado": "The Lost World Jurassic Park",
+  "estado": "corregido"
  },
  "megadrive|madden 97": {
   "archivo": "covers/megadrive/madden-97.jpg",
@@ -1868,8 +1900,12 @@
   "estado": "auto"
  },
  "megadrive|two tribes": {
-  "estado": "no encontrado",
-  "buscado": "Two Tribes"
+  "archivo": "covers/megadrive/two-tribes.jpg",
+  "ssid": 323,
+  "nombre": "Two Tribes : Populous II",
+  "region": "eu",
+  "buscado": "Two Tribes Populous II",
+  "estado": "corregido"
  },
  "megadrive|vectorman": {
   "archivo": "covers/megadrive/vectorman.jpg",
@@ -2022,6 +2058,14 @@
   "region": "eu",
   "buscado": "Dr. Mario",
   "estado": "auto"
+ },
+ "nes|dragon ball": {
+  "archivo": "covers/nes/dragon-ball.jpg",
+  "ssid": 1283,
+  "nombre": "Dragon Ball - Shen Long No Nazo",
+  "region": "fr",
+  "buscado": "Dragon Ball Le Secret du Dragon",
+  "estado": "corregido"
  },
  "nes|duck tales": {
   "archivo": "covers/nes/duck-tales.jpg",
