@@ -573,8 +573,12 @@
   "estado": "auto"
  },
  "mastersystem|y's: the vanished omens": {
-  "estado": "no encontrado",
-  "buscado": "Y's: The Vanished Omens"
+  "archivo": "covers/mastersystem/y-s-the-vanished-omens.jpg",
+  "ssid": 824,
+  "nombre": "Ys : The Vanished Omens",
+  "region": "eu",
+  "buscado": "The Vanished Omens",
+  "estado": "auto"
  },
  "mastersystem|zillion": {
   "archivo": "covers/mastersystem/zillion.jpg",
@@ -665,6 +669,14 @@
   "ssid": 100,
   "nombre": "Astérix and the Power of the Gods",
   "region": "eu",
+  "estado": "auto"
+ },
+ "megadrive|bare knuckle iii": {
+  "archivo": "covers/megadrive/bare-knuckle-iii.jpg",
+  "ssid": 143230,
+  "nombre": "Streets of Rage 3",
+  "region": "jp",
+  "buscado": "Bare Knuckle III",
   "estado": "auto"
  },
  "megadrive|batman": {
@@ -829,8 +841,12 @@
   "estado": "auto"
  },
  "megadrive|ecco the dolphin: the tides of time": {
-  "estado": "no encontrado",
-  "buscado": "Ecco the Dolphin: The Tides of Time"
+  "archivo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time.jpg",
+  "ssid": 26,
+  "nombre": "Ecco the Dolphin",
+  "region": "eu",
+  "buscado": "Ecco the Dolphin",
+  "estado": "auto"
  },
  "megadrive|el rey león": {
   "archivo": "covers/megadrive/el-rey-leon.jpg",
@@ -1072,8 +1088,12 @@
   "estado": "auto"
  },
  "megadrive|lost world: jurassic park": {
-  "estado": "no encontrado",
-  "buscado": "Lost World: Jurassic Park"
+  "archivo": "covers/megadrive/lost-world-jurassic-park.jpg",
+  "ssid": 49,
+  "nombre": "Jurassic Park",
+  "region": "eu",
+  "buscado": "Jurassic Park",
+  "estado": "auto"
  },
  "megadrive|madden 97": {
   "archivo": "covers/megadrive/madden-97.jpg",
@@ -1412,8 +1432,12 @@
   "estado": "auto"
  },
  "megadrive|spiderman": {
-  "estado": "no encontrado",
-  "buscado": "Spiderman"
+  "archivo": "covers/megadrive/spiderman.jpg",
+  "ssid": 286,
+  "nombre": "Spider-Man",
+  "region": "eu",
+  "buscado": "Spider-Man",
+  "estado": "corregido"
  },
  "megadrive|splatterhouse 2": {
   "archivo": "covers/megadrive/splatterhouse-2.jpg",
@@ -1491,6 +1515,14 @@
   "nombre": "Super Monaco GP",
   "region": "eu",
   "estado": "auto"
+ },
+ "megadrive|superman the man of steel": {
+  "archivo": "covers/megadrive/superman-the-man-of-steel.jpg",
+  "ssid": 1199,
+  "nombre": "Superman : The Man of Steel",
+  "region": "eu",
+  "buscado": "Superman",
+  "estado": "corregido"
  },
  "megadrive|talespin": {
   "archivo": "covers/megadrive/talespin.jpg",
@@ -1584,20 +1616,40 @@
   "estado": "auto"
  },
  "megadrive|tiny toon adventures: acme all stars": {
-  "estado": "no encontrado",
-  "buscado": "Tiny Toon Adventures: Acme All Stars"
+  "archivo": "covers/megadrive/tiny-toon-adventures-acme-all-stars.jpg",
+  "ssid": 217,
+  "nombre": "Tiny Toon Adventures : Acme All-Stars",
+  "region": "eu",
+  "buscado": "Tiny Toon Adventures",
+  "estado": "auto"
  },
  "megadrive|tiny toon adventures: buster's hidden treasure": {
-  "estado": "no encontrado",
-  "buscado": "Tiny Toon Adventures: Buster's Hidden Treasure"
+  "archivo": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure.jpg",
+  "ssid": 79,
+  "nombre": "Tiny Toon Adventures : Buster's Hidden Treasure",
+  "region": "eu",
+  "buscado": "Buster's Hidden Treasure",
+  "estado": "auto"
  },
  "megadrive|toe jam & earl": {
-  "estado": "no encontrado",
-  "buscado": "Toe Jam & Earl"
+  "archivo": "covers/megadrive/toe-jam-earl.jpg",
+  "ssid": 113,
+  "nombre": "ToeJam & Earl",
+  "region": "eu",
+  "buscado": "ToeJam & Earl",
+  "estado": "corregido"
  },
  "megadrive|toe jam & earl panic on funkotron": {
+  "archivo": "covers/megadrive/toe-jam-earl-panic-on-funkotron.jpg",
+  "ssid": 271,
+  "nombre": "ToeJam & Earl in Panic on Funkotron",
+  "region": "eu",
+  "buscado": "ToeJam & Earl in Panic on Funkotron",
+  "estado": "corregido"
+ },
+ "megadrive|toki": {
   "estado": "no encontrado",
-  "buscado": "Toe Jam & Earl Panic on Funkotron"
+  "buscado": "Toki"
  },
  "megadrive|toy story": {
   "archivo": "covers/megadrive/toy-story.jpg",
@@ -1877,6 +1929,14 @@
   "region": "eu",
   "estado": "auto"
  },
+ "nes|soccer": {
+  "archivo": "covers/nes/soccer.jpg",
+  "ssid": 1440,
+  "nombre": "Soccer",
+  "region": "eu",
+  "buscado": "Soccer",
+  "estado": "auto"
+ },
  "nes|solstice": {
   "archivo": "covers/nes/solstice.jpg",
   "ssid": 1301,
@@ -1931,8 +1991,12 @@
   "estado": "auto"
  },
  "nes|the simpsons: bart vs. the space mutants": {
-  "estado": "no encontrado",
-  "buscado": "The Simpsons: BART vs. the Space Mutants"
+  "archivo": "covers/nes/the-simpsons-bart-vs-the-space-mutants.jpg",
+  "ssid": 1295,
+  "nombre": "The Simpsons : Bart vs. the Space Mutants",
+  "region": "eu",
+  "buscado": "BART vs. the Space Mutants",
+  "estado": "auto"
  },
  "nes|top gun": {
   "archivo": "covers/nes/top-gun.jpg",
