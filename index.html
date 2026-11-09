@@ -55,14 +55,29 @@ svg{pointer-events:none}
 .kv > div > span{color:var(--tx2)}.kv b{font-weight:600;text-align:right}
 .seg.ancho{display:grid;grid-template-columns:repeat(3,1fr);border-radius:14px;padding:4px}
 .seg.ancho button{width:auto;height:36px;border-radius:10px;font-size:13px;font-weight:600;color:var(--tx2)}
-.big2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.big2 > div{padding:14px 16px;display:flex;flex-direction:column;gap:4px}
-.big2 > div > span{font-size:12px;color:var(--mut)}.big2 b{font-family:var(--font);font-size:22px;font-weight:700;letter-spacing:-.02em}
 .hbar{display:flex;flex-direction:column;gap:12px;padding:16px}
 .hbar > div{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:10px;font-size:12px}
 .hbar i{display:block;height:10px;border-radius:999px;background:var(--acc)}
 .hbar em{font-style:normal;color:var(--tx2);font-weight:600}
 .secbtn{display:flex;align-items:center;justify-content:center;gap:8px;height:46px;border-radius:14px;text-decoration:none;color:var(--tx);font-weight:600;font-size:14px}
+/* caja de balance */
+.caja-bal{display:flex;flex-direction:column}
+.caja-bal .cb-valor{padding:18px 16px 16px;display:flex;flex-direction:column;gap:4px}
+.caja-bal .cb-valor > span,.caja-bal .par > div > span{font-size:12px;color:var(--mut)}
+.caja-bal .cb-valor b{font-family:var(--font);font-size:34px;font-weight:700;letter-spacing:-.03em;color:var(--amb);line-height:1.05}
+.caja-bal .par{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(var(--ink),.07)}
+.caja-bal .par > div{padding:12px 16px;display:flex;flex-direction:column;gap:3px}
+.caja-bal .par b{font-family:var(--font);font-size:19px;font-weight:700;letter-spacing:-.02em}
+.sec-t{margin:8px 0 -4px;font-size:15px;font-weight:600}
+/* guía de estilos */
+.sw{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sw > div{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px}
+.sw i{width:34px;height:34px;border-radius:10px;flex:none;border:1px solid rgba(var(--ink),.15)}
+.sw b{font-size:12px;font-weight:700;display:block}.sw small{font-size:11px;color:var(--mut)}
+.tipo > div{padding:12px 16px;display:flex;flex-direction:column;gap:2px}
+.tipo > div + div{border-top:1px solid rgba(var(--ink),.07)}
+.tipo small{font-size:11px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
+.demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
 /* modo claro */
 :root[data-tema=claro]{--bg:#F2F3F6;--s1:#FFFFFF;--s2:#E8EAEF;--glass:rgba(255,255,255,.78);--glass2:rgba(255,255,255,.95);--gline:rgba(20,24,32,.09);
   --tx:#14171D;--tx2:#3D4450;--mut:#6B7280;--acc:#0C9C97;--amb:#B5760A;--grn:#1F9256;--red:#D2483A;
@@ -89,7 +104,11 @@ svg{pointer-events:none}
 .avatar-btn img{width:100%;height:100%;object-fit:cover}
 .head{display:flex;align-items:center;gap:10px}
 .head h1{flex:1;font-size:20px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.search{display:flex;align-items:center;gap:10px;height:44px;padding:0 14px;border-radius:14px}
+.search{display:flex;align-items:center;gap:7px;height:44px;padding:0 6px 0 12px;border-radius:14px}
+.search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.search .x{flex:none;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;color:var(--mut)}
+.search input:placeholder-shown ~ .x{visibility:hidden}
+.pill.cero{opacity:.45}
 .search input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--tx);font:inherit;font-size:16px}
 .search:focus-within{border-color:var(--acc)}
 .seg{display:flex;border-radius:999px;padding:3px}
@@ -215,7 +234,7 @@ label.f input:focus{border-color:var(--acc)}
   <div class="capsule">
     <a href="#/" data-tab="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17.5 13.5h.01"/></svg>Colección</a>
     <a href="#/buscar" data-tab="buscar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Buscar</a>
-    <a href="#/finanzas" data-tab="finanzas"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9v9z"/><path d="M14 2.5A9 9 0 0 1 21.5 10H14z"/></svg>Balance</a>
+    <a href="#/finanzas" data-tab="finanzas"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V5.5A1.5 1.5 0 0 0 17.5 4H5a2 2 0 0 0 0 4h14a1 1 0 0 1 1 1v3"/><path d="M3 6v12a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M21 12v4h-4a2 2 0 0 1 0-4z"/></svg>Balance</a>
   </div>
 </div></nav>
 <div id="ptr" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.9-4M4 4v4h4M4 13a8 8 0 0 0 14.9 4M20 20v-4h-4"/></svg></div>
@@ -406,14 +425,23 @@ function htmlLista(c) {
   return '<div class="list">' + l.map(g => filaJuego(g, false)).join('') + '</div>';
 }
 
+// cuántas unidades hay de cada situación entre las que coinciden con lo escrito
+function contarSits(juegos, q) {
+  q = (q || '').trim().toLowerCase(); const o = {};
+  juegos.forEach(g => { if (q && !String(g['Título']).toLowerCase().includes(q)) return; const s = g['Situación'] || 'Sin situación'; o[s] = (o[s] || 0) + 1; });
+  return o;
+}
+function pintarCuentas(juegos, q) {
+  const o = contarSits(juegos, q);
+  document.querySelectorAll('.cab .pill[data-v]').forEach(b => { const k = o[b.dataset.v] || 0; b.querySelector('.n').textContent = k; b.classList.toggle('cero', !k); });
+}
+
 function vConsola(id) {
   const c = IDX.consolas.find(x => x.id === id);
   if (!c) return vNoEncontrado();
   const { sit } = juegosFiltrados(c);
-  const chips = c.sits.map(s => {
-    const cnt = c.juegos.filter(g => (g['Situación'] || 'Sin situación') === s).length;
-    return `<button class="pill ${s === sit ? 'on' : ''}" data-act="filtro" data-v="${esc(s)}">${esc(s)}<span class="n">${cnt}</span></button>`;
-  }).join('');
+  const cuentas = contarSits(c.juegos, S.q[c.id]);
+  const chips = c.sits.map(s => `<button class="pill ${s === sit ? 'on' : ''} ${cuentas[s] ? '' : 'cero'}" data-act="filtro" data-v="${esc(s)}">${esc(s)}<span class="n">${cuentas[s] || 0}</span></button>`).join('');
   return `<div class="wrap pg">
     ${cab({ titulo: esc(c.nombre), volver: '#/',
       derecha: `<div class="seg" role="group" aria-label="Vista">
@@ -421,7 +449,7 @@ function vConsola(id) {
           <button class="${S.ui.view === 'shelf' ? 'on' : ''}" data-act="view" data-v="shelf" aria-label="Estantería">${ICON.shelf}</button></div>`,
       extra: `<div style="display:flex;gap:8px;align-items:center">
         <label class="search" style="flex:1;min-width:0">${ICON.search}<span class="sr">Buscar en ${esc(c.nombre)}</span>
-          <input id="qc" data-c="${esc(c.id)}" type="search" placeholder="Filtrar por nombre" value="${esc(S.q[c.id] || '')}" autocomplete="off"></label>
+          <input id="qc" data-c="${esc(c.id)}" type="search" placeholder="Filtrar por nombre" value="${esc(S.q[c.id] || '')}" autocomplete="off"><button type="button" class="x" data-act="limpiar" aria-label="Borrar"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".35"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round"/></svg></button></label>
         <label class="sortpick glass">${ICON.sort}<select id="ssel" aria-label="Ordenar">${Object.entries(SORTS).map(([k, t]) => `<option value="${k}" ${S.ui.sort === k ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
       </div>
       <div class="row-scroll">${chips}</div>` })}
@@ -541,10 +569,11 @@ function vJuego(gid) {
 
 function vBuscar() {
   const sits = []; IDX.juegos.forEach(g => { if (g['Situación'] && !sits.includes(g['Situación'])) sits.push(g['Situación']); });
-  const chips = sits.map(s => `<button class="pill ${S.gsit === s ? 'on' : ''}" data-act="gsit" data-v="${esc(s)}">${esc(s)}<span class="n">${IDX.juegos.filter(g => g['Situación'] === s).length}</span></button>`).join('');
+  const cuentas = contarSits(IDX.juegos, S.gq);
+  const chips = sits.map(s => `<button class="pill ${S.gsit === s ? 'on' : ''} ${cuentas[s] ? '' : 'cero'}" data-act="gsit" data-v="${esc(s)}">${esc(s)}<span class="n">${cuentas[s] || 0}</span></button>`).join('');
   return `<div class="wrap pg">
     ${cab({ titulo: 'Buscar', grande: true, extra: `<label class="search">${ICON.search}<span class="sr">Buscar en toda la colección</span>
-        <input id="qg" type="search" placeholder="Título, en todas las consolas" value="${esc(S.gq)}" autocomplete="off"></label>
+        <input id="qg" type="search" placeholder="Título, en todas las consolas" value="${esc(S.gq)}" autocomplete="off"><button type="button" class="x" data-act="limpiar" aria-label="Borrar"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".35"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round"/></svg></button></label>
       <div class="row-scroll">${chips}</div>` })}
     <div id="lista">${htmlBuscar()}</div>
   </div>`;
@@ -562,6 +591,15 @@ function htmlBuscar() {
 }
 
 // Balance: lee la pestaña Finanzas tal cual (la app no recalcula esas cifras)
+// Caja principal: valor de la colección solo y grande; debajo filas de dos datos.
+function cajaBalance({ valor, balance, optimista, fila1, fila2 }) {
+  const par = (a, b) => `<div class="par"><div><span>${a[0]}</span><b>${a[1]}</b></div><div><span>${b[0]}</span><b>${b[1]}</b></div></div>`;
+  return `<div class="card caja-bal">
+    <div class="cb-valor"><span>Valor de la colección</span><b>${eur(valor)}</b></div>
+    ${fila1 ? fila1.map(f => par(f[0], f[1])).join('') : par(['Balance', signo(balance)], ['Si vendes', signo(optimista)])}
+    ${fila2 ? par(fila2[0], fila2[1]) : ''}
+  </div>`;
+}
 const consolaDeSistema = sis => IDX.consolas.find(c => c.hoja === sis);
 const coste = v => v == null ? '—' : `<span class="${v > 0 ? '' : 'pos'}">${eur(v, 2)}</span>`; // >0 = te cuesta; ≤0 = ganas
 function vFinanzas() {
@@ -581,13 +619,9 @@ function vFinanzas() {
       </div></a>`;
   return `<div class="wrap pg stack" style="gap:16px">
     ${cab({ titulo: 'Balance', grande: true })}
-    ${filas.length ? `<div class="card big2" style="gap:0">
-      <div><span>Valor de la colección</span><b style="color:var(--amb);font-size:26px">${eur(tot('Valor colección'))}</b></div>
-      <div><span>Balance</span><b style="font-size:26px">${signo(tot('Inversión actual'))}</b></div>
-      <div><span>Si vendes lo que está en venta</span><b>${signo(tot('Inversión optimista'))}</b></div>
-      <div><span>Compras · Ventas</span><b style="font-size:15px;padding-top:6px">${eur(tot('Compras'))} · ${eur(tot('Ventas'))}</b></div>
-    </div>
-    <p class="muted" style="margin:-6px 4px 0;font-size:12px">Suma de las ${filas.length} consolas fiables de tu pestaña Finanzas.</p>` : '<div class="empty">Sin datos de la pestaña Finanzas.</div>'}
+    ${filas.length ? cajaBalance({ valor: tot('Valor colección'), balance: tot('Inversión actual'), optimista: tot('Inversión optimista'),
+      fila2: [['Compras', eur(tot('Compras'))], ['Ventas', eur(tot('Ventas'))]] })
+      + '<h2 class="sec-t">Por consola</h2>' : '<div class="empty">Sin datos de la pestaña Finanzas.</div>'}
     ${filas.map(card).join('')}
   </div>`;
 }
@@ -597,19 +631,20 @@ function vBalanceConsola(sis) {
   const r = ((f && f.filas) || []).find(x => x['Sistema'] === sis);
   if (!r) return vNoEncontrado();
   const c = consolaDeSistema(sis);
-  const datos = `<div class="card big2" style="gap:0">
-      <div><span>Valor de la colección</span><b style="color:var(--amb);font-size:26px">${eur(n(r['Valor colección']))}</b></div>
-      <div><span>Balance</span><b style="font-size:26px">${signo(n(r['Inversión actual']))}</b></div>
-      <div><span>Si vendes lo que está en venta</span><b>${signo(n(r['Inversión optimista']))}</b></div>
-      <div><span>Juegos</span><b>${esc(nfmt(r['Nº de juegos']))}</b></div>
-    </div>
+  const sistemas = ((f && f.filas) || []).map(x => x['Sistema']), pos = { i: sistemas.indexOf(sis), total: sistemas.length };
+  const enVenta = c ? c.juegos.filter(g => g['Situación'] === 'En venta').length : null;
+  const opt = n(r['Inversión optimista']), act = n(r['Inversión actual']);
+  const filas1 = [[['Juegos', esc(nfmt(r['Nº de juegos']))], ['Balance', signo(act)]]];
+  if (enVenta) filas1.push([['En venta', String(enVenta)], ['Si vendes', signo(opt)]]);
+  else if (enVenta == null && opt !== act) filas1.push([['En venta', '—'], ['Si vendes', signo(opt)]]);
+  const datos = `${cajaBalance({ valor: n(r['Valor colección']), fila1: filas1 })}
     <div class="card kv">
       <div><span>Compras</span><b>${eur(n(r['Compras']), 2)}</b></div>
       <div><span>Ventas</span><b>${eur(n(r['Ventas']), 2)}</b></div>
       <div><span>Coste por juego</span><b>${coste(n(r['Precio u. actual']))}</b></div>
-      <div><span>Coste por juego si vendes lo que está en venta</span><b>${coste(n(r['Precio u. optimista']))}</b></div>
+      ${enVenta !== 0 ? `<div><span>Coste por juego si vendes</span><b>${coste(n(r['Precio u. optimista']))}</b></div>` : ''}
     </div>
-    <p class="muted" style="margin:-6px 4px 0;font-size:12px;line-height:1.5">Coste por juego: lo que te ha costado de media cada juego que conservas, descontando lo vendido. En verde, si sales ganando.</p>`;
+    <p class="muted" style="margin:-6px 4px 0;font-size:12px;line-height:1.5">Coste por juego: lo que te ha costado de media cada juego, descontando lo vendido. En verde, si sales ganando. «Si vendes»: vendiendo por su valor lo que tienes en venta.</p>`;
   let extra = '';
   if (c) {
     const sits = c.sits.filter(s => s !== 'Vendido');
@@ -630,8 +665,8 @@ function vBalanceConsola(sis) {
     <a class="secbtn glass" href="#/c/${esc(c.id)}">Ver los juegos de ${esc(c.nombre)}</a>`;
   }
   return `<div class="wrap pg stack" style="gap:16px">
-    ${cab({ titulo: esc(sis), volver: '#/finanzas' })}
-    ${r['Logo'] ? `<img alt="" src="${esc(r['Logo'])}" style="max-width:60%;max-height:110px;object-fit:contain;margin:0 auto">` : ''}
+    ${cab({ titulo: esc(sis), volver: '#/finanzas', derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
+    ${r['Logo'] ? `<div style="padding:18px 0 14px;display:grid;place-items:center"><img alt="" src="${esc(r['Logo'])}" style="max-width:58%;max-height:120px;object-fit:contain"></div>` : ''}
     ${datos}${extra}
   </div>`;
 }
@@ -660,7 +695,63 @@ function vAjustes() {
         <div><span>Clave</span><b>Guardada en este dispositivo</b></div></div>
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v16 · solo lectura · para editar, usa la hoja</p>
+    <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v17 · solo lectura · para editar, usa la hoja</p>
+  </div>`;
+}
+
+// Guía de estilos: se pinta con los mismos estilos de la app, así nunca se desfasa
+function vEstilos() {
+  const tok = [['--bg', 'Fondo'], ['--s1', 'Superficie'], ['--glass', 'Cristal (tarjetas)'], ['--gline', 'Borde cristal'],
+    ['--tx', 'Texto'], ['--tx2', 'Texto secundario'], ['--mut', 'Texto apagado'], ['--acc', 'Acento / acción'],
+    ['--amb', 'Valor (€)'], ['--grn', 'Positivo'], ['--red', 'Negativo / peligro']];
+  const tipos = [
+    ['Título de sección del menú', '28 · 700 · −2,5%', '<div class="disp" style="font-size:28px">Colección</div>'],
+    ['Cifra principal', '34 · 700 · ámbar', '<div class="disp" style="font-size:34px;color:var(--amb)">10.485 €</div>'],
+    ['Cifra secundaria', '19 · 700', '<div class="disp" style="font-size:19px">−2858 €</div>'],
+    ['Título de ficha', '19 · 600', '<div style="font-size:19px;font-weight:600">Kid Chameleon</div>'],
+    ['Título de cabecera', '16 · 700 · centrado', '<div style="font-size:16px;font-weight:700">Mega Drive</div>'],
+    ['Título de bloque', '15 · 600', '<div style="font-size:15px;font-weight:600">Segunda mano</div>'],
+    ['Cuerpo', '14 · 500', '<div style="font-size:14px">Actualizar datos de la hoja</div>'],
+    ['Título en listado', '13 · 600', '<div style="font-size:13px;font-weight:600">Streets of Rage 2</div>'],
+    ['Etiqueta de grupo', '12 · 600 · mayúsculas', '<div class="eyebrow">Datos de la hoja</div>'],
+    ['Dato pequeño / ayuda', '11–12 · apagado', '<div class="muted" style="font-size:12px">Valor de la colección</div>']];
+  const ej = IDX.juegos[0];
+  return `<div class="wrap pg stack" style="gap:18px">
+    ${cab({ titulo: 'Guía de estilos', volver: '#/ajustes' })}
+    <p class="muted" style="margin:0;font-size:13px;line-height:1.5">Fuente Manrope. Cambia entre claro y oscuro en Ajustes para ver los dos temas.</p>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Colores</h2>
+      <div class="sw">${tok.map(([v, t]) => `<div class="glass"><i style="background:var(${v})"></i><span><b>${t}</b><small>${v}</small></span></div>`).join('')}</div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Situaciones</h2>
+      <div class="card demo">${Object.keys(SIT).map(chip).join('')}</div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Escala de estado (0,5 → 5)</h2>
+      <div class="card demo" style="gap:4px">${Object.entries(COL_NOTA).sort((a, b) => a[0] - b[0]).map(([k, c]) => `<span style="flex:1;min-width:24px;text-align:center;font-size:11px;font-weight:700;padding:8px 0;border-radius:8px;background:${c};color:#fff">${nfmt(+k)}</span>`).join('')}</div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Tipografía</h2>
+      <div class="card tipo">${tipos.map(([t, m, h]) => `<div>${h}<small>${t} · ${m}</small></div>`).join('')}</div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Botones</h2>
+      <button class="btn">Acción principal</button>
+      <a class="secbtn glass" href="#/estilos">Acción secundaria</a>
+      <button class="secbtn glass" style="color:var(--red);width:100%">Acción peligrosa</button>
+      <div class="tiendas"><a class="tienda"><b>eBay</b></a><a class="tienda"><b>Vinted</b></a><a class="tienda"><b>Wallapop</b></a></div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Etiquetas y filtros</h2>
+      <div class="card demo">
+        <button class="pill on">Activo<span class="n">12</span></button><button class="pill">Inactivo<span class="n">4</span></button><button class="pill cero">Sin resultados<span class="n">0</span></button>
+        <span class="status"><i style="background:#86E3AE"></i>Situación en ficha</span>
+        <span class="tag">Completo</span><span class="tag">${ICON.star}4,5</span>
+      </div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Campos</h2>
+      <div style="display:flex;gap:8px"><label class="search" style="flex:1;min-width:0">${ICON.search}<input type="search" placeholder="Filtrar por nombre"></label>
+        <label class="sortpick glass">${ICON.sort}<select><option>Estado</option></select></label></div>
+      <div class="seg ancho glass"><button class="on">Uno</button><button>Dos</button><button>Tres</button></div></section>
+    ${ej ? `<section class="stack" style="gap:8px"><h2 class="eyebrow">Fila de juego</h2><div class="list" style="padding-top:0">${filaJuego(ej, true)}</div></section>` : ''}
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Caja de cifras</h2>
+      ${cajaBalance({ valor: 10485, fila1: [[['Balance', signo(-2858)], ['Si vendes', signo(-2240)]]], fila2: [['Compras', eur(12726)], ['Ventas', eur(9868)]] })}</section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Iconos</h2>
+      <div class="card demo" style="gap:16px;color:var(--tx2)">${Object.values(ICON).join('')}</div></section>
+    <section class="stack" style="gap:8px"><h2 class="eyebrow">Medidas</h2>
+      <div class="card kv"><div><span>Márgenes laterales</span><b>16 px</b></div><div><span>Radio de tarjetas</span><b>20 px</b></div>
+        <div><span>Radio de campos y botones de tienda</span><b>14 px</b></div><div><span>Altura de campos</span><b>44 px</b></div>
+        <div><span>Botones redondos</span><b>42 px</b></div><div><span>Separación entre bloques</span><b>16–22 px</b></div></div></section>
   </div>`;
 }
 
@@ -674,6 +765,7 @@ function contexto(g) {
   return S.ctx;
 }
 let SW = null, animando = false;
+function irBalance(paso) { const f = S.data && S.data.finanzas; pasar(paso, ((f && f.filas) || []).map(x => x['Sistema']), ruta().b, id => '#/b/' + encodeURIComponent(id)); }
 function irConsola(paso) { pasar(paso, IDX.consolas.map(c => c.id), ruta().b, id => '#/c/' + encodeURIComponent(id)); }
 function irJuego(paso) { pasar(paso, S.ctx || [], ruta().b, id => '#/j/' + encodeURIComponent(id)); }
 function pasar(paso, ids, cur, hashDe) {
@@ -707,6 +799,7 @@ document.addEventListener('touchend', e => {
   if (enScroll) return;
   if (ruta().a === 'j') irJuego(dx < 0 ? 1 : -1);                 // en la ficha: juego anterior / siguiente
   else if (ruta().a === 'c') irConsola(dx < 0 ? 1 : -1);          // en un listado: consola anterior / siguiente
+  else if (ruta().a === 'b') irBalance(dx < 0 ? 1 : -1);          // en el detalle de Balance: consola anterior / siguiente
 }, { passive: true });
 document.addEventListener('keydown', e => { if (ruta().a === 'j' && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) irJuego(e.key === 'ArrowRight' ? 1 : -1); });
 
@@ -733,6 +826,7 @@ function render() {
   else if (r.a === 'buscar') html = vBuscar();
   else if (r.a === 'finanzas') html = vFinanzas();
   else if (r.a === 'b') html = vBalanceConsola(r.b);
+  else if (r.a === 'estilos') html = vEstilos();
   else if (r.a === 'ajustes') html = vAjustes();
   else html = vHome();
   const keepScroll = render._last === location.hash;
@@ -756,6 +850,7 @@ document.addEventListener('click', e => {
   else if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); render(); }
   else if (act === 'mas') { const c = t.closest('.clamp'); c.classList.toggle('open'); t.textContent = c.classList.contains('open') ? 'Menos' : 'Más'; }
   else if (act === 'back') volver(v);
+  else if (act === 'limpiar') { const i = t.closest('.search').querySelector('input'); i.value = ''; i.dispatchEvent(new Event('input', { bubbles: true })); i.focus(); }
   else if (act === 'tema') { S.ui.tema = v; LS.set('rp.ui', S.ui); aplicarTema(); render(); }
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
 });
@@ -763,8 +858,8 @@ document.addEventListener('change', e => {
   if (e.target.id === 'ssel') { S.ui.sort = e.target.value; LS.set('rp.ui', S.ui); render(); }
 });
 document.addEventListener('input', e => {
-  if (e.target.id === 'qc') { const id = e.target.dataset.c; S.q[id] = e.target.value; const c = IDX.consolas.find(x => x.id === id); $('#lista').innerHTML = htmlLista(c); }
-  else if (e.target.id === 'qg') { S.gq = e.target.value; $('#lista').innerHTML = htmlBuscar(); }
+  if (e.target.id === 'qc') { const id = e.target.dataset.c; S.q[id] = e.target.value; const c = IDX.consolas.find(x => x.id === id); $('#lista').innerHTML = htmlLista(c); pintarCuentas(c.juegos, S.q[id]); }
+  else if (e.target.id === 'qg') { S.gq = e.target.value; $('#lista').innerHTML = htmlBuscar(); pintarCuentas(IDX.juegos, S.gq); }
 });
 document.addEventListener('submit', async e => {
   if (e.target.id !== 'fsetup') return;

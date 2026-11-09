@@ -1,6 +1,6 @@
 // RetroPi — service worker: guarda la "carcasa" de la app para que abra rápido y sin conexión.
 // Los datos de la colección NO pasan por aquí (se guardan aparte en el dispositivo).
-const VERSION = 'retropi-v16';
+const VERSION = 'retropi-v17';
 const LOGOS = 'retropi-logos'; // logos de consola: se guardan una vez y se sirven desde el dispositivo
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/avatar.jpg', './icons/apple-touch-icon.png'];
 
