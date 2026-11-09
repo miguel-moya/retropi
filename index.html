@@ -315,9 +315,9 @@ const coverBg = g => `background:hsl(${hue(g.ID)},38%,28%)`;
 // Portada: primero la descargada de ScreenScraper (covers/map.json, en el propio repositorio); si no, la URL de la hoja
 let PORTADAS = {};
 // Las imágenes viven en la rama «portadas» (fuera de la web publicada, así cada cambio de la app se publica en segundos).
-// La lista se lee de GitHub directamente (siempre al día) y las imágenes por la CDN de jsDelivr.
+// Lista e imágenes se leen directamente de GitHub (siempre al día).
 const RAMA_RAW = 'https://raw.githubusercontent.com/miguel-moya/retropi/portadas/';
-const RAMA_CDN = 'https://cdn.jsdelivr.net/gh/miguel-moya/retropi@portadas/';
+const RAMA_CDN = RAMA_RAW; // (comprobado: GitHub sirve las imágenes con su tipo correcto)
 try { PORTADAS = JSON.parse(localStorage.getItem('rp.portadas')) || {}; } catch (_) {}
 fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).then(m => {
   if (!m) return; const cambio = JSON.stringify(m) !== JSON.stringify(PORTADAS); PORTADAS = m;
