@@ -125,6 +125,8 @@ svg{pointer-events:none}
 .rows span{display:flex;flex-direction:column;gap:1px;font-size:13px}
 .rows small{color:var(--mut);font-size:12px}
 .tiendas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.tterm{display:flex;align-items:center;gap:8px;padding:0 12px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--gline);color:var(--tx2)}
+.tterm input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--tx);font:inherit;font-size:14px}
 .tienda{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 6px;border-radius:14px;text-decoration:none;color:var(--tx);background:color-mix(in srgb,var(--c) 18%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent)}
 .tienda b{font-size:14px}
 .tienda small{font-size:11px;color:var(--tx2)}
@@ -390,21 +392,37 @@ const ROWICON = {
 };
 
 const PLAT = { megadrive: 'Mega Drive', mastersystem: 'Master System', nes: 'NES' };
-function tiendas(g) {
-  const term = `${g['Título']} ${PLAT[g._c] || g._cn}`;
+const TERM = {}; // ajustes puntuales del término, solo en esta sesión
+function tUrls(term) {
   const q = encodeURIComponent(term), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
-  const ebay = `https://www.ebay.es/sch/i.html?_nkw=${q}${vendidos ? '&LH_Sold=1&LH_Complete=1' : ''}${barato ? '&_sop=15' : ''}`;
-  const vinted = `https://www.vinted.es/catalog?search_text=${q}${barato ? '&order=price_low_to_high' : ''}`;
-  const walla = `https://es.wallapop.com/app/search?keywords=${q}${barato ? '&order_by=price_low_to_high' : ''}`;
-  const btn = (url, nombre, color, sub) => `<a href="${esc(url)}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
+  return {
+    ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}${vendidos ? '&LH_Sold=1&LH_Complete=1' : ''}${barato ? '&_sop=15' : ''}`,
+    vinted: `https://www.vinted.es/catalog?search_text=${q}${barato ? '&order=price_low_to_high' : ''}`,
+    walla: `https://es.wallapop.com/app/search?keywords=${q}${barato ? '&order_by=price_low_to_high' : ''}`,
+  };
+}
+function tiendas(g) {
+  const base = `${g['Nombre clave'] || g['Título']} ${PLAT[g._c] || g._cn}`;
+  const term = TERM[g.ID] ?? base;
+  const u = tUrls(term), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+  const btn = (k, nombre, color, sub) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
-    <div class="muted" style="font-size:12px">Busca «<span style="color:var(--tx)">${esc(term)}</span>»</div>
-    <div class="tiendas">${btn(ebay, 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn(vinted, 'Vinted', '#09B1BA', 'En venta')}${btn(walla, 'Wallapop', '#13C1AC', 'En venta')}</div>
+    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"></label>
+    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn('vinted', 'Vinted', '#09B1BA', 'En venta')}${btn('walla', 'Wallapop', '#13C1AC', 'En venta')}</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="pill ${barato ? 'on' : ''}" data-act="opt" data-v="barato">Más baratos primero</button>
       <button class="pill ${vendidos ? 'on' : ''}" data-act="opt" data-v="vendidos">eBay: ya vendidos</button>
-    </div></div>`;
+    </div>
+    <div class="muted" style="font-size:11px">Puedes retocar el texto para esta búsqueda. Para cambiarlo siempre, edita «Nombre clave» en la hoja.</div></div>`;
 }
+document.addEventListener('input', e => {
+  const el = e.target;
+  if (el.id !== 'tterm') return;
+  const v = el.value;
+  if (v.trim() && v !== el.dataset.base) TERM[el.dataset.id] = v; else delete TERM[el.dataset.id];
+  const u = tUrls(v.trim() || el.dataset.base);
+  document.querySelectorAll('.tienda[data-t]').forEach(a => { a.href = u[a.dataset.t]; });
+});
 
 function vJuego(gid) {
   const g = IDX.porId[gid];
