@@ -408,7 +408,10 @@ const sinAcentos = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').repla
 function tUrls(nombre, c) {
   const plat = PLAT[c] || '';
   const q = encodeURIComponent(sinAcentos(`${nombre} ${plat}`)); // eBay y Wallapop: título + consola
-  const qv = encodeURIComponent(sinAcentos(nombre));              // Vinted: solo título, filtra por Juegos + plataforma
+  // Vinted: en ordenador, solo título + filtro de plataforma. La app del móvil ignora la plataforma
+  // y no entiende %20, así que en móvil añadimos la consola y separamos con «+».
+  const movil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
+  const qv = encodeURIComponent(sinAcentos(movil ? `${nombre} ${plat}` : nombre)).replace(/%20/g, '+');
   const vp = VINTED_PLAT[c];
   return {
     ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}&_sop=10`,
@@ -572,7 +575,7 @@ function vAjustes() {
     <p class="muted" style="margin:-8px 4px 0;font-size:12px;line-height:1.5">Para recargar la app, desliza hacia abajo desde arriba en cualquier pantalla.</p>
     <a class="btn sec2" href="#/conectar" style="text-decoration:none">Cambiar URL o clave</a>
     <button class="btn sec2" data-act="olvidar" style="color:var(--red)">Olvidar la clave en este dispositivo</button>
-    <p class="muted" style="font-size:12px;line-height:1.5">La clave y la copia de tus datos se guardan solo en este dispositivo. RetroPi v12 · solo lectura.</p>
+    <p class="muted" style="font-size:12px;line-height:1.5">La clave y la copia de tus datos se guardan solo en este dispositivo. RetroPi v13 · solo lectura.</p>
   </div>`;
 }
 
