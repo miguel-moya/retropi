@@ -164,22 +164,25 @@ body.sin-scroll{overflow:hidden}
 .money{font-weight:700;font-size:14px;color:var(--amb)}
 .pos{color:var(--grn)} .neg{color:var(--red)}
 /* estantería */
-.shelf{position:relative;margin:12px -16px 0;padding:26px 0 120px;min-height:calc(100vh - 170px);display:flex;flex-direction:column;gap:44px;
-  background:radial-gradient(110% 60% at 50% 30%,#22252c 0%,#121418 60%,#08090b 100%)}
+.shelf{position:relative;margin:0 -16px;padding:34px 0 120px;min-height:calc(100vh - 170px);display:flex;flex-direction:column;gap:44px;
+  background:linear-gradient(180deg,var(--bg) 0,rgba(18,21,27,0) 140px),radial-gradient(110% 60% at 50% 35%,#22252c 0%,#121418 60%,#08090b 100%)}
 .shelf:before{content:'';position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:3px 3px}
-:root[data-tema=claro] .shelf{background:radial-gradient(110% 60% at 50% 30%,#fbfbfc 0%,#e9ebef 60%,#d6d9df 100%)}
+:root[data-tema=claro] .shelf{background:linear-gradient(180deg,var(--bg) 0,rgba(242,243,246,0) 140px),radial-gradient(110% 60% at 50% 35%,#fbfbfc 0%,#e9ebef 60%,#d6d9df 100%)}
 .shelf > div{position:relative}
 .shelf .items{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:0 30px;align-items:end}
 .balda{position:relative;height:36px;margin-top:-14px;z-index:1}
 .balda i{position:absolute;display:block}
 .balda .bt{left:0;right:0;top:0;height:24px;clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.12))}
-.balda .bc{left:0;right:0;top:24px;height:5px;background:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.05));border-top:1px solid rgba(255,255,255,.8);border-radius:0 0 2px 2px}
+.balda .bc{left:0;right:0;top:24px;height:5px;background:linear-gradient(rgba(255,255,255,.14),rgba(255,255,255,.03));border-top:1px solid rgba(255,255,255,.32);border-radius:0 0 2px 2px}
 .balda .bs{left:4%;right:4%;top:30px;height:26px;background:radial-gradient(60% 100% at 50% 0,rgba(0,0,0,.75),transparent)}
 :root[data-tema=claro] .balda .bt{background:linear-gradient(180deg,rgba(20,24,32,.03),rgba(20,24,32,.10))}
 :root[data-tema=claro] .balda .bc{background:linear-gradient(rgba(20,24,32,.12),rgba(20,24,32,.04));border-top-color:rgba(255,255,255,.95)}
 :root[data-tema=claro] .balda .bs{background:radial-gradient(60% 100% at 50% 0,rgba(20,24,32,.25),transparent)}
-.box{position:relative;width:100%;aspect-ratio:.712;border-radius:2px;overflow:hidden;-webkit-box-reflect:below 2px linear-gradient(transparent 82%,rgba(255,255,255,.18));display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 14px -6px rgba(0,0,0,.8)}
-.box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.box{position:relative;width:100%;aspect-ratio:.712;border-radius:2px;display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 14px -6px rgba(0,0,0,.8)}
+.box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
+.box img.refl{top:calc(100% + 3px);bottom:auto;transform:scaleY(-1);opacity:.28;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to top,#000 0,transparent 20%);mask-image:linear-gradient(to top,#000 0,transparent 20%)}
+:root[data-tema=claro] .box img.refl{opacity:.2}
 .box .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:9px;padding:2px 6px;z-index:1}
 /* ficha */
 .hero{position:relative;max-width:560px;margin:0 auto;padding:calc(var(--st) + 58px) 16px 6px;text-align:center}
@@ -476,7 +479,7 @@ function htmlLista(c) {
   if (S.ui.view === 'shelf') {
     let out = '<div class="shelf">';
     for (let i = 0; i < l.length; i += 3) {
-      out += '<div><div class="items">' + l.slice(i, i + 3).map(g => `<a class="box" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="${coverBg(g)};text-decoration:none">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
+      out += '<div><div class="items">' + l.slice(i, i + 3).map(g => `<a class="box" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="${coverBg(g)};text-decoration:none">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()"><img class="refl" loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
     }
     return out + '</div>';
   }
@@ -835,7 +838,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v24 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v25 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
