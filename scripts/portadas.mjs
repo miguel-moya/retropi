@@ -128,7 +128,7 @@ for (const [k, j] of titulos) {
     await espera(1200);
   } catch (e) { fallos++; console.log(`! ${j.c} · ${j.t}: ${e.message}`); if (/quota|429/.test(e.message)) break; }
 }
-// 3) extras (EXTRAS=1): logo, fondo (fanart) y captura de pantalla de cada juego ya identificado
+// 3) extras (EXTRAS=1): logo de cada juego ya identificado (fondo y captura se descartaron: la ficha usa la portada difuminada)
 if (E.EXTRAS) {
   const media = (jeu, tipos, regiones) => { const ms = jeu.medias || [];
     for (const t of tipos) { const c = ms.filter(m => m.type === t); if (!c.length) continue;
@@ -149,10 +149,8 @@ if (E.EXTRAS) {
         const f = `${base}${sufijo}`; await fs.writeFile(f, Buffer.from(await r.arrayBuffer())); return f;
       };
       v.logo = await bajar(media(jeu, ['wheel-hd', 'wheel'], REGIONES), '-logo.png', 'maxwidth=600&outputformat=png');
-      v.fondo = await bajar(media(jeu, ['fanart'], ['wor', ...REGIONES]), '-fondo.jpg', 'maxwidth=1100&outputformat=jpg');
-      v.captura = await bajar(media(jeu, ['ss'], REGIONES), '-captura.jpg', 'maxwidth=640&outputformat=jpg');
       v.extras = true; hechos++;
-      console.log(`+ ${k}: ${[v.logo && 'logo', v.fondo && 'fondo', v.captura && 'captura'].filter(Boolean).join(', ') || 'nada'}`);
+      console.log(`+ ${k}: ${v.logo ? 'logo' : 'sin logo'}`);
     } catch (e) { console.log(`! extras ${k}: ${e.message}`); }
   }
   console.log(`Extras: ${hechos}`);

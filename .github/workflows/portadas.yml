@@ -9,7 +9,7 @@ on:
         type: boolean
         default: false
       extras:
-        description: 'Descargar también logo, fondo y captura'
+        description: 'Descargar también el logo'
         type: boolean
         default: false
       forzar:

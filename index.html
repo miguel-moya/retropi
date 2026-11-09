@@ -164,10 +164,21 @@ body.sin-scroll{overflow:hidden}
 .money{font-weight:700;font-size:14px;color:var(--amb)}
 .pos{color:var(--grn)} .neg{color:var(--red)}
 /* estantería */
-.shelf{background:rgba(0,0,0,.22);margin:12px -16px 0;padding:22px 0 32px;display:flex;flex-direction:column;gap:26px}
-.shelf .items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:0 22px;align-items:end}
-.plank{height:12px;margin:0 10px;background:#6B4428;border-top:3px solid #8C5E3A;border-radius:2px;box-shadow:0 10px 18px rgba(0,0,0,.55)}
-.box{position:relative;width:100%;aspect-ratio:.72;border-radius:3px 3px 1px 1px;overflow:hidden;display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 4px 0 0 rgba(0,0,0,.25),0 -2px 10px rgba(0,0,0,.35)}
+.shelf{position:relative;margin:12px -16px 0;padding:26px 0 120px;min-height:calc(100vh - 170px);display:flex;flex-direction:column;gap:44px;
+  background:radial-gradient(110% 60% at 50% 30%,#22252c 0%,#121418 60%,#08090b 100%)}
+.shelf:before{content:'';position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:3px 3px}
+:root[data-tema=claro] .shelf{background:radial-gradient(110% 60% at 50% 30%,#fbfbfc 0%,#e9ebef 60%,#d6d9df 100%)}
+.shelf > div{position:relative}
+.shelf .items{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:0 30px;align-items:end}
+.balda{position:relative;height:36px;margin-top:-14px;z-index:1}
+.balda i{position:absolute;display:block}
+.balda .bt{left:0;right:0;top:0;height:24px;clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.12))}
+.balda .bc{left:0;right:0;top:24px;height:5px;background:linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.05));border-top:1px solid rgba(255,255,255,.8);border-radius:0 0 2px 2px}
+.balda .bs{left:4%;right:4%;top:30px;height:26px;background:radial-gradient(60% 100% at 50% 0,rgba(0,0,0,.75),transparent)}
+:root[data-tema=claro] .balda .bt{background:linear-gradient(180deg,rgba(20,24,32,.03),rgba(20,24,32,.10))}
+:root[data-tema=claro] .balda .bc{background:linear-gradient(rgba(20,24,32,.12),rgba(20,24,32,.04));border-top-color:rgba(255,255,255,.95)}
+:root[data-tema=claro] .balda .bs{background:radial-gradient(60% 100% at 50% 0,rgba(20,24,32,.25),transparent)}
+.box{position:relative;width:100%;aspect-ratio:.712;border-radius:2px;overflow:hidden;-webkit-box-reflect:below 2px linear-gradient(transparent 82%,rgba(255,255,255,.18));display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 14px -6px rgba(0,0,0,.8)}
 .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .box .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:9px;padding:2px 6px;z-index:1}
 /* ficha */
@@ -188,8 +199,6 @@ body.sin-scroll{overflow:hidden}
 .hero-meta .tag{height:28px;padding:0 11px;font-size:13px;font-weight:500;gap:5px}
 .hero .cov.xl{margin:2px auto 0}
 .hero h1{margin:20px 0 12px;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.01em}
-.hero-bg img.fanart{inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);filter:blur(6px) brightness(.44) saturate(1.1)}
-:root[data-tema=claro] .hero-bg img.fanart{filter:blur(6px) brightness(1.05) saturate(1.1);opacity:.5}
 .hero-meta{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
 .status{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 11px;border-radius:999px;font-size:13px;font-weight:500;color:var(--tx2)}
 .status i{width:8px;height:8px;border-radius:50%}
@@ -467,7 +476,7 @@ function htmlLista(c) {
   if (S.ui.view === 'shelf') {
     let out = '<div class="shelf">';
     for (let i = 0; i < l.length; i += 3) {
-      out += '<div><div class="items">' + l.slice(i, i + 3).map(g => `<a class="box" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="${coverBg(g)};text-decoration:none">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`).join('') + '</div><div class="plank" aria-hidden="true"></div></div>';
+      out += '<div><div class="items">' + l.slice(i, i + 3).map(g => `<a class="box" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="${coverBg(g)};text-decoration:none">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
     }
     return out + '</div>';
   }
@@ -556,7 +565,7 @@ function vJuego(gid) {
   const g = IDX.porId[gid];
   if (!g) return vNoEncontrado();
   const p = plus(g); const vend = g['Situación'] === 'Vendido';
-  const img = portada(g), fondo = extras(g).fondo || '';
+  const img = portada(g);
   const sitCol = (SIT[g['Situación']] || ['', '#C3C8D1'])[1];
   const sub = [g._cn, g['Región']].filter(Boolean).map(esc).join(' · ');
   const ids = contexto(g); const pos = { i: ids.indexOf(g.ID), total: ids.length };
@@ -598,7 +607,7 @@ function vJuego(gid) {
       titulo: `<span class="cab-mini">${img ? `<img alt="" src="${esc(img)}">` : ''}<span>${esc(g['Nombre clave'] || g['Título'])}</span></span>`,
       derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
     <section class="hero" style="--h:${hue(g.ID)}">
-      <div class="hero-bg" aria-hidden="true">${fondo && S.ui.fondo !== 'portada' ? `<img class="fanart" alt="" src="${esc(fondo)}" onerror="this.remove()">` : img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
+      <div class="hero-bg" aria-hidden="true">${img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
       ${cover(g, 'xl')}
       <h1>${esc(g['Título'])}</h1>
       <div class="hero-meta">
@@ -811,9 +820,7 @@ function vAjustes() {
       <div class="seg ancho glass" role="group" aria-label="Tema">${[['auto', 'Automático'], ['oscuro', 'Oscuro'], ['claro', 'Claro']].map(([k, t]) =>
         `<button class="${tema === k ? 'on' : ''}" data-act="tema" data-v="${k}">${t}</button>`).join('')}</div>
       <p class="muted" style="margin:0 4px;font-size:12px">Automático sigue el modo del móvil.</p>
-      <h2 class="eyebrow" style="margin-top:10px">Fondo de la ficha</h2>
-      <div class="seg ancho glass" role="group" aria-label="Fondo de la ficha" style="grid-template-columns:1fr 1fr">${[['ilustracion', 'Ilustración del juego'], ['portada', 'Portada difuminada']].map(([k, t]) =>
-        `<button class="${(S.ui.fondo || 'ilustracion') === k ? 'on' : ''}" data-act="fondo" data-v="${k}">${t}</button>`).join('')}</div></section>
+</section>
     <section class="stack" style="gap:8px"><h2 class="eyebrow">Datos de la hoja</h2>
       <div class="card kv">
         <div><span>Actualizados</span><b>${esc(hace(gen))}${exacta ? `<br><small class="muted" style="font-weight:500">${esc(exacta)}</small>` : ''}</b></div>
@@ -828,7 +835,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v23 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v24 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -945,7 +952,6 @@ function ajustarFicha() {
   cov.style.transform = `translateY(${y * 0.35}px) scale(${1 - k * 0.45})`;
   cov.style.opacity = String(1 - Math.max(0, (k - 0.55) / 0.45));
   cabF.classList.toggle('solida', y > alto * 0.75);
-  const bg = document.querySelector('.hero-bg'); if (bg) bg.style.opacity = String(1 - Math.min(1, y / (alto * 1.6)) * 0.75);  // el fondo se apaga al bajar para que se lean bien las tarjetas
 }
 window.addEventListener('scroll', () => { if (ruta().a === 'j' && !rafFicha) rafFicha = requestAnimationFrame(ajustarFicha); }, { passive: true });
 
@@ -1009,7 +1015,6 @@ document.addEventListener('click', e => {
   else if (act === 'mas') { const c = t.closest('.clamp'); c.classList.toggle('open'); t.textContent = c.classList.contains('open') ? 'Menos' : 'Más'; }
   else if (act === 'back') volver(v);
   else if (act === 'limpiar') { const i = t.closest('.search').querySelector('input'); i.value = ''; i.dispatchEvent(new Event('input', { bubbles: true })); i.focus(); }
-  else if (act === 'fondo') { S.ui.fondo = v; LS.set('rp.ui', S.ui); render(); }
   else if (act === 'tema') { S.ui.tema = v; LS.set('rp.ui', S.ui); aplicarTema(); render(); }
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
 });
