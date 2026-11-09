@@ -1,6 +1,6 @@
 // RetroPi — service worker: guarda la "carcasa" de la app para que abra rápido y sin conexión.
 // Los datos de la colección NO pasan por aquí (se guardan aparte en el dispositivo).
-const VERSION = 'retropi-v4';
+const VERSION = 'retropi-v5';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/avatar.jpg', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
