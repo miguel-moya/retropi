@@ -101,6 +101,23 @@ body.sin-scroll{overflow:hidden}
 .tipo > div + div{border-top:1px solid rgba(var(--ink),.07)}
 .tipo small{font-size:11px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
 .demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
+/* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
+#nav{view-transition-name:menu}
+::view-transition-group(*){animation-duration:.34s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.34s;animation-timing-function:cubic-bezier(.2,.8,.2,1);animation-fill-mode:both}
+html[data-dir=push]::view-transition-old(root){animation-name:vt-sale-izq}
+html[data-dir=push]::view-transition-new(root){animation-name:vt-entra-der}
+html[data-dir=pop]::view-transition-old(root){animation-name:vt-sale-der}
+html[data-dir=pop]::view-transition-new(root){animation-name:vt-entra-izq}
+html[data-dir=tab]::view-transition-old(root){animation:.18s ease both vt-fuera}
+html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-dentro}
+@keyframes vt-sale-izq{to{transform:translateX(-18%);opacity:0}}
+@keyframes vt-entra-der{from{transform:translateX(28%);opacity:0}}
+@keyframes vt-sale-der{to{transform:translateX(28%);opacity:0}}
+@keyframes vt-entra-izq{from{transform:translateX(-18%);opacity:0}}
+@keyframes vt-fuera{to{opacity:0}}
+@keyframes vt-dentro{from{opacity:0;transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 /* modo claro */
 :root[data-tema=claro]{--bg:#F2F3F6;--s1:#FFFFFF;--s2:#E8EAEF;--glass:rgba(255,255,255,.78);--glass2:rgba(255,255,255,.95);--gline:rgba(20,24,32,.09);
   --tx:#14171D;--tx2:#3D4450;--mut:#6B7280;--acc:#0C9C97;--amb:#B5760A;--grn:#1F9256;--red:#D2483A;
@@ -180,9 +197,10 @@ body.sin-scroll{overflow:hidden}
 :root[data-tema=claro] .balda .bs{background:radial-gradient(60% 100% at 50% 0,rgba(20,24,32,.25),transparent)}
 .box{position:relative;width:100%;aspect-ratio:.712;border-radius:2px;display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 14px -6px rgba(0,0,0,.8)}
 .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
-.box img.refl{top:calc(100% + 3px);bottom:auto;transform:scaleY(-1);opacity:.28;pointer-events:none;
-  -webkit-mask-image:linear-gradient(to top,#000 0,transparent 20%);mask-image:linear-gradient(to top,#000 0,transparent 20%)}
-:root[data-tema=claro] .box img.refl{opacity:.2}
+.box img.refl{top:calc(100% + 1px);bottom:auto;transform:scaleY(-1);opacity:.16;pointer-events:none;
+  clip-path:inset(calc(100% - 9px) 0 0 0);   /* visible solo los 9 px que hay hasta el canto de la balda */
+  -webkit-mask-image:linear-gradient(to top,#000 0,transparent 9px);mask-image:linear-gradient(to top,#000 0,transparent 9px)}
+:root[data-tema=claro] .box img.refl{opacity:.12}
 .box .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:9px;padding:2px 6px;z-index:1}
 /* ficha */
 .hero{position:relative;max-width:560px;margin:0 auto;padding:calc(var(--st) + 58px) 16px 6px;text-align:center}
@@ -606,12 +624,13 @@ function vJuego(gid) {
 
   const otras = IDX.juegos.filter(x => x._c === g._c && x.ID !== g.ID && String(x['Título']).toLowerCase() === String(g['Título']).toLowerCase());
 
+  const vtHero = S.vt === g.ID ? ' style="view-transition-name:portada"' : '';
   return `${cab({ flota: true, volver: '#/c/' + g._c,
       titulo: `<span class="cab-mini">${img ? `<img alt="" src="${esc(img)}">` : ''}<span>${esc(g['Nombre clave'] || g['Título'])}</span></span>`,
       derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
     <section class="hero" style="--h:${hue(g.ID)}">
       <div class="hero-bg" aria-hidden="true">${img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
-      ${cover(g, 'xl')}
+      <div${vtHero}>${cover(g, 'xl')}</div>
       <h1>${esc(g['Título'])}</h1>
       <div class="hero-meta">
         <span class="status" title="Situación en la hoja"><i style="background:${sitCol}"></i>${esc(g['Situación'] || 'Sin situación')}</span>
@@ -838,7 +857,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v25 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v26 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -906,6 +925,7 @@ function contexto(g) {
   return S.ctx;
 }
 let SW = null, animando = false;
+const ES_APP = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
 function irBalance(paso) { const f = S.data && S.data.finanzas; pasar(paso, ((f && f.filas) || []).map(x => x['Sistema']), ruta().b, id => '#/b/' + encodeURIComponent(id)); }
 function irConsola(paso) { pasar(paso, IDX.consolas.map(c => c.id), ruta().b, id => '#/c/' + encodeURIComponent(id)); }
 function irJuego(paso) { pasar(paso, S.ctx || [], ruta().b, id => '#/j/' + encodeURIComponent(id)); }
@@ -936,7 +956,7 @@ document.addEventListener('touchend', e => {
   const horizontal = Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700;
   if (!horizontal) return;
   const b = document.querySelector('.cab [data-act="back"]');
-  if (borde && dx > 0 && b) { volver(b.dataset.v); return; }      // desde el borde: volver, como en iOS
+  if (borde && dx > 0 && b && ES_APP) { volver(b.dataset.v); return; }      // desde el borde: volver, como en iOS
   if (enScroll) return;
   if (ruta().a === 'j') irJuego(dx < 0 ? 1 : -1);                 // en la ficha: juego anterior / siguiente
   else if (ruta().a === 'c') irConsola(dx < 0 ? 1 : -1);          // en un listado: consola anterior / siguiente
@@ -970,6 +990,11 @@ mqClaro.addEventListener && mqClaro.addEventListener('change', aplicarTema);
 /* ============ router ============ */
 function ruta() { const h = location.hash.replace(/^#\/?/, ''); const [a, b] = h.split('/'); return { a: a || 'home', b: b ? decodeURIComponent(b) : '' }; }
 
+const VISTAS = new Map();
+function claveVista(r) {
+  if (!r || !['c', 'buscar', 'home', 'finanzas', 'b'].includes(r.a)) return null;
+  return JSON.stringify([r.a, r.b, S.data && S.data.generado, S.ui.view, S.ui.sort, S.filtro, S.q, S.gq, S.bf, Object.keys(PORTADAS).length, document.documentElement.dataset.tema]);
+}
 function render() {
   const r = ruta();
   const sinConfig = !S.cfg || r.a === 'conectar';
@@ -986,9 +1011,21 @@ function render() {
   else html = vHome();
   if (r.a !== 'buscar') { S.panel = false; document.body.classList.remove('sin-scroll'); }
   const keepScroll = render._last === location.hash;
-  const y = window.scrollY;
-  $('#app').innerHTML = html;
-  if (keepScroll) window.scrollTo(0, y); else window.scrollTo(0, 0);
+  const y = window.scrollY, app = $('#app');
+  // Al salir de un listado se guarda tal cual (nodos y scroll); al volver se reutiliza: sin recargar portadas ni parpadeos.
+  if (!keepScroll && render._last && claveVista(render._lastRuta)) {
+    const frag = document.createDocumentFragment(); while (app.firstChild) frag.appendChild(app.firstChild);
+    VISTAS.set(render._last, { clave: claveVista(render._lastRuta), frag, y, ctx: S.ctx });
+  }
+  const guardada = !keepScroll && VISTAS.get(location.hash);
+  if (guardada && guardada.clave === claveVista(r)) {
+    app.textContent = ''; app.appendChild(guardada.frag); S.ctx = guardada.ctx; VISTAS.delete(location.hash);
+    window.scrollTo(0, guardada.y);
+  } else {
+    app.innerHTML = html;
+    if (keepScroll) window.scrollTo(0, y); else window.scrollTo(0, 0);
+  }
+  render._lastRuta = r;
   render._last = location.hash;
   const nav = $('#nav'); nav.hidden = sinConfig;
   const tab = ['buscar', 'finanzas'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : 'home';
@@ -999,6 +1036,12 @@ function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') ren
 
 /* ============ eventos ============ */
 document.addEventListener('click', e => {
+  const enlace = e.target.closest('a.g, a.box');
+  if (enlace) {
+    document.querySelectorAll('[style*="view-transition-name"]').forEach(x => { if (x.id !== 'nav') x.style.viewTransitionName = ''; });
+    const id = decodeURIComponent((enlace.getAttribute('href') || '').split('/').pop());
+    S.vt = id; const c = enlace.querySelector('.cov') || enlace; c.style.viewTransitionName = 'portada';
+  }
   const t = e.target.closest('[data-act]'); if (!t) return;
   const act = t.dataset.act, v = t.dataset.v;
   if (act === 'sync') { cargar(); }
@@ -1041,7 +1084,21 @@ document.addEventListener('submit', async e => {
   if (ok) { S.cfg = cfg; LS.set('rp.cfg', cfg); toast('Conectado'); location.hash = '#/'; render(); }
 });
 let PASOS = 0; // navegaciones dentro de la app (para saber si «volver» puede usar el historial)
-window.addEventListener('hashchange', () => { PASOS++; render(); });
+const PROFUNDIDAD = a => ({ c: 1, b: 1, ajustes: 1, j: 2, estilos: 2 })[a] || 0;
+let rutaPrevia = ruta().a;
+window.addEventListener('hashchange', e => {
+  PASOS++;
+  const nueva = ruta().a, pa = PROFUNDIDAD(rutaPrevia), pn = PROFUNDIDAD(nueva); rutaPrevia = nueva;
+  const dir = pn > pa ? 'push' : pn < pa ? 'pop' : 'tab';
+  // si el propio navegador ya anima (gesto de volver de Safari), no se añade otra animación encima
+  if (e.hasUAVisualTransition || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    render();
+    if (!e.hasUAVisualTransition && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    return;
+  }
+  document.documentElement.dataset.dir = dir;
+  document.startViewTransition(() => render());
+});
 function volver(fallback) { if (PASOS > 0) { PASOS -= 2; history.back(); } else location.hash = fallback || '#/'; }
 
 /* ============ deslizar hacia abajo para recargar la app ============ */
