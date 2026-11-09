@@ -113,7 +113,10 @@ svg{pointer-events:none}
 .detail{padding-top:8px}
 .sec{margin-top:22px}
 .sec > h2{margin:0 0 10px;font-size:15px;font-weight:600}
-.vbig{display:flex;justify-content:space-between;align-items:flex-end;padding:16px 16px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+.vbig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end;padding:16px 0 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+.vbig > *{padding:0 16px}
+.pclink{display:flex;flex-direction:column;gap:2px;color:inherit;text-decoration:none}
+.pclink span{display:inline-flex;align-items:center;gap:3px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid2{padding:6px 0}
 .grid2 > div{padding:8px 16px;display:flex;flex-direction:column;gap:2px}
@@ -279,7 +282,7 @@ const ICON = {
   rows: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>',
   shelf: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16M9 6v14M14 6v14M17.5 6.5l3.5 13"/></svg>',
   star: '<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>',
-  ext: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  ext: '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>',
 };
 const SORTS = { hoja: 'Estado', valor: 'Valor', az: 'A–Z' };
 
@@ -402,32 +405,25 @@ const TERM = {}; // ajustes puntuales del término, solo en esta sesión
 const VINTED_PLAT = { megadrive: 1285, mastersystem: 1285, nes: 1268 }; // Master System se publica en Mega Drive
 const sinAcentos = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
 function tUrls(nombre, c) {
-  const plat = PLAT[c] || '', barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
-  const q = encodeURIComponent(sinAcentos(`${nombre} ${plat}`));
-  // Vinted web filtra por plataforma; la app del móvil ignora ese filtro, así que en móvil
-  // (y siempre en Master System, que comparte categoría con Mega Drive) añadimos la consola al texto
-  const movil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/.test(navigator.userAgent));
-  const qv = encodeURIComponent(sinAcentos(movil || c === 'mastersystem' ? `${nombre} ${plat}` : nombre));
+  const plat = PLAT[c] || '';
+  const q = encodeURIComponent(sinAcentos(`${nombre} ${plat}`)); // eBay y Wallapop: título + consola
+  const qv = encodeURIComponent(sinAcentos(nombre));              // Vinted: solo título, filtra por Juegos + plataforma
   const vp = VINTED_PLAT[c];
   return {
-    ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}${vendidos ? '&LH_Sold=1&LH_Complete=1' : ''}${barato ? '&_sop=15' : ''}`,
-    vinted: `https://www.vinted.es/catalog?search_text=${qv}&catalog[]=3026${vp ? `&video_game_platform_ids[]=${vp}` : ''}&order=${barato ? 'price_low_to_high' : 'newest_first'}`,
-    walla: `https://es.wallapop.com/app/search?keywords=${q}&category_id=24200&subcategory_ids=24131${barato ? '&order_by=price_low_to_high' : ''}`,
+    ebay: `https://www.ebay.es/sch/i.html?_nkw=${q}&_sop=10`,
+    vinted: `https://www.vinted.es/catalog?search_text=${qv}&catalog[]=3026${vp ? `&video_game_platform_ids[]=${vp}` : ''}&order=newest_first`,
+    walla: `https://es.wallapop.com/app/search?keywords=${q}&category_id=24200&subcategory_ids=24131&order_by=newest`,
   };
 }
 function tiendas(g) {
   const base = g['Nombre clave'] || g['Título'];
   const term = TERM[g.ID] ?? base;
-  const u = tUrls(term, g._c), barato = !!S.ui.barato, vendidos = !!S.ui.vendidos;
+  const u = tUrls(term, g._c);
   const plat = PLAT[g._c] || g._cn;
   const btn = (k, nombre, color, sub) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda" style="--c:${color}"><b>${nombre}</b><small>${sub}</small></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
     <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small class="tplat">${esc(plat)}</small></label>
-    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', vendidos ? 'Vendidos' : 'En venta')}${btn('vinted', 'Vinted', '#09B1BA', barato ? 'En venta' : 'Más nuevos')}${btn('walla', 'Wallapop', '#13C1AC', 'Videojuegos')}</div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="pill ${barato ? 'on' : ''}" data-act="opt" data-v="barato">Más baratos primero</button>
-      <button class="pill ${vendidos ? 'on' : ''}" data-act="opt" data-v="vendidos">eBay: ya vendidos</button>
-    </div>
+    <div class="tiendas">${btn('ebay', 'eBay', '#3665F3', 'Más nuevos')}${btn('vinted', 'Vinted', '#09B1BA', 'Más nuevos')}${btn('walla', 'Wallapop', '#13C1AC', 'Más nuevos')}</div>
     <div class="muted" style="font-size:11px">Retoca el texto solo para esta búsqueda; para siempre, cambia «Nombre clave» en la hoja.</div></div>`;
 }
 document.addEventListener('input', e => {
@@ -459,7 +455,9 @@ function vJuego(gid) {
   if (celdas.length % 2) celdas.push(['', '']);
   const dinero = `<div class="card">
     <div class="vbig"><div><span class="muted" style="font-size:12px">${vend ? 'Vendido por' : 'Tu valor'}</span><div class="disp" style="font-size:27px;color:var(--amb)">${eur(vend ? g['Venta'] : g['Valor'])}</div></div>
-      ${pcVal != null ? `<div style="text-align:right"><span class="muted" style="font-size:12px">PriceCharting</span><div style="font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:flex-end;gap:6px">${eur(pcVal, 2)}${g['Url Price Charting'] ? `<a href="${esc(g['Url Price Charting'])}" target="_blank" rel="noopener" aria-label="Abrir en PriceCharting" style="display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);color:var(--tx2)">${ICON.ext}</a>` : ''}</div></div>` : ''}</div>
+      ${pcVal != null ? (g['Url Price Charting']
+        ? `<a class="pclink" href="${esc(g['Url Price Charting'])}" target="_blank" rel="noopener" aria-label="Abrir en PriceCharting"><span class="muted" style="font-size:12px">PriceCharting ${ICON.ext}</span><b style="font-size:14px;font-weight:600">${eur(pcVal, 2)}</b></a>`
+        : `<div class="pclink"><span class="muted" style="font-size:12px">PriceCharting</span><b style="font-size:14px;font-weight:600">${eur(pcVal, 2)}</b></div>`) : ''}</div>
     <div class="grid2">${celdas.map(([k, v, c]) => `<div>${k ? `<span>${k}</span><b class="${c || ''}">${v}</b>` : ''}</div>`).join('')}</div></div>`;
 
   // Estado
@@ -650,7 +648,6 @@ document.addEventListener('click', e => {
   else if (act === 'filtro') { const id = ruta().b; S.filtro[id] = v; render(); }
   else if (act === 'gsit') { S.gsit = S.gsit === v ? '' : v; $('#lista').innerHTML = htmlBuscar(); document.querySelectorAll('[data-act="gsit"]').forEach(b => b.classList.toggle('on', b.dataset.v === S.gsit)); }
   else if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); render(); }
-  else if (act === 'opt') { S.ui[v] = !S.ui[v]; LS.set('rp.ui', S.ui); render(); }
   else if (act === 'mas') { const c = t.closest('.clamp'); c.classList.toggle('open'); t.textContent = c.classList.contains('open') ? 'Menos' : 'Más'; }
   else if (act === 'back') { if (history.length > 1) history.back(); else location.hash = '#/'; }
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
