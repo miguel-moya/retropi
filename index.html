@@ -129,6 +129,12 @@ html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-d
 .row-scroll::-webkit-scrollbar{display:none}
 .pill{flex:none;min-height:32px;padding:0 12px;border-radius:999px;font-size:12px;font-weight:600;color:var(--tx2);white-space:nowrap}
 .pill.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.pill,.seg button,.capsule a,.tienda,.secbtn,.btn,.gbtn,.filtbtn,.tag.quita{transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .15s ease,opacity .2s ease}
+.pill:active,.seg button:active,.capsule a:active,.tienda:active,.secbtn:active,.btn:active,.gbtn:active,.filtbtn:active{transform:scale(.95)}
+.enciende{animation:enciende .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes enciende{from{transform:scale(.86);opacity:.55}}
+.capsule a svg{transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.capsule a.on svg{transform:translateY(-1px) scale(1.06)}
 .pill .n{opacity:.7;margin-left:4px}
 .gbtn{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:50%;color:var(--tx);text-decoration:none}
 .sticky{position:sticky;top:0;z-index:5;background:rgba(var(--bgrgb),.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);margin:0 -16px;padding:calc(var(--st) + 10px) 16px 12px;border-bottom:1px solid rgba(var(--ink),.06);display:flex;flex-direction:column;gap:12px}
@@ -181,10 +187,10 @@ html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-d
 .money{font-weight:700;font-size:14px;color:var(--amb)}
 .pos{color:var(--grn)} .neg{color:var(--red)}
 /* estantería */
-.shelf{position:relative;margin:0 -16px;padding:34px 0 120px;min-height:calc(100vh - 170px);display:flex;flex-direction:column;gap:44px;
-  background:linear-gradient(180deg,var(--bg) 0,rgba(18,21,27,0) 140px),radial-gradient(110% 60% at 50% 35%,#22252c 0%,#121418 60%,#08090b 100%)}
+.shelf{position:relative;margin:0 -16px -60px;padding:34px 0 70px;min-height:calc(100vh - 230px);display:flex;flex-direction:column;gap:44px;
+  background:linear-gradient(180deg,var(--bg) 0,rgba(18,21,27,0) 140px,rgba(18,21,27,0) calc(100% - 160px),var(--bg) 100%),radial-gradient(110% 60% at 50% 35%,#22252c 0%,#121418 60%,#08090b 100%)}
 .shelf:before{content:'';position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:3px 3px}
-:root[data-tema=claro] .shelf{background:linear-gradient(180deg,var(--bg) 0,rgba(242,243,246,0) 140px),radial-gradient(110% 60% at 50% 35%,#fbfbfc 0%,#e9ebef 60%,#d6d9df 100%)}
+:root[data-tema=claro] .shelf{background:linear-gradient(180deg,var(--bg) 0,rgba(242,243,246,0) 140px,rgba(242,243,246,0) calc(100% - 160px),var(--bg) 100%),radial-gradient(110% 60% at 50% 35%,#fbfbfc 0%,#e9ebef 60%,#d6d9df 100%)}
 .shelf > div{position:relative}
 .shelf .items{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:0 30px;align-items:end}
 .balda{position:relative;height:36px;margin-top:-14px;z-index:1}
@@ -197,10 +203,10 @@ html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-d
 :root[data-tema=claro] .balda .bs{background:radial-gradient(60% 100% at 50% 0,rgba(20,24,32,.25),transparent)}
 .box{position:relative;width:100%;aspect-ratio:.712;border-radius:2px;display:grid;place-items:center;color:#fff;font-family:var(--font);font-weight:800;font-size:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 14px -6px rgba(0,0,0,.8)}
 .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
-.box img.refl{top:calc(100% + 1px);bottom:auto;transform:scaleY(-1);opacity:.16;pointer-events:none;
+.box img.refl{top:calc(100% + 1px);bottom:auto;transform:scaleY(-1);opacity:.22;pointer-events:none;
   clip-path:inset(calc(100% - 9px) 0 0 0);   /* visible solo los 9 px que hay hasta el canto de la balda */
   -webkit-mask-image:linear-gradient(to top,#000 0,transparent 9px);mask-image:linear-gradient(to top,#000 0,transparent 9px)}
-:root[data-tema=claro] .box img.refl{opacity:.12}
+:root[data-tema=claro] .box img.refl{opacity:.16}
 .box .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:9px;padding:2px 6px;z-index:1}
 /* ficha */
 .hero{position:relative;max-width:560px;margin:0 auto;padding:calc(var(--st) + 58px) 16px 6px;text-align:center}
@@ -857,7 +863,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v26 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v27 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -924,7 +930,7 @@ function contexto(g) {
   S.ctx = c ? c.juegos.map(x => x.ID) : [g.ID];
   return S.ctx;
 }
-let SW = null, animando = false;
+let SW = null, animando = false, BORDE_T = 0, BORDE_HASH = '', GESTO_PROPIO = false;
 const ES_APP = navigator.standalone === true || matchMedia('(display-mode: standalone)').matches;
 function irBalance(paso) { const f = S.data && S.data.finanzas; pasar(paso, ((f && f.filas) || []).map(x => x['Sistema']), ruta().b, id => '#/b/' + encodeURIComponent(id)); }
 function irConsola(paso) { pasar(paso, IDX.consolas.map(c => c.id), ruta().b, id => '#/c/' + encodeURIComponent(id)); }
@@ -948,7 +954,8 @@ function pasar(paso, ids, cur, hashDe) {
 }
 document.addEventListener('touchstart', e => {
   if (e.touches.length !== 1) { SW = null; return; }
-  const t = e.touches[0]; SW = { x: t.clientX, y: t.clientY, t: Date.now(), borde: t.clientX < 24, enScroll: !!e.target.closest('.row-scroll, input, select') };
+  const t = e.touches[0]; if (t.clientX < 30) { BORDE_T = Date.now(); BORDE_HASH = location.hash; }
+  SW = { x: t.clientX, y: t.clientY, t: Date.now(), borde: t.clientX < 24, enScroll: !!(e.target.closest && e.target.closest('.row-scroll, input, select')) };
 }, { passive: true });
 document.addEventListener('touchend', e => {
   if (!SW) return;
@@ -956,7 +963,8 @@ document.addEventListener('touchend', e => {
   const horizontal = Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 2 && dt < 700;
   if (!horizontal) return;
   const b = document.querySelector('.cab [data-act="back"]');
-  if (borde && dx > 0 && b && ES_APP) { volver(b.dataset.v); return; }      // desde el borde: volver, como en iOS
+  // si el sistema ya hace su propio «volver» con el gesto, no lo repetimos; si no lo hace (app instalada), volvemos nosotros
+  if (borde && dx > 0 && b) { const h = location.hash; setTimeout(() => { if (location.hash === h) { GESTO_PROPIO = true; volver(b.dataset.v); } }, 350); return; }      // desde el borde: volver, como en iOS
   if (enScroll) return;
   if (ruta().a === 'j') irJuego(dx < 0 ? 1 : -1);                 // en la ficha: juego anterior / siguiente
   else if (ruta().a === 'c') irConsola(dx < 0 ? 1 : -1);          // en un listado: consola anterior / siguiente
@@ -1029,9 +1037,11 @@ function render() {
   render._last = location.hash;
   const nav = $('#nav'); nav.hidden = sinConfig;
   const tab = ['buscar', 'finanzas'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : 'home';
-  nav.querySelectorAll('[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === tab));
+  nav.querySelectorAll('[data-tab]').forEach(a => { const era = a.classList.contains('on'), es = a.dataset.tab === tab; a.classList.toggle('on', es); if (es && !era) { a.classList.remove('enciende'); void a.offsetWidth; a.classList.add('enciende'); } });
   if (r.a === 'j') ajustarFicha();
+  if (ULTIMO) { const b = document.querySelector(`[data-act="${ULTIMO.act}"][data-v="${CSS.escape(ULTIMO.v)}"]`); if (b) b.classList.add('enciende'); ULTIMO = null; }
 }
+let ULTIMO = null;
 function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') render(); }
 
 /* ============ eventos ============ */
@@ -1044,6 +1054,12 @@ document.addEventListener('click', e => {
   }
   const t = e.target.closest('[data-act]'); if (!t) return;
   const act = t.dataset.act, v = t.dataset.v;
+  if (['view', 'filtro', 'tema', 'bfparte'].includes(act)) ULTIMO = { act, v };   // para animar el botón recién activado
+  if ((act === 'view' || act === 'filtro') && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.dataset.dir = 'tab';
+    if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); } else S.filtro[ruta().b] = v;
+    document.startViewTransition(() => render()); return;
+  }
   if (act === 'sync') { cargar(); }
   else if (act === 'filtro') { const id = ruta().b; S.filtro[id] = v; render(); }
   else if (act === 'bf') { const k = t.dataset.k, arr = S.bf[k]; const i = arr.indexOf(v); if (i < 0) arr.push(v); else arr.splice(i, 1);
@@ -1091,9 +1107,14 @@ window.addEventListener('hashchange', e => {
   const nueva = ruta().a, pa = PROFUNDIDAD(rutaPrevia), pn = PROFUNDIDAD(nueva); rutaPrevia = nueva;
   const dir = pn > pa ? 'push' : pn < pa ? 'pop' : 'tab';
   // si el propio navegador ya anima (gesto de volver de Safari), no se añade otra animación encima
-  if (e.hasUAVisualTransition || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  // gesto del sistema: ya anima él → sin animación propia. Gesto nuestro: misma animación que la flecha, sin viaje de portada.
+  const propio = GESTO_PROPIO; GESTO_PROPIO = false;
+  const porGesto = !propio && Date.now() - BORDE_T < 1500;
+  if (propio) { document.querySelectorAll('[style*="view-transition-name"]').forEach(x => x.style.viewTransitionName = ''); S.vt = null; }
+  if (porGesto) { document.querySelectorAll('[style*="view-transition-name"]').forEach(x => x.style.viewTransitionName = ''); S.vt = null; }
+  if (e.hasUAVisualTransition || porGesto || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     render();
-    if (!e.hasUAVisualTransition && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    if (!e.hasUAVisualTransition && !porGesto && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
     return;
   }
   document.documentElement.dataset.dir = dir;
