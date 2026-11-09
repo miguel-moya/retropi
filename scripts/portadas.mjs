@@ -52,7 +52,8 @@ function parecido(termino, jeu) {
   const a = palabras(termino); if (!a.size) return 0;
   return Math.max(0, ...(jeu.noms || []).map(n => {
     const b = palabras(n.text); let k = 0; a.forEach(w => b.has(w) && k++);
-    const p = k / Math.max(a.size, b.size);
+    // cuánto del término aparece en el nombre, con una pequeña penalización por palabras de más
+    const p = k / a.size - 0.05 * Math.max(0, b.size - k);
     return numeros(a) === numeros(b) ? p : p * 0.3;   // «Mega Man» ≠ «Mega Man 2», «Super Mario Bros 3» ≠ «Super Mario Bros»
   }));
 }
@@ -94,20 +95,27 @@ for (const [k, j] of titulos) {
     if (typeof aj === 'number') jeu = (await ss('jeuInfos.php', { gameid: aj, systemeid: SISTEMA[j.c] })).response?.jeu || null;
     else {
       // prueba variantes y se queda con el resultado cuyo nombre más se parece (no el primero sin más)
-      let mejor = null, nota = 0;
+      let mejor = null, nota = 0; const vistos = [];
       for (const termino of variantes(j.t, j.nc, typeof aj === 'string' ? aj : '')) {
         const r = await ss('jeuRecherche.php', { recherche: termino, systemeid: SISTEMA[j.c] });
         await espera(1200);
+        if (r.aviso) vistos.push(`«${termino}»: ${r.aviso.replace(/\s+/g, ' ').slice(0, 60)}`);
         for (const x of (r.response?.jeux || []).filter(x => x && x.id)) {
+          if (vistos.length < 6) vistos.push(nombreJuego(x));
           const p = Math.max(parecido(termino, x), parecido(j.t, x));
           if (p > nota) { mejor = x; nota = p; buscado = termino; }
         }
         if (nota >= 0.99 || (typeof aj === 'string' && mejor)) break;
       }
       jeu = nota >= 0.6 ? mejor : null;
+      if (!jeu) j.vistos = vistos;
     }
     const m = jeu && elegirPortada(jeu, j.regiones.size === 1 && j.regiones.has('JP'));
-    if (!m) { mapa[k] = { estado: 'no encontrado', buscado: j.t }; fallos++; console.log(`✗ ${j.c} · ${j.t}`); continue; }
+    if (!m) {
+      if (previo && previo.archivo) previo.estado = 'dudoso';          // al rehacer, no se pierde la portada anterior
+      else mapa[k] = { estado: 'no encontrado', buscado: j.t };
+      fallos++; console.log(`✗ ${j.c} · ${j.t}   (vistos: ${(j.vistos || []).join(' | ') || 'nada'})`); continue;
+    }
     const rel = `${DIR}/${j.c}/${slug(j.t)}.jpg`;
     const img = await fetch(`${m.url}&maxwidth=600&outputformat=jpg`);
     if (!img.ok) throw new Error('descarga ' + img.status);
