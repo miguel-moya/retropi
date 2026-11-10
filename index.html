@@ -108,9 +108,9 @@ body.sin-scroll{overflow:hidden}
 .caja3 .c3f{inset:0;transform:translateZ(calc(var(--d) / 2));overflow:hidden;display:grid;place-items:center;font-weight:800;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
 .caja3 .c3f img,.caja3 .c3r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .caja3 .c3l{top:0;left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg);filter:brightness(.82)}
-.caja3 .c3lr{top:calc(100% + 1px);left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg) scaleY(-1);filter:brightness(.82);opacity:.22;clip-path:inset(calc(100% - 9px) 0 0 0);pointer-events:none}
+.caja3 .c3lr{top:calc(100% + 1px);left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg) scaleY(-1);filter:brightness(.82);opacity:.18;clip-path:inset(calc(100% - 6px) 0 0 0);pointer-events:none}
 .caja3 .c3t{left:0;top:calc(50% - var(--d) / 2);width:100%;height:var(--d);background:#0a0b0d;transform:translateY(calc(var(--h) / -2)) rotateX(90deg)}
-.caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.22;clip-path:inset(calc(100% - 9px) 0 0 0);pointer-events:none}
+.caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.18;clip-path:inset(calc(100% - 6px) 0 0 0);pointer-events:none}
 .caja3 .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%) translateZ(calc(var(--d) / 2 + 1px));font-size:9px;padding:2px 6px}
 :root[data-tema=claro] .caja3 .c3t{background:#2a2d33}
 /* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
@@ -888,7 +888,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v32 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v33 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
