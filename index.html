@@ -306,16 +306,63 @@ label.f input:focus{border-color:var(--acc)}
 #ptr.listo{color:var(--acc)}
 #ptr.go svg{animation:spin .8s linear infinite}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* ============ escritorio: barra lateral y diseño a pantalla completa ============ */
+.marca,.nav-aj{display:none}
+@media (min-width:1024px){
+  :root{--lat:240px}
+  .nav{top:0;right:auto;width:var(--lat);padding:22px 14px 22px;pointer-events:auto;background:rgba(var(--bgrgb),.72);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-right:1px solid rgba(var(--ink),.06)}
+  .navbar{max-width:none;height:100%;flex-direction:column;align-items:stretch;gap:22px}
+  .marca{display:flex;align-items:center;gap:12px;padding:0 10px;text-decoration:none;color:var(--tx);font-family:var(--font);font-size:20px;font-weight:800;letter-spacing:-.02em}
+  .marca img{border-radius:50%;box-shadow:0 0 0 2px var(--acc)}.marca b{color:var(--acc);font-weight:800}
+  .capsule{flex:none;display:flex;flex-direction:column;gap:4px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .capsule a,.nav-aj{flex-direction:row;justify-content:flex-start;align-items:center;gap:12px;height:44px;padding:0 14px;border-radius:12px;font-size:14px;font-weight:600;color:var(--tx2);text-decoration:none}
+  .capsule a:hover,.nav-aj:hover{background:rgba(var(--ink),.06)}
+  .nav-aj{display:flex;margin-top:auto}
+  .nav-aj.on{background:rgba(var(--ink),.10);color:var(--acc)}
+  .capsule a.on svg{transform:none}
+  #app{margin-left:var(--lat)}
+  #ptr{display:none}
+  .wrap{max-width:1180px;padding:calc(var(--st) + 28px) 40px 60px}
+  .wrap.pg{padding-top:0}
+  .cab{margin:0 -40px;padding:var(--st) 40px 14px}
+  .cab .avatar-btn{display:none}
+  .cab-bar{grid-template-columns:auto 1fr auto;min-height:64px}
+  .cab-t{text-align:left;font-size:22px;max-width:none}
+  .cab-l:empty{display:none}
+  .tiles{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+  .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:10px}
+  .g{transition:border-color .2s,background-color .2s}.g:hover,.tile:hover,.tienda:hover,.secbtn:hover{border-color:rgba(var(--ink),.22);background-color:rgba(var(--ink),.08)}
+  .shelf{margin:0 -40px -60px}
+  .cajas3d .items{gap:44px;padding:0 60px}
+  .caja3{transition:transform .25s cubic-bezier(.2,.8,.2,1)}.caja3:hover{transform:rotateY(calc(var(--g) - 10deg)) translateY(-6px)}
+  .hoja-panel{left:50%;right:auto;top:50%;bottom:auto;width:560px;max-height:80vh;border-radius:24px;transform:translate(-50%,-46%) scale(.97);opacity:0;pointer-events:none;transition:transform .25s ease,opacity .2s ease}
+  .hoja-panel.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+  .hp-pie{padding-bottom:12px}
+  /* ficha en dos columnas: portada fija a la izquierda, datos a la derecha */
+  body[data-ruta=j] #app{display:grid;grid-template-columns:minmax(300px,380px) minmax(0,620px);justify-content:center;column-gap:56px;align-items:start;padding:0 40px}
+  body[data-ruta=j] .cab.flota{left:var(--lat);max-width:none;padding-left:40px;padding-right:40px}
+  body[data-ruta=j] .cab.flota .cab-t{text-align:center}
+  body[data-ruta=j] .hero{position:sticky;top:0;max-width:none;margin:0;padding:calc(var(--st) + 96px) 0 40px}
+  body[data-ruta=j] .hero-bg{left:var(--lat)}
+  body[data-ruta=j] .hero .cov.xl{width:300px;height:421px;max-width:none;max-height:none}
+  body[data-ruta=j] .wrap.detail{max-width:none;margin:0;padding:calc(var(--st) + 84px) 0 60px}
+  /* balance: tarjetas de consola en rejilla */
+  body[data-ruta=finanzas] .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  body[data-ruta=finanzas] .wrap > .cab,body[data-ruta=finanzas] .wrap > .caja-bal,body[data-ruta=finanzas] .wrap > .sec-t,body[data-ruta=finanzas] .wrap > .empty{grid-column:1/-1}
+  body[data-ruta=b] .wrap,body[data-ruta=ajustes] .wrap,body[data-ruta=estilos] .wrap{max-width:820px}
+}
 </style>
 </head>
 <body>
 <main id="app"></main>
 <nav class="nav" id="nav" hidden><div class="navbar">
+  <a class="marca" href="#/"><img src="icons/avatar.jpg" alt="" width="40" height="40"><span>Retro<b>Pi</b></span></a>
   <div class="capsule">
     <a href="#/" data-tab="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17.5 13.5h.01"/></svg>Colección</a>
     <a href="#/buscar" data-tab="buscar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Buscar</a>
     <a href="#/finanzas" data-tab="finanzas"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V5.5A1.5 1.5 0 0 0 17.5 4H5a2 2 0 0 0 0 4h14a1 1 0 0 1 1 1v3"/><path d="M3 6v12a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-3"/><path d="M21 12v4h-4a2 2 0 0 1 0-4z"/></svg>Balance</a>
   </div>
+  <a class="nav-aj" href="#/ajustes" data-tab="ajustes"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Ajustes</a>
 </div></nav>
 <div id="ptr" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.9-4M4 4v4h4M4 13a8 8 0 0 0 14.9 4M20 20v-4h-4"/></svg></div>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -520,12 +567,15 @@ function htmlLista(c) {
   if (!l.length) return '<div class="empty">Nada con este filtro.</div>';
   if (S.ui.view === 'cajas') {
     // Estantería 3D (prueba para comparar con la plana): cada juego es una caja con la portada delante y el lomo real en el lateral
-    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.08)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
+    const escritorio = window.innerWidth >= 1024;
+    const ancho = Math.min(window.innerWidth, 560), w = escritorio ? 132 : Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.08)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
+    const cols = escritorio ? Math.max(4, Math.floor((Math.min(window.innerWidth - 240, 1180) - 100) / (w + 44))) : 3;
+    const giro = k => cols === 1 ? 30 : Math.round(38 - k * (16 / (cols - 1)));
     let out = `<div class="shelf cajas3d" style="--w:${w}px;--h:${h}px;--d:${d}px">`;
-    for (let i = 0; i < l.length; i += 3) {
-      out += '<div><div class="items">' + l.slice(i, i + 3).map((g, k) => {
+    for (let i = 0; i < l.length; i += cols) {
+      out += `<div><div class="items" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">` + l.slice(i, i + cols).map((g, k) => {
         const f = portada(g), lomo = extras(g).lomo;
-        return `<a class="caja3" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="--g:${[38, 32, 26][k]}deg">
+        return `<a class="caja3" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="--g:${giro(k)}deg">
           <span class="c3t"></span><span class="c3l" style="${lomo ? `background-image:url('${esc(lomo)}')` : 'background:#111'}"></span>
           <span class="c3f" style="${coverBg(g)}">${f ? `<img loading="lazy" decoding="async" alt="" src="${esc(f)}" onerror="this.remove()">` : esc(ini(g['Título']))}</span>
           ${f ? `<span class="c3r"><img loading="lazy" decoding="async" alt="" src="${esc(f)}"></span>` : ''}${lomo ? `<span class="c3lr" style="background-image:url('${esc(lomo)}')"></span>` : ''}
@@ -888,7 +938,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v33 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v34 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1003,6 +1053,7 @@ function ajustarFicha() {
   rafFicha = 0;
   const cov = document.querySelector('.hero .cov.xl'), cabF = document.querySelector('.cab.flota');
   if (!cov || !cabF) return;
+  if (window.innerWidth >= 1024) { cov.style.transform = ''; cov.style.opacity = ''; cabF.classList.toggle('solida', window.scrollY > 40); return; }
   const y = Math.max(0, window.scrollY), alto = cov.offsetHeight;
   const k = Math.min(1, y / (alto * 0.9));
   cov.style.transform = `translateY(${y * 0.35}px) scale(${1 - k * 0.45})`;
@@ -1061,12 +1112,15 @@ function render() {
   render._lastRuta = r;
   render._last = location.hash;
   const nav = $('#nav'); nav.hidden = sinConfig;
-  const tab = ['buscar', 'finanzas'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : 'home';
+  document.body.dataset.ruta = r.a;
+  const tab = ['buscar', 'finanzas', 'ajustes'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : r.a === 'estilos' ? 'ajustes' : 'home';
   nav.querySelectorAll('[data-tab]').forEach(a => { const era = a.classList.contains('on'), es = a.dataset.tab === tab; a.classList.toggle('on', es); if (es && !era) { a.classList.remove('enciende'); void a.offsetWidth; a.classList.add('enciende'); } });
   if (r.a === 'j') ajustarFicha();
   if (ULTIMO) { const b = document.querySelector(`[data-act="${ULTIMO.act}"][data-v="${CSS.escape(ULTIMO.v)}"]`); if (b) b.classList.add('enciende'); ULTIMO = null; }
 }
 let ULTIMO = null;
+let anchoPrevio = window.innerWidth >= 1024;
+window.addEventListener('resize', () => { const e = window.innerWidth >= 1024; if (e !== anchoPrevio) { anchoPrevio = e; VISTAS.clear(); render(); } });
 function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') render(); }
 
 /* ============ eventos ============ */
