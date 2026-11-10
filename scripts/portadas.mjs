@@ -135,7 +135,7 @@ if (E.EXTRAS) {
       for (const r of regiones) { const m = c.find(x => x.region === r); if (m) return m; } return c[0]; } return null; };
   let hechos = 0;
   for (const [k, v] of Object.entries(mapa)) {
-    if (!v.ssid || (v.extras && !E.FORZAR_EXTRAS)) continue;
+    if (!v.ssid || (v.extras && !E.FORZAR_EXTRAS && !(E.LOMOS && v.lomo === undefined))) continue;
     const c = k.split('|')[0];
     try {
       const jeu = (await ss('jeuInfos.php', { gameid: v.ssid, systemeid: SISTEMA[c] })).response?.jeu;
@@ -149,8 +149,9 @@ if (E.EXTRAS) {
         const f = `${base}${sufijo}`; await fs.writeFile(f, Buffer.from(await r.arrayBuffer())); return f;
       };
       v.logo = await bajar(media(jeu, ['wheel-hd', 'wheel'], REGIONES), '-logo.png', 'maxwidth=600&outputformat=png');
+      if (E.LOMOS) v.lomo = await bajar(media(jeu, ['box-2D-side'], REGIONES), '-lomo.png', 'maxheight=680&outputformat=png');
       v.extras = true; hechos++;
-      console.log(`+ ${k}: ${v.logo ? 'logo' : 'sin logo'}`);
+      console.log(`+ ${k}: ${v.logo ? 'logo' : 'sin logo'}${E.LOMOS ? (v.lomo ? ', lomo' : ', sin lomo') : ''}`);
     } catch (e) { console.log(`! extras ${k}: ${e.message}`); }
   }
   console.log(`Extras: ${hechos}`);

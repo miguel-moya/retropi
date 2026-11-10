@@ -120,6 +120,7 @@ html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-d
 @keyframes vt-fuera{to{opacity:0}}
 @keyframes vt-dentro{from{opacity:0;transform:translateY(6px)}}
 @media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+html.en-transicion .cab:not(.flota),html.en-transicion .cab.flota.solida{background:rgb(var(--bgrgb))}
 /* modo claro */
 :root[data-tema=claro]{--bg:#F2F3F6;--s1:#FFFFFF;--s2:#E8EAEF;--glass:rgba(255,255,255,.78);--glass2:rgba(255,255,255,.95);--gline:rgba(20,24,32,.09);
   --tx:#14171D;--tx2:#3D4450;--mut:#6B7280;--acc:#0C9C97;--amb:#B5760A;--grn:#1F9256;--red:#D2483A;
@@ -864,7 +865,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v28 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v29 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1111,7 +1112,10 @@ window.addEventListener('hashchange', e => {
     return;
   }
   document.documentElement.dataset.dir = dir;
-  document.startViewTransition(() => render());
+  // durante la transición las cabeceras van opacas: la captura no aplica el desenfoque y se verían las portadas detrás
+  document.documentElement.classList.add('en-transicion');
+  const vt = document.startViewTransition(() => render());
+  vt.finished.finally(() => document.documentElement.classList.remove('en-transicion'));
 });
 function volver(fallback) { if (PASOS > 0) { PASOS -= 2; history.back(); } else location.hash = fallback || '#/'; }
 

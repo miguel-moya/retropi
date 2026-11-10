@@ -12,6 +12,10 @@ on:
         description: 'Descargar también el logo'
         type: boolean
         default: false
+      lomos:
+        description: 'Descargar también los lomos de las cajas'
+        type: boolean
+        default: false
       forzar:
         description: 'Volver a buscar todos los títulos'
         type: boolean
@@ -45,7 +49,8 @@ jobs:
           RETROPI_KEY: ${{ secrets.RETROPI_KEY }}
           REINTENTAR: ${{ inputs.reintentar && '1' || '' }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
-          EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras) && '1' || '' }}
+          LOMOS: ${{ inputs.lomos && '1' || '' }}
+          EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras || inputs.lomos) && '1' || '' }}
         working-directory: datos
         run: node ../scripts/portadas.mjs
       - name: Guardar en la rama portadas
