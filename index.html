@@ -101,6 +101,17 @@ body.sin-scroll{overflow:hidden}
 .tipo > div + div{border-top:1px solid rgba(var(--ink),.07)}
 .tipo small{font-size:11px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
 .demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
+/* estantería 3D (prueba) */
+.cajas3d .items{perspective:1100px;padding:0 22px 0 46px}
+.caja3{position:relative;display:block;width:var(--w);height:var(--h);justify-self:center;transform-style:preserve-3d;transform:rotateY(var(--g,30deg));transform-origin:50% 100%;text-decoration:none;color:#fff}
+.caja3 > span{position:absolute;display:block;backface-visibility:hidden}
+.caja3 .c3f{inset:0;transform:translateZ(calc(var(--d) / 2));overflow:hidden;display:grid;place-items:center;font-weight:800;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
+.caja3 .c3f img,.caja3 .c3r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.caja3 .c3l{top:0;left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg);filter:brightness(.82)}
+.caja3 .c3t{left:0;top:calc(50% - var(--d) / 2);width:100%;height:var(--d);background:#0a0b0d;transform:translateY(calc(var(--h) / -2)) rotateX(90deg)}
+.caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.22;clip-path:inset(calc(100% - 9px) 0 0 0);pointer-events:none}
+.caja3 .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%) translateZ(calc(var(--d) / 2 + 1px));font-size:9px;padding:2px 6px}
+:root[data-tema=claro] .caja3 .c3t{background:#2a2d33}
 /* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
 #nav{view-transition-name:menu}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.42s;animation-timing-function:cubic-bezier(.32,.72,0,1);animation-fill-mode:both;mix-blend-mode:normal}
@@ -365,7 +376,7 @@ fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.js
 }).catch(() => {});
 const urlMedia = (f, v) => f ? RAMA_CDN + f + (v ? '?v=' + v : '') : '';
 const extras = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
-  return { fondo: urlMedia(p.fondo, p.ssid), logo: urlMedia(p.logo, p.ssid), captura: urlMedia(p.captura, p.ssid) }; };
+  return { fondo: urlMedia(p.fondo, p.ssid), logo: urlMedia(p.logo, p.ssid), captura: urlMedia(p.captura, p.ssid), lomo: urlMedia(p.lomo, p.ssid) }; };
 const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia(p.archivo, p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
 const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
@@ -431,6 +442,7 @@ const ICON = {
   star: '<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg>',
   chev: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>',
   sliders: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>',
+  cubo: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>',
   ext: '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>',
 };
 const SORTS = { hoja: 'Estado', valor: 'Valor', az: 'A–Z' };
@@ -503,6 +515,21 @@ function htmlLista(c) {
   const { l } = juegosFiltrados(c);
   S.ctx = l.map(g => g.ID);
   if (!l.length) return '<div class="empty">Nada con este filtro.</div>';
+  if (S.ui.view === 'cajas') {
+    // Estantería 3D (prueba para comparar con la plana): cada juego es una caja con la portada delante y el lomo real en el lateral
+    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(118, (ancho - 120) / 3 * 0.92)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
+    let out = `<div class="shelf cajas3d" style="--w:${w}px;--h:${h}px;--d:${d}px">`;
+    for (let i = 0; i < l.length; i += 3) {
+      out += '<div><div class="items">' + l.slice(i, i + 3).map((g, k) => {
+        const f = portada(g), lomo = extras(g).lomo;
+        return `<a class="caja3" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="--g:${[38, 32, 26][k]}deg">
+          <span class="c3t"></span><span class="c3l" style="${lomo ? `background-image:url('${esc(lomo)}')` : 'background:#111'}"></span>
+          <span class="c3f" style="${coverBg(g)}">${f ? `<img loading="lazy" decoding="async" alt="" src="${esc(f)}" onerror="this.remove()">` : esc(ini(g['Título']))}</span>
+          ${f ? `<span class="c3r"><img loading="lazy" decoding="async" alt="" src="${esc(f)}"></span>` : ''}
+          ${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`; }).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
+    }
+    return out + '</div>';
+  }
   if (S.ui.view === 'shelf') {
     let out = '<div class="shelf">';
     for (let i = 0; i < l.length; i += 3) {
@@ -535,7 +562,8 @@ function vConsola(id) {
     ${cab({ titulo: esc(c.nombre), volver: '#/',
       derecha: `<div class="seg" role="group" aria-label="Vista">
           <button class="${S.ui.view === 'rows' ? 'on' : ''}" data-act="view" data-v="rows" aria-label="Lista">${ICON.rows}</button>
-          <button class="${S.ui.view === 'shelf' ? 'on' : ''}" data-act="view" data-v="shelf" aria-label="Estantería">${ICON.shelf}</button></div>`,
+          <button class="${S.ui.view === 'shelf' ? 'on' : ''}" data-act="view" data-v="shelf" aria-label="Estantería">${ICON.shelf}</button>
+          <button class="${S.ui.view === 'cajas' ? 'on' : ''}" data-act="view" data-v="cajas" aria-label="Estantería 3D">${ICON.cubo}</button></div>`,
       extra: `<div style="display:flex;gap:8px;align-items:center">
         <label class="search" style="flex:1;min-width:0">${ICON.search}<span class="sr">Buscar en ${esc(c.nombre)}</span>
           <input id="qc" data-c="${esc(c.id)}" type="search" placeholder="Filtrar por nombre" value="${esc(S.q[c.id] || '')}" autocomplete="off"><button type="button" class="x" data-act="limpiar" aria-label="Borrar"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".35"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round"/></svg></button></label>
@@ -865,7 +893,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v29 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v30 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
