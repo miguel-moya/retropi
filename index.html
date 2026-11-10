@@ -102,12 +102,13 @@ body.sin-scroll{overflow:hidden}
 .tipo small{font-size:11px;color:var(--mut);font-family:ui-monospace,Menlo,monospace}
 .demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
 /* estantería 3D (prueba) */
-.cajas3d .items{perspective:1100px;padding:0 22px 0 46px}
+.cajas3d .items{perspective:1100px;padding:0 12px 0 34px;gap:10px}
 .caja3{position:relative;display:block;width:var(--w);height:var(--h);justify-self:center;transform-style:preserve-3d;transform:rotateY(var(--g,30deg));transform-origin:50% 100%;text-decoration:none;color:#fff}
 .caja3 > span{position:absolute;display:block;backface-visibility:hidden}
 .caja3 .c3f{inset:0;transform:translateZ(calc(var(--d) / 2));overflow:hidden;display:grid;place-items:center;font-weight:800;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
 .caja3 .c3f img,.caja3 .c3r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .caja3 .c3l{top:0;left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg);filter:brightness(.82)}
+.caja3 .c3lr{top:calc(100% + 1px);left:calc(50% - var(--d) / 2);width:var(--d);height:100%;background-size:100% 100%;transform:translateX(calc(var(--w) / -2)) rotateY(-90deg) scaleY(-1);filter:brightness(.82);opacity:.22;clip-path:inset(calc(100% - 9px) 0 0 0);pointer-events:none}
 .caja3 .c3t{left:0;top:calc(50% - var(--d) / 2);width:100%;height:var(--d);background:#0a0b0d;transform:translateY(calc(var(--h) / -2)) rotateX(90deg)}
 .caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.22;clip-path:inset(calc(100% - 9px) 0 0 0);pointer-events:none}
 .caja3 .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%) translateZ(calc(var(--d) / 2 + 1px));font-size:9px;padding:2px 6px}
@@ -332,6 +333,7 @@ const S = {
   cfg: LS.get('rp.cfg', null),        // { url, key }
   data: LS.get('rp.data', null),      // respuesta del Apps Script
   ui: Object.assign({ view: 'rows', sort: 'hoja' }, LS.get('rp.ui', {})),
+  // (la estantería plana se retiró: quien la tenía guardada pasa a la 3D)
   filtro: {},                          // por consola: situación elegida
   q: {},                               // por consola: texto buscado
   gq: '',
@@ -339,6 +341,7 @@ const S = {
   panel: false,
   cargando: false,
 };
+if (S.ui.view === 'shelf') S.ui.view = 'cajas';
 let IDX = { juegos: [], porId: {}, consolas: [], logos: {} };
 
 /* ============ utilidades ============ */
@@ -517,7 +520,7 @@ function htmlLista(c) {
   if (!l.length) return '<div class="empty">Nada con este filtro.</div>';
   if (S.ui.view === 'cajas') {
     // Estantería 3D (prueba para comparar con la plana): cada juego es una caja con la portada delante y el lomo real en el lateral
-    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(118, (ancho - 120) / 3 * 0.92)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
+    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.2)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
     let out = `<div class="shelf cajas3d" style="--w:${w}px;--h:${h}px;--d:${d}px">`;
     for (let i = 0; i < l.length; i += 3) {
       out += '<div><div class="items">' + l.slice(i, i + 3).map((g, k) => {
@@ -525,15 +528,8 @@ function htmlLista(c) {
         return `<a class="caja3" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="--g:${[38, 32, 26][k]}deg">
           <span class="c3t"></span><span class="c3l" style="${lomo ? `background-image:url('${esc(lomo)}')` : 'background:#111'}"></span>
           <span class="c3f" style="${coverBg(g)}">${f ? `<img loading="lazy" decoding="async" alt="" src="${esc(f)}" onerror="this.remove()">` : esc(ini(g['Título']))}</span>
-          ${f ? `<span class="c3r"><img loading="lazy" decoding="async" alt="" src="${esc(f)}"></span>` : ''}
+          ${f ? `<span class="c3r"><img loading="lazy" decoding="async" alt="" src="${esc(f)}"></span>` : ''}${lomo ? `<span class="c3lr" style="background-image:url('${esc(lomo)}')"></span>` : ''}
           ${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`; }).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
-    }
-    return out + '</div>';
-  }
-  if (S.ui.view === 'shelf') {
-    let out = '<div class="shelf">';
-    for (let i = 0; i < l.length; i += 3) {
-      out += '<div><div class="items">' + l.slice(i, i + 3).map(g => `<a class="box" href="#/j/${esc(g.ID)}" aria-label="${esc(g['Título'])}" style="${coverBg(g)};text-decoration:none">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()"><img class="refl" loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
     }
     return out + '</div>';
   }
@@ -562,8 +558,7 @@ function vConsola(id) {
     ${cab({ titulo: esc(c.nombre), volver: '#/',
       derecha: `<div class="seg" role="group" aria-label="Vista">
           <button class="${S.ui.view === 'rows' ? 'on' : ''}" data-act="view" data-v="rows" aria-label="Lista">${ICON.rows}</button>
-          <button class="${S.ui.view === 'shelf' ? 'on' : ''}" data-act="view" data-v="shelf" aria-label="Estantería">${ICON.shelf}</button>
-          <button class="${S.ui.view === 'cajas' ? 'on' : ''}" data-act="view" data-v="cajas" aria-label="Estantería 3D">${ICON.cubo}</button></div>`,
+          <button class="${S.ui.view === 'cajas' ? 'on' : ''}" data-act="view" data-v="cajas" aria-label="Estantería">${ICON.shelf}</button></div>`,
       extra: `<div style="display:flex;gap:8px;align-items:center">
         <label class="search" style="flex:1;min-width:0">${ICON.search}<span class="sr">Buscar en ${esc(c.nombre)}</span>
           <input id="qc" data-c="${esc(c.id)}" type="search" placeholder="Filtrar por nombre" value="${esc(S.q[c.id] || '')}" autocomplete="off"><button type="button" class="x" data-act="limpiar" aria-label="Borrar"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".35"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="var(--bg)" stroke-width="2.2" stroke-linecap="round"/></svg></button></label>
@@ -893,7 +888,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v30 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v31 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1079,7 +1074,7 @@ document.addEventListener('click', e => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   const act = t.dataset.act, v = t.dataset.v;
   if (['view', 'filtro', 'tema', 'bfparte'].includes(act)) ULTIMO = { act, v };   // para animar el botón recién activado
-  if ((act === 'view' || act === 'filtro') && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ((act === 'view' || act === 'filtro') && S.ui.view !== 'cajas' && v !== 'cajas' && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.dataset.dir = 'tab';
     if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); } else S.filtro[ruta().b] = v;
     document.startViewTransition(() => render()); return;
@@ -1128,7 +1123,7 @@ const PROFUNDIDAD = a => ({ c: 1, b: 1, ajustes: 1, j: 2, estilos: 2 })[a] || 0;
 let rutaPrevia = ruta().a;
 window.addEventListener('hashchange', e => {
   PASOS++;
-  const nueva = ruta().a, pa = PROFUNDIDAD(rutaPrevia), pn = PROFUNDIDAD(nueva); rutaPrevia = nueva;
+  const nueva = ruta().a, rutaAnt = rutaPrevia, pa = PROFUNDIDAD(rutaPrevia), pn = PROFUNDIDAD(nueva); rutaPrevia = nueva;
   const dir = pn > pa ? 'push' : pn < pa ? 'pop' : 'tab';
   // si el propio navegador ya anima (gesto de volver de Safari), no se añade otra animación encima
   // gesto del sistema: ya anima él → sin animación propia. Gesto nuestro: misma animación que la flecha, sin viaje de portada.
@@ -1137,6 +1132,15 @@ window.addEventListener('hashchange', e => {
   if (e.hasUAVisualTransition || porGesto || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
     render();
     if (!e.hasUAVisualTransition && !porGesto && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
+    return;
+  }
+  if (S.ui.view === 'cajas' && (nueva === 'c' || rutaAnt === 'c')) {
+    // La captura de las transiciones del navegador aplana las cajas 3D (se veían planas y luego «se montaban»),
+    // así que aquí se anima la pantalla nueva directamente.
+    render();
+    const desde = dir === 'pop' ? [{ transform: 'translateX(-28%)', filter: 'brightness(.72)' }, { transform: 'none', filter: 'none' }]
+                                : [{ transform: 'translateX(100%)' }, { transform: 'none' }];
+    $('#app').animate(desde, { duration: 420, easing: 'cubic-bezier(.32,.72,0,1)' });
     return;
   }
   document.documentElement.dataset.dir = dir;
