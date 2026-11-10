@@ -114,7 +114,7 @@ body.sin-scroll{overflow:hidden}
 .caja3 .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%) translateZ(calc(var(--d) / 2 + 1px));font-size:9px;padding:2px 6px}
 :root[data-tema=claro] .caja3 .c3t{background:#2a2d33}
 /* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
-#nav{view-transition-name:menu}
+.capsule{view-transition-name:menu}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.42s;animation-timing-function:cubic-bezier(.32,.72,0,1);animation-fill-mode:both;mix-blend-mode:normal}
 /* como en iOS: la pantalla nueva entra desde la derecha por encima; al volver, la de arriba sale por la derecha */
 html[data-dir=pop]::view-transition-old(root){z-index:2}
@@ -143,7 +143,7 @@ html.en-transicion .cab:not(.flota),html.en-transicion .cab.flota.solida{backgro
 .row-scroll{display:flex;gap:8px;overflow-x:auto;margin:0 -16px;padding:0 16px;scrollbar-width:none}
 .row-scroll::-webkit-scrollbar{display:none}
 .pill{flex:none;min-height:32px;padding:0 12px;border-radius:999px;font-size:12px;font-weight:600;color:var(--tx2);white-space:nowrap}
-.pill.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.pill.on{background:var(--acc);color:#0B1020;border-color:var(--acc)}
 .pill,.seg button,.capsule a,.tienda,.secbtn,.btn,.gbtn,.filtbtn,.tag.quita{transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .15s ease,opacity .2s ease}
 .pill:active,.seg button:active,.capsule a:active,.tienda:active,.secbtn:active,.btn:active,.gbtn:active,.filtbtn:active{transform:scale(.95)}
 .enciende{animation:enciende .32s cubic-bezier(.2,.8,.2,1)}
@@ -520,7 +520,7 @@ function htmlLista(c) {
   if (!l.length) return '<div class="empty">Nada con este filtro.</div>';
   if (S.ui.view === 'cajas') {
     // Estantería 3D (prueba para comparar con la plana): cada juego es una caja con la portada delante y el lomo real en el lateral
-    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.2)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
+    const ancho = Math.min(window.innerWidth, 560), w = Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.08)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
     let out = `<div class="shelf cajas3d" style="--w:${w}px;--h:${h}px;--d:${d}px">`;
     for (let i = 0; i < l.length; i += 3) {
       out += '<div><div class="items">' + l.slice(i, i + 3).map((g, k) => {
@@ -888,7 +888,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v31 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v32 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
