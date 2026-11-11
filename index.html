@@ -322,7 +322,7 @@ label.f input:focus{border-color:var(--acc)}
   .capsule a.on svg{transform:none}
   #app{margin-left:var(--lat)}
   #ptr{display:none}
-  .wrap{max-width:1180px;padding:calc(var(--st) + 28px) 40px 60px}
+  .wrap{max-width:none;padding:calc(var(--st) + 28px) 40px 60px}
   .wrap.pg{padding-top:0}
   .cab{margin:0 -40px;padding:var(--st) 40px 14px}
   .cab .avatar-btn{display:none}
@@ -330,7 +330,7 @@ label.f input:focus{border-color:var(--acc)}
   .cab-t{text-align:left;font-size:22px;max-width:none}
   .cab-l:empty{display:none}
   .tiles{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-  .list{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:10px}
+  .list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .g{transition:border-color .2s,background-color .2s}.g:hover,.tile:hover,.tienda:hover,.secbtn:hover{border-color:rgba(var(--ink),.22);background-color:rgba(var(--ink),.08)}
   .shelf{margin:0 -40px -60px}
   .cajas3d .items{gap:44px;padding:0 60px}
@@ -347,9 +347,22 @@ label.f input:focus{border-color:var(--acc)}
   body[data-ruta=j] .hero .cov.xl{width:300px;height:421px;max-width:none;max-height:none}
   body[data-ruta=j] .wrap.detail{max-width:none;margin:0;padding:calc(var(--st) + 84px) 0 60px}
   /* balance: tarjetas de consola en rejilla */
-  body[data-ruta=finanzas] .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  body[data-ruta=finanzas] .wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
+  body[data-ruta=finanzas] .caja-bal{max-width:980px}
   body[data-ruta=finanzas] .wrap > .cab,body[data-ruta=finanzas] .wrap > .caja-bal,body[data-ruta=finanzas] .wrap > .sec-t,body[data-ruta=finanzas] .wrap > .empty{grid-column:1/-1}
   body[data-ruta=b] .wrap,body[data-ruta=ajustes] .wrap,body[data-ruta=estilos] .wrap{max-width:820px}
+}
+/* pantallas grandes: la ficha crece entera (también la letra), con un ancho máximo para que se lea bien */
+@media (min-width:1440px){
+  body[data-ruta=j] .hero,body[data-ruta=j] .wrap.detail{zoom:1.15}
+  body[data-ruta=j] #app{grid-template-columns:minmax(320px,400px) minmax(0,640px)}
+  body[data-ruta=b] .wrap,body[data-ruta=ajustes] .wrap,body[data-ruta=estilos] .wrap{zoom:1.1}
+}
+@media (min-width:1800px){ .list{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (min-width:2600px){ .list{grid-template-columns:repeat(4,minmax(0,1fr))} }
+@media (min-width:1920px){
+  body[data-ruta=j] .hero,body[data-ruta=j] .wrap.detail{zoom:1.32}
+  body[data-ruta=b] .wrap,body[data-ruta=ajustes] .wrap,body[data-ruta=estilos] .wrap{zoom:1.22}
 }
 </style>
 </head>
@@ -569,7 +582,7 @@ function htmlLista(c) {
     // Estantería 3D (prueba para comparar con la plana): cada juego es una caja con la portada delante y el lomo real en el lateral
     const escritorio = window.innerWidth >= 1024;
     const ancho = Math.min(window.innerWidth, 560), w = escritorio ? 132 : Math.round(Math.min(140, (ancho - 120) / 3 * 0.92 * 1.08)), h = Math.round(w / 0.712), d = Math.round(w * 0.2);
-    const cols = escritorio ? Math.max(4, Math.floor((Math.min(window.innerWidth - 240, 1180) - 100) / (w + 44))) : 3;
+    const cols = escritorio ? Math.max(4, Math.floor((window.innerWidth - 240 - 100) / (w + 44))) : 3;
     const giro = k => cols === 1 ? 30 : Math.round(38 - k * (16 / (cols - 1)));
     let out = `<div class="shelf cajas3d" style="--w:${w}px;--h:${h}px;--d:${d}px">`;
     for (let i = 0; i < l.length; i += cols) {
@@ -938,7 +951,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v34 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v35 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
