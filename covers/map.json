@@ -3559,6 +3559,17 @@
   "extras": true,
   "lomo": "covers/nes/mega-man-2-lomo.png"
  },
+ "nes|nes open": {
+  "archivo": "covers/nes/nes-open.jpg",
+  "ssid": 1472,
+  "nombre": "NES Open Tournament Golf",
+  "region": "eu",
+  "buscado": "Nes Open",
+  "estado": "auto",
+  "logo": "covers/nes/nes-open-logo.png",
+  "lomo": "covers/nes/nes-open-lomo.png",
+  "extras": true
+ },
  "nes|new ghostbusters ii": {
   "archivo": "covers/nes/new-ghostbusters-ii.jpg",
   "ssid": 1378,
