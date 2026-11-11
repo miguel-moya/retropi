@@ -1,6 +1,6 @@
 name: Portadas
 # Descarga portadas de ScreenScraper y las guarda en covers/. Se lanza a mano (Actions → Portadas → Run workflow)
-# y una vez por semana para los juegos nuevos.
+# y cada día de madrugada para los juegos nuevos (portada, logo y lomo).
 on:
   workflow_dispatch:
     inputs:
@@ -21,7 +21,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '17 4 * * 1'
+    - cron: '17 4 * * *'   # cada día: solo busca los títulos nuevos
 permissions:
   contents: write
 concurrency: portadas
@@ -49,7 +49,7 @@ jobs:
           RETROPI_KEY: ${{ secrets.RETROPI_KEY }}
           REINTENTAR: ${{ inputs.reintentar && '1' || '' }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
-          LOMOS: ${{ inputs.lomos && '1' || '' }}
+          LOMOS: ${{ (github.event_name == 'schedule' || inputs.lomos) && '1' || '' }}
           EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras || inputs.lomos) && '1' || '' }}
         working-directory: datos
         run: node ../scripts/portadas.mjs

@@ -467,8 +467,12 @@ function preparar() {
   const d = S.data; IDX = { juegos: [], porId: {}, consolas: [], logos: {} };
   if (!d || !d.consolas) return;
   (d.finanzas && d.finanzas.filas || []).forEach(f => { if (f['Sistema']) IDX.logos[f['Sistema']] = f['Logo']; });
+  IDX.repetidos = [];
   d.consolas.forEach(c => {
     const juegos = (c.juegos || []).map((g, i) => Object.assign(g, { _c: c.id, _cn: c.nombre, _i: i }));
+    // IDs repetidos en la hoja: se avisa en Ajustes y cada fila recibe un identificador interno único para no abrir la ficha equivocada
+    const vistos = {};
+    juegos.forEach(g => { const id = String(g.ID); if (vistos[id]) { IDX.repetidos.push(`${id}: ${vistos[id]} y ${g['Título']}`); let n = 2; while (vistos[`${id}·${n}`]) n++; g.ID = `${id}·${n}`; vistos[g.ID] = g['Título']; } else vistos[id] = g['Título']; });
     // situaciones en el orden en que aparecen en la hoja (= orden de bloques)
     const sits = []; juegos.forEach(g => { const s = g['Situación'] || 'Sin situación'; if (!sits.includes(s)) sits.push(s); });
     IDX.consolas.push(Object.assign({}, c, { juegos, sits, logo: IDX.logos[c.hoja] || '' }));
@@ -937,6 +941,8 @@ function vAjustes() {
         `<button class="${tema === k ? 'on' : ''}" data-act="tema" data-v="${k}">${t}</button>`).join('')}</div>
       <p class="muted" style="margin:0 4px;font-size:12px">Automático sigue el modo del móvil.</p>
 </section>
+    ${IDX.repetidos && IDX.repetidos.length ? `<div class="card" style="padding:14px 16px;border-color:color-mix(in srgb,var(--amb) 50%,transparent)"><b style="color:var(--amb);font-size:14px">IDs repetidos en la hoja</b>
+      <p class="muted" style="margin:6px 0 0;font-size:13px;line-height:1.5">${IDX.repetidos.map(esc).join('<br>')}<br>Cambia uno de ellos en la hoja para que cada juego tenga su propio ID.</p></div>` : ''}
     <section class="stack" style="gap:8px"><h2 class="eyebrow">Datos de la hoja</h2>
       <div class="card kv">
         <div><span>Actualizados</span><b>${esc(hace(gen))}${exacta ? `<br><small class="muted" style="font-weight:500">${esc(exacta)}</small>` : ''}</b></div>
@@ -951,7 +957,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v36 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v37 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
