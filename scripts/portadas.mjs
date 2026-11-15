@@ -69,11 +69,14 @@ const nombreJuego = jeu => { const ns = jeu.noms || []; return (ns.find(n => n.r
 const datos = await (await fetch(`${E.RETROPI_URL}?key=${encodeURIComponent(E.RETROPI_KEY)}`)).json();
 if (!datos.ok) { console.error('El Apps Script no devolvió datos'); process.exit(1); }
 const titulos = new Map();
+// pestañas mixtas (Duplicados): la columna «Consola» dice de qué consola es cada juego y se reutilizan sus portadas
+const PLAT_ID = { 'Mega Drive': 'megadrive', 'Master System': 'mastersystem', 'NES': 'nes' };
 for (const c of datos.consolas) {
-  if (!SISTEMA[c.id]) continue;
   for (const g of c.juegos) {
-    const k = clave(c.id, g['Título']);
-    if (!titulos.has(k)) titulos.set(k, { c: c.id, t: g['Título'], nc: g['Nombre clave'], regiones: new Set() });
+    const cid = PLAT_ID[g['Consola']] || c.id;
+    if (!SISTEMA[cid]) continue;
+    const k = clave(cid, g['Título']);
+    if (!titulos.has(k)) titulos.set(k, { c: cid, t: g['Título'], nc: g['Nombre clave'], regiones: new Set() });
     titulos.get(k).regiones.add(String(g['Región'] || '').slice(0, 2).toUpperCase());
   }
 }

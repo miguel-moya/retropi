@@ -453,11 +453,11 @@ fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.js
   if (cambio) render();
 }).catch(() => {});
 const urlMedia = (f, v) => f ? RAMA_CDN + f + (v ? '?v=' + v : '') : '';
-const extras = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
+const extras = g => { const p = PORTADAS[`${g._p || g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
   const v = p.t || p.ssid;
   return { fondo: urlMedia(p.fondo, v), logo: urlMedia(p.logo, v), captura: urlMedia(p.captura, v), lomo: urlMedia(p.lw || p.lomo, v) }; };
 // portada ligera (WebP 264 px) para listas y estantería; grande (WebP 484 px) solo en la ficha
-const portada = (g, grande) => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia((grande ? p.g : p.p) || p.archivo, p.t || p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
+const portada = (g, grande) => { const p = PORTADAS[`${g._p || g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia((grande ? p.g : p.p) || p.archivo, p.t || p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
 const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g, cls === 'xl'))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
   const coste = n(g['Compra + Envío']);
@@ -480,13 +480,16 @@ function hace(iso) {
 }
 
 /* ============ datos ============ */
+const PLAT = { megadrive: 'Mega Drive', mastersystem: 'Master System', nes: 'NES' };
+const PLAT_ID = Object.fromEntries(Object.entries(PLAT).map(([k, v]) => [v, k])); // columna «Consola» (Duplicados) → consola de las portadas y tiendas
 function preparar() {
   const d = S.data; IDX = { juegos: [], porId: {}, consolas: [], logos: {} };
   if (!d || !d.consolas) return;
   (d.finanzas && d.finanzas.filas || []).forEach(f => { if (f['Sistema']) IDX.logos[f['Sistema']] = f['Logo']; });
   IDX.repetidos = [];
   d.consolas.forEach(c => {
-    const juegos = (c.juegos || []).map((g, i) => Object.assign(g, { _c: c.id, _cn: c.nombre, _i: i }));
+    const juegos = (c.juegos || []).map((g, i) => Object.assign(g, { _c: c.id, _cn: c.nombre, _i: i, _p: PLAT_ID[g['Consola']] || c.id,
+      _pn: g['Consola'] && PLAT_ID[g['Consola']] ? `${c.nombre} · ${g['Consola']}` : c.nombre }));
     // IDs repetidos en la hoja: se avisa en Ajustes y cada fila recibe un identificador interno único para no abrir la ficha equivocada
     const vistos = {};
     juegos.forEach(g => { const id = String(g.ID); if (vistos[id]) { IDX.repetidos.push(`${id}: ${vistos[id]} y ${g['Título']}`); let n = 2; while (vistos[`${id}·${n}`]) n++; g.ID = `${id}·${n}`; vistos[g.ID] = g['Título']; } else vistos[id] = g['Título']; });
@@ -591,7 +594,7 @@ function filaJuego(g, conConsola, parte) {
   return `<a class="g" href="#/j/${esc(g.ID)}" style="text-decoration:none;color:inherit">
     ${cover(g, 'sm')}
     <span class="mid"><span class="t">${esc(g['Título'])}</span>
-      <span class="meta">${chip(g['Situación'])}${conConsola ? `<span>${esc(g._cn)}</span>` : ''}${g['Formato'] ? `<span class="tag">${esc(g['Formato'])}</span>` : ''}${n(g[kN]) != null ? `<span class="tag">${ICON.star}${etqN}${nfmt(g[kN])}</span>` : ''}</span></span>
+      <span class="meta">${chip(g['Situación'])}${conConsola ? `<span>${esc(g._pn)}</span>` : ''}${g['Formato'] ? `<span class="tag">${esc(g['Formato'])}</span>` : ''}${n(g[kN]) != null ? `<span class="tag">${ICON.star}${etqN}${nfmt(g[kN])}</span>` : ''}</span></span>
     <span class="end"><span class="money">${eur(vend ? g['Venta'] : g['Valor'])}</span><small style="font-size:12px;font-weight:600">${signo(p)}</small></span></a>`;
 }
 
@@ -663,7 +666,6 @@ const ROWICON = {
   link: IC('<path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>'),
 };
 
-const PLAT = { megadrive: 'Mega Drive', mastersystem: 'Master System', nes: 'NES' };
 const TERM = {}; // ajustes puntuales del término, solo en esta sesión
 const VINTED_PLAT = { megadrive: 1285, mastersystem: 1285, nes: 1268 }; // Master System se publica en Mega Drive
 const sinAcentos = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
@@ -682,11 +684,11 @@ function tUrls(nombre, c) {
 function tiendas(g) {
   const base = g['Nombre clave'] || g['Título'];
   const term = TERM[g.ID] ?? base;
-  const u = tUrls(term, g._c);
-  const plat = PLAT[g._c] || g._cn;
+  const u = tUrls(term, g._p);
+  const plat = PLAT[g._p] || g._cn;
   const btn = (k, nombre) => `<a href="${esc(u[k])}" data-t="${k}" target="_blank" rel="noopener" class="tienda"><b>${nombre}</b></a>`;
   return `<div class="card" style="padding:14px;display:flex;flex-direction:column;gap:12px">
-    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._c)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small class="tplat">${esc(plat)}</small></label>
+    <label class="tterm">${ICON.search}<input id="tterm" data-id="${esc(g.ID)}" data-c="${esc(g._p)}" data-base="${esc(base)}" value="${esc(term)}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"><small class="tplat">${esc(plat)}</small></label>
     <div class="tiendas">${btn('ebay', 'eBay')}${btn('vinted', 'Vinted')}${btn('walla', 'Wallapop')}</div></div>`;
 }
 document.addEventListener('input', e => {
@@ -705,7 +707,7 @@ function vJuego(gid) {
   const img = portada(g);
   FONDO = { img, h: hue(g.ID) };   // el fondo difuminado se pinta fuera de la página (ver pintarFondo)
   const sitCol = (SIT[g['Situación']] || ['', '#C3C8D1'])[1];
-  const sub = [g._cn, g['Región']].filter(Boolean).map(esc).join(' · ');
+  const sub = [g._pn, g['Región']].filter(Boolean).map(esc).join(' · ');
   const ids = contexto(g); const pos = { i: ids.indexOf(g.ID), total: ids.length };
   // Nota: Estado General; si no hay, media de los estados con número
   const notas = Object.keys(g).filter(k => /^Estado /.test(k) && k !== 'Estado General' && isNum(g[k])).map(k => g[k]);
@@ -732,7 +734,7 @@ function vJuego(gid) {
 
   // Detalles
   const filas = [
-    ['consola', 'Consola', g._cn],
+    ['consola', 'Consola', g._pn],
     g['Región'] ? ['region', 'Región', g['Región']] : null,
     g['Formato'] ? ['formato', 'Formato', g['Formato']] : null,
     g['Fecha venta'] ? ['fecha', 'Fecha de venta', fecha(g['Fecha venta'])] : null,
@@ -761,7 +763,7 @@ function vJuego(gid) {
       <section class="sec"><h2>Segunda mano</h2>${tiendas(g)}</section>
       <section class="sec"><h2>Detalles</h2><div class="card rows">${filas}</div></section>
       ${otras.length ? `<section class="sec"><h2>Otras unidades</h2><div class="list" style="padding-top:0">${otras.map(x => filaJuego(x, false)).join('')}</div></section>` : ''}
-      <button class="secbtn glass" data-act="rescrapear" data-v="${esc(g._c + '|' + String(g['Título']).trim().toLowerCase())}" style="width:100%;margin-top:22px">${ICON.sync} Buscar portada y lomo de nuevo</button>
+      <button class="secbtn glass" data-act="rescrapear" data-v="${esc(g._p + '|' + String(g['Título']).trim().toLowerCase())}" style="width:100%;margin-top:22px">${ICON.sync} Buscar portada y lomo de nuevo</button>
       <p class="muted" style="font-size:12px;margin-top:14px;text-align:center">Solo lectura · para editar, usa la hoja</p>
     </div>`;
 }
