@@ -113,9 +113,9 @@ body.sin-scroll{overflow:hidden}
 .caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.18;clip-path:inset(calc(100% - 6px) 0 0 0);pointer-events:none}
 .caja3w{position:relative;display:block;justify-self:center;text-decoration:none}
 /* punto de libro: metido entre la portada y la funda de plástico, a la derecha, asomando un poco por arriba */
-.caja3 > b.punto{position:absolute;top:-6px;right:4px;width:17px;height:74%;transform:translateZ(calc(var(--d) / 2 + .5px));background:var(--c);backface-visibility:hidden;
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
-.caja3 > b.punto i{font:800 7.5px/1 var(--font);letter-spacing:.14em;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);font-style:normal;white-space:nowrap;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.caja3 > b.punto{position:absolute;top:-6px;right:4px;width:calc(var(--w) * .22);height:76%;transform:translateZ(calc(var(--d) / 2 + .5px));background:var(--c);backface-visibility:hidden;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:calc(var(--w) * .07);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.caja3 > b.punto i{font:800 calc(var(--w) * .1)/1 var(--font);letter-spacing:.1em;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);font-style:normal;white-space:nowrap;text-shadow:0 1px 0 rgba(0,0,0,.25)}
 .caja3 > b.punto:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 40%,rgba(0,0,0,.15))}
 .caja3 > b.punto:before{content:'';position:absolute;left:0;right:0;top:5px;height:2px;background:rgba(0,0,0,.25)}
 .caja3 > .funda{inset:0;transform:translateZ(calc(var(--d) / 2 + 1px));pointer-events:none;
@@ -975,7 +975,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v41 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v42 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
