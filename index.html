@@ -823,7 +823,7 @@ function htmlBuscar() {
       <button class="secbtn glass" data-act="preset" data-v="venta">Todo lo que tengo en venta</button></div>`;
   const l = filtrarBusqueda();
   S.ctx = l.slice(0, 150).map(g => g.ID);
-  const cab2 = `<div class="res-cab"><span>${l.length} ${l.length === 1 ? 'resultado' : 'resultados'}${S.bf.orden !== 'hoja' ? ' · ' + ORDENES[S.bf.orden].toLowerCase() : ''}</span>${resumen ? `<div class="res-tags">${resumen}</div>` : ''}</div>`;
+  const cab2 = `<div class="res-cab"><span style="display:flex;justify-content:space-between;gap:8px">${l.length} ${l.length === 1 ? 'resultado' : 'resultados'}${S.bf.orden !== 'hoja' ? ' · ' + ORDENES[S.bf.orden].toLowerCase() : ''}<button class="lnk" data-act="bflimpiar" style="color:var(--acc);font-weight:700;font-size:12px">Empezar de nuevo</button></span>${resumen ? `<div class="res-tags">${resumen}</div>` : ''}</div>`;
   if (!l.length) return cab2 + '<div class="empty">Sin resultados con estos filtros.</div>';
   const extra = l.length > 150 ? `<p class="muted" style="font-size:12px">Mostrando 150 de ${l.length}. Afina la búsqueda.</p>` : '';
   const parte = (S.bf.emin !== '' || S.bf.emax !== '' || S.bf.orden.startsWith('estado')) ? S.bf.parte : '';
@@ -979,7 +979,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v45 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v46 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1214,7 +1214,7 @@ document.addEventListener('click', e => {
     if (Array.isArray(F[k])) F[k] = F[k].filter(x => x !== v);
     else if (k === 'estado') { F.emin = ''; F.emax = ''; F.sinParte = false; } else if (k === 'valor') { F.vmin = ''; F.vmax = ''; } else if (k === 'compra') { F.cmin = ''; F.cmax = ''; }
     render(); }
-  else if (act === 'bflimpiar') { S.bf = { sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }; render(); }
+  else if (act === 'bflimpiar') { if (!t.closest('.hoja-panel')) S.gq = ''; S.bf = { sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }; render(); }
   else if (act === 'preset') { S.bf = Object.assign({ sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }, JSON.parse(JSON.stringify(PRESETS[v]))); render(); }
   else if (act === 'panel') { S.panel = true; document.querySelector('.hoja-panel').classList.add('on'); document.querySelector('.velo').classList.add('on'); document.body.classList.add('sin-scroll'); }
   else if (act === 'panelcerrar') { S.panel = false; document.querySelector('.hoja-panel').classList.remove('on'); document.querySelector('.velo').classList.remove('on'); document.body.classList.remove('sin-scroll'); }
@@ -1223,6 +1223,9 @@ document.addEventListener('click', e => {
   else if (act === 'back') volver(v);
   else if (act === 'ghborrar') { delete S.ui.ghToken; LS.set('rp.ui', S.ui); toast('Token quitado'); render(); }
   else if (act === 'rescrapear') rescrapear(v, t);
+  else if (act === 'limpiar' && t.closest('.search').querySelector('#qg')) {
+    // en Buscar, la X vuelve al inicio: borra el texto y también los filtros y atajos aplicados
+    S.gq = ''; S.bf = { sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }; render(); }
   else if (act === 'limpiar') { const i = t.closest('.search').querySelector('input'); i.value = ''; i.dispatchEvent(new Event('input', { bubbles: true })); i.focus(); }
   else if (act === 'tema') { S.ui.tema = v; LS.set('rp.ui', S.ui); aplicarTema(); render(); }
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
