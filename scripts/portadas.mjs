@@ -83,11 +83,12 @@ const mapa = await leer(path.join(DIR, 'map.json'), {});
 const ajustes = await leer(path.join(DIR, 'ajustes.json'), {});
 let nuevos = 0, ok = 0, fallos = 0;
 for (const [k, j] of titulos) {
+  if (E.SOLO && k !== E.SOLO) continue;          // botón de la ficha: solo ese título, y siempre de nuevo
   const aj = ajustes[k];
   if (aj === 'no') { mapa[k] = { estado: 'omitido' }; continue; }
   const previo = mapa[k];
-  if (!E.FORZAR && previo && previo.archivo && (!aj || previo.ssid === aj || previo.buscado === aj)) continue;     // ya está y no hay corrección nueva
-  if (previo && previo.estado === 'no encontrado' && !aj && !E.REINTENTAR) continue;
+  if (!E.FORZAR && !E.SOLO && previo && previo.archivo && (!aj || previo.ssid === aj || previo.buscado === aj)) continue;     // ya está y no hay corrección nueva
+  if (previo && previo.estado === 'no encontrado' && !aj && !E.REINTENTAR && !E.SOLO) continue;
   if (nuevos++ >= LIMITE) break;
   try {
     let jeu = null;
@@ -123,7 +124,7 @@ for (const [k, j] of titulos) {
     if (!img.ok) throw new Error('descarga ' + img.status);
     await fs.mkdir(path.dirname(rel), { recursive: true });
     await fs.writeFile(rel, Buffer.from(await img.arrayBuffer()));
-    mapa[k] = { archivo: rel, ssid: Number(jeu.id), nombre: nombreJuego(jeu), region: m.region, buscado: typeof aj === 'string' ? aj : buscado, estado: aj ? 'corregido' : 'auto' };
+    mapa[k] = { archivo: rel, t: Date.now(), ssid: Number(jeu.id), nombre: nombreJuego(jeu), region: m.region, buscado: typeof aj === 'string' ? aj : buscado, estado: aj ? 'corregido' : 'auto' };
     ok++; console.log(`✓ ${j.c} · ${j.t} → ${mapa[k].nombre} [${m.region}]`);
     await espera(1200);
   } catch (e) { fallos++; console.log(`! ${j.c} · ${j.t}: ${e.message}`); if (/quota|429/.test(e.message)) break; }
@@ -135,7 +136,8 @@ if (E.EXTRAS) {
       for (const r of regiones) { const m = c.find(x => x.region === r); if (m) return m; } return c[0]; } return null; };
   let hechos = 0;
   for (const [k, v] of Object.entries(mapa)) {
-    if (!v.ssid || (v.extras && !E.FORZAR_EXTRAS && !(E.LOMOS && v.lomo === undefined))) continue;
+    if (E.SOLO && k !== E.SOLO) continue;
+    if (!v.ssid || (!E.SOLO && v.extras && !E.FORZAR_EXTRAS && !(E.LOMOS && v.lomo === undefined))) continue;
     const c = k.split('|')[0];
     try {
       const jeu = (await ss('jeuInfos.php', { gameid: v.ssid, systemeid: SISTEMA[c] })).response?.jeu;

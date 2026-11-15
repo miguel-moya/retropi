@@ -16,6 +16,10 @@ on:
         description: 'Descargar también los lomos de las cajas'
         type: boolean
         default: false
+      solo:
+        description: 'Solo este título (consola|título en minúsculas). Lo usa el botón de la ficha'
+        type: string
+        default: ''
       forzar:
         description: 'Volver a buscar todos los títulos'
         type: boolean
@@ -49,8 +53,9 @@ jobs:
           RETROPI_KEY: ${{ secrets.RETROPI_KEY }}
           REINTENTAR: ${{ inputs.reintentar && '1' || '' }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
-          LOMOS: ${{ (github.event_name == 'schedule' || inputs.lomos) && '1' || '' }}
-          EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras || inputs.lomos) && '1' || '' }}
+          LOMOS: ${{ (github.event_name == 'schedule' || inputs.lomos || inputs.solo != '') && '1' || '' }}
+          SOLO: ${{ inputs.solo }}
+          EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras || inputs.lomos || inputs.solo != '') && '1' || '' }}
         working-directory: datos
         run: node ../scripts/portadas.mjs
       - name: Guardar en la rama portadas

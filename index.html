@@ -439,8 +439,9 @@ fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.js
 }).catch(() => {});
 const urlMedia = (f, v) => f ? RAMA_CDN + f + (v ? '?v=' + v : '') : '';
 const extras = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
-  return { fondo: urlMedia(p.fondo, p.ssid), logo: urlMedia(p.logo, p.ssid), captura: urlMedia(p.captura, p.ssid), lomo: urlMedia(p.lomo, p.ssid) }; };
-const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia(p.archivo, p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
+  const v = p.t || p.ssid;
+  return { fondo: urlMedia(p.fondo, v), logo: urlMedia(p.logo, v), captura: urlMedia(p.captura, v), lomo: urlMedia(p.lomo, v) }; };
+const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia(p.archivo, p.t || p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
 const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
   const coste = n(g['Compra + Envío']);
@@ -744,7 +745,8 @@ function vJuego(gid) {
       <section class="sec"><h2>Segunda mano</h2>${tiendas(g)}</section>
       <section class="sec"><h2>Detalles</h2><div class="card rows">${filas}</div></section>
       ${otras.length ? `<section class="sec"><h2>Otras unidades</h2><div class="list" style="padding-top:0">${otras.map(x => filaJuego(x, false)).join('')}</div></section>` : ''}
-      <p class="muted" style="font-size:12px;margin-top:22px;text-align:center">Solo lectura · para editar, usa la hoja</p>
+      <button class="secbtn glass" data-act="rescrapear" data-v="${esc(g._c + '|' + String(g['Título']).trim().toLowerCase())}" style="width:100%;margin-top:22px">${ICON.sync} Buscar portada y lomo de nuevo</button>
+      <p class="muted" style="font-size:12px;margin-top:14px;text-align:center">Solo lectura · para editar, usa la hoja</p>
     </div>`;
 }
 
@@ -953,11 +955,16 @@ function vAjustes() {
       <p class="muted" style="margin:0 4px;font-size:12px;line-height:1.5">Para recargar la app, desliza hacia abajo desde arriba en cualquier pantalla.</p></section>
     <section class="stack" style="gap:8px"><h2 class="eyebrow">Conexión</h2>
       <div class="card kv"><div><span>Apps Script</span><b style="font-size:12px;word-break:break-all">${esc(u.replace(/^https:\/\/script\.google\.com\/macros\/s\/(.{6}).+(.{4})\/exec$/, '…/s/$1…$2/exec'))}</b></div>
-        <div><span>Clave</span><b>Guardada en este dispositivo</b></div></div>
+        <div><span>Clave</span><b>Guardada en este dispositivo</b></div>
+        <div><span>Token de GitHub</span><b>${S.ui.ghToken ? 'Guardado' : 'Sin configurar'}</b></div></div>
+      <form id="fgh" class="stack" style="gap:8px" autocomplete="off">
+        <label class="f">Token de GitHub (para el botón «Buscar portada» de la ficha)<input id="ghtok" name="tok" type="password" spellcheck="false" placeholder="${S.ui.ghToken ? '•••••••• (guardado)' : 'github_pat_…'}"></label>
+        <div style="display:flex;gap:8px"><button class="secbtn glass" type="submit" style="flex:1">Guardar token</button>${S.ui.ghToken ? '<button class="secbtn glass" type="button" data-act="ghborrar" style="flex:1;color:var(--red)">Quitar token</button>' : ''}</div>
+        <p class="muted" style="margin:0 4px;font-size:12px;line-height:1.5">Se guarda solo en este dispositivo. Usa un token «fine-grained» limitado al repositorio retropi con el permiso Actions: lectura y escritura.</p></form>
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v37 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v38 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1081,6 +1088,33 @@ function ajustarFicha() {
 }
 window.addEventListener('scroll', () => { if (ruta().a === 'j' && !rafFicha) rafFicha = requestAnimationFrame(ajustarFicha); }, { passive: true });
 
+/* ============ botón de la ficha: lanzar la tarea de portadas solo para este juego ============ */
+async function rescrapear(clave, boton) {
+  if (!S.ui.ghToken) { toast('Añade tu token de GitHub en Ajustes'); return; }
+  boton.disabled = true; boton.innerHTML = `<span class="spin" style="display:grid">${ICON.sync}</span> Buscando… (1–2 min)`;
+  try {
+    const r = await fetch('https://api.github.com/repos/miguel-moya/retropi/actions/workflows/portadas.yml/dispatches', {
+      method: 'POST', headers: { Authorization: 'Bearer ' + S.ui.ghToken, Accept: 'application/vnd.github+json' },
+      body: JSON.stringify({ ref: 'main', inputs: { solo: clave } }) });
+    if (r.status === 401 || r.status === 403) throw new Error('El token no es válido o no tiene permiso de Actions');
+    if (!r.ok) throw new Error('GitHub respondió ' + r.status);
+  } catch (err) { toast(String(err.message || err)); boton.disabled = false; boton.innerHTML = `${ICON.sync} Buscar portada y lomo de nuevo`; return; }
+  // espera a que la tarea termine: comprueba la lista de portadas cada 20 s durante 6 min
+  const antes = JSON.stringify(PORTADAS[clave] || null), inicio = Date.now();
+  const mirar = async () => {
+    try {
+      const m = await (await fetch(RAMA_RAW + 'covers/map.json?' + Date.now(), { cache: 'no-store' })).json();
+      if (JSON.stringify(m[clave] || null) !== antes) {
+        PORTADAS = m; try { localStorage.setItem('rp.portadas', JSON.stringify(m)); } catch (_) {}
+        VISTAS.clear(); render(); toast(m[clave] && m[clave].archivo ? 'Portada y lomo actualizados' : 'ScreenScraper no encontró este juego'); return;
+      }
+    } catch (_) {}
+    if (Date.now() - inicio < 360000) setTimeout(mirar, 20000);
+    else { toast('Sigue tardando: recarga la app en un rato'); render(); }
+  };
+  setTimeout(mirar, 45000);
+}
+
 /* ============ tema ============ */
 const mqClaro = matchMedia('(prefers-color-scheme: light)');
 function aplicarTema() {
@@ -1168,6 +1202,8 @@ document.addEventListener('click', e => {
   else if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); render(); }
   else if (act === 'mas') { const c = t.closest('.clamp'); c.classList.toggle('open'); t.textContent = c.classList.contains('open') ? 'Menos' : 'Más'; }
   else if (act === 'back') volver(v);
+  else if (act === 'ghborrar') { delete S.ui.ghToken; LS.set('rp.ui', S.ui); toast('Token quitado'); render(); }
+  else if (act === 'rescrapear') rescrapear(v, t);
   else if (act === 'limpiar') { const i = t.closest('.search').querySelector('input'); i.value = ''; i.dispatchEvent(new Event('input', { bubbles: true })); i.focus(); }
   else if (act === 'tema') { S.ui.tema = v; LS.set('rp.ui', S.ui); aplicarTema(); render(); }
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
@@ -1182,6 +1218,7 @@ document.addEventListener('input', e => {
   else if (e.target.dataset && e.target.dataset.bf && e.target.tagName === 'INPUT') { S.bf[e.target.dataset.bf] = e.target.value; refrescarBuscar(); }
 });
 document.addEventListener('submit', async e => {
+  if (e.target.id === 'fgh') { e.preventDefault(); const v = $('#ghtok').value.trim(); if (!v) return; S.ui.ghToken = v; LS.set('rp.ui', S.ui); toast('Token guardado'); render(); return; }
   if (e.target.id !== 'fsetup') return;
   e.preventDefault();
   const fd = new FormData(e.target);
