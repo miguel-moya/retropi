@@ -3700,6 +3700,17 @@
   "extras": true,
   "lomo": "covers/nes/super-mario-bros-3-lomo.png"
  },
+ "nes|super off road": {
+  "archivo": "covers/nes/super-off-road.jpg",
+  "ssid": 71427,
+  "nombre": "Ivan &quot;Ironman&quot; Stewart's Super Off Road",
+  "region": "eu",
+  "buscado": "Super Off Road",
+  "estado": "auto",
+  "logo": "covers/nes/super-off-road-logo.png",
+  "lomo": "covers/nes/super-off-road-lomo.png",
+  "extras": true
+ },
  "nes|tale spin": {
   "archivo": "covers/nes/tale-spin.jpg",
   "ssid": 1477,
