@@ -10,7 +10,10 @@
   "fondo": "covers/mastersystem/aladdin-fondo.jpg",
   "captura": "covers/mastersystem/aladdin-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/aladdin-lomo.png"
+  "lomo": "covers/mastersystem/aladdin-lomo.png",
+  "g": "covers/mastersystem/aladdin.webp",
+  "p": "covers/mastersystem/aladdin-p.webp",
+  "lw": "covers/mastersystem/aladdin-lomo.webp"
  },
  "mastersystem|alex kidd in high tech world": {
   "archivo": "covers/mastersystem/alex-kidd-in-high-tech-world.jpg",
@@ -23,7 +26,10 @@
   "fondo": "covers/mastersystem/alex-kidd-in-high-tech-world-fondo.jpg",
   "captura": "covers/mastersystem/alex-kidd-in-high-tech-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/alex-kidd-in-high-tech-world-lomo.png"
+  "lomo": "covers/mastersystem/alex-kidd-in-high-tech-world-lomo.png",
+  "g": "covers/mastersystem/alex-kidd-in-high-tech-world.webp",
+  "p": "covers/mastersystem/alex-kidd-in-high-tech-world-p.webp",
+  "lw": "covers/mastersystem/alex-kidd-in-high-tech-world-lomo.webp"
  },
  "mastersystem|alex kidd in shinobi world": {
   "archivo": "covers/mastersystem/alex-kidd-in-shinobi-world.jpg",
@@ -36,7 +42,10 @@
   "fondo": "covers/mastersystem/alex-kidd-in-shinobi-world-fondo.jpg",
   "captura": "covers/mastersystem/alex-kidd-in-shinobi-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/alex-kidd-in-shinobi-world-lomo.png"
+  "lomo": "covers/mastersystem/alex-kidd-in-shinobi-world-lomo.png",
+  "g": "covers/mastersystem/alex-kidd-in-shinobi-world.webp",
+  "p": "covers/mastersystem/alex-kidd-in-shinobi-world-p.webp",
+  "lw": "covers/mastersystem/alex-kidd-in-shinobi-world-lomo.webp"
  },
  "mastersystem|alex kidd miracle world": {
   "archivo": "covers/mastersystem/alex-kidd-miracle-world.jpg",
@@ -49,7 +58,10 @@
   "fondo": "covers/mastersystem/alex-kidd-miracle-world-fondo.jpg",
   "captura": "covers/mastersystem/alex-kidd-miracle-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/alex-kidd-miracle-world-lomo.png"
+  "lomo": "covers/mastersystem/alex-kidd-miracle-world-lomo.png",
+  "g": "covers/mastersystem/alex-kidd-miracle-world.webp",
+  "p": "covers/mastersystem/alex-kidd-miracle-world-p.webp",
+  "lw": "covers/mastersystem/alex-kidd-miracle-world-lomo.webp"
  },
  "mastersystem|alien 3": {
   "archivo": "covers/mastersystem/alien-3.jpg",
@@ -62,7 +74,10 @@
   "fondo": "covers/mastersystem/alien-3-fondo.jpg",
   "captura": "covers/mastersystem/alien-3-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/alien-3-lomo.png"
+  "lomo": "covers/mastersystem/alien-3-lomo.png",
+  "g": "covers/mastersystem/alien-3.webp",
+  "p": "covers/mastersystem/alien-3-p.webp",
+  "lw": "covers/mastersystem/alien-3-lomo.webp"
  },
  "mastersystem|altered beast": {
   "archivo": "covers/mastersystem/altered-beast.jpg",
@@ -75,7 +90,10 @@
   "fondo": "covers/mastersystem/altered-beast-fondo.jpg",
   "captura": "covers/mastersystem/altered-beast-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/altered-beast-lomo.png"
+  "lomo": "covers/mastersystem/altered-beast-lomo.png",
+  "g": "covers/mastersystem/altered-beast.webp",
+  "p": "covers/mastersystem/altered-beast-p.webp",
+  "lw": "covers/mastersystem/altered-beast-lomo.webp"
  },
  "mastersystem|asterix": {
   "archivo": "covers/mastersystem/asterix.jpg",
@@ -88,7 +106,10 @@
   "fondo": "covers/mastersystem/asterix-fondo.jpg",
   "captura": "covers/mastersystem/asterix-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/asterix-lomo.png"
+  "lomo": "covers/mastersystem/asterix-lomo.png",
+  "g": "covers/mastersystem/asterix.webp",
+  "p": "covers/mastersystem/asterix-p.webp",
+  "lw": "covers/mastersystem/asterix-lomo.webp"
  },
  "mastersystem|basketball nightmare": {
   "archivo": "covers/mastersystem/basketball-nightmare.jpg",
@@ -101,7 +122,10 @@
   "fondo": "covers/mastersystem/basketball-nightmare-fondo.jpg",
   "captura": "covers/mastersystem/basketball-nightmare-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/basketball-nightmare-lomo.png"
+  "lomo": "covers/mastersystem/basketball-nightmare-lomo.png",
+  "g": "covers/mastersystem/basketball-nightmare.webp",
+  "p": "covers/mastersystem/basketball-nightmare-p.webp",
+  "lw": "covers/mastersystem/basketball-nightmare-lomo.webp"
  },
  "mastersystem|batman returns": {
   "archivo": "covers/mastersystem/batman-returns.jpg",
@@ -114,7 +138,10 @@
   "fondo": "covers/mastersystem/batman-returns-fondo.jpg",
   "captura": "covers/mastersystem/batman-returns-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/batman-returns-lomo.png"
+  "lomo": "covers/mastersystem/batman-returns-lomo.png",
+  "g": "covers/mastersystem/batman-returns.webp",
+  "p": "covers/mastersystem/batman-returns-p.webp",
+  "lw": "covers/mastersystem/batman-returns-lomo.webp"
  },
  "mastersystem|bonanza bros": {
   "archivo": "covers/mastersystem/bonanza-bros.jpg",
@@ -127,7 +154,10 @@
   "fondo": "covers/mastersystem/bonanza-bros-fondo.jpg",
   "captura": "covers/mastersystem/bonanza-bros-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/bonanza-bros-lomo.png"
+  "lomo": "covers/mastersystem/bonanza-bros-lomo.png",
+  "g": "covers/mastersystem/bonanza-bros.webp",
+  "p": "covers/mastersystem/bonanza-bros-p.webp",
+  "lw": "covers/mastersystem/bonanza-bros-lomo.webp"
  },
  "mastersystem|bubble bobble": {
   "archivo": "covers/mastersystem/bubble-bobble.jpg",
@@ -140,7 +170,10 @@
   "fondo": "covers/mastersystem/bubble-bobble-fondo.jpg",
   "captura": "covers/mastersystem/bubble-bobble-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/bubble-bobble-lomo.png"
+  "lomo": "covers/mastersystem/bubble-bobble-lomo.png",
+  "g": "covers/mastersystem/bubble-bobble.webp",
+  "p": "covers/mastersystem/bubble-bobble-p.webp",
+  "lw": "covers/mastersystem/bubble-bobble-lomo.webp"
  },
  "mastersystem|california games": {
   "archivo": "covers/mastersystem/california-games.jpg",
@@ -153,7 +186,10 @@
   "fondo": "covers/mastersystem/california-games-fondo.jpg",
   "captura": "covers/mastersystem/california-games-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/california-games-lomo.png"
+  "lomo": "covers/mastersystem/california-games-lomo.png",
+  "g": "covers/mastersystem/california-games.webp",
+  "p": "covers/mastersystem/california-games-p.webp",
+  "lw": "covers/mastersystem/california-games-lomo.webp"
  },
  "mastersystem|castle of illusion": {
   "archivo": "covers/mastersystem/castle-of-illusion.jpg",
@@ -166,7 +202,10 @@
   "fondo": "covers/mastersystem/castle-of-illusion-fondo.jpg",
   "captura": "covers/mastersystem/castle-of-illusion-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/castle-of-illusion-lomo.png"
+  "lomo": "covers/mastersystem/castle-of-illusion-lomo.png",
+  "g": "covers/mastersystem/castle-of-illusion.webp",
+  "p": "covers/mastersystem/castle-of-illusion-p.webp",
+  "lw": "covers/mastersystem/castle-of-illusion-lomo.webp"
  },
  "mastersystem|cloud master": {
   "archivo": "covers/mastersystem/cloud-master.jpg",
@@ -179,7 +218,10 @@
   "fondo": "covers/mastersystem/cloud-master-fondo.jpg",
   "captura": "covers/mastersystem/cloud-master-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/cloud-master-lomo.png"
+  "lomo": "covers/mastersystem/cloud-master-lomo.png",
+  "g": "covers/mastersystem/cloud-master.webp",
+  "p": "covers/mastersystem/cloud-master-p.webp",
+  "lw": "covers/mastersystem/cloud-master-lomo.webp"
  },
  "mastersystem|cyborg hunter": {
   "archivo": "covers/mastersystem/cyborg-hunter.jpg",
@@ -192,7 +234,10 @@
   "fondo": "covers/mastersystem/cyborg-hunter-fondo.jpg",
   "captura": "covers/mastersystem/cyborg-hunter-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/cyborg-hunter-lomo.png"
+  "lomo": "covers/mastersystem/cyborg-hunter-lomo.png",
+  "g": "covers/mastersystem/cyborg-hunter.webp",
+  "p": "covers/mastersystem/cyborg-hunter-p.webp",
+  "lw": "covers/mastersystem/cyborg-hunter-lomo.webp"
  },
  "mastersystem|daffy duck": {
   "archivo": "covers/mastersystem/daffy-duck.jpg",
@@ -205,7 +250,10 @@
   "fondo": "covers/mastersystem/daffy-duck-fondo.jpg",
   "captura": "covers/mastersystem/daffy-duck-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/daffy-duck-lomo.png"
+  "lomo": "covers/mastersystem/daffy-duck-lomo.png",
+  "g": "covers/mastersystem/daffy-duck.webp",
+  "p": "covers/mastersystem/daffy-duck-p.webp",
+  "lw": "covers/mastersystem/daffy-duck-lomo.webp"
  },
  "mastersystem|deep duck trouble": {
   "archivo": "covers/mastersystem/deep-duck-trouble.jpg",
@@ -218,7 +266,10 @@
   "fondo": "covers/mastersystem/deep-duck-trouble-fondo.jpg",
   "captura": "covers/mastersystem/deep-duck-trouble-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/deep-duck-trouble-lomo.png"
+  "lomo": "covers/mastersystem/deep-duck-trouble-lomo.png",
+  "g": "covers/mastersystem/deep-duck-trouble.webp",
+  "p": "covers/mastersystem/deep-duck-trouble-p.webp",
+  "lw": "covers/mastersystem/deep-duck-trouble-lomo.webp"
  },
  "mastersystem|desert speedtrap": {
   "archivo": "covers/mastersystem/desert-speedtrap.jpg",
@@ -231,7 +282,10 @@
   "fondo": "covers/mastersystem/desert-speedtrap-fondo.jpg",
   "captura": "covers/mastersystem/desert-speedtrap-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/desert-speedtrap-lomo.png"
+  "lomo": "covers/mastersystem/desert-speedtrap-lomo.png",
+  "g": "covers/mastersystem/desert-speedtrap.webp",
+  "p": "covers/mastersystem/desert-speedtrap-p.webp",
+  "lw": "covers/mastersystem/desert-speedtrap-lomo.webp"
  },
  "mastersystem|double dragon": {
   "archivo": "covers/mastersystem/double-dragon.jpg",
@@ -244,7 +298,10 @@
   "fondo": "covers/mastersystem/double-dragon-fondo.jpg",
   "captura": "covers/mastersystem/double-dragon-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/double-dragon-lomo.png"
+  "lomo": "covers/mastersystem/double-dragon-lomo.png",
+  "g": "covers/mastersystem/double-dragon.webp",
+  "p": "covers/mastersystem/double-dragon-p.webp",
+  "lw": "covers/mastersystem/double-dragon-lomo.webp"
  },
  "mastersystem|dragon crystal": {
   "archivo": "covers/mastersystem/dragon-crystal.jpg",
@@ -257,7 +314,10 @@
   "fondo": "covers/mastersystem/dragon-crystal-fondo.jpg",
   "captura": "covers/mastersystem/dragon-crystal-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/dragon-crystal-lomo.png"
+  "lomo": "covers/mastersystem/dragon-crystal-lomo.png",
+  "g": "covers/mastersystem/dragon-crystal.webp",
+  "p": "covers/mastersystem/dragon-crystal-p.webp",
+  "lw": "covers/mastersystem/dragon-crystal-lomo.webp"
  },
  "mastersystem|dynamite dux": {
   "archivo": "covers/mastersystem/dynamite-dux.jpg",
@@ -270,7 +330,10 @@
   "fondo": "covers/mastersystem/dynamite-dux-fondo.jpg",
   "captura": "covers/mastersystem/dynamite-dux-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/dynamite-dux-lomo.png"
+  "lomo": "covers/mastersystem/dynamite-dux-lomo.png",
+  "g": "covers/mastersystem/dynamite-dux.webp",
+  "p": "covers/mastersystem/dynamite-dux-p.webp",
+  "lw": "covers/mastersystem/dynamite-dux-lomo.webp"
  },
  "mastersystem|enduro racer": {
   "archivo": "covers/mastersystem/enduro-racer.jpg",
@@ -283,7 +346,10 @@
   "fondo": "covers/mastersystem/enduro-racer-fondo.jpg",
   "captura": "covers/mastersystem/enduro-racer-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/enduro-racer-lomo.png"
+  "lomo": "covers/mastersystem/enduro-racer-lomo.png",
+  "g": "covers/mastersystem/enduro-racer.webp",
+  "p": "covers/mastersystem/enduro-racer-p.webp",
+  "lw": "covers/mastersystem/enduro-racer-lomo.webp"
  },
  "mastersystem|fantasy zone": {
   "archivo": "covers/mastersystem/fantasy-zone.jpg",
@@ -296,7 +362,10 @@
   "fondo": "covers/mastersystem/fantasy-zone-fondo.jpg",
   "captura": "covers/mastersystem/fantasy-zone-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/fantasy-zone-lomo.png"
+  "lomo": "covers/mastersystem/fantasy-zone-lomo.png",
+  "g": "covers/mastersystem/fantasy-zone.webp",
+  "p": "covers/mastersystem/fantasy-zone-p.webp",
+  "lw": "covers/mastersystem/fantasy-zone-lomo.webp"
  },
  "mastersystem|g-loc air battle": {
   "archivo": "covers/mastersystem/g-loc-air-battle.jpg",
@@ -309,7 +378,10 @@
   "fondo": "covers/mastersystem/g-loc-air-battle-fondo.jpg",
   "captura": "covers/mastersystem/g-loc-air-battle-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/g-loc-air-battle-lomo.png"
+  "lomo": "covers/mastersystem/g-loc-air-battle-lomo.png",
+  "g": "covers/mastersystem/g-loc-air-battle.webp",
+  "p": "covers/mastersystem/g-loc-air-battle-p.webp",
+  "lw": "covers/mastersystem/g-loc-air-battle-lomo.webp"
  },
  "mastersystem|galaxy force": {
   "archivo": "covers/mastersystem/galaxy-force.jpg",
@@ -322,7 +394,10 @@
   "fondo": "covers/mastersystem/galaxy-force-fondo.jpg",
   "captura": "covers/mastersystem/galaxy-force-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/galaxy-force-lomo.png"
+  "lomo": "covers/mastersystem/galaxy-force-lomo.png",
+  "g": "covers/mastersystem/galaxy-force.webp",
+  "p": "covers/mastersystem/galaxy-force-p.webp",
+  "lw": "covers/mastersystem/galaxy-force-lomo.webp"
  },
  "mastersystem|ghouls'n ghosts": {
   "archivo": "covers/mastersystem/ghouls-n-ghosts.jpg",
@@ -335,7 +410,10 @@
   "fondo": "covers/mastersystem/ghouls-n-ghosts-fondo.jpg",
   "captura": "covers/mastersystem/ghouls-n-ghosts-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/ghouls-n-ghosts-lomo.png"
+  "lomo": "covers/mastersystem/ghouls-n-ghosts-lomo.png",
+  "g": "covers/mastersystem/ghouls-n-ghosts.webp",
+  "p": "covers/mastersystem/ghouls-n-ghosts-p.webp",
+  "lw": "covers/mastersystem/ghouls-n-ghosts-lomo.webp"
  },
  "mastersystem|golden axe warrior": {
   "archivo": "covers/mastersystem/golden-axe-warrior.jpg",
@@ -348,7 +426,10 @@
   "fondo": "covers/mastersystem/golden-axe-warrior-fondo.jpg",
   "captura": "covers/mastersystem/golden-axe-warrior-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/golden-axe-warrior-lomo.png"
+  "lomo": "covers/mastersystem/golden-axe-warrior-lomo.png",
+  "g": "covers/mastersystem/golden-axe-warrior.webp",
+  "p": "covers/mastersystem/golden-axe-warrior-p.webp",
+  "lw": "covers/mastersystem/golden-axe-warrior-lomo.webp"
  },
  "mastersystem|golvellius": {
   "archivo": "covers/mastersystem/golvellius.jpg",
@@ -361,7 +442,10 @@
   "fondo": "covers/mastersystem/golvellius-fondo.jpg",
   "captura": "covers/mastersystem/golvellius-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/golvellius-lomo.png"
+  "lomo": "covers/mastersystem/golvellius-lomo.png",
+  "g": "covers/mastersystem/golvellius.webp",
+  "p": "covers/mastersystem/golvellius-p.webp",
+  "lw": "covers/mastersystem/golvellius-lomo.webp"
  },
  "mastersystem|great golf": {
   "archivo": "covers/mastersystem/great-golf.jpg",
@@ -374,7 +458,10 @@
   "fondo": "covers/mastersystem/great-golf-fondo.jpg",
   "captura": "covers/mastersystem/great-golf-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/great-golf-lomo.png"
+  "lomo": "covers/mastersystem/great-golf-lomo.png",
+  "g": "covers/mastersystem/great-golf.webp",
+  "p": "covers/mastersystem/great-golf-p.webp",
+  "lw": "covers/mastersystem/great-golf-lomo.webp"
  },
  "mastersystem|hang on": {
   "archivo": "covers/mastersystem/hang-on.jpg",
@@ -387,7 +474,10 @@
   "fondo": "covers/mastersystem/hang-on-fondo.jpg",
   "captura": "covers/mastersystem/hang-on-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/hang-on-lomo.png"
+  "lomo": "covers/mastersystem/hang-on-lomo.png",
+  "g": "covers/mastersystem/hang-on.webp",
+  "p": "covers/mastersystem/hang-on-p.webp",
+  "lw": "covers/mastersystem/hang-on-lomo.webp"
  },
  "mastersystem|joe montana football": {
   "archivo": "covers/mastersystem/joe-montana-football.jpg",
@@ -400,7 +490,10 @@
   "fondo": "covers/mastersystem/joe-montana-football-fondo.jpg",
   "captura": "covers/mastersystem/joe-montana-football-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/joe-montana-football-lomo.png"
+  "lomo": "covers/mastersystem/joe-montana-football-lomo.png",
+  "g": "covers/mastersystem/joe-montana-football.webp",
+  "p": "covers/mastersystem/joe-montana-football-p.webp",
+  "lw": "covers/mastersystem/joe-montana-football-lomo.webp"
  },
  "mastersystem|jurassic park": {
   "archivo": "covers/mastersystem/jurassic-park.jpg",
@@ -413,7 +506,10 @@
   "fondo": "covers/mastersystem/jurassic-park-fondo.jpg",
   "captura": "covers/mastersystem/jurassic-park-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/jurassic-park-lomo.png"
+  "lomo": "covers/mastersystem/jurassic-park-lomo.png",
+  "g": "covers/mastersystem/jurassic-park.webp",
+  "p": "covers/mastersystem/jurassic-park-p.webp",
+  "lw": "covers/mastersystem/jurassic-park-lomo.webp"
  },
  "mastersystem|kenseiden": {
   "archivo": "covers/mastersystem/kenseiden.jpg",
@@ -426,7 +522,10 @@
   "fondo": "covers/mastersystem/kenseiden-fondo.jpg",
   "captura": "covers/mastersystem/kenseiden-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/kenseiden-lomo.png"
+  "lomo": "covers/mastersystem/kenseiden-lomo.png",
+  "g": "covers/mastersystem/kenseiden.webp",
+  "p": "covers/mastersystem/kenseiden-p.webp",
+  "lw": "covers/mastersystem/kenseiden-lomo.webp"
  },
  "mastersystem|kung fu kid": {
   "archivo": "covers/mastersystem/kung-fu-kid.jpg",
@@ -439,7 +538,10 @@
   "fondo": "covers/mastersystem/kung-fu-kid-fondo.jpg",
   "captura": "covers/mastersystem/kung-fu-kid-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/kung-fu-kid-lomo.png"
+  "lomo": "covers/mastersystem/kung-fu-kid-lomo.png",
+  "g": "covers/mastersystem/kung-fu-kid.webp",
+  "p": "covers/mastersystem/kung-fu-kid-p.webp",
+  "lw": "covers/mastersystem/kung-fu-kid-lomo.webp"
  },
  "mastersystem|land of illusion": {
   "archivo": "covers/mastersystem/land-of-illusion.jpg",
@@ -452,7 +554,10 @@
   "fondo": "covers/mastersystem/land-of-illusion-fondo.jpg",
   "captura": "covers/mastersystem/land-of-illusion-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/land-of-illusion-lomo.png"
+  "lomo": "covers/mastersystem/land-of-illusion-lomo.png",
+  "g": "covers/mastersystem/land-of-illusion.webp",
+  "p": "covers/mastersystem/land-of-illusion-p.webp",
+  "lw": "covers/mastersystem/land-of-illusion-lomo.webp"
  },
  "mastersystem|lemmings": {
   "archivo": "covers/mastersystem/lemmings.jpg",
@@ -465,7 +570,10 @@
   "fondo": "covers/mastersystem/lemmings-fondo.jpg",
   "captura": "covers/mastersystem/lemmings-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/lemmings-lomo.png"
+  "lomo": "covers/mastersystem/lemmings-lomo.png",
+  "g": "covers/mastersystem/lemmings.webp",
+  "p": "covers/mastersystem/lemmings-p.webp",
+  "lw": "covers/mastersystem/lemmings-lomo.webp"
  },
  "mastersystem|lord of sword": {
   "archivo": "covers/mastersystem/lord-of-sword.jpg",
@@ -478,7 +586,10 @@
   "fondo": "covers/mastersystem/lord-of-sword-fondo.jpg",
   "captura": "covers/mastersystem/lord-of-sword-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/lord-of-sword-lomo.png"
+  "lomo": "covers/mastersystem/lord-of-sword-lomo.png",
+  "g": "covers/mastersystem/lord-of-sword.webp",
+  "p": "covers/mastersystem/lord-of-sword-p.webp",
+  "lw": "covers/mastersystem/lord-of-sword-lomo.webp"
  },
  "mastersystem|lucky dime caper donald duck": {
   "archivo": "covers/mastersystem/lucky-dime-caper-donald-duck.jpg",
@@ -491,7 +602,10 @@
   "fondo": "covers/mastersystem/lucky-dime-caper-donald-duck-fondo.jpg",
   "captura": "covers/mastersystem/lucky-dime-caper-donald-duck-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/lucky-dime-caper-donald-duck-lomo.png"
+  "lomo": "covers/mastersystem/lucky-dime-caper-donald-duck-lomo.png",
+  "g": "covers/mastersystem/lucky-dime-caper-donald-duck.webp",
+  "p": "covers/mastersystem/lucky-dime-caper-donald-duck-p.webp",
+  "lw": "covers/mastersystem/lucky-dime-caper-donald-duck-lomo.webp"
  },
  "mastersystem|master of darkness": {
   "archivo": "covers/mastersystem/master-of-darkness.jpg",
@@ -504,7 +618,10 @@
   "fondo": "covers/mastersystem/master-of-darkness-fondo.jpg",
   "captura": "covers/mastersystem/master-of-darkness-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/master-of-darkness-lomo.png"
+  "lomo": "covers/mastersystem/master-of-darkness-lomo.png",
+  "g": "covers/mastersystem/master-of-darkness.webp",
+  "p": "covers/mastersystem/master-of-darkness-p.webp",
+  "lw": "covers/mastersystem/master-of-darkness-lomo.webp"
  },
  "mastersystem|masters of combat": {
   "archivo": "covers/mastersystem/masters-of-combat.jpg",
@@ -517,7 +634,10 @@
   "fondo": "covers/mastersystem/masters-of-combat-fondo.jpg",
   "captura": "covers/mastersystem/masters-of-combat-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/masters-of-combat-lomo.png"
+  "lomo": "covers/mastersystem/masters-of-combat-lomo.png",
+  "g": "covers/mastersystem/masters-of-combat.webp",
+  "p": "covers/mastersystem/masters-of-combat-p.webp",
+  "lw": "covers/mastersystem/masters-of-combat-lomo.webp"
  },
  "mastersystem|mercs": {
   "archivo": "covers/mastersystem/mercs.jpg",
@@ -530,7 +650,10 @@
   "fondo": "covers/mastersystem/mercs-fondo.jpg",
   "captura": "covers/mastersystem/mercs-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/mercs-lomo.png"
+  "lomo": "covers/mastersystem/mercs-lomo.png",
+  "g": "covers/mastersystem/mercs.webp",
+  "p": "covers/mastersystem/mercs-p.webp",
+  "lw": "covers/mastersystem/mercs-lomo.webp"
  },
  "mastersystem|michael jackson: moonwalker": {
   "archivo": "covers/mastersystem/michael-jackson-moonwalker.jpg",
@@ -543,7 +666,10 @@
   "fondo": "covers/mastersystem/michael-jackson-moonwalker-fondo.jpg",
   "captura": "covers/mastersystem/michael-jackson-moonwalker-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/michael-jackson-moonwalker-lomo.png"
+  "lomo": "covers/mastersystem/michael-jackson-moonwalker-lomo.png",
+  "g": "covers/mastersystem/michael-jackson-moonwalker.webp",
+  "p": "covers/mastersystem/michael-jackson-moonwalker-p.webp",
+  "lw": "covers/mastersystem/michael-jackson-moonwalker-lomo.webp"
  },
  "mastersystem|missile defense 3d": {
   "archivo": "covers/mastersystem/missile-defense-3d.jpg",
@@ -556,7 +682,10 @@
   "fondo": "covers/mastersystem/missile-defense-3d-fondo.jpg",
   "captura": "covers/mastersystem/missile-defense-3d-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/missile-defense-3d-lomo.png"
+  "lomo": "covers/mastersystem/missile-defense-3d-lomo.png",
+  "g": "covers/mastersystem/missile-defense-3d.webp",
+  "p": "covers/mastersystem/missile-defense-3d-p.webp",
+  "lw": "covers/mastersystem/missile-defense-3d-lomo.webp"
  },
  "mastersystem|monopoly": {
   "archivo": "covers/mastersystem/monopoly.jpg",
@@ -569,7 +698,10 @@
   "fondo": "covers/mastersystem/monopoly-fondo.jpg",
   "captura": "covers/mastersystem/monopoly-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/monopoly-lomo.png"
+  "lomo": "covers/mastersystem/monopoly-lomo.png",
+  "g": "covers/mastersystem/monopoly.webp",
+  "p": "covers/mastersystem/monopoly-p.webp",
+  "lw": "covers/mastersystem/monopoly-lomo.webp"
  },
  "mastersystem|ninja gaiden": {
   "archivo": "covers/mastersystem/ninja-gaiden.jpg",
@@ -582,7 +714,10 @@
   "fondo": "covers/mastersystem/ninja-gaiden-fondo.jpg",
   "captura": "covers/mastersystem/ninja-gaiden-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/ninja-gaiden-lomo.png"
+  "lomo": "covers/mastersystem/ninja-gaiden-lomo.png",
+  "g": "covers/mastersystem/ninja-gaiden.webp",
+  "p": "covers/mastersystem/ninja-gaiden-p.webp",
+  "lw": "covers/mastersystem/ninja-gaiden-lomo.webp"
  },
  "mastersystem|operation wolf": {
   "archivo": "covers/mastersystem/operation-wolf.jpg",
@@ -595,7 +730,10 @@
   "fondo": "covers/mastersystem/operation-wolf-fondo.jpg",
   "captura": "covers/mastersystem/operation-wolf-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/operation-wolf-lomo.png"
+  "lomo": "covers/mastersystem/operation-wolf-lomo.png",
+  "g": "covers/mastersystem/operation-wolf.webp",
+  "p": "covers/mastersystem/operation-wolf-p.webp",
+  "lw": "covers/mastersystem/operation-wolf-lomo.webp"
  },
  "mastersystem|pac-mania": {
   "archivo": "covers/mastersystem/pac-mania.jpg",
@@ -608,7 +746,10 @@
   "fondo": "covers/mastersystem/pac-mania-fondo.jpg",
   "captura": "covers/mastersystem/pac-mania-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/pac-mania-lomo.png"
+  "lomo": "covers/mastersystem/pac-mania-lomo.png",
+  "g": "covers/mastersystem/pac-mania.webp",
+  "p": "covers/mastersystem/pac-mania-p.webp",
+  "lw": "covers/mastersystem/pac-mania-lomo.webp"
  },
  "mastersystem|penguin land": {
   "archivo": "covers/mastersystem/penguin-land.jpg",
@@ -621,7 +762,10 @@
   "fondo": "covers/mastersystem/penguin-land-fondo.jpg",
   "captura": "covers/mastersystem/penguin-land-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/penguin-land-lomo.png"
+  "lomo": "covers/mastersystem/penguin-land-lomo.png",
+  "g": "covers/mastersystem/penguin-land.webp",
+  "p": "covers/mastersystem/penguin-land-p.webp",
+  "lw": "covers/mastersystem/penguin-land-lomo.webp"
  },
  "mastersystem|phantasy star": {
   "archivo": "covers/mastersystem/phantasy-star.jpg",
@@ -634,7 +778,10 @@
   "fondo": "covers/mastersystem/phantasy-star-fondo.jpg",
   "captura": "covers/mastersystem/phantasy-star-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/phantasy-star-lomo.png"
+  "lomo": "covers/mastersystem/phantasy-star-lomo.png",
+  "g": "covers/mastersystem/phantasy-star.webp",
+  "p": "covers/mastersystem/phantasy-star-p.webp",
+  "lw": "covers/mastersystem/phantasy-star-lomo.webp"
  },
  "mastersystem|power strike": {
   "archivo": "covers/mastersystem/power-strike.jpg",
@@ -647,7 +794,10 @@
   "fondo": "covers/mastersystem/power-strike-fondo.jpg",
   "captura": "covers/mastersystem/power-strike-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/power-strike-lomo.png"
+  "lomo": "covers/mastersystem/power-strike-lomo.png",
+  "g": "covers/mastersystem/power-strike.webp",
+  "p": "covers/mastersystem/power-strike-p.webp",
+  "lw": "covers/mastersystem/power-strike-lomo.webp"
  },
  "mastersystem|power strike ii": {
   "archivo": "covers/mastersystem/power-strike-ii.jpg",
@@ -660,7 +810,10 @@
   "fondo": "covers/mastersystem/power-strike-ii-fondo.jpg",
   "captura": "covers/mastersystem/power-strike-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/power-strike-ii-lomo.png"
+  "lomo": "covers/mastersystem/power-strike-ii-lomo.png",
+  "g": "covers/mastersystem/power-strike-ii.webp",
+  "p": "covers/mastersystem/power-strike-ii-p.webp",
+  "lw": "covers/mastersystem/power-strike-ii-lomo.webp"
  },
  "mastersystem|psychic world": {
   "archivo": "covers/mastersystem/psychic-world.jpg",
@@ -673,7 +826,10 @@
   "fondo": "covers/mastersystem/psychic-world-fondo.jpg",
   "captura": "covers/mastersystem/psychic-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/psychic-world-lomo.png"
+  "lomo": "covers/mastersystem/psychic-world-lomo.png",
+  "g": "covers/mastersystem/psychic-world.webp",
+  "p": "covers/mastersystem/psychic-world-p.webp",
+  "lw": "covers/mastersystem/psychic-world-lomo.webp"
  },
  "mastersystem|psycho fox": {
   "archivo": "covers/mastersystem/psycho-fox.jpg",
@@ -686,7 +842,10 @@
   "fondo": "covers/mastersystem/psycho-fox-fondo.jpg",
   "captura": "covers/mastersystem/psycho-fox-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/psycho-fox-lomo.png"
+  "lomo": "covers/mastersystem/psycho-fox-lomo.png",
+  "g": "covers/mastersystem/psycho-fox.webp",
+  "p": "covers/mastersystem/psycho-fox-p.webp",
+  "lw": "covers/mastersystem/psycho-fox-lomo.webp"
  },
  "mastersystem|r-type": {
   "archivo": "covers/mastersystem/r-type.jpg",
@@ -699,7 +858,10 @@
   "fondo": "covers/mastersystem/r-type-fondo.jpg",
   "captura": "covers/mastersystem/r-type-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/r-type-lomo.png"
+  "lomo": "covers/mastersystem/r-type-lomo.png",
+  "g": "covers/mastersystem/r-type.webp",
+  "p": "covers/mastersystem/r-type-p.webp",
+  "lw": "covers/mastersystem/r-type-lomo.webp"
  },
  "mastersystem|rainbow islands": {
   "archivo": "covers/mastersystem/rainbow-islands.jpg",
@@ -712,7 +874,10 @@
   "fondo": "covers/mastersystem/rainbow-islands-fondo.jpg",
   "captura": "covers/mastersystem/rainbow-islands-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/rainbow-islands-lomo.png"
+  "lomo": "covers/mastersystem/rainbow-islands-lomo.png",
+  "g": "covers/mastersystem/rainbow-islands.webp",
+  "p": "covers/mastersystem/rainbow-islands-p.webp",
+  "lw": "covers/mastersystem/rainbow-islands-lomo.webp"
  },
  "mastersystem|rambo iii": {
   "archivo": "covers/mastersystem/rambo-iii.jpg",
@@ -725,7 +890,10 @@
   "fondo": "covers/mastersystem/rambo-iii-fondo.jpg",
   "captura": "covers/mastersystem/rambo-iii-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/rambo-iii-lomo.png"
+  "lomo": "covers/mastersystem/rambo-iii-lomo.png",
+  "g": "covers/mastersystem/rambo-iii.webp",
+  "p": "covers/mastersystem/rambo-iii-p.webp",
+  "lw": "covers/mastersystem/rambo-iii-lomo.webp"
  },
  "mastersystem|rastan": {
   "archivo": "covers/mastersystem/rastan.jpg",
@@ -738,7 +906,10 @@
   "fondo": "covers/mastersystem/rastan-fondo.jpg",
   "captura": "covers/mastersystem/rastan-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/rastan-lomo.png"
+  "lomo": "covers/mastersystem/rastan-lomo.png",
+  "g": "covers/mastersystem/rastan.webp",
+  "p": "covers/mastersystem/rastan-p.webp",
+  "lw": "covers/mastersystem/rastan-lomo.webp"
  },
  "mastersystem|renegade": {
   "archivo": "covers/mastersystem/renegade.jpg",
@@ -751,7 +922,10 @@
   "fondo": "covers/mastersystem/renegade-fondo.jpg",
   "captura": "covers/mastersystem/renegade-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/renegade-lomo.png"
+  "lomo": "covers/mastersystem/renegade-lomo.png",
+  "g": "covers/mastersystem/renegade.webp",
+  "p": "covers/mastersystem/renegade-p.webp",
+  "lw": "covers/mastersystem/renegade-lomo.webp"
  },
  "mastersystem|rescue mission": {
   "archivo": "covers/mastersystem/rescue-mission.jpg",
@@ -764,7 +938,10 @@
   "fondo": "covers/mastersystem/rescue-mission-fondo.jpg",
   "captura": "covers/mastersystem/rescue-mission-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/rescue-mission-lomo.png"
+  "lomo": "covers/mastersystem/rescue-mission-lomo.png",
+  "g": "covers/mastersystem/rescue-mission.webp",
+  "p": "covers/mastersystem/rescue-mission-p.webp",
+  "lw": "covers/mastersystem/rescue-mission-lomo.webp"
  },
  "mastersystem|sagaia": {
   "archivo": "covers/mastersystem/sagaia.jpg",
@@ -777,7 +954,10 @@
   "fondo": "covers/mastersystem/sagaia-fondo.jpg",
   "captura": "covers/mastersystem/sagaia-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/sagaia-lomo.png"
+  "lomo": "covers/mastersystem/sagaia-lomo.png",
+  "g": "covers/mastersystem/sagaia.webp",
+  "p": "covers/mastersystem/sagaia-p.webp",
+  "lw": "covers/mastersystem/sagaia-lomo.webp"
  },
  "mastersystem|shinobi": {
   "archivo": "covers/mastersystem/shinobi.jpg",
@@ -790,7 +970,10 @@
   "fondo": "covers/mastersystem/shinobi-fondo.jpg",
   "captura": "covers/mastersystem/shinobi-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/shinobi-lomo.png"
+  "lomo": "covers/mastersystem/shinobi-lomo.png",
+  "g": "covers/mastersystem/shinobi.webp",
+  "p": "covers/mastersystem/shinobi-p.webp",
+  "lw": "covers/mastersystem/shinobi-lomo.webp"
  },
  "mastersystem|sonic": {
   "archivo": "covers/mastersystem/sonic.jpg",
@@ -803,7 +986,10 @@
   "fondo": "covers/mastersystem/sonic-fondo.jpg",
   "captura": "covers/mastersystem/sonic-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/sonic-lomo.png"
+  "lomo": "covers/mastersystem/sonic-lomo.png",
+  "g": "covers/mastersystem/sonic.webp",
+  "p": "covers/mastersystem/sonic-p.webp",
+  "lw": "covers/mastersystem/sonic-lomo.webp"
  },
  "mastersystem|sonic 2": {
   "archivo": "covers/mastersystem/sonic-2.jpg",
@@ -816,7 +1002,10 @@
   "fondo": "covers/mastersystem/sonic-2-fondo.jpg",
   "captura": "covers/mastersystem/sonic-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/sonic-2-lomo.png"
+  "lomo": "covers/mastersystem/sonic-2-lomo.png",
+  "g": "covers/mastersystem/sonic-2.webp",
+  "p": "covers/mastersystem/sonic-2-p.webp",
+  "lw": "covers/mastersystem/sonic-2-lomo.webp"
  },
  "mastersystem|sonic chaos": {
   "archivo": "covers/mastersystem/sonic-chaos.jpg",
@@ -829,7 +1018,10 @@
   "fondo": "covers/mastersystem/sonic-chaos-fondo.jpg",
   "captura": "covers/mastersystem/sonic-chaos-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/sonic-chaos-lomo.png"
+  "lomo": "covers/mastersystem/sonic-chaos-lomo.png",
+  "g": "covers/mastersystem/sonic-chaos.webp",
+  "p": "covers/mastersystem/sonic-chaos-p.webp",
+  "lw": "covers/mastersystem/sonic-chaos-lomo.webp"
  },
  "mastersystem|star wars": {
   "archivo": "covers/mastersystem/star-wars.jpg",
@@ -842,7 +1034,10 @@
   "fondo": "covers/mastersystem/star-wars-fondo.jpg",
   "captura": "covers/mastersystem/star-wars-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/star-wars-lomo.png"
+  "lomo": "covers/mastersystem/star-wars-lomo.png",
+  "g": "covers/mastersystem/star-wars.webp",
+  "p": "covers/mastersystem/star-wars-p.webp",
+  "lw": "covers/mastersystem/star-wars-lomo.webp"
  },
  "mastersystem|streets of rage": {
   "archivo": "covers/mastersystem/streets-of-rage.jpg",
@@ -855,7 +1050,10 @@
   "fondo": "covers/mastersystem/streets-of-rage-fondo.jpg",
   "captura": "covers/mastersystem/streets-of-rage-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/streets-of-rage-lomo.png"
+  "lomo": "covers/mastersystem/streets-of-rage-lomo.png",
+  "g": "covers/mastersystem/streets-of-rage.webp",
+  "p": "covers/mastersystem/streets-of-rage-p.webp",
+  "lw": "covers/mastersystem/streets-of-rage-lomo.webp"
  },
  "mastersystem|strider": {
   "archivo": "covers/mastersystem/strider.jpg",
@@ -868,7 +1066,10 @@
   "fondo": "covers/mastersystem/strider-fondo.jpg",
   "captura": "covers/mastersystem/strider-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/strider-lomo.png"
+  "lomo": "covers/mastersystem/strider-lomo.png",
+  "g": "covers/mastersystem/strider.webp",
+  "p": "covers/mastersystem/strider-p.webp",
+  "lw": "covers/mastersystem/strider-lomo.webp"
  },
  "mastersystem|submarine attack": {
   "archivo": "covers/mastersystem/submarine-attack.jpg",
@@ -881,7 +1082,10 @@
   "fondo": "covers/mastersystem/submarine-attack-fondo.jpg",
   "captura": "covers/mastersystem/submarine-attack-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/submarine-attack-lomo.png"
+  "lomo": "covers/mastersystem/submarine-attack-lomo.png",
+  "g": "covers/mastersystem/submarine-attack.webp",
+  "p": "covers/mastersystem/submarine-attack-p.webp",
+  "lw": "covers/mastersystem/submarine-attack-lomo.webp"
  },
  "mastersystem|super kick off": {
   "archivo": "covers/mastersystem/super-kick-off.jpg",
@@ -894,7 +1098,10 @@
   "fondo": "covers/mastersystem/super-kick-off-fondo.jpg",
   "captura": "covers/mastersystem/super-kick-off-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/super-kick-off-lomo.png"
+  "lomo": "covers/mastersystem/super-kick-off-lomo.png",
+  "g": "covers/mastersystem/super-kick-off.webp",
+  "p": "covers/mastersystem/super-kick-off-p.webp",
+  "lw": "covers/mastersystem/super-kick-off-lomo.webp"
  },
  "mastersystem|taz-mania": {
   "archivo": "covers/mastersystem/taz-mania.jpg",
@@ -907,7 +1114,10 @@
   "fondo": "covers/mastersystem/taz-mania-fondo.jpg",
   "captura": "covers/mastersystem/taz-mania-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/taz-mania-lomo.png"
+  "lomo": "covers/mastersystem/taz-mania-lomo.png",
+  "g": "covers/mastersystem/taz-mania.webp",
+  "p": "covers/mastersystem/taz-mania-p.webp",
+  "lw": "covers/mastersystem/taz-mania-lomo.webp"
  },
  "mastersystem|tecmo world cup 93": {
   "archivo": "covers/mastersystem/tecmo-world-cup-93.jpg",
@@ -920,7 +1130,10 @@
   "fondo": "covers/mastersystem/tecmo-world-cup-93-fondo.jpg",
   "captura": "covers/mastersystem/tecmo-world-cup-93-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/tecmo-world-cup-93-lomo.png"
+  "lomo": "covers/mastersystem/tecmo-world-cup-93-lomo.png",
+  "g": "covers/mastersystem/tecmo-world-cup-93.webp",
+  "p": "covers/mastersystem/tecmo-world-cup-93-p.webp",
+  "lw": "covers/mastersystem/tecmo-world-cup-93-lomo.webp"
  },
  "mastersystem|the new zealand story": {
   "archivo": "covers/mastersystem/the-new-zealand-story.jpg",
@@ -933,7 +1146,10 @@
   "fondo": "covers/mastersystem/the-new-zealand-story-fondo.jpg",
   "captura": "covers/mastersystem/the-new-zealand-story-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/the-new-zealand-story-lomo.png"
+  "lomo": "covers/mastersystem/the-new-zealand-story-lomo.png",
+  "g": "covers/mastersystem/the-new-zealand-story.webp",
+  "p": "covers/mastersystem/the-new-zealand-story-p.webp",
+  "lw": "covers/mastersystem/the-new-zealand-story-lomo.webp"
  },
  "mastersystem|tom and jerry the movie": {
   "archivo": "covers/mastersystem/tom-and-jerry-the-movie.jpg",
@@ -946,7 +1162,10 @@
   "fondo": "covers/mastersystem/tom-and-jerry-the-movie-fondo.jpg",
   "captura": "covers/mastersystem/tom-and-jerry-the-movie-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/tom-and-jerry-the-movie-lomo.png"
+  "lomo": "covers/mastersystem/tom-and-jerry-the-movie-lomo.png",
+  "g": "covers/mastersystem/tom-and-jerry-the-movie.webp",
+  "p": "covers/mastersystem/tom-and-jerry-the-movie-p.webp",
+  "lw": "covers/mastersystem/tom-and-jerry-the-movie-lomo.webp"
  },
  "mastersystem|ultima iv": {
   "archivo": "covers/mastersystem/ultima-iv.jpg",
@@ -959,7 +1178,10 @@
   "fondo": "covers/mastersystem/ultima-iv-fondo.jpg",
   "captura": "covers/mastersystem/ultima-iv-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/ultima-iv-lomo.png"
+  "lomo": "covers/mastersystem/ultima-iv-lomo.png",
+  "g": "covers/mastersystem/ultima-iv.webp",
+  "p": "covers/mastersystem/ultima-iv-p.webp",
+  "lw": "covers/mastersystem/ultima-iv-lomo.webp"
  },
  "mastersystem|vigilante": {
   "archivo": "covers/mastersystem/vigilante.jpg",
@@ -972,7 +1194,10 @@
   "fondo": "covers/mastersystem/vigilante-fondo.jpg",
   "captura": "covers/mastersystem/vigilante-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/vigilante-lomo.png"
+  "lomo": "covers/mastersystem/vigilante-lomo.png",
+  "g": "covers/mastersystem/vigilante.webp",
+  "p": "covers/mastersystem/vigilante-p.webp",
+  "lw": "covers/mastersystem/vigilante-lomo.webp"
  },
  "mastersystem|wolfchild": {
   "archivo": "covers/mastersystem/wolfchild.jpg",
@@ -985,7 +1210,10 @@
   "fondo": "covers/mastersystem/wolfchild-fondo.jpg",
   "captura": "covers/mastersystem/wolfchild-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/wolfchild-lomo.png"
+  "lomo": "covers/mastersystem/wolfchild-lomo.png",
+  "g": "covers/mastersystem/wolfchild.webp",
+  "p": "covers/mastersystem/wolfchild-p.webp",
+  "lw": "covers/mastersystem/wolfchild-lomo.webp"
  },
  "mastersystem|wonder boy": {
   "archivo": "covers/mastersystem/wonder-boy.jpg",
@@ -998,7 +1226,10 @@
   "fondo": "covers/mastersystem/wonder-boy-fondo.jpg",
   "captura": "covers/mastersystem/wonder-boy-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/wonder-boy-lomo.png"
+  "lomo": "covers/mastersystem/wonder-boy-lomo.png",
+  "g": "covers/mastersystem/wonder-boy.webp",
+  "p": "covers/mastersystem/wonder-boy-p.webp",
+  "lw": "covers/mastersystem/wonder-boy-lomo.webp"
  },
  "mastersystem|wonder boy iii the dragon's trap": {
   "archivo": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap.jpg",
@@ -1011,7 +1242,10 @@
   "fondo": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-fondo.jpg",
   "captura": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-lomo.png"
+  "lomo": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-lomo.png",
+  "g": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap.webp",
+  "p": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-p.webp",
+  "lw": "covers/mastersystem/wonder-boy-iii-the-dragon-s-trap-lomo.webp"
  },
  "mastersystem|wonder boy in monster land": {
   "archivo": "covers/mastersystem/wonder-boy-in-monster-land.jpg",
@@ -1024,7 +1258,10 @@
   "fondo": "covers/mastersystem/wonder-boy-in-monster-land-fondo.jpg",
   "captura": "covers/mastersystem/wonder-boy-in-monster-land-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/wonder-boy-in-monster-land-lomo.png"
+  "lomo": "covers/mastersystem/wonder-boy-in-monster-land-lomo.png",
+  "g": "covers/mastersystem/wonder-boy-in-monster-land.webp",
+  "p": "covers/mastersystem/wonder-boy-in-monster-land-p.webp",
+  "lw": "covers/mastersystem/wonder-boy-in-monster-land-lomo.webp"
  },
  "mastersystem|wonder boy in monster world": {
   "archivo": "covers/mastersystem/wonder-boy-in-monster-world.jpg",
@@ -1037,7 +1274,10 @@
   "fondo": "covers/mastersystem/wonder-boy-in-monster-world-fondo.jpg",
   "captura": "covers/mastersystem/wonder-boy-in-monster-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/wonder-boy-in-monster-world-lomo.png"
+  "lomo": "covers/mastersystem/wonder-boy-in-monster-world-lomo.png",
+  "g": "covers/mastersystem/wonder-boy-in-monster-world.webp",
+  "p": "covers/mastersystem/wonder-boy-in-monster-world-p.webp",
+  "lw": "covers/mastersystem/wonder-boy-in-monster-world-lomo.webp"
  },
  "mastersystem|world class leader board": {
   "archivo": "covers/mastersystem/world-class-leader-board.jpg",
@@ -1050,7 +1290,10 @@
   "fondo": "covers/mastersystem/world-class-leader-board-fondo.jpg",
   "captura": "covers/mastersystem/world-class-leader-board-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/world-class-leader-board-lomo.png"
+  "lomo": "covers/mastersystem/world-class-leader-board-lomo.png",
+  "g": "covers/mastersystem/world-class-leader-board.webp",
+  "p": "covers/mastersystem/world-class-leader-board-p.webp",
+  "lw": "covers/mastersystem/world-class-leader-board-lomo.webp"
  },
  "mastersystem|world cup italia '90": {
   "archivo": "covers/mastersystem/world-cup-italia-90.jpg",
@@ -1063,7 +1306,10 @@
   "fondo": "covers/mastersystem/world-cup-italia-90-fondo.jpg",
   "captura": "covers/mastersystem/world-cup-italia-90-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/world-cup-italia-90-lomo.png"
+  "lomo": "covers/mastersystem/world-cup-italia-90-lomo.png",
+  "g": "covers/mastersystem/world-cup-italia-90.webp",
+  "p": "covers/mastersystem/world-cup-italia-90-p.webp",
+  "lw": "covers/mastersystem/world-cup-italia-90-lomo.webp"
  },
  "mastersystem|world grand prix": {
   "archivo": "covers/mastersystem/world-grand-prix.jpg",
@@ -1076,7 +1322,10 @@
   "fondo": "covers/mastersystem/world-grand-prix-fondo.jpg",
   "captura": "covers/mastersystem/world-grand-prix-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/world-grand-prix-lomo.png"
+  "lomo": "covers/mastersystem/world-grand-prix-lomo.png",
+  "g": "covers/mastersystem/world-grand-prix.webp",
+  "p": "covers/mastersystem/world-grand-prix-p.webp",
+  "lw": "covers/mastersystem/world-grand-prix-lomo.webp"
  },
  "mastersystem|world soccer": {
   "archivo": "covers/mastersystem/world-soccer.jpg",
@@ -1089,7 +1338,10 @@
   "fondo": "covers/mastersystem/world-soccer-fondo.jpg",
   "captura": "covers/mastersystem/world-soccer-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/world-soccer-lomo.png"
+  "lomo": "covers/mastersystem/world-soccer-lomo.png",
+  "g": "covers/mastersystem/world-soccer.webp",
+  "p": "covers/mastersystem/world-soccer-p.webp",
+  "lw": "covers/mastersystem/world-soccer-lomo.webp"
  },
  "mastersystem|y's: the vanished omens": {
   "archivo": "covers/mastersystem/y-s-the-vanished-omens.jpg",
@@ -1102,7 +1354,10 @@
   "fondo": "covers/mastersystem/y-s-the-vanished-omens-fondo.jpg",
   "captura": "covers/mastersystem/y-s-the-vanished-omens-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/y-s-the-vanished-omens-lomo.png"
+  "lomo": "covers/mastersystem/y-s-the-vanished-omens-lomo.png",
+  "g": "covers/mastersystem/y-s-the-vanished-omens.webp",
+  "p": "covers/mastersystem/y-s-the-vanished-omens-p.webp",
+  "lw": "covers/mastersystem/y-s-the-vanished-omens-lomo.webp"
  },
  "mastersystem|zillion": {
   "archivo": "covers/mastersystem/zillion.jpg",
@@ -1115,7 +1370,10 @@
   "fondo": "covers/mastersystem/zillion-fondo.jpg",
   "captura": "covers/mastersystem/zillion-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/zillion-lomo.png"
+  "lomo": "covers/mastersystem/zillion-lomo.png",
+  "g": "covers/mastersystem/zillion.webp",
+  "p": "covers/mastersystem/zillion-p.webp",
+  "lw": "covers/mastersystem/zillion-lomo.webp"
  },
  "mastersystem|zillion ii": {
   "archivo": "covers/mastersystem/zillion-ii.jpg",
@@ -1128,7 +1386,10 @@
   "fondo": "covers/mastersystem/zillion-ii-fondo.jpg",
   "captura": "covers/mastersystem/zillion-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/mastersystem/zillion-ii-lomo.png"
+  "lomo": "covers/mastersystem/zillion-ii-lomo.png",
+  "g": "covers/mastersystem/zillion-ii.webp",
+  "p": "covers/mastersystem/zillion-ii-p.webp",
+  "lw": "covers/mastersystem/zillion-ii-lomo.webp"
  },
  "megadrive|addams family values": {
   "archivo": "covers/megadrive/addams-family-values.jpg",
@@ -1141,7 +1402,10 @@
   "fondo": "covers/megadrive/addams-family-values-fondo.jpg",
   "captura": "covers/megadrive/addams-family-values-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/addams-family-values-lomo.png"
+  "lomo": "covers/megadrive/addams-family-values-lomo.png",
+  "g": "covers/megadrive/addams-family-values.webp",
+  "p": "covers/megadrive/addams-family-values-p.webp",
+  "lw": "covers/megadrive/addams-family-values-lomo.webp"
  },
  "megadrive|after burner ii": {
   "archivo": "covers/megadrive/after-burner-ii.jpg",
@@ -1154,7 +1418,10 @@
   "fondo": "covers/megadrive/after-burner-ii-fondo.jpg",
   "captura": "covers/megadrive/after-burner-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/after-burner-ii-lomo.png"
+  "lomo": "covers/megadrive/after-burner-ii-lomo.png",
+  "g": "covers/megadrive/after-burner-ii.webp",
+  "p": "covers/megadrive/after-burner-ii-p.webp",
+  "lw": "covers/megadrive/after-burner-ii-lomo.webp"
  },
  "megadrive|aladdin": {
   "archivo": "covers/megadrive/aladdin.jpg",
@@ -1167,7 +1434,10 @@
   "fondo": "covers/megadrive/aladdin-fondo.jpg",
   "captura": "covers/megadrive/aladdin-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/aladdin-lomo.png"
+  "lomo": "covers/megadrive/aladdin-lomo.png",
+  "g": "covers/megadrive/aladdin.webp",
+  "p": "covers/megadrive/aladdin-p.webp",
+  "lw": "covers/megadrive/aladdin-lomo.webp"
  },
  "megadrive|alien soldier": {
   "archivo": "covers/megadrive/alien-soldier.jpg",
@@ -1180,7 +1450,10 @@
   "fondo": "covers/megadrive/alien-soldier-fondo.jpg",
   "captura": "covers/megadrive/alien-soldier-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/alien-soldier-lomo.png"
+  "lomo": "covers/megadrive/alien-soldier-lomo.png",
+  "g": "covers/megadrive/alien-soldier.webp",
+  "p": "covers/megadrive/alien-soldier-p.webp",
+  "lw": "covers/megadrive/alien-soldier-lomo.webp"
  },
  "megadrive|alien storm": {
   "archivo": "covers/megadrive/alien-storm.jpg",
@@ -1193,7 +1466,10 @@
   "fondo": "covers/megadrive/alien-storm-fondo.jpg",
   "captura": "covers/megadrive/alien-storm-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/alien-storm-lomo.png"
+  "lomo": "covers/megadrive/alien-storm-lomo.png",
+  "g": "covers/megadrive/alien-storm.webp",
+  "p": "covers/megadrive/alien-storm-p.webp",
+  "lw": "covers/megadrive/alien-storm-lomo.webp"
  },
  "megadrive|alisia dragoon": {
   "archivo": "covers/megadrive/alisia-dragoon.jpg",
@@ -1206,7 +1482,10 @@
   "fondo": "covers/megadrive/alisia-dragoon-fondo.jpg",
   "captura": "covers/megadrive/alisia-dragoon-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/alisia-dragoon-lomo.png"
+  "lomo": "covers/megadrive/alisia-dragoon-lomo.png",
+  "g": "covers/megadrive/alisia-dragoon.webp",
+  "p": "covers/megadrive/alisia-dragoon-p.webp",
+  "lw": "covers/megadrive/alisia-dragoon-lomo.webp"
  },
  "megadrive|altered beast": {
   "archivo": "covers/megadrive/altered-beast.jpg",
@@ -1219,7 +1498,10 @@
   "fondo": "covers/megadrive/altered-beast-fondo.jpg",
   "captura": "covers/megadrive/altered-beast-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/altered-beast-lomo.png"
+  "lomo": "covers/megadrive/altered-beast-lomo.png",
+  "g": "covers/megadrive/altered-beast.webp",
+  "p": "covers/megadrive/altered-beast-p.webp",
+  "lw": "covers/megadrive/altered-beast-lomo.webp"
  },
  "megadrive|another world": {
   "archivo": "covers/megadrive/another-world.jpg",
@@ -1232,7 +1514,10 @@
   "fondo": "covers/megadrive/another-world-fondo.jpg",
   "captura": "covers/megadrive/another-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/another-world-lomo.png"
+  "lomo": "covers/megadrive/another-world-lomo.png",
+  "g": "covers/megadrive/another-world.webp",
+  "p": "covers/megadrive/another-world-p.webp",
+  "lw": "covers/megadrive/another-world-lomo.webp"
  },
  "megadrive|ariel the little mermaid": {
   "archivo": "covers/megadrive/ariel-the-little-mermaid.jpg",
@@ -1245,7 +1530,10 @@
   "fondo": "covers/megadrive/ariel-the-little-mermaid-fondo.jpg",
   "captura": "covers/megadrive/ariel-the-little-mermaid-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ariel-the-little-mermaid-lomo.png"
+  "lomo": "covers/megadrive/ariel-the-little-mermaid-lomo.png",
+  "g": "covers/megadrive/ariel-the-little-mermaid.webp",
+  "p": "covers/megadrive/ariel-the-little-mermaid-p.webp",
+  "lw": "covers/megadrive/ariel-the-little-mermaid-lomo.webp"
  },
  "megadrive|arrow flash": {
   "archivo": "covers/megadrive/arrow-flash.jpg",
@@ -1258,7 +1546,10 @@
   "fondo": "covers/megadrive/arrow-flash-fondo.jpg",
   "captura": "covers/megadrive/arrow-flash-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/arrow-flash-lomo.png"
+  "lomo": "covers/megadrive/arrow-flash-lomo.png",
+  "g": "covers/megadrive/arrow-flash.webp",
+  "p": "covers/megadrive/arrow-flash-p.webp",
+  "lw": "covers/megadrive/arrow-flash-lomo.webp"
  },
  "megadrive|asterix": {
   "archivo": "covers/megadrive/asterix.jpg",
@@ -1271,7 +1562,10 @@
   "fondo": "covers/megadrive/asterix-fondo.jpg",
   "captura": "covers/megadrive/asterix-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/asterix-lomo.png"
+  "lomo": "covers/megadrive/asterix-lomo.png",
+  "g": "covers/megadrive/asterix.webp",
+  "p": "covers/megadrive/asterix-p.webp",
+  "lw": "covers/megadrive/asterix-lomo.webp"
  },
  "megadrive|bare knuckle iii": {
   "archivo": "covers/megadrive/bare-knuckle-iii.jpg",
@@ -1284,7 +1578,10 @@
   "fondo": "covers/megadrive/bare-knuckle-iii-fondo.jpg",
   "captura": "covers/megadrive/bare-knuckle-iii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/bare-knuckle-iii-lomo.png"
+  "lomo": "covers/megadrive/bare-knuckle-iii-lomo.png",
+  "g": "covers/megadrive/bare-knuckle-iii.webp",
+  "p": "covers/megadrive/bare-knuckle-iii-p.webp",
+  "lw": "covers/megadrive/bare-knuckle-iii-lomo.webp"
  },
  "megadrive|batman": {
   "archivo": "covers/megadrive/batman.jpg",
@@ -1297,7 +1594,10 @@
   "fondo": "covers/megadrive/batman-fondo.jpg",
   "captura": "covers/megadrive/batman-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/batman-lomo.png"
+  "lomo": "covers/megadrive/batman-lomo.png",
+  "g": "covers/megadrive/batman.webp",
+  "p": "covers/megadrive/batman-p.webp",
+  "lw": "covers/megadrive/batman-lomo.webp"
  },
  "megadrive|batman returns": {
   "archivo": "covers/megadrive/batman-returns.jpg",
@@ -1310,7 +1610,10 @@
   "fondo": "covers/megadrive/batman-returns-fondo.jpg",
   "captura": "covers/megadrive/batman-returns-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/batman-returns-lomo.png"
+  "lomo": "covers/megadrive/batman-returns-lomo.png",
+  "g": "covers/megadrive/batman-returns.webp",
+  "p": "covers/megadrive/batman-returns-p.webp",
+  "lw": "covers/megadrive/batman-returns-lomo.webp"
  },
  "megadrive|bio hazard battle": {
   "archivo": "covers/megadrive/bio-hazard-battle.jpg",
@@ -1323,7 +1626,10 @@
   "fondo": "covers/megadrive/bio-hazard-battle-fondo.jpg",
   "captura": "covers/megadrive/bio-hazard-battle-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/bio-hazard-battle-lomo.png"
+  "lomo": "covers/megadrive/bio-hazard-battle-lomo.png",
+  "g": "covers/megadrive/bio-hazard-battle.webp",
+  "p": "covers/megadrive/bio-hazard-battle-p.webp",
+  "lw": "covers/megadrive/bio-hazard-battle-lomo.webp"
  },
  "megadrive|boogerman": {
   "archivo": "covers/megadrive/boogerman.jpg",
@@ -1336,7 +1642,10 @@
   "fondo": "covers/megadrive/boogerman-fondo.jpg",
   "captura": "covers/megadrive/boogerman-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/boogerman-lomo.png"
+  "lomo": "covers/megadrive/boogerman-lomo.png",
+  "g": "covers/megadrive/boogerman.webp",
+  "p": "covers/megadrive/boogerman-p.webp",
+  "lw": "covers/megadrive/boogerman-lomo.webp"
  },
  "megadrive|boogerman: a pick and flick adventure": {
   "archivo": "covers/megadrive/boogerman-a-pick-and-flick-adventure.jpg",
@@ -1349,7 +1658,10 @@
   "fondo": "covers/megadrive/boogerman-a-pick-and-flick-adventure-fondo.jpg",
   "captura": "covers/megadrive/boogerman-a-pick-and-flick-adventure-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/boogerman-a-pick-and-flick-adventure-lomo.png"
+  "lomo": "covers/megadrive/boogerman-a-pick-and-flick-adventure-lomo.png",
+  "g": "covers/megadrive/boogerman-a-pick-and-flick-adventure.webp",
+  "p": "covers/megadrive/boogerman-a-pick-and-flick-adventure-p.webp",
+  "lw": "covers/megadrive/boogerman-a-pick-and-flick-adventure-lomo.webp"
  },
  "megadrive|bram stoker's dracula": {
   "archivo": "covers/megadrive/bram-stoker-s-dracula.jpg",
@@ -1362,7 +1674,10 @@
   "fondo": "covers/megadrive/bram-stoker-s-dracula-fondo.jpg",
   "captura": "covers/megadrive/bram-stoker-s-dracula-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/bram-stoker-s-dracula-lomo.png"
+  "lomo": "covers/megadrive/bram-stoker-s-dracula-lomo.png",
+  "g": "covers/megadrive/bram-stoker-s-dracula.webp",
+  "p": "covers/megadrive/bram-stoker-s-dracula-p.webp",
+  "lw": "covers/megadrive/bram-stoker-s-dracula-lomo.webp"
  },
  "megadrive|bubsy ii": {
   "archivo": "covers/megadrive/bubsy-ii.jpg",
@@ -1375,7 +1690,10 @@
   "fondo": "covers/megadrive/bubsy-ii-fondo.jpg",
   "captura": "covers/megadrive/bubsy-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/bubsy-ii-lomo.png"
+  "lomo": "covers/megadrive/bubsy-ii-lomo.png",
+  "g": "covers/megadrive/bubsy-ii.webp",
+  "p": "covers/megadrive/bubsy-ii-p.webp",
+  "lw": "covers/megadrive/bubsy-ii-lomo.webp"
  },
  "megadrive|castle of illusion": {
   "archivo": "covers/megadrive/castle-of-illusion.jpg",
@@ -1388,7 +1706,10 @@
   "fondo": "covers/megadrive/castle-of-illusion-fondo.jpg",
   "captura": "covers/megadrive/castle-of-illusion-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/castle-of-illusion-lomo.png"
+  "lomo": "covers/megadrive/castle-of-illusion-lomo.png",
+  "g": "covers/megadrive/castle-of-illusion.webp",
+  "p": "covers/megadrive/castle-of-illusion-p.webp",
+  "lw": "covers/megadrive/castle-of-illusion-lomo.webp"
  },
  "megadrive|castlevania the new generation": {
   "archivo": "covers/megadrive/castlevania-the-new-generation.jpg",
@@ -1401,7 +1722,10 @@
   "fondo": "covers/megadrive/castlevania-the-new-generation-fondo.jpg",
   "captura": "covers/megadrive/castlevania-the-new-generation-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/castlevania-the-new-generation-lomo.png"
+  "lomo": "covers/megadrive/castlevania-the-new-generation-lomo.png",
+  "g": "covers/megadrive/castlevania-the-new-generation.webp",
+  "p": "covers/megadrive/castlevania-the-new-generation-p.webp",
+  "lw": "covers/megadrive/castlevania-the-new-generation-lomo.webp"
  },
  "megadrive|chakan": {
   "archivo": "covers/megadrive/chakan.jpg",
@@ -1414,7 +1738,10 @@
   "fondo": "covers/megadrive/chakan-fondo.jpg",
   "captura": "covers/megadrive/chakan-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/chakan-lomo.png"
+  "lomo": "covers/megadrive/chakan-lomo.png",
+  "g": "covers/megadrive/chakan.webp",
+  "p": "covers/megadrive/chakan-p.webp",
+  "lw": "covers/megadrive/chakan-lomo.webp"
  },
  "megadrive|chiki chiki boys": {
   "archivo": "covers/megadrive/chiki-chiki-boys.jpg",
@@ -1427,7 +1754,10 @@
   "fondo": "covers/megadrive/chiki-chiki-boys-fondo.jpg",
   "captura": "covers/megadrive/chiki-chiki-boys-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/chiki-chiki-boys-lomo.png"
+  "lomo": "covers/megadrive/chiki-chiki-boys-lomo.png",
+  "g": "covers/megadrive/chiki-chiki-boys.webp",
+  "p": "covers/megadrive/chiki-chiki-boys-p.webp",
+  "lw": "covers/megadrive/chiki-chiki-boys-lomo.webp"
  },
  "megadrive|columns": {
   "archivo": "covers/megadrive/columns.jpg",
@@ -1440,7 +1770,10 @@
   "fondo": "covers/megadrive/columns-fondo.jpg",
   "captura": "covers/megadrive/columns-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/columns-lomo.png"
+  "lomo": "covers/megadrive/columns-lomo.png",
+  "g": "covers/megadrive/columns.webp",
+  "p": "covers/megadrive/columns-p.webp",
+  "lw": "covers/megadrive/columns-lomo.webp"
  },
  "megadrive|comix zone": {
   "archivo": "covers/megadrive/comix-zone.jpg",
@@ -1453,7 +1786,10 @@
   "fondo": "covers/megadrive/comix-zone-fondo.jpg",
   "captura": "covers/megadrive/comix-zone-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/comix-zone-lomo.png"
+  "lomo": "covers/megadrive/comix-zone-lomo.png",
+  "g": "covers/megadrive/comix-zone.webp",
+  "p": "covers/megadrive/comix-zone-p.webp",
+  "lw": "covers/megadrive/comix-zone-lomo.webp"
  },
  "megadrive|cool spot": {
   "archivo": "covers/megadrive/cool-spot.jpg",
@@ -1466,7 +1802,10 @@
   "fondo": "covers/megadrive/cool-spot-fondo.jpg",
   "captura": "covers/megadrive/cool-spot-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/cool-spot-lomo.png"
+  "lomo": "covers/megadrive/cool-spot-lomo.png",
+  "g": "covers/megadrive/cool-spot.webp",
+  "p": "covers/megadrive/cool-spot-p.webp",
+  "lw": "covers/megadrive/cool-spot-lomo.webp"
  },
  "megadrive|daffy duck in hollywood": {
   "archivo": "covers/megadrive/daffy-duck-in-hollywood.jpg",
@@ -1479,7 +1818,10 @@
   "fondo": "covers/megadrive/daffy-duck-in-hollywood-fondo.jpg",
   "captura": "covers/megadrive/daffy-duck-in-hollywood-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/daffy-duck-in-hollywood-lomo.png"
+  "lomo": "covers/megadrive/daffy-duck-in-hollywood-lomo.png",
+  "g": "covers/megadrive/daffy-duck-in-hollywood.webp",
+  "p": "covers/megadrive/daffy-duck-in-hollywood-p.webp",
+  "lw": "covers/megadrive/daffy-duck-in-hollywood-lomo.webp"
  },
  "megadrive|decap attack": {
   "archivo": "covers/megadrive/decap-attack.jpg",
@@ -1492,7 +1834,10 @@
   "fondo": "covers/megadrive/decap-attack-fondo.jpg",
   "captura": "covers/megadrive/decap-attack-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/decap-attack-lomo.png"
+  "lomo": "covers/megadrive/decap-attack-lomo.png",
+  "g": "covers/megadrive/decap-attack.webp",
+  "p": "covers/megadrive/decap-attack-p.webp",
+  "lw": "covers/megadrive/decap-attack-lomo.webp"
  },
  "megadrive|donald in maui mallard": {
   "archivo": "covers/megadrive/donald-in-maui-mallard.jpg",
@@ -1505,7 +1850,10 @@
   "fondo": "covers/megadrive/donald-in-maui-mallard-fondo.jpg",
   "captura": "covers/megadrive/donald-in-maui-mallard-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/donald-in-maui-mallard-lomo.png"
+  "lomo": "covers/megadrive/donald-in-maui-mallard-lomo.png",
+  "g": "covers/megadrive/donald-in-maui-mallard.webp",
+  "p": "covers/megadrive/donald-in-maui-mallard-p.webp",
+  "lw": "covers/megadrive/donald-in-maui-mallard-lomo.webp"
  },
  "megadrive|dr. robotnik's mean bean machine": {
   "archivo": "covers/megadrive/dr-robotnik-s-mean-bean-machine.jpg",
@@ -1518,7 +1866,10 @@
   "fondo": "covers/megadrive/dr-robotnik-s-mean-bean-machine-fondo.jpg",
   "captura": "covers/megadrive/dr-robotnik-s-mean-bean-machine-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/dr-robotnik-s-mean-bean-machine-lomo.png"
+  "lomo": "covers/megadrive/dr-robotnik-s-mean-bean-machine-lomo.png",
+  "g": "covers/megadrive/dr-robotnik-s-mean-bean-machine.webp",
+  "p": "covers/megadrive/dr-robotnik-s-mean-bean-machine-p.webp",
+  "lw": "covers/megadrive/dr-robotnik-s-mean-bean-machine-lomo.webp"
  },
  "megadrive|dragon ball l'appel du destin": {
   "archivo": "covers/megadrive/dragon-ball-l-appel-du-destin.jpg",
@@ -1531,7 +1882,10 @@
   "fondo": "covers/megadrive/dragon-ball-l-appel-du-destin-fondo.jpg",
   "captura": "covers/megadrive/dragon-ball-l-appel-du-destin-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/dragon-ball-l-appel-du-destin-lomo.png"
+  "lomo": "covers/megadrive/dragon-ball-l-appel-du-destin-lomo.png",
+  "g": "covers/megadrive/dragon-ball-l-appel-du-destin.webp",
+  "p": "covers/megadrive/dragon-ball-l-appel-du-destin-p.webp",
+  "lw": "covers/megadrive/dragon-ball-l-appel-du-destin-lomo.webp"
  },
  "megadrive|dynamite headdy": {
   "archivo": "covers/megadrive/dynamite-headdy.jpg",
@@ -1544,7 +1898,10 @@
   "fondo": "covers/megadrive/dynamite-headdy-fondo.jpg",
   "captura": "covers/megadrive/dynamite-headdy-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/dynamite-headdy-lomo.png"
+  "lomo": "covers/megadrive/dynamite-headdy-lomo.png",
+  "g": "covers/megadrive/dynamite-headdy.webp",
+  "p": "covers/megadrive/dynamite-headdy-p.webp",
+  "lw": "covers/megadrive/dynamite-headdy-lomo.webp"
  },
  "megadrive|earthworm jim": {
   "archivo": "covers/megadrive/earthworm-jim.jpg",
@@ -1557,7 +1914,10 @@
   "fondo": "covers/megadrive/earthworm-jim-fondo.jpg",
   "captura": "covers/megadrive/earthworm-jim-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/earthworm-jim-lomo.png"
+  "lomo": "covers/megadrive/earthworm-jim-lomo.png",
+  "g": "covers/megadrive/earthworm-jim.webp",
+  "p": "covers/megadrive/earthworm-jim-p.webp",
+  "lw": "covers/megadrive/earthworm-jim-lomo.webp"
  },
  "megadrive|earthworm jim 2": {
   "archivo": "covers/megadrive/earthworm-jim-2.jpg",
@@ -1570,7 +1930,10 @@
   "fondo": "covers/megadrive/earthworm-jim-2-fondo.jpg",
   "captura": "covers/megadrive/earthworm-jim-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/earthworm-jim-2-lomo.png"
+  "lomo": "covers/megadrive/earthworm-jim-2-lomo.png",
+  "g": "covers/megadrive/earthworm-jim-2.webp",
+  "p": "covers/megadrive/earthworm-jim-2-p.webp",
+  "lw": "covers/megadrive/earthworm-jim-2-lomo.webp"
  },
  "megadrive|ecco the dolphin": {
   "archivo": "covers/megadrive/ecco-the-dolphin.jpg",
@@ -1583,7 +1946,10 @@
   "fondo": "covers/megadrive/ecco-the-dolphin-fondo.jpg",
   "captura": "covers/megadrive/ecco-the-dolphin-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ecco-the-dolphin-lomo.png"
+  "lomo": "covers/megadrive/ecco-the-dolphin-lomo.png",
+  "g": "covers/megadrive/ecco-the-dolphin.webp",
+  "p": "covers/megadrive/ecco-the-dolphin-p.webp",
+  "lw": "covers/megadrive/ecco-the-dolphin-lomo.webp"
  },
  "megadrive|ecco the dolphin: the tides of time": {
   "archivo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time.jpg",
@@ -1596,7 +1962,10 @@
   "fondo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-fondo.jpg",
   "captura": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-lomo.png"
+  "lomo": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-lomo.png",
+  "g": "covers/megadrive/ecco-the-dolphin-the-tides-of-time.webp",
+  "p": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-p.webp",
+  "lw": "covers/megadrive/ecco-the-dolphin-the-tides-of-time-lomo.webp"
  },
  "megadrive|el rey león": {
   "archivo": "covers/megadrive/el-rey-leon.jpg",
@@ -1609,7 +1978,10 @@
   "fondo": "covers/megadrive/el-rey-leon-fondo.jpg",
   "captura": "covers/megadrive/el-rey-leon-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/el-rey-leon-lomo.png"
+  "lomo": "covers/megadrive/el-rey-leon-lomo.png",
+  "g": "covers/megadrive/el-rey-leon.webp",
+  "p": "covers/megadrive/el-rey-leon-p.webp",
+  "lw": "covers/megadrive/el-rey-leon-lomo.webp"
  },
  "megadrive|empire of steel": {
   "archivo": "covers/megadrive/empire-of-steel.jpg",
@@ -1622,7 +1994,10 @@
   "fondo": "covers/megadrive/empire-of-steel-fondo.jpg",
   "captura": "covers/megadrive/empire-of-steel-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/empire-of-steel-lomo.png"
+  "lomo": "covers/megadrive/empire-of-steel-lomo.png",
+  "g": "covers/megadrive/empire-of-steel.webp",
+  "p": "covers/megadrive/empire-of-steel-p.webp",
+  "lw": "covers/megadrive/empire-of-steel-lomo.webp"
  },
  "megadrive|eswat: city under siege": {
   "archivo": "covers/megadrive/eswat-city-under-siege.jpg",
@@ -1635,7 +2010,10 @@
   "fondo": "covers/megadrive/eswat-city-under-siege-fondo.jpg",
   "captura": "covers/megadrive/eswat-city-under-siege-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/eswat-city-under-siege-lomo.png"
+  "lomo": "covers/megadrive/eswat-city-under-siege-lomo.png",
+  "g": "covers/megadrive/eswat-city-under-siege.webp",
+  "p": "covers/megadrive/eswat-city-under-siege-p.webp",
+  "lw": "covers/megadrive/eswat-city-under-siege-lomo.webp"
  },
  "megadrive|eternal champions": {
   "archivo": "covers/megadrive/eternal-champions.jpg",
@@ -1648,7 +2026,10 @@
   "fondo": "covers/megadrive/eternal-champions-fondo.jpg",
   "captura": "covers/megadrive/eternal-champions-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/eternal-champions-lomo.png"
+  "lomo": "covers/megadrive/eternal-champions-lomo.png",
+  "g": "covers/megadrive/eternal-champions.webp",
+  "p": "covers/megadrive/eternal-champions-p.webp",
+  "lw": "covers/megadrive/eternal-champions-lomo.webp"
  },
  "megadrive|european club soccer": {
   "archivo": "covers/megadrive/european-club-soccer.jpg",
@@ -1661,7 +2042,10 @@
   "fondo": "covers/megadrive/european-club-soccer-fondo.jpg",
   "captura": "covers/megadrive/european-club-soccer-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/european-club-soccer-lomo.png"
+  "lomo": "covers/megadrive/european-club-soccer-lomo.png",
+  "g": "covers/megadrive/european-club-soccer.webp",
+  "p": "covers/megadrive/european-club-soccer-p.webp",
+  "lw": "covers/megadrive/european-club-soccer-lomo.webp"
  },
  "megadrive|f1": {
   "archivo": "covers/megadrive/f1.jpg",
@@ -1674,7 +2058,10 @@
   "fondo": "covers/megadrive/f1-fondo.jpg",
   "captura": "covers/megadrive/f1-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/f1-lomo.png"
+  "lomo": "covers/megadrive/f1-lomo.png",
+  "g": "covers/megadrive/f1.webp",
+  "p": "covers/megadrive/f1-p.webp",
+  "lw": "covers/megadrive/f1-lomo.webp"
  },
  "megadrive|fantasia": {
   "archivo": "covers/megadrive/fantasia.jpg",
@@ -1687,7 +2074,10 @@
   "fondo": "covers/megadrive/fantasia-fondo.jpg",
   "captura": "covers/megadrive/fantasia-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/fantasia-lomo.png"
+  "lomo": "covers/megadrive/fantasia-lomo.png",
+  "g": "covers/megadrive/fantasia.webp",
+  "p": "covers/megadrive/fantasia-p.webp",
+  "lw": "covers/megadrive/fantasia-lomo.webp"
  },
  "megadrive|fifa 95": {
   "archivo": "covers/megadrive/fifa-95.jpg",
@@ -1700,7 +2090,10 @@
   "fondo": "covers/megadrive/fifa-95-fondo.jpg",
   "captura": "covers/megadrive/fifa-95-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/fifa-95-lomo.png"
+  "lomo": "covers/megadrive/fifa-95-lomo.png",
+  "g": "covers/megadrive/fifa-95.webp",
+  "p": "covers/megadrive/fifa-95-p.webp",
+  "lw": "covers/megadrive/fifa-95-lomo.webp"
  },
  "megadrive|fifa 97": {
   "archivo": "covers/megadrive/fifa-97.jpg",
@@ -1713,7 +2106,10 @@
   "fondo": "covers/megadrive/fifa-97-fondo.jpg",
   "captura": "covers/megadrive/fifa-97-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/fifa-97-lomo.png"
+  "lomo": "covers/megadrive/fifa-97-lomo.png",
+  "g": "covers/megadrive/fifa-97.webp",
+  "p": "covers/megadrive/fifa-97-p.webp",
+  "lw": "covers/megadrive/fifa-97-lomo.webp"
  },
  "megadrive|fifa soccer": {
   "archivo": "covers/megadrive/fifa-soccer.jpg",
@@ -1726,7 +2122,10 @@
   "fondo": "covers/megadrive/fifa-soccer-fondo.jpg",
   "captura": "covers/megadrive/fifa-soccer-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/fifa-soccer-lomo.png"
+  "lomo": "covers/megadrive/fifa-soccer-lomo.png",
+  "g": "covers/megadrive/fifa-soccer.webp",
+  "p": "covers/megadrive/fifa-soccer-p.webp",
+  "lw": "covers/megadrive/fifa-soccer-lomo.webp"
  },
  "megadrive|flashback": {
   "archivo": "covers/megadrive/flashback.jpg",
@@ -1739,7 +2138,10 @@
   "fondo": "covers/megadrive/flashback-fondo.jpg",
   "captura": "covers/megadrive/flashback-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/flashback-lomo.png"
+  "lomo": "covers/megadrive/flashback-lomo.png",
+  "g": "covers/megadrive/flashback.webp",
+  "p": "covers/megadrive/flashback-p.webp",
+  "lw": "covers/megadrive/flashback-lomo.webp"
  },
  "megadrive|flink": {
   "archivo": "covers/megadrive/flink.jpg",
@@ -1752,7 +2154,10 @@
   "fondo": "covers/megadrive/flink-fondo.jpg",
   "captura": "covers/megadrive/flink-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/flink-lomo.png"
+  "lomo": "covers/megadrive/flink-lomo.png",
+  "g": "covers/megadrive/flink.webp",
+  "p": "covers/megadrive/flink-p.webp",
+  "lw": "covers/megadrive/flink-lomo.webp"
  },
  "megadrive|gain ground": {
   "archivo": "covers/megadrive/gain-ground.jpg",
@@ -1765,7 +2170,10 @@
   "fondo": "covers/megadrive/gain-ground-fondo.jpg",
   "captura": "covers/megadrive/gain-ground-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/gain-ground-lomo.png"
+  "lomo": "covers/megadrive/gain-ground-lomo.png",
+  "g": "covers/megadrive/gain-ground.webp",
+  "p": "covers/megadrive/gain-ground-p.webp",
+  "lw": "covers/megadrive/gain-ground-lomo.webp"
  },
  "megadrive|ghostbusters": {
   "archivo": "covers/megadrive/ghostbusters.jpg",
@@ -1778,7 +2186,10 @@
   "fondo": "covers/megadrive/ghostbusters-fondo.jpg",
   "captura": "covers/megadrive/ghostbusters-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ghostbusters-lomo.png"
+  "lomo": "covers/megadrive/ghostbusters-lomo.png",
+  "g": "covers/megadrive/ghostbusters.webp",
+  "p": "covers/megadrive/ghostbusters-p.webp",
+  "lw": "covers/megadrive/ghostbusters-lomo.webp"
  },
  "megadrive|ghouls'n and ghosts": {
   "archivo": "covers/megadrive/ghouls-n-and-ghosts.jpg",
@@ -1791,7 +2202,10 @@
   "fondo": "covers/megadrive/ghouls-n-and-ghosts-fondo.jpg",
   "captura": "covers/megadrive/ghouls-n-and-ghosts-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ghouls-n-and-ghosts-lomo.png"
+  "lomo": "covers/megadrive/ghouls-n-and-ghosts-lomo.png",
+  "g": "covers/megadrive/ghouls-n-and-ghosts.webp",
+  "p": "covers/megadrive/ghouls-n-and-ghosts-p.webp",
+  "lw": "covers/megadrive/ghouls-n-and-ghosts-lomo.webp"
  },
  "megadrive|global gladiators": {
   "archivo": "covers/megadrive/global-gladiators.jpg",
@@ -1804,7 +2218,10 @@
   "fondo": "covers/megadrive/global-gladiators-fondo.jpg",
   "captura": "covers/megadrive/global-gladiators-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/global-gladiators-lomo.png"
+  "lomo": "covers/megadrive/global-gladiators-lomo.png",
+  "g": "covers/megadrive/global-gladiators.webp",
+  "p": "covers/megadrive/global-gladiators-p.webp",
+  "lw": "covers/megadrive/global-gladiators-lomo.webp"
  },
  "megadrive|golden axe": {
   "archivo": "covers/megadrive/golden-axe.jpg",
@@ -1817,7 +2234,10 @@
   "fondo": "covers/megadrive/golden-axe-fondo.jpg",
   "captura": "covers/megadrive/golden-axe-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/golden-axe-lomo.png"
+  "lomo": "covers/megadrive/golden-axe-lomo.png",
+  "g": "covers/megadrive/golden-axe.webp",
+  "p": "covers/megadrive/golden-axe-p.webp",
+  "lw": "covers/megadrive/golden-axe-lomo.webp"
  },
  "megadrive|golden axe ii": {
   "archivo": "covers/megadrive/golden-axe-ii.jpg",
@@ -1830,7 +2250,10 @@
   "fondo": "covers/megadrive/golden-axe-ii-fondo.jpg",
   "captura": "covers/megadrive/golden-axe-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/golden-axe-ii-lomo.png"
+  "lomo": "covers/megadrive/golden-axe-ii-lomo.png",
+  "g": "covers/megadrive/golden-axe-ii.webp",
+  "p": "covers/megadrive/golden-axe-ii-p.webp",
+  "lw": "covers/megadrive/golden-axe-ii-lomo.webp"
  },
  "megadrive|golden axe iii": {
   "archivo": "covers/megadrive/golden-axe-iii.jpg",
@@ -1843,7 +2266,10 @@
   "fondo": "covers/megadrive/golden-axe-iii-fondo.jpg",
   "captura": "covers/megadrive/golden-axe-iii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/golden-axe-iii-lomo.png"
+  "lomo": "covers/megadrive/golden-axe-iii-lomo.png",
+  "g": "covers/megadrive/golden-axe-iii.webp",
+  "p": "covers/megadrive/golden-axe-iii-p.webp",
+  "lw": "covers/megadrive/golden-axe-iii-lomo.webp"
  },
  "megadrive|gunstar heroes": {
   "archivo": "covers/megadrive/gunstar-heroes.jpg",
@@ -1856,7 +2282,10 @@
   "fondo": "covers/megadrive/gunstar-heroes-fondo.jpg",
   "captura": "covers/megadrive/gunstar-heroes-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/gunstar-heroes-lomo.png"
+  "lomo": "covers/megadrive/gunstar-heroes-lomo.png",
+  "g": "covers/megadrive/gunstar-heroes.webp",
+  "p": "covers/megadrive/gunstar-heroes-p.webp",
+  "lw": "covers/megadrive/gunstar-heroes-lomo.webp"
  },
  "megadrive|gynoug": {
   "archivo": "covers/megadrive/gynoug.jpg",
@@ -1869,7 +2298,10 @@
   "fondo": "covers/megadrive/gynoug-fondo.jpg",
   "captura": "covers/megadrive/gynoug-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/gynoug-lomo.png"
+  "lomo": "covers/megadrive/gynoug-lomo.png",
+  "g": "covers/megadrive/gynoug.webp",
+  "p": "covers/megadrive/gynoug-p.webp",
+  "lw": "covers/megadrive/gynoug-lomo.webp"
  },
  "megadrive|haunting starring polterguy": {
   "archivo": "covers/megadrive/haunting-starring-polterguy.jpg",
@@ -1882,7 +2314,10 @@
   "fondo": "covers/megadrive/haunting-starring-polterguy-fondo.jpg",
   "captura": "covers/megadrive/haunting-starring-polterguy-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/haunting-starring-polterguy-lomo.png"
+  "lomo": "covers/megadrive/haunting-starring-polterguy-lomo.png",
+  "g": "covers/megadrive/haunting-starring-polterguy.webp",
+  "p": "covers/megadrive/haunting-starring-polterguy-p.webp",
+  "lw": "covers/megadrive/haunting-starring-polterguy-lomo.webp"
  },
  "megadrive|hellfire": {
   "archivo": "covers/megadrive/hellfire.jpg",
@@ -1895,7 +2330,10 @@
   "fondo": "covers/megadrive/hellfire-fondo.jpg",
   "captura": "covers/megadrive/hellfire-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/hellfire-lomo.png"
+  "lomo": "covers/megadrive/hellfire-lomo.png",
+  "g": "covers/megadrive/hellfire.webp",
+  "p": "covers/megadrive/hellfire-p.webp",
+  "lw": "covers/megadrive/hellfire-lomo.webp"
  },
  "megadrive|hook": {
   "archivo": "covers/megadrive/hook.jpg",
@@ -1908,7 +2346,10 @@
   "fondo": "covers/megadrive/hook-fondo.jpg",
   "captura": "covers/megadrive/hook-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/hook-lomo.png"
+  "lomo": "covers/megadrive/hook-lomo.png",
+  "g": "covers/megadrive/hook.webp",
+  "p": "covers/megadrive/hook-p.webp",
+  "lw": "covers/megadrive/hook-lomo.webp"
  },
  "megadrive|indiana jones and the last crusade": {
   "archivo": "covers/megadrive/indiana-jones-and-the-last-crusade.jpg",
@@ -1921,7 +2362,10 @@
   "fondo": "covers/megadrive/indiana-jones-and-the-last-crusade-fondo.jpg",
   "captura": "covers/megadrive/indiana-jones-and-the-last-crusade-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/indiana-jones-and-the-last-crusade-lomo.png"
+  "lomo": "covers/megadrive/indiana-jones-and-the-last-crusade-lomo.png",
+  "g": "covers/megadrive/indiana-jones-and-the-last-crusade.webp",
+  "p": "covers/megadrive/indiana-jones-and-the-last-crusade-p.webp",
+  "lw": "covers/megadrive/indiana-jones-and-the-last-crusade-lomo.webp"
  },
  "megadrive|international superstar soccer deluxe": {
   "archivo": "covers/megadrive/international-superstar-soccer-deluxe.jpg",
@@ -1934,7 +2378,10 @@
   "fondo": "covers/megadrive/international-superstar-soccer-deluxe-fondo.jpg",
   "captura": "covers/megadrive/international-superstar-soccer-deluxe-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/international-superstar-soccer-deluxe-lomo.png"
+  "lomo": "covers/megadrive/international-superstar-soccer-deluxe-lomo.png",
+  "g": "covers/megadrive/international-superstar-soccer-deluxe.webp",
+  "p": "covers/megadrive/international-superstar-soccer-deluxe-p.webp",
+  "lw": "covers/megadrive/international-superstar-soccer-deluxe-lomo.webp"
  },
  "megadrive|james pond 2 codename robocod": {
   "archivo": "covers/megadrive/james-pond-2-codename-robocod.jpg",
@@ -1947,7 +2394,10 @@
   "fondo": "covers/megadrive/james-pond-2-codename-robocod-fondo.jpg",
   "captura": "covers/megadrive/james-pond-2-codename-robocod-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/james-pond-2-codename-robocod-lomo.png"
+  "lomo": "covers/megadrive/james-pond-2-codename-robocod-lomo.png",
+  "g": "covers/megadrive/james-pond-2-codename-robocod.webp",
+  "p": "covers/megadrive/james-pond-2-codename-robocod-p.webp",
+  "lw": "covers/megadrive/james-pond-2-codename-robocod-lomo.webp"
  },
  "megadrive|jewel master": {
   "archivo": "covers/megadrive/jewel-master.jpg",
@@ -1960,7 +2410,10 @@
   "fondo": "covers/megadrive/jewel-master-fondo.jpg",
   "captura": "covers/megadrive/jewel-master-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/jewel-master-lomo.png"
+  "lomo": "covers/megadrive/jewel-master-lomo.png",
+  "g": "covers/megadrive/jewel-master.webp",
+  "p": "covers/megadrive/jewel-master-p.webp",
+  "lw": "covers/megadrive/jewel-master-lomo.webp"
  },
  "megadrive|jurassic park": {
   "archivo": "covers/megadrive/jurassic-park.jpg",
@@ -1973,7 +2426,10 @@
   "fondo": "covers/megadrive/jurassic-park-fondo.jpg",
   "captura": "covers/megadrive/jurassic-park-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/jurassic-park-lomo.png"
+  "lomo": "covers/megadrive/jurassic-park-lomo.png",
+  "g": "covers/megadrive/jurassic-park.webp",
+  "p": "covers/megadrive/jurassic-park-p.webp",
+  "lw": "covers/megadrive/jurassic-park-lomo.webp"
  },
  "megadrive|kid chameleon": {
   "archivo": "covers/megadrive/kid-chameleon.jpg",
@@ -1986,7 +2442,10 @@
   "fondo": "covers/megadrive/kid-chameleon-fondo.jpg",
   "captura": "covers/megadrive/kid-chameleon-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/kid-chameleon-lomo.png"
+  "lomo": "covers/megadrive/kid-chameleon-lomo.png",
+  "g": "covers/megadrive/kid-chameleon.webp",
+  "p": "covers/megadrive/kid-chameleon-p.webp",
+  "lw": "covers/megadrive/kid-chameleon-lomo.webp"
  },
  "megadrive|landstalker: the treasures of king nole": {
   "archivo": "covers/megadrive/landstalker-the-treasures-of-king-nole.jpg",
@@ -1999,7 +2458,10 @@
   "fondo": "covers/megadrive/landstalker-the-treasures-of-king-nole-fondo.jpg",
   "captura": "covers/megadrive/landstalker-the-treasures-of-king-nole-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/landstalker-the-treasures-of-king-nole-lomo.png"
+  "lomo": "covers/megadrive/landstalker-the-treasures-of-king-nole-lomo.png",
+  "g": "covers/megadrive/landstalker-the-treasures-of-king-nole.webp",
+  "p": "covers/megadrive/landstalker-the-treasures-of-king-nole-p.webp",
+  "lw": "covers/megadrive/landstalker-the-treasures-of-king-nole-lomo.webp"
  },
  "megadrive|last battle": {
   "archivo": "covers/megadrive/last-battle.jpg",
@@ -2012,7 +2474,10 @@
   "fondo": "covers/megadrive/last-battle-fondo.jpg",
   "captura": "covers/megadrive/last-battle-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/last-battle-lomo.png"
+  "lomo": "covers/megadrive/last-battle-lomo.png",
+  "g": "covers/megadrive/last-battle.webp",
+  "p": "covers/megadrive/last-battle-p.webp",
+  "lw": "covers/megadrive/last-battle-lomo.webp"
  },
  "megadrive|leader board": {
   "archivo": "covers/megadrive/leader-board.jpg",
@@ -2025,7 +2490,10 @@
   "fondo": "covers/megadrive/leader-board-fondo.jpg",
   "captura": "covers/megadrive/leader-board-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/leader-board-lomo.png"
+  "lomo": "covers/megadrive/leader-board-lomo.png",
+  "g": "covers/megadrive/leader-board.webp",
+  "p": "covers/megadrive/leader-board-p.webp",
+  "lw": "covers/megadrive/leader-board-lomo.webp"
  },
  "megadrive|light crusader": {
   "archivo": "covers/megadrive/light-crusader.jpg",
@@ -2038,7 +2506,10 @@
   "fondo": "covers/megadrive/light-crusader-fondo.jpg",
   "captura": "covers/megadrive/light-crusader-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/light-crusader-lomo.png"
+  "lomo": "covers/megadrive/light-crusader-lomo.png",
+  "g": "covers/megadrive/light-crusader.webp",
+  "p": "covers/megadrive/light-crusader-p.webp",
+  "lw": "covers/megadrive/light-crusader-lomo.webp"
  },
  "megadrive|los pitufos": {
   "archivo": "covers/megadrive/los-pitufos.jpg",
@@ -2051,7 +2522,10 @@
   "fondo": "covers/megadrive/los-pitufos-fondo.jpg",
   "captura": "covers/megadrive/los-pitufos-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/los-pitufos-lomo.png"
+  "lomo": "covers/megadrive/los-pitufos-lomo.png",
+  "g": "covers/megadrive/los-pitufos.webp",
+  "p": "covers/megadrive/los-pitufos-p.webp",
+  "lw": "covers/megadrive/los-pitufos-lomo.webp"
  },
  "megadrive|lost world: jurassic park": {
   "archivo": "covers/megadrive/lost-world-jurassic-park.jpg",
@@ -2064,7 +2538,10 @@
   "fondo": "covers/megadrive/lost-world-jurassic-park-fondo.jpg",
   "captura": "covers/megadrive/lost-world-jurassic-park-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/lost-world-jurassic-park-lomo.png"
+  "lomo": "covers/megadrive/lost-world-jurassic-park-lomo.png",
+  "g": "covers/megadrive/lost-world-jurassic-park.webp",
+  "p": "covers/megadrive/lost-world-jurassic-park-p.webp",
+  "lw": "covers/megadrive/lost-world-jurassic-park-lomo.webp"
  },
  "megadrive|madden 97": {
   "archivo": "covers/megadrive/madden-97.jpg",
@@ -2077,7 +2554,10 @@
   "fondo": "covers/megadrive/madden-97-fondo.jpg",
   "captura": "covers/megadrive/madden-97-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/madden-97-lomo.png"
+  "lomo": "covers/megadrive/madden-97-lomo.png",
+  "g": "covers/megadrive/madden-97.webp",
+  "p": "covers/megadrive/madden-97-p.webp",
+  "lw": "covers/megadrive/madden-97-lomo.webp"
  },
  "megadrive|marsupilami": {
   "archivo": "covers/megadrive/marsupilami.jpg",
@@ -2090,7 +2570,10 @@
   "fondo": "covers/megadrive/marsupilami-fondo.jpg",
   "captura": "covers/megadrive/marsupilami-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/marsupilami-lomo.png"
+  "lomo": "covers/megadrive/marsupilami-lomo.png",
+  "g": "covers/megadrive/marsupilami.webp",
+  "p": "covers/megadrive/marsupilami-p.webp",
+  "lw": "covers/megadrive/marsupilami-lomo.webp"
  },
  "megadrive|mcdonald's treasure land adventure": {
   "archivo": "covers/megadrive/mcdonald-s-treasure-land-adventure.jpg",
@@ -2103,7 +2586,10 @@
   "fondo": "covers/megadrive/mcdonald-s-treasure-land-adventure-fondo.jpg",
   "captura": "covers/megadrive/mcdonald-s-treasure-land-adventure-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mcdonald-s-treasure-land-adventure-lomo.png"
+  "lomo": "covers/megadrive/mcdonald-s-treasure-land-adventure-lomo.png",
+  "g": "covers/megadrive/mcdonald-s-treasure-land-adventure.webp",
+  "p": "covers/megadrive/mcdonald-s-treasure-land-adventure-p.webp",
+  "lw": "covers/megadrive/mcdonald-s-treasure-land-adventure-lomo.webp"
  },
  "megadrive|mega bomberman": {
   "archivo": "covers/megadrive/mega-bomberman.jpg",
@@ -2116,7 +2602,10 @@
   "fondo": "covers/megadrive/mega-bomberman-fondo.jpg",
   "captura": "covers/megadrive/mega-bomberman-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mega-bomberman-lomo.png"
+  "lomo": "covers/megadrive/mega-bomberman-lomo.png",
+  "g": "covers/megadrive/mega-bomberman.webp",
+  "p": "covers/megadrive/mega-bomberman-p.webp",
+  "lw": "covers/megadrive/mega-bomberman-lomo.webp"
  },
  "megadrive|mega games 2": {
   "archivo": "covers/megadrive/mega-games-2.jpg",
@@ -2128,7 +2617,10 @@
   "logo": "covers/megadrive/mega-games-2-logo.png",
   "captura": "covers/megadrive/mega-games-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mega-games-2-lomo.png"
+  "lomo": "covers/megadrive/mega-games-2-lomo.png",
+  "g": "covers/megadrive/mega-games-2.webp",
+  "p": "covers/megadrive/mega-games-2-p.webp",
+  "lw": "covers/megadrive/mega-games-2-lomo.webp"
  },
  "megadrive|mega games i": {
   "archivo": "covers/megadrive/mega-games-i.jpg",
@@ -2140,7 +2632,10 @@
   "logo": "covers/megadrive/mega-games-i-logo.png",
   "captura": "covers/megadrive/mega-games-i-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mega-games-i-lomo.png"
+  "lomo": "covers/megadrive/mega-games-i-lomo.png",
+  "g": "covers/megadrive/mega-games-i.webp",
+  "p": "covers/megadrive/mega-games-i-p.webp",
+  "lw": "covers/megadrive/mega-games-i-lomo.webp"
  },
  "megadrive|mega man: the wily wars": {
   "archivo": "covers/megadrive/mega-man-the-wily-wars.jpg",
@@ -2153,7 +2648,10 @@
   "fondo": "covers/megadrive/mega-man-the-wily-wars-fondo.jpg",
   "captura": "covers/megadrive/mega-man-the-wily-wars-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mega-man-the-wily-wars-lomo.png"
+  "lomo": "covers/megadrive/mega-man-the-wily-wars-lomo.png",
+  "g": "covers/megadrive/mega-man-the-wily-wars.webp",
+  "p": "covers/megadrive/mega-man-the-wily-wars-p.webp",
+  "lw": "covers/megadrive/mega-man-the-wily-wars-lomo.webp"
  },
  "megadrive|mega turrican": {
   "archivo": "covers/megadrive/mega-turrican.jpg",
@@ -2166,7 +2664,10 @@
   "fondo": "covers/megadrive/mega-turrican-fondo.jpg",
   "captura": "covers/megadrive/mega-turrican-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mega-turrican-lomo.png"
+  "lomo": "covers/megadrive/mega-turrican-lomo.png",
+  "g": "covers/megadrive/mega-turrican.webp",
+  "p": "covers/megadrive/mega-turrican-p.webp",
+  "lw": "covers/megadrive/mega-turrican-lomo.webp"
  },
  "megadrive|mercs": {
   "archivo": "covers/megadrive/mercs.jpg",
@@ -2179,7 +2680,10 @@
   "fondo": "covers/megadrive/mercs-fondo.jpg",
   "captura": "covers/megadrive/mercs-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mercs-lomo.png"
+  "lomo": "covers/megadrive/mercs-lomo.png",
+  "g": "covers/megadrive/mercs.webp",
+  "p": "covers/megadrive/mercs-p.webp",
+  "lw": "covers/megadrive/mercs-lomo.webp"
  },
  "megadrive|michael jackson: moonwalker": {
   "archivo": "covers/megadrive/michael-jackson-moonwalker.jpg",
@@ -2192,7 +2696,10 @@
   "fondo": "covers/megadrive/michael-jackson-moonwalker-fondo.jpg",
   "captura": "covers/megadrive/michael-jackson-moonwalker-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/michael-jackson-moonwalker-lomo.png"
+  "lomo": "covers/megadrive/michael-jackson-moonwalker-lomo.png",
+  "g": "covers/megadrive/michael-jackson-moonwalker.webp",
+  "p": "covers/megadrive/michael-jackson-moonwalker-p.webp",
+  "lw": "covers/megadrive/michael-jackson-moonwalker-lomo.webp"
  },
  "megadrive|mickey mania": {
   "archivo": "covers/megadrive/mickey-mania.jpg",
@@ -2205,7 +2712,10 @@
   "fondo": "covers/megadrive/mickey-mania-fondo.jpg",
   "captura": "covers/megadrive/mickey-mania-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mickey-mania-lomo.png"
+  "lomo": "covers/megadrive/mickey-mania-lomo.png",
+  "g": "covers/megadrive/mickey-mania.webp",
+  "p": "covers/megadrive/mickey-mania-p.webp",
+  "lw": "covers/megadrive/mickey-mania-lomo.webp"
  },
  "megadrive|mighty morphin power rangers: the movie": {
   "archivo": "covers/megadrive/mighty-morphin-power-rangers-the-movie.jpg",
@@ -2218,7 +2728,10 @@
   "fondo": "covers/megadrive/mighty-morphin-power-rangers-the-movie-fondo.jpg",
   "captura": "covers/megadrive/mighty-morphin-power-rangers-the-movie-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mighty-morphin-power-rangers-the-movie-lomo.png"
+  "lomo": "covers/megadrive/mighty-morphin-power-rangers-the-movie-lomo.png",
+  "g": "covers/megadrive/mighty-morphin-power-rangers-the-movie.webp",
+  "p": "covers/megadrive/mighty-morphin-power-rangers-the-movie-p.webp",
+  "lw": "covers/megadrive/mighty-morphin-power-rangers-the-movie-lomo.webp"
  },
  "megadrive|mortal kombat": {
   "archivo": "covers/megadrive/mortal-kombat.jpg",
@@ -2231,7 +2744,10 @@
   "fondo": "covers/megadrive/mortal-kombat-fondo.jpg",
   "captura": "covers/megadrive/mortal-kombat-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mortal-kombat-lomo.png"
+  "lomo": "covers/megadrive/mortal-kombat-lomo.png",
+  "g": "covers/megadrive/mortal-kombat.webp",
+  "p": "covers/megadrive/mortal-kombat-p.webp",
+  "lw": "covers/megadrive/mortal-kombat-lomo.webp"
  },
  "megadrive|mr. nutz": {
   "archivo": "covers/megadrive/mr-nutz.jpg",
@@ -2244,7 +2760,10 @@
   "fondo": "covers/megadrive/mr-nutz-fondo.jpg",
   "captura": "covers/megadrive/mr-nutz-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mr-nutz-lomo.png"
+  "lomo": "covers/megadrive/mr-nutz-lomo.png",
+  "g": "covers/megadrive/mr-nutz.webp",
+  "p": "covers/megadrive/mr-nutz-p.webp",
+  "lw": "covers/megadrive/mr-nutz-lomo.webp"
  },
  "megadrive|mystic defender": {
   "archivo": "covers/megadrive/mystic-defender.jpg",
@@ -2257,7 +2776,10 @@
   "fondo": "covers/megadrive/mystic-defender-fondo.jpg",
   "captura": "covers/megadrive/mystic-defender-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/mystic-defender-lomo.png"
+  "lomo": "covers/megadrive/mystic-defender-lomo.png",
+  "g": "covers/megadrive/mystic-defender.webp",
+  "p": "covers/megadrive/mystic-defender-p.webp",
+  "lw": "covers/megadrive/mystic-defender-lomo.webp"
  },
  "megadrive|nba jam": {
   "archivo": "covers/megadrive/nba-jam.jpg",
@@ -2270,7 +2792,10 @@
   "fondo": "covers/megadrive/nba-jam-fondo.jpg",
   "captura": "covers/megadrive/nba-jam-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/nba-jam-lomo.png"
+  "lomo": "covers/megadrive/nba-jam-lomo.png",
+  "g": "covers/megadrive/nba-jam.webp",
+  "p": "covers/megadrive/nba-jam-p.webp",
+  "lw": "covers/megadrive/nba-jam-lomo.webp"
  },
  "megadrive|nba live 95": {
   "archivo": "covers/megadrive/nba-live-95.jpg",
@@ -2283,7 +2808,10 @@
   "fondo": "covers/megadrive/nba-live-95-fondo.jpg",
   "captura": "covers/megadrive/nba-live-95-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/nba-live-95-lomo.png"
+  "lomo": "covers/megadrive/nba-live-95-lomo.png",
+  "g": "covers/megadrive/nba-live-95.webp",
+  "p": "covers/megadrive/nba-live-95-p.webp",
+  "lw": "covers/megadrive/nba-live-95-lomo.webp"
  },
  "megadrive|nba live 97": {
   "archivo": "covers/megadrive/nba-live-97.jpg",
@@ -2296,7 +2824,10 @@
   "fondo": "covers/megadrive/nba-live-97-fondo.jpg",
   "captura": "covers/megadrive/nba-live-97-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/nba-live-97-lomo.png"
+  "lomo": "covers/megadrive/nba-live-97-lomo.png",
+  "g": "covers/megadrive/nba-live-97.webp",
+  "p": "covers/megadrive/nba-live-97-p.webp",
+  "lw": "covers/megadrive/nba-live-97-lomo.webp"
  },
  "megadrive|outrun": {
   "archivo": "covers/megadrive/outrun.jpg",
@@ -2309,7 +2840,10 @@
   "fondo": "covers/megadrive/outrun-fondo.jpg",
   "captura": "covers/megadrive/outrun-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/outrun-lomo.png"
+  "lomo": "covers/megadrive/outrun-lomo.png",
+  "g": "covers/megadrive/outrun.webp",
+  "p": "covers/megadrive/outrun-p.webp",
+  "lw": "covers/megadrive/outrun-lomo.webp"
  },
  "megadrive|pac-mania": {
   "archivo": "covers/megadrive/pac-mania.jpg",
@@ -2322,7 +2856,10 @@
   "fondo": "covers/megadrive/pac-mania-fondo.jpg",
   "captura": "covers/megadrive/pac-mania-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/pac-mania-lomo.png"
+  "lomo": "covers/megadrive/pac-mania-lomo.png",
+  "g": "covers/megadrive/pac-mania.webp",
+  "p": "covers/megadrive/pac-mania-p.webp",
+  "lw": "covers/megadrive/pac-mania-lomo.webp"
  },
  "megadrive|paperboy": {
   "archivo": "covers/megadrive/paperboy.jpg",
@@ -2335,7 +2872,10 @@
   "fondo": "covers/megadrive/paperboy-fondo.jpg",
   "captura": "covers/megadrive/paperboy-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/paperboy-lomo.png"
+  "lomo": "covers/megadrive/paperboy-lomo.png",
+  "g": "covers/megadrive/paperboy.webp",
+  "p": "covers/megadrive/paperboy-p.webp",
+  "lw": "covers/megadrive/paperboy-lomo.webp"
  },
  "megadrive|pelé": {
   "archivo": "covers/megadrive/pele.jpg",
@@ -2348,7 +2888,10 @@
   "fondo": "covers/megadrive/pele-fondo.jpg",
   "captura": "covers/megadrive/pele-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/pele-lomo.png"
+  "lomo": "covers/megadrive/pele-lomo.png",
+  "g": "covers/megadrive/pele.webp",
+  "p": "covers/megadrive/pele-p.webp",
+  "lw": "covers/megadrive/pele-lomo.webp"
  },
  "megadrive|phantasy star iv": {
   "archivo": "covers/megadrive/phantasy-star-iv.jpg",
@@ -2361,7 +2904,10 @@
   "fondo": "covers/megadrive/phantasy-star-iv-fondo.jpg",
   "captura": "covers/megadrive/phantasy-star-iv-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/phantasy-star-iv-lomo.png"
+  "lomo": "covers/megadrive/phantasy-star-iv-lomo.png",
+  "g": "covers/megadrive/phantasy-star-iv.webp",
+  "p": "covers/megadrive/phantasy-star-iv-p.webp",
+  "lw": "covers/megadrive/phantasy-star-iv-lomo.webp"
  },
  "megadrive|pitfall: mayan adventure": {
   "archivo": "covers/megadrive/pitfall-mayan-adventure.jpg",
@@ -2374,7 +2920,10 @@
   "fondo": "covers/megadrive/pitfall-mayan-adventure-fondo.jpg",
   "captura": "covers/megadrive/pitfall-mayan-adventure-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/pitfall-mayan-adventure-lomo.png"
+  "lomo": "covers/megadrive/pitfall-mayan-adventure-lomo.png",
+  "g": "covers/megadrive/pitfall-mayan-adventure.webp",
+  "p": "covers/megadrive/pitfall-mayan-adventure-p.webp",
+  "lw": "covers/megadrive/pitfall-mayan-adventure-lomo.webp"
  },
  "megadrive|probotector": {
   "archivo": "covers/megadrive/probotector.jpg",
@@ -2387,7 +2936,10 @@
   "fondo": "covers/megadrive/probotector-fondo.jpg",
   "captura": "covers/megadrive/probotector-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/probotector-lomo.png"
+  "lomo": "covers/megadrive/probotector-lomo.png",
+  "g": "covers/megadrive/probotector.webp",
+  "p": "covers/megadrive/probotector-p.webp",
+  "lw": "covers/megadrive/probotector-lomo.webp"
  },
  "megadrive|quackshot": {
   "archivo": "covers/megadrive/quackshot.jpg",
@@ -2400,7 +2952,10 @@
   "fondo": "covers/megadrive/quackshot-fondo.jpg",
   "captura": "covers/megadrive/quackshot-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/quackshot-lomo.png"
+  "lomo": "covers/megadrive/quackshot-lomo.png",
+  "g": "covers/megadrive/quackshot.webp",
+  "p": "covers/megadrive/quackshot-p.webp",
+  "lw": "covers/megadrive/quackshot-lomo.webp"
  },
  "megadrive|ranger x": {
   "archivo": "covers/megadrive/ranger-x.jpg",
@@ -2413,7 +2968,10 @@
   "fondo": "covers/megadrive/ranger-x-fondo.jpg",
   "captura": "covers/megadrive/ranger-x-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ranger-x-lomo.png"
+  "lomo": "covers/megadrive/ranger-x-lomo.png",
+  "g": "covers/megadrive/ranger-x.webp",
+  "p": "covers/megadrive/ranger-x-p.webp",
+  "lw": "covers/megadrive/ranger-x-lomo.webp"
  },
  "megadrive|risky woods": {
   "archivo": "covers/megadrive/risky-woods.jpg",
@@ -2426,7 +2984,10 @@
   "fondo": "covers/megadrive/risky-woods-fondo.jpg",
   "captura": "covers/megadrive/risky-woods-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/risky-woods-lomo.png"
+  "lomo": "covers/megadrive/risky-woods-lomo.png",
+  "g": "covers/megadrive/risky-woods.webp",
+  "p": "covers/megadrive/risky-woods-p.webp",
+  "lw": "covers/megadrive/risky-woods-lomo.webp"
  },
  "megadrive|ristar": {
   "archivo": "covers/megadrive/ristar.jpg",
@@ -2439,7 +3000,10 @@
   "fondo": "covers/megadrive/ristar-fondo.jpg",
   "captura": "covers/megadrive/ristar-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/ristar-lomo.png"
+  "lomo": "covers/megadrive/ristar-lomo.png",
+  "g": "covers/megadrive/ristar.webp",
+  "p": "covers/megadrive/ristar-p.webp",
+  "lw": "covers/megadrive/ristar-lomo.webp"
  },
  "megadrive|robocop versus the terminator": {
   "archivo": "covers/megadrive/robocop-versus-the-terminator.jpg",
@@ -2452,7 +3016,10 @@
   "fondo": "covers/megadrive/robocop-versus-the-terminator-fondo.jpg",
   "captura": "covers/megadrive/robocop-versus-the-terminator-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/robocop-versus-the-terminator-lomo.png"
+  "lomo": "covers/megadrive/robocop-versus-the-terminator-lomo.png",
+  "g": "covers/megadrive/robocop-versus-the-terminator.webp",
+  "p": "covers/megadrive/robocop-versus-the-terminator-p.webp",
+  "lw": "covers/megadrive/robocop-versus-the-terminator-lomo.webp"
  },
  "megadrive|rocket knight adventures": {
   "archivo": "covers/megadrive/rocket-knight-adventures.jpg",
@@ -2465,7 +3032,10 @@
   "fondo": "covers/megadrive/rocket-knight-adventures-fondo.jpg",
   "captura": "covers/megadrive/rocket-knight-adventures-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/rocket-knight-adventures-lomo.png"
+  "lomo": "covers/megadrive/rocket-knight-adventures-lomo.png",
+  "g": "covers/megadrive/rocket-knight-adventures.webp",
+  "p": "covers/megadrive/rocket-knight-adventures-p.webp",
+  "lw": "covers/megadrive/rocket-knight-adventures-lomo.webp"
  },
  "megadrive|rolling thunder 2": {
   "archivo": "covers/megadrive/rolling-thunder-2.jpg",
@@ -2478,7 +3048,10 @@
   "fondo": "covers/megadrive/rolling-thunder-2-fondo.jpg",
   "captura": "covers/megadrive/rolling-thunder-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/rolling-thunder-2-lomo.png"
+  "lomo": "covers/megadrive/rolling-thunder-2-lomo.png",
+  "g": "covers/megadrive/rolling-thunder-2.webp",
+  "p": "covers/megadrive/rolling-thunder-2-p.webp",
+  "lw": "covers/megadrive/rolling-thunder-2-lomo.webp"
  },
  "megadrive|sampras": {
   "archivo": "covers/megadrive/sampras.jpg",
@@ -2491,7 +3064,10 @@
   "fondo": "covers/megadrive/sampras-fondo.jpg",
   "captura": "covers/megadrive/sampras-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sampras-lomo.png"
+  "lomo": "covers/megadrive/sampras-lomo.png",
+  "g": "covers/megadrive/sampras.webp",
+  "p": "covers/megadrive/sampras-p.webp",
+  "lw": "covers/megadrive/sampras-lomo.webp"
  },
  "megadrive|shadow dancer": {
   "archivo": "covers/megadrive/shadow-dancer.jpg",
@@ -2504,7 +3080,10 @@
   "fondo": "covers/megadrive/shadow-dancer-fondo.jpg",
   "captura": "covers/megadrive/shadow-dancer-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shadow-dancer-lomo.png"
+  "lomo": "covers/megadrive/shadow-dancer-lomo.png",
+  "g": "covers/megadrive/shadow-dancer.webp",
+  "p": "covers/megadrive/shadow-dancer-p.webp",
+  "lw": "covers/megadrive/shadow-dancer-lomo.webp"
  },
  "megadrive|shadow of the beast": {
   "archivo": "covers/megadrive/shadow-of-the-beast.jpg",
@@ -2517,7 +3096,10 @@
   "fondo": "covers/megadrive/shadow-of-the-beast-fondo.jpg",
   "captura": "covers/megadrive/shadow-of-the-beast-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shadow-of-the-beast-lomo.png"
+  "lomo": "covers/megadrive/shadow-of-the-beast-lomo.png",
+  "g": "covers/megadrive/shadow-of-the-beast.webp",
+  "p": "covers/megadrive/shadow-of-the-beast-p.webp",
+  "lw": "covers/megadrive/shadow-of-the-beast-lomo.webp"
  },
  "megadrive|shaq-fu": {
   "archivo": "covers/megadrive/shaq-fu.jpg",
@@ -2530,7 +3112,10 @@
   "fondo": "covers/megadrive/shaq-fu-fondo.jpg",
   "captura": "covers/megadrive/shaq-fu-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shaq-fu-lomo.png"
+  "lomo": "covers/megadrive/shaq-fu-lomo.png",
+  "g": "covers/megadrive/shaq-fu.webp",
+  "p": "covers/megadrive/shaq-fu-p.webp",
+  "lw": "covers/megadrive/shaq-fu-lomo.webp"
  },
  "megadrive|shining force": {
   "archivo": "covers/megadrive/shining-force.jpg",
@@ -2543,7 +3128,10 @@
   "fondo": "covers/megadrive/shining-force-fondo.jpg",
   "captura": "covers/megadrive/shining-force-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shining-force-lomo.png"
+  "lomo": "covers/megadrive/shining-force-lomo.png",
+  "g": "covers/megadrive/shining-force.webp",
+  "p": "covers/megadrive/shining-force-p.webp",
+  "lw": "covers/megadrive/shining-force-lomo.webp"
  },
  "megadrive|shining force ii": {
   "archivo": "covers/megadrive/shining-force-ii.jpg",
@@ -2556,7 +3144,10 @@
   "fondo": "covers/megadrive/shining-force-ii-fondo.jpg",
   "captura": "covers/megadrive/shining-force-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shining-force-ii-lomo.png"
+  "lomo": "covers/megadrive/shining-force-ii-lomo.png",
+  "g": "covers/megadrive/shining-force-ii.webp",
+  "p": "covers/megadrive/shining-force-ii-p.webp",
+  "lw": "covers/megadrive/shining-force-ii-lomo.webp"
  },
  "megadrive|shinobi iii": {
   "archivo": "covers/megadrive/shinobi-iii.jpg",
@@ -2569,7 +3160,10 @@
   "fondo": "covers/megadrive/shinobi-iii-fondo.jpg",
   "captura": "covers/megadrive/shinobi-iii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/shinobi-iii-lomo.png"
+  "lomo": "covers/megadrive/shinobi-iii-lomo.png",
+  "g": "covers/megadrive/shinobi-iii.webp",
+  "p": "covers/megadrive/shinobi-iii-p.webp",
+  "lw": "covers/megadrive/shinobi-iii-lomo.webp"
  },
  "megadrive|soleil": {
   "archivo": "covers/megadrive/soleil.jpg",
@@ -2582,7 +3176,10 @@
   "fondo": "covers/megadrive/soleil-fondo.jpg",
   "captura": "covers/megadrive/soleil-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/soleil-lomo.png"
+  "lomo": "covers/megadrive/soleil-lomo.png",
+  "g": "covers/megadrive/soleil.webp",
+  "p": "covers/megadrive/soleil-p.webp",
+  "lw": "covers/megadrive/soleil-lomo.webp"
  },
  "megadrive|sonic & knuckles": {
   "archivo": "covers/megadrive/sonic-knuckles.jpg",
@@ -2595,7 +3192,10 @@
   "fondo": "covers/megadrive/sonic-knuckles-fondo.jpg",
   "captura": "covers/megadrive/sonic-knuckles-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-knuckles-lomo.png"
+  "lomo": "covers/megadrive/sonic-knuckles-lomo.png",
+  "g": "covers/megadrive/sonic-knuckles.webp",
+  "p": "covers/megadrive/sonic-knuckles-p.webp",
+  "lw": "covers/megadrive/sonic-knuckles-lomo.webp"
  },
  "megadrive|sonic 2": {
   "archivo": "covers/megadrive/sonic-2.jpg",
@@ -2608,7 +3208,10 @@
   "fondo": "covers/megadrive/sonic-2-fondo.jpg",
   "captura": "covers/megadrive/sonic-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-2-lomo.png"
+  "lomo": "covers/megadrive/sonic-2-lomo.png",
+  "g": "covers/megadrive/sonic-2.webp",
+  "p": "covers/megadrive/sonic-2-p.webp",
+  "lw": "covers/megadrive/sonic-2-lomo.webp"
  },
  "megadrive|sonic 3": {
   "archivo": "covers/megadrive/sonic-3.jpg",
@@ -2621,7 +3224,10 @@
   "fondo": "covers/megadrive/sonic-3-fondo.jpg",
   "captura": "covers/megadrive/sonic-3-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-3-lomo.png"
+  "lomo": "covers/megadrive/sonic-3-lomo.png",
+  "g": "covers/megadrive/sonic-3.webp",
+  "p": "covers/megadrive/sonic-3-p.webp",
+  "lw": "covers/megadrive/sonic-3-lomo.webp"
  },
  "megadrive|sonic 3d": {
   "archivo": "covers/megadrive/sonic-3d.jpg",
@@ -2634,7 +3240,10 @@
   "fondo": "covers/megadrive/sonic-3d-fondo.jpg",
   "captura": "covers/megadrive/sonic-3d-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-3d-lomo.png"
+  "lomo": "covers/megadrive/sonic-3d-lomo.png",
+  "g": "covers/megadrive/sonic-3d.webp",
+  "p": "covers/megadrive/sonic-3d-p.webp",
+  "lw": "covers/megadrive/sonic-3d-lomo.webp"
  },
  "megadrive|sonic spinball": {
   "archivo": "covers/megadrive/sonic-spinball.jpg",
@@ -2647,7 +3256,10 @@
   "fondo": "covers/megadrive/sonic-spinball-fondo.jpg",
   "captura": "covers/megadrive/sonic-spinball-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-spinball-lomo.png"
+  "lomo": "covers/megadrive/sonic-spinball-lomo.png",
+  "g": "covers/megadrive/sonic-spinball.webp",
+  "p": "covers/megadrive/sonic-spinball-p.webp",
+  "lw": "covers/megadrive/sonic-spinball-lomo.webp"
  },
  "megadrive|sonic the hedgehog": {
   "archivo": "covers/megadrive/sonic-the-hedgehog.jpg",
@@ -2660,7 +3272,10 @@
   "fondo": "covers/megadrive/sonic-the-hedgehog-fondo.jpg",
   "captura": "covers/megadrive/sonic-the-hedgehog-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sonic-the-hedgehog-lomo.png"
+  "lomo": "covers/megadrive/sonic-the-hedgehog-lomo.png",
+  "g": "covers/megadrive/sonic-the-hedgehog.webp",
+  "p": "covers/megadrive/sonic-the-hedgehog-p.webp",
+  "lw": "covers/megadrive/sonic-the-hedgehog-lomo.webp"
  },
  "megadrive|space harrier ii": {
   "archivo": "covers/megadrive/space-harrier-ii.jpg",
@@ -2673,7 +3288,10 @@
   "fondo": "covers/megadrive/space-harrier-ii-fondo.jpg",
   "captura": "covers/megadrive/space-harrier-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/space-harrier-ii-lomo.png"
+  "lomo": "covers/megadrive/space-harrier-ii-lomo.png",
+  "g": "covers/megadrive/space-harrier-ii.webp",
+  "p": "covers/megadrive/space-harrier-ii-p.webp",
+  "lw": "covers/megadrive/space-harrier-ii-lomo.webp"
  },
  "megadrive|speedball 2": {
   "archivo": "covers/megadrive/speedball-2.jpg",
@@ -2686,7 +3304,10 @@
   "fondo": "covers/megadrive/speedball-2-fondo.jpg",
   "captura": "covers/megadrive/speedball-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/speedball-2-lomo.png"
+  "lomo": "covers/megadrive/speedball-2-lomo.png",
+  "g": "covers/megadrive/speedball-2.webp",
+  "p": "covers/megadrive/speedball-2-p.webp",
+  "lw": "covers/megadrive/speedball-2-lomo.webp"
  },
  "megadrive|spiderman": {
   "archivo": "covers/megadrive/spiderman.jpg",
@@ -2699,7 +3320,10 @@
   "fondo": "covers/megadrive/spiderman-fondo.jpg",
   "captura": "covers/megadrive/spiderman-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/spiderman-lomo.png"
+  "lomo": "covers/megadrive/spiderman-lomo.png",
+  "g": "covers/megadrive/spiderman.webp",
+  "p": "covers/megadrive/spiderman-p.webp",
+  "lw": "covers/megadrive/spiderman-lomo.webp"
  },
  "megadrive|splatterhouse 2": {
   "archivo": "covers/megadrive/splatterhouse-2.jpg",
@@ -2712,7 +3336,10 @@
   "fondo": "covers/megadrive/splatterhouse-2-fondo.jpg",
   "captura": "covers/megadrive/splatterhouse-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/splatterhouse-2-lomo.png"
+  "lomo": "covers/megadrive/splatterhouse-2-lomo.png",
+  "g": "covers/megadrive/splatterhouse-2.webp",
+  "p": "covers/megadrive/splatterhouse-2-p.webp",
+  "lw": "covers/megadrive/splatterhouse-2-lomo.webp"
  },
  "megadrive|street fighter 2: special champion edition": {
   "archivo": "covers/megadrive/street-fighter-2-special-champion-edition.jpg",
@@ -2725,7 +3352,10 @@
   "fondo": "covers/megadrive/street-fighter-2-special-champion-edition-fondo.jpg",
   "captura": "covers/megadrive/street-fighter-2-special-champion-edition-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/street-fighter-2-special-champion-edition-lomo.png"
+  "lomo": "covers/megadrive/street-fighter-2-special-champion-edition-lomo.png",
+  "g": "covers/megadrive/street-fighter-2-special-champion-edition.webp",
+  "p": "covers/megadrive/street-fighter-2-special-champion-edition-p.webp",
+  "lw": "covers/megadrive/street-fighter-2-special-champion-edition-lomo.webp"
  },
  "megadrive|street fighter ii": {
   "archivo": "covers/megadrive/street-fighter-ii.jpg",
@@ -2738,7 +3368,10 @@
   "fondo": "covers/megadrive/street-fighter-ii-fondo.jpg",
   "captura": "covers/megadrive/street-fighter-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/street-fighter-ii-lomo.png"
+  "lomo": "covers/megadrive/street-fighter-ii-lomo.png",
+  "g": "covers/megadrive/street-fighter-ii.webp",
+  "p": "covers/megadrive/street-fighter-ii-p.webp",
+  "lw": "covers/megadrive/street-fighter-ii-lomo.webp"
  },
  "megadrive|streets of rage": {
   "archivo": "covers/megadrive/streets-of-rage.jpg",
@@ -2751,7 +3384,10 @@
   "fondo": "covers/megadrive/streets-of-rage-fondo.jpg",
   "captura": "covers/megadrive/streets-of-rage-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/streets-of-rage-lomo.png"
+  "lomo": "covers/megadrive/streets-of-rage-lomo.png",
+  "g": "covers/megadrive/streets-of-rage.webp",
+  "p": "covers/megadrive/streets-of-rage-p.webp",
+  "lw": "covers/megadrive/streets-of-rage-lomo.webp"
  },
  "megadrive|streets of rage 2": {
   "archivo": "covers/megadrive/streets-of-rage-2.jpg",
@@ -2764,7 +3400,10 @@
   "fondo": "covers/megadrive/streets-of-rage-2-fondo.jpg",
   "captura": "covers/megadrive/streets-of-rage-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/streets-of-rage-2-lomo.png"
+  "lomo": "covers/megadrive/streets-of-rage-2-lomo.png",
+  "g": "covers/megadrive/streets-of-rage-2.webp",
+  "p": "covers/megadrive/streets-of-rage-2-p.webp",
+  "lw": "covers/megadrive/streets-of-rage-2-lomo.webp"
  },
  "megadrive|streets of rage 3": {
   "archivo": "covers/megadrive/streets-of-rage-3.jpg",
@@ -2777,7 +3416,10 @@
   "fondo": "covers/megadrive/streets-of-rage-3-fondo.jpg",
   "captura": "covers/megadrive/streets-of-rage-3-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/streets-of-rage-3-lomo.png"
+  "lomo": "covers/megadrive/streets-of-rage-3-lomo.png",
+  "g": "covers/megadrive/streets-of-rage-3.webp",
+  "p": "covers/megadrive/streets-of-rage-3-p.webp",
+  "lw": "covers/megadrive/streets-of-rage-3-lomo.webp"
  },
  "megadrive|strider": {
   "archivo": "covers/megadrive/strider.jpg",
@@ -2790,7 +3432,10 @@
   "fondo": "covers/megadrive/strider-fondo.jpg",
   "captura": "covers/megadrive/strider-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/strider-lomo.png"
+  "lomo": "covers/megadrive/strider-lomo.png",
+  "g": "covers/megadrive/strider.webp",
+  "p": "covers/megadrive/strider-p.webp",
+  "lw": "covers/megadrive/strider-lomo.webp"
  },
  "megadrive|sub-terrania": {
   "archivo": "covers/megadrive/sub-terrania.jpg",
@@ -2803,7 +3448,10 @@
   "fondo": "covers/megadrive/sub-terrania-fondo.jpg",
   "captura": "covers/megadrive/sub-terrania-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sub-terrania-lomo.png"
+  "lomo": "covers/megadrive/sub-terrania-lomo.png",
+  "g": "covers/megadrive/sub-terrania.webp",
+  "p": "covers/megadrive/sub-terrania-p.webp",
+  "lw": "covers/megadrive/sub-terrania-lomo.webp"
  },
  "megadrive|sunset riders": {
   "archivo": "covers/megadrive/sunset-riders.jpg",
@@ -2816,7 +3464,10 @@
   "fondo": "covers/megadrive/sunset-riders-fondo.jpg",
   "captura": "covers/megadrive/sunset-riders-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/sunset-riders-lomo.png"
+  "lomo": "covers/megadrive/sunset-riders-lomo.png",
+  "g": "covers/megadrive/sunset-riders.webp",
+  "p": "covers/megadrive/sunset-riders-p.webp",
+  "lw": "covers/megadrive/sunset-riders-lomo.webp"
  },
  "megadrive|super hang-on": {
   "archivo": "covers/megadrive/super-hang-on.jpg",
@@ -2829,7 +3480,10 @@
   "fondo": "covers/megadrive/super-hang-on-fondo.jpg",
   "captura": "covers/megadrive/super-hang-on-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/super-hang-on-lomo.png"
+  "lomo": "covers/megadrive/super-hang-on-lomo.png",
+  "g": "covers/megadrive/super-hang-on.webp",
+  "p": "covers/megadrive/super-hang-on-p.webp",
+  "lw": "covers/megadrive/super-hang-on-lomo.webp"
  },
  "megadrive|super monaco gp": {
   "archivo": "covers/megadrive/super-monaco-gp.jpg",
@@ -2842,7 +3496,10 @@
   "fondo": "covers/megadrive/super-monaco-gp-fondo.jpg",
   "captura": "covers/megadrive/super-monaco-gp-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/super-monaco-gp-lomo.png"
+  "lomo": "covers/megadrive/super-monaco-gp-lomo.png",
+  "g": "covers/megadrive/super-monaco-gp.webp",
+  "p": "covers/megadrive/super-monaco-gp-p.webp",
+  "lw": "covers/megadrive/super-monaco-gp-lomo.webp"
  },
  "megadrive|superman the man of steel": {
   "archivo": "covers/megadrive/superman-the-man-of-steel.jpg",
@@ -2855,7 +3512,10 @@
   "fondo": "covers/megadrive/superman-the-man-of-steel-fondo.jpg",
   "captura": "covers/megadrive/superman-the-man-of-steel-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/superman-the-man-of-steel-lomo.png"
+  "lomo": "covers/megadrive/superman-the-man-of-steel-lomo.png",
+  "g": "covers/megadrive/superman-the-man-of-steel.webp",
+  "p": "covers/megadrive/superman-the-man-of-steel-p.webp",
+  "lw": "covers/megadrive/superman-the-man-of-steel-lomo.webp"
  },
  "megadrive|talespin": {
   "archivo": "covers/megadrive/talespin.jpg",
@@ -2868,7 +3528,10 @@
   "fondo": "covers/megadrive/talespin-fondo.jpg",
   "captura": "covers/megadrive/talespin-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/talespin-lomo.png"
+  "lomo": "covers/megadrive/talespin-lomo.png",
+  "g": "covers/megadrive/talespin.webp",
+  "p": "covers/megadrive/talespin-p.webp",
+  "lw": "covers/megadrive/talespin-lomo.webp"
  },
  "megadrive|talmit's adventure": {
   "archivo": "covers/megadrive/talmit-s-adventure.jpg",
@@ -2881,7 +3544,10 @@
   "fondo": "covers/megadrive/talmit-s-adventure-fondo.jpg",
   "captura": "covers/megadrive/talmit-s-adventure-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/talmit-s-adventure-lomo.png"
+  "lomo": "covers/megadrive/talmit-s-adventure-lomo.png",
+  "g": "covers/megadrive/talmit-s-adventure.webp",
+  "p": "covers/megadrive/talmit-s-adventure-p.webp",
+  "lw": "covers/megadrive/talmit-s-adventure-lomo.webp"
  },
  "megadrive|taz in escape from mars": {
   "archivo": "covers/megadrive/taz-in-escape-from-mars.jpg",
@@ -2894,7 +3560,10 @@
   "fondo": "covers/megadrive/taz-in-escape-from-mars-fondo.jpg",
   "captura": "covers/megadrive/taz-in-escape-from-mars-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/taz-in-escape-from-mars-lomo.png"
+  "lomo": "covers/megadrive/taz-in-escape-from-mars-lomo.png",
+  "g": "covers/megadrive/taz-in-escape-from-mars.webp",
+  "p": "covers/megadrive/taz-in-escape-from-mars-p.webp",
+  "lw": "covers/megadrive/taz-in-escape-from-mars-lomo.webp"
  },
  "megadrive|taz-mania": {
   "archivo": "covers/megadrive/taz-mania.jpg",
@@ -2907,7 +3576,10 @@
   "fondo": "covers/megadrive/taz-mania-fondo.jpg",
   "captura": "covers/megadrive/taz-mania-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/taz-mania-lomo.png"
+  "lomo": "covers/megadrive/taz-mania-lomo.png",
+  "g": "covers/megadrive/taz-mania.webp",
+  "p": "covers/megadrive/taz-mania-p.webp",
+  "lw": "covers/megadrive/taz-mania-lomo.webp"
  },
  "megadrive|teenage mutant ninja turtles: the hyperstone heist": {
   "archivo": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist.jpg",
@@ -2920,7 +3592,10 @@
   "fondo": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-fondo.jpg",
   "captura": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-lomo.png"
+  "lomo": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-lomo.png",
+  "g": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist.webp",
+  "p": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-p.webp",
+  "lw": "covers/megadrive/teenage-mutant-ninja-turtles-the-hyperstone-heist-lomo.webp"
  },
  "megadrive|the adventures of batman & robin": {
   "archivo": "covers/megadrive/the-adventures-of-batman-robin.jpg",
@@ -2933,7 +3608,10 @@
   "fondo": "covers/megadrive/the-adventures-of-batman-robin-fondo.jpg",
   "captura": "covers/megadrive/the-adventures-of-batman-robin-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-adventures-of-batman-robin-lomo.png"
+  "lomo": "covers/megadrive/the-adventures-of-batman-robin-lomo.png",
+  "g": "covers/megadrive/the-adventures-of-batman-robin.webp",
+  "p": "covers/megadrive/the-adventures-of-batman-robin-p.webp",
+  "lw": "covers/megadrive/the-adventures-of-batman-robin-lomo.webp"
  },
  "megadrive|the flintstones": {
   "archivo": "covers/megadrive/the-flintstones.jpg",
@@ -2946,7 +3624,10 @@
   "fondo": "covers/megadrive/the-flintstones-fondo.jpg",
   "captura": "covers/megadrive/the-flintstones-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-flintstones-lomo.png"
+  "lomo": "covers/megadrive/the-flintstones-lomo.png",
+  "g": "covers/megadrive/the-flintstones.webp",
+  "p": "covers/megadrive/the-flintstones-p.webp",
+  "lw": "covers/megadrive/the-flintstones-lomo.webp"
  },
  "megadrive|the revenge of shinobi": {
   "archivo": "covers/megadrive/the-revenge-of-shinobi.jpg",
@@ -2959,7 +3640,10 @@
   "fondo": "covers/megadrive/the-revenge-of-shinobi-fondo.jpg",
   "captura": "covers/megadrive/the-revenge-of-shinobi-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-revenge-of-shinobi-lomo.png"
+  "lomo": "covers/megadrive/the-revenge-of-shinobi-lomo.png",
+  "g": "covers/megadrive/the-revenge-of-shinobi.webp",
+  "p": "covers/megadrive/the-revenge-of-shinobi-p.webp",
+  "lw": "covers/megadrive/the-revenge-of-shinobi-lomo.webp"
  },
  "megadrive|the simpsons: bart's nightmare": {
   "archivo": "covers/megadrive/the-simpsons-bart-s-nightmare.jpg",
@@ -2972,7 +3656,10 @@
   "fondo": "covers/megadrive/the-simpsons-bart-s-nightmare-fondo.jpg",
   "captura": "covers/megadrive/the-simpsons-bart-s-nightmare-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-simpsons-bart-s-nightmare-lomo.png"
+  "lomo": "covers/megadrive/the-simpsons-bart-s-nightmare-lomo.png",
+  "g": "covers/megadrive/the-simpsons-bart-s-nightmare.webp",
+  "p": "covers/megadrive/the-simpsons-bart-s-nightmare-p.webp",
+  "lw": "covers/megadrive/the-simpsons-bart-s-nightmare-lomo.webp"
  },
  "megadrive|the story of thor": {
   "archivo": "covers/megadrive/the-story-of-thor.jpg",
@@ -2985,7 +3672,10 @@
   "fondo": "covers/megadrive/the-story-of-thor-fondo.jpg",
   "captura": "covers/megadrive/the-story-of-thor-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-story-of-thor-lomo.png"
+  "lomo": "covers/megadrive/the-story-of-thor-lomo.png",
+  "g": "covers/megadrive/the-story-of-thor.webp",
+  "p": "covers/megadrive/the-story-of-thor-p.webp",
+  "lw": "covers/megadrive/the-story-of-thor-lomo.webp"
  },
  "megadrive|the terminator": {
   "archivo": "covers/megadrive/the-terminator.jpg",
@@ -2998,7 +3688,10 @@
   "fondo": "covers/megadrive/the-terminator-fondo.jpg",
   "captura": "covers/megadrive/the-terminator-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/the-terminator-lomo.png"
+  "lomo": "covers/megadrive/the-terminator-lomo.png",
+  "g": "covers/megadrive/the-terminator.webp",
+  "p": "covers/megadrive/the-terminator-p.webp",
+  "lw": "covers/megadrive/the-terminator-lomo.webp"
  },
  "megadrive|thunder force ii": {
   "archivo": "covers/megadrive/thunder-force-ii.jpg",
@@ -3011,7 +3704,10 @@
   "fondo": "covers/megadrive/thunder-force-ii-fondo.jpg",
   "captura": "covers/megadrive/thunder-force-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/thunder-force-ii-lomo.png"
+  "lomo": "covers/megadrive/thunder-force-ii-lomo.png",
+  "g": "covers/megadrive/thunder-force-ii.webp",
+  "p": "covers/megadrive/thunder-force-ii-p.webp",
+  "lw": "covers/megadrive/thunder-force-ii-lomo.webp"
  },
  "megadrive|thunder force iv": {
   "archivo": "covers/megadrive/thunder-force-iv.jpg",
@@ -3024,7 +3720,10 @@
   "fondo": "covers/megadrive/thunder-force-iv-fondo.jpg",
   "captura": "covers/megadrive/thunder-force-iv-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/thunder-force-iv-lomo.png"
+  "lomo": "covers/megadrive/thunder-force-iv-lomo.png",
+  "g": "covers/megadrive/thunder-force-iv.webp",
+  "p": "covers/megadrive/thunder-force-iv-p.webp",
+  "lw": "covers/megadrive/thunder-force-iv-lomo.webp"
  },
  "megadrive|tiny toon adventures: acme all stars": {
   "archivo": "covers/megadrive/tiny-toon-adventures-acme-all-stars.jpg",
@@ -3037,7 +3736,10 @@
   "fondo": "covers/megadrive/tiny-toon-adventures-acme-all-stars-fondo.jpg",
   "captura": "covers/megadrive/tiny-toon-adventures-acme-all-stars-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/tiny-toon-adventures-acme-all-stars-lomo.png"
+  "lomo": "covers/megadrive/tiny-toon-adventures-acme-all-stars-lomo.png",
+  "g": "covers/megadrive/tiny-toon-adventures-acme-all-stars.webp",
+  "p": "covers/megadrive/tiny-toon-adventures-acme-all-stars-p.webp",
+  "lw": "covers/megadrive/tiny-toon-adventures-acme-all-stars-lomo.webp"
  },
  "megadrive|tiny toon adventures: buster's hidden treasure": {
   "archivo": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure.jpg",
@@ -3050,7 +3752,10 @@
   "fondo": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-fondo.jpg",
   "captura": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-lomo.png"
+  "lomo": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-lomo.png",
+  "g": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure.webp",
+  "p": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-p.webp",
+  "lw": "covers/megadrive/tiny-toon-adventures-buster-s-hidden-treasure-lomo.webp"
  },
  "megadrive|toe jam & earl": {
   "archivo": "covers/megadrive/toe-jam-earl.jpg",
@@ -3063,7 +3768,10 @@
   "fondo": "covers/megadrive/toe-jam-earl-fondo.jpg",
   "captura": "covers/megadrive/toe-jam-earl-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/toe-jam-earl-lomo.png"
+  "lomo": "covers/megadrive/toe-jam-earl-lomo.png",
+  "g": "covers/megadrive/toe-jam-earl.webp",
+  "p": "covers/megadrive/toe-jam-earl-p.webp",
+  "lw": "covers/megadrive/toe-jam-earl-lomo.webp"
  },
  "megadrive|toe jam & earl panic on funkotron": {
   "archivo": "covers/megadrive/toe-jam-earl-panic-on-funkotron.jpg",
@@ -3076,7 +3784,10 @@
   "fondo": "covers/megadrive/toe-jam-earl-panic-on-funkotron-fondo.jpg",
   "captura": "covers/megadrive/toe-jam-earl-panic-on-funkotron-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/toe-jam-earl-panic-on-funkotron-lomo.png"
+  "lomo": "covers/megadrive/toe-jam-earl-panic-on-funkotron-lomo.png",
+  "g": "covers/megadrive/toe-jam-earl-panic-on-funkotron.webp",
+  "p": "covers/megadrive/toe-jam-earl-panic-on-funkotron-p.webp",
+  "lw": "covers/megadrive/toe-jam-earl-panic-on-funkotron-lomo.webp"
  },
  "megadrive|toki": {
   "archivo": "covers/megadrive/toki.jpg",
@@ -3089,7 +3800,10 @@
   "fondo": "covers/megadrive/toki-fondo.jpg",
   "captura": "covers/megadrive/toki-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/toki-lomo.png"
+  "lomo": "covers/megadrive/toki-lomo.png",
+  "g": "covers/megadrive/toki.webp",
+  "p": "covers/megadrive/toki-p.webp",
+  "lw": "covers/megadrive/toki-lomo.webp"
  },
  "megadrive|toy story": {
   "archivo": "covers/megadrive/toy-story.jpg",
@@ -3102,7 +3816,10 @@
   "fondo": "covers/megadrive/toy-story-fondo.jpg",
   "captura": "covers/megadrive/toy-story-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/toy-story-lomo.png"
+  "lomo": "covers/megadrive/toy-story-lomo.png",
+  "g": "covers/megadrive/toy-story.webp",
+  "p": "covers/megadrive/toy-story-p.webp",
+  "lw": "covers/megadrive/toy-story-lomo.webp"
  },
  "megadrive|truxton": {
   "archivo": "covers/megadrive/truxton.jpg",
@@ -3115,7 +3832,10 @@
   "fondo": "covers/megadrive/truxton-fondo.jpg",
   "captura": "covers/megadrive/truxton-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/truxton-lomo.png"
+  "lomo": "covers/megadrive/truxton-lomo.png",
+  "g": "covers/megadrive/truxton.webp",
+  "p": "covers/megadrive/truxton-p.webp",
+  "lw": "covers/megadrive/truxton-lomo.webp"
  },
  "megadrive|turbo outrun": {
   "archivo": "covers/megadrive/turbo-outrun.jpg",
@@ -3128,7 +3848,10 @@
   "fondo": "covers/megadrive/turbo-outrun-fondo.jpg",
   "captura": "covers/megadrive/turbo-outrun-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/turbo-outrun-lomo.png"
+  "lomo": "covers/megadrive/turbo-outrun-lomo.png",
+  "g": "covers/megadrive/turbo-outrun.webp",
+  "p": "covers/megadrive/turbo-outrun-p.webp",
+  "lw": "covers/megadrive/turbo-outrun-lomo.webp"
  },
  "megadrive|two tribes": {
   "archivo": "covers/megadrive/two-tribes.jpg",
@@ -3141,7 +3864,10 @@
   "fondo": "covers/megadrive/two-tribes-fondo.jpg",
   "captura": "covers/megadrive/two-tribes-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/two-tribes-lomo.png"
+  "lomo": "covers/megadrive/two-tribes-lomo.png",
+  "g": "covers/megadrive/two-tribes.webp",
+  "p": "covers/megadrive/two-tribes-p.webp",
+  "lw": "covers/megadrive/two-tribes-lomo.webp"
  },
  "megadrive|vectorman": {
   "archivo": "covers/megadrive/vectorman.jpg",
@@ -3154,7 +3880,10 @@
   "fondo": "covers/megadrive/vectorman-fondo.jpg",
   "captura": "covers/megadrive/vectorman-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/vectorman-lomo.png"
+  "lomo": "covers/megadrive/vectorman-lomo.png",
+  "g": "covers/megadrive/vectorman.webp",
+  "p": "covers/megadrive/vectorman-p.webp",
+  "lw": "covers/megadrive/vectorman-lomo.webp"
  },
  "megadrive|virtua racing": {
   "archivo": "covers/megadrive/virtua-racing.jpg",
@@ -3167,7 +3896,10 @@
   "fondo": "covers/megadrive/virtua-racing-fondo.jpg",
   "captura": "covers/megadrive/virtua-racing-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/virtua-racing-lomo.png"
+  "lomo": "covers/megadrive/virtua-racing-lomo.png",
+  "g": "covers/megadrive/virtua-racing.webp",
+  "p": "covers/megadrive/virtua-racing-p.webp",
+  "lw": "covers/megadrive/virtua-racing-lomo.webp"
  },
  "megadrive|wonder boy iii: monster lair": {
   "archivo": "covers/megadrive/wonder-boy-iii-monster-lair.jpg",
@@ -3180,7 +3912,10 @@
   "fondo": "covers/megadrive/wonder-boy-iii-monster-lair-fondo.jpg",
   "captura": "covers/megadrive/wonder-boy-iii-monster-lair-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/wonder-boy-iii-monster-lair-lomo.png"
+  "lomo": "covers/megadrive/wonder-boy-iii-monster-lair-lomo.png",
+  "g": "covers/megadrive/wonder-boy-iii-monster-lair.webp",
+  "p": "covers/megadrive/wonder-boy-iii-monster-lair-p.webp",
+  "lw": "covers/megadrive/wonder-boy-iii-monster-lair-lomo.webp"
  },
  "megadrive|wonder boy in monster world": {
   "archivo": "covers/megadrive/wonder-boy-in-monster-world.jpg",
@@ -3193,7 +3928,10 @@
   "fondo": "covers/megadrive/wonder-boy-in-monster-world-fondo.jpg",
   "captura": "covers/megadrive/wonder-boy-in-monster-world-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/wonder-boy-in-monster-world-lomo.png"
+  "lomo": "covers/megadrive/wonder-boy-in-monster-world-lomo.png",
+  "g": "covers/megadrive/wonder-boy-in-monster-world.webp",
+  "p": "covers/megadrive/wonder-boy-in-monster-world-p.webp",
+  "lw": "covers/megadrive/wonder-boy-in-monster-world-lomo.webp"
  },
  "megadrive|world championship soccer 2": {
   "archivo": "covers/megadrive/world-championship-soccer-2.jpg",
@@ -3206,7 +3944,10 @@
   "fondo": "covers/megadrive/world-championship-soccer-2-fondo.jpg",
   "captura": "covers/megadrive/world-championship-soccer-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/world-championship-soccer-2-lomo.png"
+  "lomo": "covers/megadrive/world-championship-soccer-2-lomo.png",
+  "g": "covers/megadrive/world-championship-soccer-2.webp",
+  "p": "covers/megadrive/world-championship-soccer-2-p.webp",
+  "lw": "covers/megadrive/world-championship-soccer-2-lomo.webp"
  },
  "megadrive|world cup italia '90": {
   "archivo": "covers/megadrive/world-cup-italia-90.jpg",
@@ -3219,7 +3960,10 @@
   "fondo": "covers/megadrive/world-cup-italia-90-fondo.jpg",
   "captura": "covers/megadrive/world-cup-italia-90-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/world-cup-italia-90-lomo.png"
+  "lomo": "covers/megadrive/world-cup-italia-90-lomo.png",
+  "g": "covers/megadrive/world-cup-italia-90.webp",
+  "p": "covers/megadrive/world-cup-italia-90-p.webp",
+  "lw": "covers/megadrive/world-cup-italia-90-lomo.webp"
  },
  "megadrive|world cup usa '94": {
   "archivo": "covers/megadrive/world-cup-usa-94.jpg",
@@ -3232,7 +3976,10 @@
   "fondo": "covers/megadrive/world-cup-usa-94-fondo.jpg",
   "captura": "covers/megadrive/world-cup-usa-94-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/world-cup-usa-94-lomo.png"
+  "lomo": "covers/megadrive/world-cup-usa-94-lomo.png",
+  "g": "covers/megadrive/world-cup-usa-94.webp",
+  "p": "covers/megadrive/world-cup-usa-94-p.webp",
+  "lw": "covers/megadrive/world-cup-usa-94-lomo.webp"
  },
  "megadrive|world of illusion": {
   "archivo": "covers/megadrive/world-of-illusion.jpg",
@@ -3245,7 +3992,10 @@
   "fondo": "covers/megadrive/world-of-illusion-fondo.jpg",
   "captura": "covers/megadrive/world-of-illusion-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/world-of-illusion-lomo.png"
+  "lomo": "covers/megadrive/world-of-illusion-lomo.png",
+  "g": "covers/megadrive/world-of-illusion.webp",
+  "p": "covers/megadrive/world-of-illusion-p.webp",
+  "lw": "covers/megadrive/world-of-illusion-lomo.webp"
  },
  "megadrive|zombies ate my neighbors": {
   "archivo": "covers/megadrive/zombies-ate-my-neighbors.jpg",
@@ -3258,7 +4008,10 @@
   "fondo": "covers/megadrive/zombies-ate-my-neighbors-fondo.jpg",
   "captura": "covers/megadrive/zombies-ate-my-neighbors-captura.jpg",
   "extras": true,
-  "lomo": "covers/megadrive/zombies-ate-my-neighbors-lomo.png"
+  "lomo": "covers/megadrive/zombies-ate-my-neighbors-lomo.png",
+  "g": "covers/megadrive/zombies-ate-my-neighbors.webp",
+  "p": "covers/megadrive/zombies-ate-my-neighbors-p.webp",
+  "lw": "covers/megadrive/zombies-ate-my-neighbors-lomo.webp"
  },
  "nes|adventures of lolo": {
   "archivo": "covers/nes/adventures-of-lolo.jpg",
@@ -3271,7 +4024,10 @@
   "fondo": "covers/nes/adventures-of-lolo-fondo.jpg",
   "captura": "covers/nes/adventures-of-lolo-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/adventures-of-lolo-lomo.png"
+  "lomo": "covers/nes/adventures-of-lolo-lomo.png",
+  "g": "covers/nes/adventures-of-lolo.webp",
+  "p": "covers/nes/adventures-of-lolo-p.webp",
+  "lw": "covers/nes/adventures-of-lolo-lomo.webp"
  },
  "nes|adventures of lolo 2": {
   "archivo": "covers/nes/adventures-of-lolo-2.jpg",
@@ -3284,7 +4040,10 @@
   "fondo": "covers/nes/adventures-of-lolo-2-fondo.jpg",
   "captura": "covers/nes/adventures-of-lolo-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/adventures-of-lolo-2-lomo.png"
+  "lomo": "covers/nes/adventures-of-lolo-2-lomo.png",
+  "g": "covers/nes/adventures-of-lolo-2.webp",
+  "p": "covers/nes/adventures-of-lolo-2-p.webp",
+  "lw": "covers/nes/adventures-of-lolo-2-lomo.webp"
  },
  "nes|adventures of rad gravity": {
   "archivo": "covers/nes/adventures-of-rad-gravity.jpg",
@@ -3297,7 +4056,10 @@
   "fondo": "covers/nes/adventures-of-rad-gravity-fondo.jpg",
   "captura": "covers/nes/adventures-of-rad-gravity-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/adventures-of-rad-gravity-lomo.png"
+  "lomo": "covers/nes/adventures-of-rad-gravity-lomo.png",
+  "g": "covers/nes/adventures-of-rad-gravity.webp",
+  "p": "covers/nes/adventures-of-rad-gravity-p.webp",
+  "lw": "covers/nes/adventures-of-rad-gravity-lomo.webp"
  },
  "nes|aladdin": {
   "archivo": "covers/nes/aladdin.jpg",
@@ -3310,7 +4072,10 @@
   "fondo": "covers/nes/aladdin-fondo.jpg",
   "captura": "covers/nes/aladdin-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/aladdin-lomo.png"
+  "lomo": "covers/nes/aladdin-lomo.png",
+  "g": "covers/nes/aladdin.webp",
+  "p": "covers/nes/aladdin-p.webp",
+  "lw": "covers/nes/aladdin-lomo.webp"
  },
  "nes|asterix": {
   "archivo": "covers/nes/asterix.jpg",
@@ -3323,7 +4088,10 @@
   "fondo": "covers/nes/asterix-fondo.jpg",
   "captura": "covers/nes/asterix-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/asterix-lomo.png"
+  "lomo": "covers/nes/asterix-lomo.png",
+  "g": "covers/nes/asterix.webp",
+  "p": "covers/nes/asterix-p.webp",
+  "lw": "covers/nes/asterix-lomo.webp"
  },
  "nes|blades of steel": {
   "archivo": "covers/nes/blades-of-steel.jpg",
@@ -3336,7 +4104,10 @@
   "fondo": "covers/nes/blades-of-steel-fondo.jpg",
   "captura": "covers/nes/blades-of-steel-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/blades-of-steel-lomo.png"
+  "lomo": "covers/nes/blades-of-steel-lomo.png",
+  "g": "covers/nes/blades-of-steel.webp",
+  "p": "covers/nes/blades-of-steel-p.webp",
+  "lw": "covers/nes/blades-of-steel-lomo.webp"
  },
  "nes|captain skyhawk": {
   "archivo": "covers/nes/captain-skyhawk.jpg",
@@ -3349,7 +4120,10 @@
   "fondo": "covers/nes/captain-skyhawk-fondo.jpg",
   "captura": "covers/nes/captain-skyhawk-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/captain-skyhawk-lomo.png"
+  "lomo": "covers/nes/captain-skyhawk-lomo.png",
+  "g": "covers/nes/captain-skyhawk.webp",
+  "p": "covers/nes/captain-skyhawk-p.webp",
+  "lw": "covers/nes/captain-skyhawk-lomo.webp"
  },
  "nes|chip and dale rescue rangers": {
   "archivo": "covers/nes/chip-and-dale-rescue-rangers.jpg",
@@ -3362,7 +4136,10 @@
   "fondo": "covers/nes/chip-and-dale-rescue-rangers-fondo.jpg",
   "captura": "covers/nes/chip-and-dale-rescue-rangers-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/chip-and-dale-rescue-rangers-lomo.png"
+  "lomo": "covers/nes/chip-and-dale-rescue-rangers-lomo.png",
+  "g": "covers/nes/chip-and-dale-rescue-rangers.webp",
+  "p": "covers/nes/chip-and-dale-rescue-rangers-p.webp",
+  "lw": "covers/nes/chip-and-dale-rescue-rangers-lomo.webp"
  },
  "nes|donkey kong classics": {
   "archivo": "covers/nes/donkey-kong-classics.jpg",
@@ -3375,7 +4152,10 @@
   "fondo": "covers/nes/donkey-kong-classics-fondo.jpg",
   "captura": "covers/nes/donkey-kong-classics-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/donkey-kong-classics-lomo.png"
+  "lomo": "covers/nes/donkey-kong-classics-lomo.png",
+  "g": "covers/nes/donkey-kong-classics.webp",
+  "p": "covers/nes/donkey-kong-classics-p.webp",
+  "lw": "covers/nes/donkey-kong-classics-lomo.webp"
  },
  "nes|double dragon ii": {
   "archivo": "covers/nes/double-dragon-ii.jpg",
@@ -3388,7 +4168,10 @@
   "fondo": "covers/nes/double-dragon-ii-fondo.jpg",
   "captura": "covers/nes/double-dragon-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/double-dragon-ii-lomo.png"
+  "lomo": "covers/nes/double-dragon-ii-lomo.png",
+  "g": "covers/nes/double-dragon-ii.webp",
+  "p": "covers/nes/double-dragon-ii-p.webp",
+  "lw": "covers/nes/double-dragon-ii-lomo.webp"
  },
  "nes|dr. mario": {
   "archivo": "covers/nes/dr-mario.jpg",
@@ -3401,7 +4184,10 @@
   "fondo": "covers/nes/dr-mario-fondo.jpg",
   "captura": "covers/nes/dr-mario-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/dr-mario-lomo.png"
+  "lomo": "covers/nes/dr-mario-lomo.png",
+  "g": "covers/nes/dr-mario.webp",
+  "p": "covers/nes/dr-mario-p.webp",
+  "lw": "covers/nes/dr-mario-lomo.webp"
  },
  "nes|dragon ball": {
   "archivo": "covers/nes/dragon-ball.jpg",
@@ -3414,7 +4200,10 @@
   "fondo": "covers/nes/dragon-ball-fondo.jpg",
   "captura": "covers/nes/dragon-ball-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/dragon-ball-lomo.png"
+  "lomo": "covers/nes/dragon-ball-lomo.png",
+  "g": "covers/nes/dragon-ball.webp",
+  "p": "covers/nes/dragon-ball-p.webp",
+  "lw": "covers/nes/dragon-ball-lomo.webp"
  },
  "nes|duck tales": {
   "archivo": "covers/nes/duck-tales.jpg",
@@ -3427,7 +4216,10 @@
   "fondo": "covers/nes/duck-tales-fondo.jpg",
   "captura": "covers/nes/duck-tales-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/duck-tales-lomo.png"
+  "lomo": "covers/nes/duck-tales-lomo.png",
+  "g": "covers/nes/duck-tales.webp",
+  "p": "covers/nes/duck-tales-p.webp",
+  "lw": "covers/nes/duck-tales-lomo.webp"
  },
  "nes|faxanadu": {
   "archivo": "covers/nes/faxanadu.jpg",
@@ -3440,7 +4232,10 @@
   "fondo": "covers/nes/faxanadu-fondo.jpg",
   "captura": "covers/nes/faxanadu-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/faxanadu-lomo.png"
+  "lomo": "covers/nes/faxanadu-lomo.png",
+  "g": "covers/nes/faxanadu.webp",
+  "p": "covers/nes/faxanadu-p.webp",
+  "lw": "covers/nes/faxanadu-lomo.webp"
  },
  "nes|flintstones the rescue of dino and hoppy": {
   "archivo": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy.jpg",
@@ -3453,7 +4248,10 @@
   "fondo": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-fondo.jpg",
   "captura": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-lomo.png"
+  "lomo": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-lomo.png",
+  "g": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy.webp",
+  "p": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-p.webp",
+  "lw": "covers/nes/flintstones-the-rescue-of-dino-and-hoppy-lomo.webp"
  },
  "nes|gremlins 2": {
   "archivo": "covers/nes/gremlins-2.jpg",
@@ -3466,7 +4264,10 @@
   "fondo": "covers/nes/gremlins-2-fondo.jpg",
   "captura": "covers/nes/gremlins-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/gremlins-2-lomo.png"
+  "lomo": "covers/nes/gremlins-2-lomo.png",
+  "g": "covers/nes/gremlins-2.webp",
+  "p": "covers/nes/gremlins-2-p.webp",
+  "lw": "covers/nes/gremlins-2-lomo.webp"
  },
  "nes|jackie chan's action kung fu": {
   "archivo": "covers/nes/jackie-chan-s-action-kung-fu.jpg",
@@ -3479,7 +4280,10 @@
   "fondo": "covers/nes/jackie-chan-s-action-kung-fu-fondo.jpg",
   "captura": "covers/nes/jackie-chan-s-action-kung-fu-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/jackie-chan-s-action-kung-fu-lomo.png"
+  "lomo": "covers/nes/jackie-chan-s-action-kung-fu-lomo.png",
+  "g": "covers/nes/jackie-chan-s-action-kung-fu.webp",
+  "p": "covers/nes/jackie-chan-s-action-kung-fu-p.webp",
+  "lw": "covers/nes/jackie-chan-s-action-kung-fu-lomo.webp"
  },
  "nes|kung-fu": {
   "archivo": "covers/nes/kung-fu.jpg",
@@ -3492,7 +4296,10 @@
   "fondo": "covers/nes/kung-fu-fondo.jpg",
   "captura": "covers/nes/kung-fu-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/kung-fu-lomo.png"
+  "lomo": "covers/nes/kung-fu-lomo.png",
+  "g": "covers/nes/kung-fu.webp",
+  "p": "covers/nes/kung-fu-p.webp",
+  "lw": "covers/nes/kung-fu-lomo.webp"
  },
  "nes|little nemo the dream master": {
   "archivo": "covers/nes/little-nemo-the-dream-master.jpg",
@@ -3505,7 +4312,10 @@
   "fondo": "covers/nes/little-nemo-the-dream-master-fondo.jpg",
   "captura": "covers/nes/little-nemo-the-dream-master-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/little-nemo-the-dream-master-lomo.png"
+  "lomo": "covers/nes/little-nemo-the-dream-master-lomo.png",
+  "g": "covers/nes/little-nemo-the-dream-master.webp",
+  "p": "covers/nes/little-nemo-the-dream-master-p.webp",
+  "lw": "covers/nes/little-nemo-the-dream-master-lomo.webp"
  },
  "nes|maniac mansion": {
   "archivo": "covers/nes/maniac-mansion.jpg",
@@ -3518,7 +4328,10 @@
   "fondo": "covers/nes/maniac-mansion-fondo.jpg",
   "captura": "covers/nes/maniac-mansion-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/maniac-mansion-lomo.png"
+  "lomo": "covers/nes/maniac-mansion-lomo.png",
+  "g": "covers/nes/maniac-mansion.webp",
+  "p": "covers/nes/maniac-mansion-p.webp",
+  "lw": "covers/nes/maniac-mansion-lomo.webp"
  },
  "nes|marble madness": {
   "archivo": "covers/nes/marble-madness.jpg",
@@ -3531,7 +4344,10 @@
   "fondo": "covers/nes/marble-madness-fondo.jpg",
   "captura": "covers/nes/marble-madness-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/marble-madness-lomo.png"
+  "lomo": "covers/nes/marble-madness-lomo.png",
+  "g": "covers/nes/marble-madness.webp",
+  "p": "covers/nes/marble-madness-p.webp",
+  "lw": "covers/nes/marble-madness-lomo.webp"
  },
  "nes|mega man": {
   "archivo": "covers/nes/mega-man.jpg",
@@ -3544,7 +4360,10 @@
   "fondo": "covers/nes/mega-man-fondo.jpg",
   "captura": "covers/nes/mega-man-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/mega-man-lomo.png"
+  "lomo": "covers/nes/mega-man-lomo.png",
+  "g": "covers/nes/mega-man.webp",
+  "p": "covers/nes/mega-man-p.webp",
+  "lw": "covers/nes/mega-man-lomo.webp"
  },
  "nes|mega man 2": {
   "archivo": "covers/nes/mega-man-2.jpg",
@@ -3557,7 +4376,10 @@
   "fondo": "covers/nes/mega-man-2-fondo.jpg",
   "captura": "covers/nes/mega-man-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/mega-man-2-lomo.png"
+  "lomo": "covers/nes/mega-man-2-lomo.png",
+  "g": "covers/nes/mega-man-2.webp",
+  "p": "covers/nes/mega-man-2-p.webp",
+  "lw": "covers/nes/mega-man-2-lomo.webp"
  },
  "nes|nes open": {
   "archivo": "covers/nes/nes-open.jpg",
@@ -3568,7 +4390,10 @@
   "estado": "auto",
   "logo": "covers/nes/nes-open-logo.png",
   "lomo": "covers/nes/nes-open-lomo.png",
-  "extras": true
+  "extras": true,
+  "g": "covers/nes/nes-open.webp",
+  "p": "covers/nes/nes-open-p.webp",
+  "lw": "covers/nes/nes-open-lomo.webp"
  },
  "nes|new ghostbusters ii": {
   "archivo": "covers/nes/new-ghostbusters-ii.jpg",
@@ -3581,7 +4406,10 @@
   "fondo": "covers/nes/new-ghostbusters-ii-fondo.jpg",
   "captura": "covers/nes/new-ghostbusters-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/new-ghostbusters-ii-lomo.png"
+  "lomo": "covers/nes/new-ghostbusters-ii-lomo.png",
+  "g": "covers/nes/new-ghostbusters-ii.webp",
+  "p": "covers/nes/new-ghostbusters-ii-p.webp",
+  "lw": "covers/nes/new-ghostbusters-ii-lomo.webp"
  },
  "nes|nintendo world cup": {
   "archivo": "covers/nes/nintendo-world-cup.jpg",
@@ -3594,7 +4422,10 @@
   "fondo": "covers/nes/nintendo-world-cup-fondo.jpg",
   "captura": "covers/nes/nintendo-world-cup-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/nintendo-world-cup-lomo.png"
+  "lomo": "covers/nes/nintendo-world-cup-lomo.png",
+  "g": "covers/nes/nintendo-world-cup.webp",
+  "p": "covers/nes/nintendo-world-cup-p.webp",
+  "lw": "covers/nes/nintendo-world-cup-lomo.webp"
  },
  "nes|robocop": {
   "archivo": "covers/nes/robocop.jpg",
@@ -3607,7 +4438,10 @@
   "fondo": "covers/nes/robocop-fondo.jpg",
   "captura": "covers/nes/robocop-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/robocop-lomo.png"
+  "lomo": "covers/nes/robocop-lomo.png",
+  "g": "covers/nes/robocop.webp",
+  "p": "covers/nes/robocop-p.webp",
+  "lw": "covers/nes/robocop-lomo.webp"
  },
  "nes|rygar": {
   "archivo": "covers/nes/rygar.jpg",
@@ -3620,7 +4454,10 @@
   "fondo": "covers/nes/rygar-fondo.jpg",
   "captura": "covers/nes/rygar-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/rygar-lomo.png"
+  "lomo": "covers/nes/rygar-lomo.png",
+  "g": "covers/nes/rygar.webp",
+  "p": "covers/nes/rygar-p.webp",
+  "lw": "covers/nes/rygar-lomo.webp"
  },
  "nes|snake rattle n roll": {
   "archivo": "covers/nes/snake-rattle-n-roll.jpg",
@@ -3633,7 +4470,10 @@
   "fondo": "covers/nes/snake-rattle-n-roll-fondo.jpg",
   "captura": "covers/nes/snake-rattle-n-roll-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/snake-rattle-n-roll-lomo.png"
+  "lomo": "covers/nes/snake-rattle-n-roll-lomo.png",
+  "g": "covers/nes/snake-rattle-n-roll.webp",
+  "p": "covers/nes/snake-rattle-n-roll-p.webp",
+  "lw": "covers/nes/snake-rattle-n-roll-lomo.webp"
  },
  "nes|soccer": {
   "archivo": "covers/nes/soccer.jpg",
@@ -3646,7 +4486,10 @@
   "fondo": "covers/nes/soccer-fondo.jpg",
   "captura": "covers/nes/soccer-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/soccer-lomo.png"
+  "lomo": "covers/nes/soccer-lomo.png",
+  "g": "covers/nes/soccer.webp",
+  "p": "covers/nes/soccer-p.webp",
+  "lw": "covers/nes/soccer-lomo.webp"
  },
  "nes|solstice": {
   "archivo": "covers/nes/solstice.jpg",
@@ -3659,7 +4502,10 @@
   "fondo": "covers/nes/solstice-fondo.jpg",
   "captura": "covers/nes/solstice-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/solstice-lomo.png"
+  "lomo": "covers/nes/solstice-lomo.png",
+  "g": "covers/nes/solstice.webp",
+  "p": "covers/nes/solstice-p.webp",
+  "lw": "covers/nes/solstice-lomo.webp"
  },
  "nes|super mario bros": {
   "archivo": "covers/nes/super-mario-bros.jpg",
@@ -3672,7 +4518,10 @@
   "fondo": "covers/nes/super-mario-bros-fondo.jpg",
   "captura": "covers/nes/super-mario-bros-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/super-mario-bros-lomo.png"
+  "lomo": "covers/nes/super-mario-bros-lomo.png",
+  "g": "covers/nes/super-mario-bros.webp",
+  "p": "covers/nes/super-mario-bros-p.webp",
+  "lw": "covers/nes/super-mario-bros-lomo.webp"
  },
  "nes|super mario bros 2": {
   "archivo": "covers/nes/super-mario-bros-2.jpg",
@@ -3685,7 +4534,10 @@
   "fondo": "covers/nes/super-mario-bros-2-fondo.jpg",
   "captura": "covers/nes/super-mario-bros-2-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/super-mario-bros-2-lomo.png"
+  "lomo": "covers/nes/super-mario-bros-2-lomo.png",
+  "g": "covers/nes/super-mario-bros-2.webp",
+  "p": "covers/nes/super-mario-bros-2-p.webp",
+  "lw": "covers/nes/super-mario-bros-2-lomo.webp"
  },
  "nes|super mario bros 3": {
   "archivo": "covers/nes/super-mario-bros-3.jpg",
@@ -3698,7 +4550,10 @@
   "fondo": "covers/nes/super-mario-bros-3-fondo.jpg",
   "captura": "covers/nes/super-mario-bros-3-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/super-mario-bros-3-lomo.png"
+  "lomo": "covers/nes/super-mario-bros-3-lomo.png",
+  "g": "covers/nes/super-mario-bros-3.webp",
+  "p": "covers/nes/super-mario-bros-3-p.webp",
+  "lw": "covers/nes/super-mario-bros-3-lomo.webp"
  },
  "nes|super off road": {
   "archivo": "covers/nes/super-off-road.jpg",
@@ -3710,7 +4565,10 @@
   "estado": "auto",
   "logo": "covers/nes/super-off-road-logo.png",
   "lomo": "covers/nes/super-off-road-lomo.png",
-  "extras": true
+  "extras": true,
+  "g": "covers/nes/super-off-road.webp",
+  "p": "covers/nes/super-off-road-p.webp",
+  "lw": "covers/nes/super-off-road-lomo.webp"
  },
  "nes|tale spin": {
   "archivo": "covers/nes/tale-spin.jpg",
@@ -3723,7 +4581,10 @@
   "fondo": "covers/nes/tale-spin-fondo.jpg",
   "captura": "covers/nes/tale-spin-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/tale-spin-lomo.png"
+  "lomo": "covers/nes/tale-spin-lomo.png",
+  "g": "covers/nes/tale-spin.webp",
+  "p": "covers/nes/tale-spin-p.webp",
+  "lw": "covers/nes/tale-spin-lomo.webp"
  },
  "nes|teenage mutant hero turtles": {
   "archivo": "covers/nes/teenage-mutant-hero-turtles.jpg",
@@ -3736,7 +4597,10 @@
   "fondo": "covers/nes/teenage-mutant-hero-turtles-fondo.jpg",
   "captura": "covers/nes/teenage-mutant-hero-turtles-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/teenage-mutant-hero-turtles-lomo.png"
+  "lomo": "covers/nes/teenage-mutant-hero-turtles-lomo.png",
+  "g": "covers/nes/teenage-mutant-hero-turtles.webp",
+  "p": "covers/nes/teenage-mutant-hero-turtles-p.webp",
+  "lw": "covers/nes/teenage-mutant-hero-turtles-lomo.webp"
  },
  "nes|teenage mutant hero turtles ii": {
   "archivo": "covers/nes/teenage-mutant-hero-turtles-ii.jpg",
@@ -3749,7 +4613,10 @@
   "fondo": "covers/nes/teenage-mutant-hero-turtles-ii-fondo.jpg",
   "captura": "covers/nes/teenage-mutant-hero-turtles-ii-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/teenage-mutant-hero-turtles-ii-lomo.png"
+  "lomo": "covers/nes/teenage-mutant-hero-turtles-ii-lomo.png",
+  "g": "covers/nes/teenage-mutant-hero-turtles-ii.webp",
+  "p": "covers/nes/teenage-mutant-hero-turtles-ii-p.webp",
+  "lw": "covers/nes/teenage-mutant-hero-turtles-ii-lomo.webp"
  },
  "nes|tetris": {
   "archivo": "covers/nes/tetris.jpg",
@@ -3762,7 +4629,10 @@
   "fondo": "covers/nes/tetris-fondo.jpg",
   "captura": "covers/nes/tetris-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/tetris-lomo.png"
+  "lomo": "covers/nes/tetris-lomo.png",
+  "g": "covers/nes/tetris.webp",
+  "p": "covers/nes/tetris-p.webp",
+  "lw": "covers/nes/tetris-lomo.webp"
  },
  "nes|the simpsons: bart vs. the space mutants": {
   "archivo": "covers/nes/the-simpsons-bart-vs-the-space-mutants.jpg",
@@ -3775,7 +4645,10 @@
   "fondo": "covers/nes/the-simpsons-bart-vs-the-space-mutants-fondo.jpg",
   "captura": "covers/nes/the-simpsons-bart-vs-the-space-mutants-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/the-simpsons-bart-vs-the-space-mutants-lomo.png"
+  "lomo": "covers/nes/the-simpsons-bart-vs-the-space-mutants-lomo.png",
+  "g": "covers/nes/the-simpsons-bart-vs-the-space-mutants.webp",
+  "p": "covers/nes/the-simpsons-bart-vs-the-space-mutants-p.webp",
+  "lw": "covers/nes/the-simpsons-bart-vs-the-space-mutants-lomo.webp"
  },
  "nes|top gun": {
   "archivo": "covers/nes/top-gun.jpg",
@@ -3788,7 +4661,10 @@
   "fondo": "covers/nes/top-gun-fondo.jpg",
   "captura": "covers/nes/top-gun-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/top-gun-lomo.png"
+  "lomo": "covers/nes/top-gun-lomo.png",
+  "g": "covers/nes/top-gun.webp",
+  "p": "covers/nes/top-gun-p.webp",
+  "lw": "covers/nes/top-gun-lomo.webp"
  },
  "nes|willow": {
   "archivo": "covers/nes/willow.jpg",
@@ -3801,7 +4677,10 @@
   "fondo": "covers/nes/willow-fondo.jpg",
   "captura": "covers/nes/willow-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/willow-lomo.png"
+  "lomo": "covers/nes/willow-lomo.png",
+  "g": "covers/nes/willow.webp",
+  "p": "covers/nes/willow-p.webp",
+  "lw": "covers/nes/willow-lomo.webp"
  },
  "nes|wrecking crew": {
   "archivo": "covers/nes/wrecking-crew.jpg",
@@ -3814,6 +4693,9 @@
   "fondo": "covers/nes/wrecking-crew-fondo.jpg",
   "captura": "covers/nes/wrecking-crew-captura.jpg",
   "extras": true,
-  "lomo": "covers/nes/wrecking-crew-lomo.png"
+  "lomo": "covers/nes/wrecking-crew-lomo.png",
+  "g": "covers/nes/wrecking-crew.webp",
+  "p": "covers/nes/wrecking-crew-p.webp",
+  "lw": "covers/nes/wrecking-crew-lomo.webp"
  }
 }
