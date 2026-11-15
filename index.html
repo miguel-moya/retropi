@@ -452,9 +452,10 @@ fetch(RAMA_RAW + 'covers/map.json', { cache: 'no-cache' }).then(r => r.ok ? r.js
 const urlMedia = (f, v) => f ? RAMA_CDN + f + (v ? '?v=' + v : '') : '';
 const extras = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`] || {};
   const v = p.t || p.ssid;
-  return { fondo: urlMedia(p.fondo, v), logo: urlMedia(p.logo, v), captura: urlMedia(p.captura, v), lomo: urlMedia(p.lomo, v) }; };
-const portada = g => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia(p.archivo, p.t || p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
-const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g))}" onerror="this.remove()">` : ''}</span>`;
+  return { fondo: urlMedia(p.fondo, v), logo: urlMedia(p.logo, v), captura: urlMedia(p.captura, v), lomo: urlMedia(p.lw || p.lomo, v) }; };
+// portada ligera (WebP 264 px) para listas y estantería; grande (WebP 484 px) solo en la ficha
+const portada = (g, grande) => { const p = PORTADAS[`${g._c}|${String(g['Título']).trim().toLowerCase()}`]; return p && p.archivo ? urlMedia((grande ? p.g : p.p) || p.archivo, p.t || p.ssid) : (isImg(g.Portada) ? g.Portada : ''); };
+const cover = (g, cls) => `<span class="cov ${cls}" style="${coverBg(g)}">${esc(ini(g['Título']))}${portada(g) ? `<img loading="lazy" decoding="async" alt="" src="${esc(portada(g, cls === 'xl'))}" onerror="this.remove()">` : ''}</span>`;
 const plus = g => {
   const coste = n(g['Compra + Envío']);
   if (coste == null) return null;
@@ -979,7 +980,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v46 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v47 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 

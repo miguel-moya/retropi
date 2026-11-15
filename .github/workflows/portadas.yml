@@ -58,6 +58,11 @@ jobs:
           EXTRAS: ${{ (github.event_name == 'schedule' || inputs.extras || inputs.lomos || inputs.solo != '') && '1' || '' }}
         working-directory: datos
         run: node ../scripts/portadas.mjs
+      - name: Versiones ligeras (WebP) para la app
+        working-directory: datos
+        run: |
+          pip install --quiet pillow
+          python3 ../scripts/optimizar.py
       - name: Guardar en la rama portadas
         working-directory: datos
         run: |
