@@ -386,6 +386,7 @@ label.f input:focus{border-color:var(--acc)}
   <a class="nav-aj" href="#/ajustes" data-tab="ajustes"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Ajustes</a>
 </div></nav>
 <div id="ptr" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.9-4M4 4v4h4M4 13a8 8 0 0 0 14.9 4M20 20v-4h-4"/></svg></div>
+<input id="focoAux" aria-hidden="true" tabindex="-1" style="position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px;border:0;padding:0" autocomplete="off">
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -772,7 +773,7 @@ function bfActivos() {
   F.sits.forEach(v => out.push(['sits', v, v]));
   F.consolas.forEach(v => out.push(['consolas', v, (IDX.consolas.find(c => c.id === v) || {}).nombre || v]));
   F.formatos.forEach(v => out.push(['formatos', v, v]));
-  if (F.emin !== '' || F.emax !== '') out.push(['estado', '', `${F.parte} ${F.emin !== '' ? nfmt(+F.emin) : '0,5'}–${F.emax !== '' ? nfmt(+F.emax) : '5'}`]);
+  if (F.emin !== '' || F.emax !== '') out.push(['estado', '', `${F.parte} ${F.emin !== '' ? nfmt(+F.emin) : '0,5'}–${F.emax !== '' ? nfmt(+F.emax) : '5'}${F.sinParte ? ` o sin ${F.parte.toLowerCase()}` : ''}`]);
   if (F.vmin !== '' || F.vmax !== '') out.push(['valor', '', `Valor ${F.vmin || 0}–${F.vmax || '∞'} €`]);
   if (F.cmin !== '' || F.cmax !== '') out.push(['compra', '', `Compra ${F.cmin || 0}–${F.cmax || '∞'} €`]);
   return out;
@@ -786,7 +787,7 @@ function filtrarBusqueda() {
     (!F.sits.length || F.sits.includes(g['Situación'])) &&
     (!F.consolas.length || F.consolas.includes(g._c)) &&
     (!F.formatos.length || F.formatos.includes(g['Formato'])) &&
-    enRango(n(g[kN]), F.emin, F.emax) &&
+    (enRango(n(g[kN]), F.emin, F.emax) || (F.sinParte && (F.emin !== '' || F.emax !== '') && !isNum(n(g[kN])))) &&
     enRango(n(g['Valor']), F.vmin, F.vmax) &&
     enRango(n(g['Compra + Envío']), F.cmin, F.cmax));
   const val = (g, k) => { const v = n(g[k]); return isNum(v) ? v : null; };
@@ -816,8 +817,9 @@ function htmlBuscar() {
   const resumen = act.filter(a => a[0] !== 'sits').map(([k, v, t]) => `<button class="tag quita" data-act="bfquita" data-k="${k}" data-v="${esc(v)}">${esc(t)} <b>×</b></button>`).join('');
   if (!q && !act.length && S.bf.orden === 'hoja') return `<div class="empty" style="padding:28px 8px 12px">Busca por título o combina filtros: consola, situación, formato, estado de cada parte, valor y compra.</div>
     <div class="stack" style="gap:8px"><h2 class="eyebrow">Atajos</h2>
-      <button class="secbtn glass" data-act="preset" data-v="cajas">Cajas en colección con estado 3 o menos</button>
-      <button class="secbtn glass" data-act="preset" data-v="valiosos">Los más valiosos en colección</button>
+      <button class="secbtn glass" data-act="preset" data-v="cajasMD">Cajas Mega Drive 3,5 o menos</button>
+      <button class="secbtn glass" data-act="preset" data-v="cajasMS">Cajas Master System 3,5 o menos</button>
+      <button class="secbtn glass" data-act="preset" data-v="manuales">Manuales muy mejorables</button>
       <button class="secbtn glass" data-act="preset" data-v="venta">Todo lo que tengo en venta</button></div>`;
   const l = filtrarBusqueda();
   S.ctx = l.slice(0, 150).map(g => g.ID);
@@ -842,6 +844,7 @@ function htmlPanel() {
       <h3>Estado</h3>
       <div class="seg ancho glass" style="grid-template-columns:repeat(5,1fr)">${PARTES.map(p => `<button class="${F.parte === p ? 'on' : ''}" data-act="bfparte" data-v="${p}">${p}</button>`).join('')}</div>
       <div class="rango"><span>Entre</span><label class="sortpick glass"><select data-bf="emin">${optN(F.emin)}</select></label><span>y</span><label class="sortpick glass"><select data-bf="emax">${optN(F.emax)}</select></label></div>
+      <label class="rango" style="gap:10px;cursor:pointer"><input type="checkbox" data-bfc="sinParte" ${F.sinParte ? 'checked' : ''} style="width:18px;height:18px;accent-color:var(--acc)">Incluir también los que no tienen esa parte</label>
       <h3>Valor (€)</h3><div class="rango">${num('vmin', 'Mín.')}<span>–</span>${num('vmax', 'Máx.')}</div>
       <h3>Compra + envío (€)</h3><div class="rango">${num('cmin', 'Mín.')}<span>–</span>${num('cmax', 'Máx.')}</div>
       <h3>Formato</h3><div class="wrapp">${pills('formatos', formatos.map(f => [f, f]))}</div>
@@ -856,8 +859,9 @@ function refrescarBuscar() {
   document.querySelectorAll('.cab [data-act="bf"][data-k="sits"]').forEach(b => b.classList.toggle('on', S.bf.sits.includes(b.dataset.v)));
 }
 const PRESETS = {
-  cajas: { sits: ['En colección'], parte: 'Caja', emin: '', emax: '3', orden: 'estado-asc' },
-  valiosos: { sits: ['En colección'], orden: 'valor-desc' },
+  cajasMD: { sits: ['En colección'], consolas: ['megadrive'], parte: 'Caja', emax: '3.5', orden: 'estado-asc' },
+  cajasMS: { sits: ['En colección'], consolas: ['mastersystem'], parte: 'Caja', emax: '3.5', orden: 'estado-asc' },
+  manuales: { sits: ['En colección'], parte: 'Manual', emax: '2.5', sinParte: true, orden: 'estado-asc' },
   venta: { sits: ['En venta'], orden: 'hoja' },
 };
 
@@ -975,7 +979,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v44 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v45 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1181,6 +1185,7 @@ function render() {
   const tab = ['buscar', 'finanzas', 'ajustes'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : r.a === 'estilos' ? 'ajustes' : 'home';
   nav.querySelectorAll('[data-tab]').forEach(a => { const era = a.classList.contains('on'), es = a.dataset.tab === tab; a.classList.toggle('on', es); if (es && !era) { a.classList.remove('enciende'); void a.offsetWidth; a.classList.add('enciende'); } });
   if (r.a === 'j') ajustarFicha();
+  if (r.a === 'buscar' && S.enfocar) { S.enfocar = false; const q = $('#qg'); if (q) setTimeout(() => q.focus({ preventScroll: true }), 0); }
   if (ULTIMO) { const b = document.querySelector(`[data-act="${ULTIMO.act}"][data-v="${CSS.escape(ULTIMO.v)}"]`); if (b) b.classList.add('enciende'); ULTIMO = null; }
 }
 let ULTIMO = null;
@@ -1190,6 +1195,8 @@ function pintarEstado() { if (ruta().a === 'home' || ruta().a === 'ajustes') ren
 
 /* ============ eventos ============ */
 document.addEventListener('click', e => {
+  // iOS solo abre el teclado si el foco nace del toque: se enfoca un campo auxiliar ya y luego se pasa al buscador
+  if (e.target.closest('[data-tab="buscar"]')) { const aux = $('#focoAux'); if (aux) aux.focus({ preventScroll: true }); S.enfocar = true; }
   const t = e.target.closest('[data-act]'); if (!t) return;
   const act = t.dataset.act, v = t.dataset.v;
   if (['view', 'filtro', 'tema', 'bfparte'].includes(act)) ULTIMO = { act, v };   // para animar el botón recién activado
@@ -1205,7 +1212,7 @@ document.addEventListener('click', e => {
   else if (act === 'bfparte') { S.bf.parte = v; document.querySelectorAll('[data-act="bfparte"]').forEach(b => b.classList.toggle('on', b.dataset.v === v)); refrescarBuscar(); }
   else if (act === 'bfquita') { const k = t.dataset.k, F = S.bf;
     if (Array.isArray(F[k])) F[k] = F[k].filter(x => x !== v);
-    else if (k === 'estado') { F.emin = ''; F.emax = ''; } else if (k === 'valor') { F.vmin = ''; F.vmax = ''; } else if (k === 'compra') { F.cmin = ''; F.cmax = ''; }
+    else if (k === 'estado') { F.emin = ''; F.emax = ''; F.sinParte = false; } else if (k === 'valor') { F.vmin = ''; F.vmax = ''; } else if (k === 'compra') { F.cmin = ''; F.cmax = ''; }
     render(); }
   else if (act === 'bflimpiar') { S.bf = { sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }; render(); }
   else if (act === 'preset') { S.bf = Object.assign({ sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }, JSON.parse(JSON.stringify(PRESETS[v]))); render(); }
@@ -1221,6 +1228,7 @@ document.addEventListener('click', e => {
   else if (act === 'olvidar') { if (confirm('¿Olvidar la clave y los datos guardados en este dispositivo?')) { LS.del('rp.cfg'); LS.del('rp.data'); S.cfg = null; S.data = null; preparar(); location.hash = '#/'; render(); } }
 });
 document.addEventListener('change', e => {
+  if (e.target.dataset && e.target.dataset.bfc) { S.bf[e.target.dataset.bfc] = e.target.checked; refrescarBuscar(); return; }
   if (e.target.dataset && e.target.dataset.bf) { S.bf[e.target.dataset.bf] = e.target.value; refrescarBuscar(); return; }
   if (e.target.id === 'ssel') { S.ui.sort = e.target.value; LS.set('rp.ui', S.ui); render(); }
 });
