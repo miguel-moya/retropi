@@ -112,7 +112,14 @@ body.sin-scroll{overflow:hidden}
 .caja3 .c3t{left:0;top:calc(50% - var(--d) / 2);width:100%;height:var(--d);background:#0a0b0d;transform:translateY(calc(var(--h) / -2)) rotateX(90deg)}
 .caja3 .c3r{left:0;top:calc(100% + 1px);width:100%;height:100%;transform:translateZ(calc(var(--d) / 2)) scaleY(-1);opacity:.18;clip-path:inset(calc(100% - 6px) 0 0 0);pointer-events:none}
 .caja3w{position:relative;display:block;justify-self:center;text-decoration:none}
-.caja3w > .chip{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:2;font-size:10px;padding:3px 8px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.45)}   /* fuera de la caja 3D: se ve de frente, sin achatar */
+/* punto de libro: metido entre la portada y la funda de plástico, a la derecha, asomando un poco por arriba */
+.caja3 > b.punto{position:absolute;top:-6px;right:4px;width:17px;height:74%;transform:translateZ(calc(var(--d) / 2 + .5px));background:var(--c);backface-visibility:hidden;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.caja3 > b.punto i{font:800 7.5px/1 var(--font);letter-spacing:.14em;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);font-style:normal;white-space:nowrap;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.caja3 > b.punto:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 40%,rgba(0,0,0,.15))}
+.caja3 > b.punto:before{content:'';position:absolute;left:0;right:0;top:5px;height:2px;background:rgba(0,0,0,.25)}
+.caja3 > .funda{inset:0;transform:translateZ(calc(var(--d) / 2 + 1px));pointer-events:none;
+  background:linear-gradient(115deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 62%,rgba(255,255,255,.07) 78%,rgba(255,255,255,0) 90%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 :root[data-tema=claro] .caja3 .c3t{background:#2a2d33}
 /* transiciones entre pantallas (View Transitions; si el navegador no las tiene, un fundido corto) */
 .capsule{view-transition-name:menu}
@@ -417,6 +424,9 @@ const hue = s => { let h = 0; for (const c of String(s)) h = (h * 31 + c.charCod
 const ini = t => (String(t).replace(/[^\p{L}\p{N} ]/gu, ' ').split(' ').filter(w => w && !/^(the|of|in|el|la|and|a)$/i.test(w)).slice(0, 2).map(w => w[0].toUpperCase()).join('')) || '?';
 const n = v => isNum(v) ? v : null;
 
+// color del «punto de libro» de la estantería según la situación
+const PUNTO = { 'En venta': '#D9921A', 'Reservado': '#B4541F', 'De camino': '#7B4FC8', 'Me interesa': '#3E63C9', 'Vendido': '#5E6470',
+  'En espera': '#8C7A55', 'Devolución': '#B23A3A', 'Especulación': '#1E8C88' };
 const SIT = {
   'En colección': ['#1E3A2C', '#86E3AE'], 'En venta': ['#3D3016', '#F5C35B'], 'De camino': ['#33224A', '#D2B1FF'],
   'Me interesa': ['#1E2A47', '#A3BEFF'], 'Vendido': ['#2A2D33', '#C3C8D1'], 'En espera': ['#2E2A22', '#E2CFA3'],
@@ -598,7 +608,7 @@ function htmlLista(c) {
           <span class="c3t"></span><span class="c3l" style="${lomo ? `background-image:url('${esc(lomo)}')` : 'background:#111'}"></span>
           <span class="c3f" style="${coverBg(g)}">${f ? `<img loading="lazy" decoding="async" alt="" src="${esc(f)}" onerror="this.remove()">` : esc(ini(g['Título']))}</span>
           ${f ? `<span class="c3r"><img loading="lazy" decoding="async" alt="" src="${esc(f)}"></span>` : ''}${lomo ? `<span class="c3lr" style="background-image:url('${esc(lomo)}')"></span>` : ''}
-          </span>${g['Situación'] !== 'En colección' ? chip(g['Situación']) : ''}</a>`; }).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
+          ${g['Situación'] !== 'En colección' ? `<b class="punto" style="--c:${PUNTO[g['Situación']] || '#5E6470'}"><i>${esc(String(g['Situación'] || '').toUpperCase())}</i></b>` : ''}<span class="funda"></span></span></a>`; }).join('') + '</div><div class="balda" aria-hidden="true"><i class="bt"></i><i class="bc"></i><i class="bs"></i></div></div>';
     }
     return out + '</div>';
   }
@@ -965,7 +975,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v40 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v41 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
