@@ -980,7 +980,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v48 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v49 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1186,7 +1186,6 @@ function render() {
   const tab = ['buscar', 'finanzas', 'ajustes'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : r.a === 'estilos' ? 'ajustes' : 'home';
   nav.querySelectorAll('[data-tab]').forEach(a => { const era = a.classList.contains('on'), es = a.dataset.tab === tab; a.classList.toggle('on', es); if (es && !era) { a.classList.remove('enciende'); void a.offsetWidth; a.classList.add('enciende'); } });
   if (r.a === 'j') ajustarFicha();
-  if (r.a === 'buscar' && S.enfocar) { S.enfocar = false; const q = $('#qg'); if (q) setTimeout(() => q.focus({ preventScroll: true }), 0); }
   if (ULTIMO) { const b = document.querySelector(`[data-act="${ULTIMO.act}"][data-v="${CSS.escape(ULTIMO.v)}"]`); if (b) b.classList.add('enciende'); ULTIMO = null; }
 }
 let ULTIMO = null;
@@ -1264,7 +1263,7 @@ window.addEventListener('hashchange', e => {
   const propio = GESTO_PROPIO; GESTO_PROPIO = false;
   const porGesto = !propio && Date.now() - BORDE_T < 1500;
   if (e.hasUAVisualTransition || porGesto || !document.startViewTransition || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    render();
+    render(); setTimeout(enfocarBuscar, 260);
     if (!e.hasUAVisualTransition && !porGesto && !document.startViewTransition) $('#app').animate([{ opacity: 0, transform: `translateX(${dir === 'pop' ? -16 : dir === 'push' ? 16 : 0}px)` }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' });
     return;
   }
@@ -1281,8 +1280,14 @@ window.addEventListener('hashchange', e => {
   // durante la transición las cabeceras van opacas: la captura no aplica el desenfoque y se verían las portadas detrás
   document.documentElement.classList.add('en-transicion');
   const vt = document.startViewTransition(() => render());
-  vt.finished.finally(() => document.documentElement.classList.remove('en-transicion'));
+  vt.finished.finally(() => { document.documentElement.classList.remove('en-transicion'); enfocarBuscar(); });
 });
+// El buscador recibe el foco cuando la pantalla ya está quieta: si se hace durante la animación,
+// iOS dibuja el cursor donde estaba el campo a mitad del movimiento.
+function enfocarBuscar() {
+  if (!S.enfocar || ruta().a !== 'buscar') return;
+  S.enfocar = false; const q = $('#qg'); if (q) q.focus({ preventScroll: true });
+}
 function volver(fallback) { if (PASOS > 0) { PASOS -= 2; history.back(); } else location.hash = fallback || '#/'; }
 
 /* ============ deslizar hacia abajo para recargar la app ============ */
