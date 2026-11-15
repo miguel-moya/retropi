@@ -964,7 +964,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v38 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v39 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1094,9 +1094,10 @@ async function rescrapear(clave, boton) {
   boton.disabled = true; boton.innerHTML = `<span class="spin" style="display:grid">${ICON.sync}</span> Buscando… (1–2 min)`;
   try {
     const r = await fetch('https://api.github.com/repos/miguel-moya/retropi/actions/workflows/portadas.yml/dispatches', {
-      method: 'POST', headers: { Authorization: 'Bearer ' + S.ui.ghToken, Accept: 'application/vnd.github+json' },
+      method: 'POST', headers: { Authorization: 'Bearer ' + S.ui.ghToken, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
       body: JSON.stringify({ ref: 'main', inputs: { solo: clave } }) });
-    if (r.status === 401 || r.status === 403) throw new Error('El token no es válido o no tiene permiso de Actions');
+    if (r.status === 401) throw new Error('El token no es válido o ha caducado');
+    if (r.status === 403 || r.status === 404) throw new Error('El token no tiene permiso de Actions (lectura y escritura) en retropi');
     if (!r.ok) throw new Error('GitHub respondió ' + r.status);
   } catch (err) { toast(String(err.message || err)); boton.disabled = false; boton.innerHTML = `${ICON.sync} Buscar portada y lomo de nuevo`; return; }
   // espera a que la tarea termine: comprueba la lista de portadas cada 20 s durante 6 min
