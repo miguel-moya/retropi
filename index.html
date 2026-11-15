@@ -18,7 +18,7 @@ document.write('<meta name="apple-mobile-web-app-status-bar-style" content="'+(c
 <link rel="icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#12151B; --s1:#1A1E26; --s2:#252A34;
@@ -103,7 +103,7 @@ body.sin-scroll{overflow:hidden}
 .demo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:14px}
 /* estantería 3D (prueba) */
 .cajas3d .items{padding:0 12px 0 34px;gap:10px}
-.caja3{position:relative;display:block;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:perspective(1000px) rotateY(var(--g,30deg));transform-origin:50% 100%;text-decoration:none;color:#fff}
+.caja3{position:relative;display:block;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:perspective(1000px) rotateY(var(--g,30deg));transform-origin:50% 45%;text-decoration:none;color:#fff}
 .caja3 > span{position:absolute;display:block;backface-visibility:hidden}
 .caja3 .c3f{inset:0;transform:translateZ(calc(var(--d) / 2));overflow:hidden;display:grid;place-items:center;font-weight:800;box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}
 .caja3 .c3f img,.caja3 .c3r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -114,8 +114,8 @@ body.sin-scroll{overflow:hidden}
 .caja3w{position:relative;display:block;justify-self:center;text-decoration:none}
 /* punto de libro: metido entre la portada y la funda de plástico, a la derecha, asomando un poco por arriba */
 .caja3 > b.punto{position:absolute;top:-6px;right:4px;width:calc(var(--w) * .22);height:76%;transform:translateZ(calc(var(--d) / 2 + .5px));background:var(--c);backface-visibility:hidden;
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:calc(var(--w) * .07);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
-.caja3 > b.punto i{font:800 calc(var(--w) * .1)/1 var(--font);letter-spacing:.1em;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);font-style:normal;white-space:nowrap;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:calc(var(--w) * .06);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.caja3 > b.punto i{font:400 calc(var(--w) * .145)/1 'Bebas Neue','Arial Narrow',Impact,sans-serif;letter-spacing:.04em;color:#fff;writing-mode:vertical-rl;transform:rotate(180deg);font-style:normal;white-space:nowrap;opacity:.95}
 .caja3 > b.punto:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 40%,rgba(0,0,0,.15))}
 .caja3 > b.punto:before{content:'';position:absolute;left:0;right:0;top:5px;height:2px;background:rgba(0,0,0,.25)}
 .caja3 > .funda{inset:0;transform:translateZ(calc(var(--d) / 2 + 1px));pointer-events:none;
@@ -975,7 +975,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v42 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v43 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
