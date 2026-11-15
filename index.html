@@ -141,6 +141,8 @@ html[data-dir=tab]::view-transition-new(root){animation:.22s ease .04s both vt-d
 @keyframes vt-dentro{from{opacity:0;transform:translateY(6px)}}
 @media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
 html.en-transicion .cab:not(.flota),html.en-transicion .cab.flota.solida{background:rgb(var(--bgrgb))}
+#fondo.on{opacity:1}
+#app{position:relative;z-index:1}
 /* modo claro */
 :root[data-tema=claro]{--bg:#F2F3F6;--s1:#FFFFFF;--s2:#E8EAEF;--glass:rgba(255,255,255,.78);--glass2:rgba(255,255,255,.95);--gline:rgba(20,24,32,.09);
   --tx:#14171D;--tx2:#3D4450;--mut:#6B7280;--acc:#0C9C97;--amb:#B5760A;--grn:#1F9256;--red:#D2483A;
@@ -233,7 +235,7 @@ html.en-transicion .cab:not(.flota),html.en-transicion .cab.flota.solida{backgro
 .box .chip{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:9px;padding:2px 6px;z-index:1}
 /* ficha */
 .hero{position:relative;max-width:560px;margin:0 auto;padding:calc(var(--st) + 58px) 16px 6px;text-align:center}
-.hero-bg{position:fixed;left:0;right:0;top:0;height:78vh;overflow:hidden;z-index:0;pointer-events:none;
+.hero-bg{position:fixed;left:0;right:0;top:0;height:78vh;overflow:hidden;z-index:0;pointer-events:none;opacity:0;transition:opacity .35s ease;
   background:radial-gradient(70% 60% at 50% 35%,hsl(var(--h) 45% 32% / .9),transparent 75%);
   -webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
 .hero-bg img{position:absolute;inset:-60px;width:calc(100% + 120px);height:calc(100% + 120px);object-fit:cover;filter:blur(38px) saturate(1.35) brightness(.6)}
@@ -375,6 +377,7 @@ label.f input:focus{border-color:var(--acc)}
 </style>
 </head>
 <body>
+<div class="hero-bg" id="fondo" aria-hidden="true"></div>
 <main id="app"></main>
 <nav class="nav" id="nav" hidden><div class="navbar">
   <a class="marca" href="#/"><img src="icons/avatar.jpg" alt="" width="40" height="40"><span>Retro<b>Pi</b></span></a>
@@ -700,6 +703,7 @@ function vJuego(gid) {
   if (!g) return vNoEncontrado();
   const p = plus(g); const vend = g['Situación'] === 'Vendido';
   const img = portada(g);
+  FONDO = { img, h: hue(g.ID) };   // el fondo difuminado se pinta fuera de la página (ver pintarFondo)
   const sitCol = (SIT[g['Situación']] || ['', '#C3C8D1'])[1];
   const sub = [g._cn, g['Región']].filter(Boolean).map(esc).join(' · ');
   const ids = contexto(g); const pos = { i: ids.indexOf(g.ID), total: ids.length };
@@ -741,7 +745,6 @@ function vJuego(gid) {
       titulo: `<span class="cab-mini">${img ? `<img alt="" src="${esc(img)}">` : ''}<span>${esc(g['Nombre clave'] || g['Título'])}</span></span>`,
       derecha: pos.total > 1 ? `<span class="muted" style="font-size:12px;font-weight:600">${pos.i + 1} de ${pos.total}</span>` : '' })}
     <section class="hero" style="--h:${hue(g.ID)}">
-      <div class="hero-bg" aria-hidden="true">${img ? `<img alt="" src="${esc(img)}" onerror="this.remove()">` : ''}</div>
       <div>${cover(g, 'xl')}</div>
       <h1>${esc(g['Título'])}</h1>
       <div class="hero-meta">
@@ -980,7 +983,7 @@ function vAjustes() {
       <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
       <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v49 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v50 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1185,6 +1188,7 @@ function render() {
   document.body.dataset.ruta = r.a;
   const tab = ['buscar', 'finanzas', 'ajustes'].includes(r.a) ? r.a : r.a === 'b' ? 'finanzas' : r.a === 'estilos' ? 'ajustes' : 'home';
   nav.querySelectorAll('[data-tab]').forEach(a => { const era = a.classList.contains('on'), es = a.dataset.tab === tab; a.classList.toggle('on', es); if (es && !era) { a.classList.remove('enciende'); void a.offsetWidth; a.classList.add('enciende'); } });
+  pintarFondo(r.a === 'j');
   if (r.a === 'j') ajustarFicha();
   if (ULTIMO) { const b = document.querySelector(`[data-act="${ULTIMO.act}"][data-v="${CSS.escape(ULTIMO.v)}"]`); if (b) b.classList.add('enciende'); ULTIMO = null; }
 }
@@ -1287,6 +1291,18 @@ window.addEventListener('hashchange', e => {
 function enfocarBuscar() {
   if (!S.enfocar || ruta().a !== 'buscar') return;
   S.enfocar = false; const q = $('#qg'); if (q) q.focus({ preventScroll: true });
+}
+// Fondo difuminado de la ficha: vive fuera de #app para que ni el zoom de escritorio ni las animaciones
+// de cambio de pantalla lo desplacen o lo hagan «saltar»; ocupa siempre todo el ancho disponible.
+let FONDO = null;
+function pintarFondo(visible) {
+  const f = $('#fondo'); if (!f) return;
+  if (!visible || !FONDO) { f.classList.remove('on'); return; }
+  f.style.setProperty('--h', FONDO.h);
+  const actual = f.querySelector('img');
+  if (FONDO.img && (!actual || actual.getAttribute('src') !== FONDO.img)) f.innerHTML = `<img alt="" src="${esc(FONDO.img)}" onerror="this.remove()">`;
+  else if (!FONDO.img) f.innerHTML = '';
+  f.classList.add('on');
 }
 function volver(fallback) { if (PASOS > 0) { PASOS -= 2; history.back(); } else location.hash = fallback || '#/'; }
 
