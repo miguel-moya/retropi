@@ -1055,6 +1055,21 @@
   "p": "covers/mastersystem/streets-of-rage-p.webp",
   "lw": "covers/mastersystem/streets-of-rage-lomo.webp"
  },
+ "mastersystem|streets of rage 2": {
+  "archivo": "covers/mastersystem/streets-of-rage-2.jpg",
+  "t": 1794833230043,
+  "ssid": 777,
+  "nombre": "Streets of Rage II",
+  "region": "eu",
+  "buscado": "Streets of Rage 2",
+  "estado": "auto",
+  "logo": "covers/mastersystem/streets-of-rage-2-logo.png",
+  "lomo": "covers/mastersystem/streets-of-rage-2-lomo.png",
+  "extras": true,
+  "g": "covers/mastersystem/streets-of-rage-2.webp",
+  "p": "covers/mastersystem/streets-of-rage-2-p.webp",
+  "lw": "covers/mastersystem/streets-of-rage-2-lomo.webp"
+ },
  "mastersystem|strider": {
   "archivo": "covers/mastersystem/strider.jpg",
   "ssid": 871,
@@ -3068,6 +3083,21 @@
   "g": "covers/megadrive/sampras.webp",
   "p": "covers/megadrive/sampras-p.webp",
   "lw": "covers/megadrive/sampras-lomo.webp"
+ },
+ "megadrive|sensible soccer": {
+  "archivo": "covers/megadrive/sensible-soccer.jpg",
+  "t": 1794833226433,
+  "ssid": 511,
+  "nombre": "Sensible Soccer : European Champions",
+  "region": "eu",
+  "buscado": "Sensible Soccer",
+  "estado": "auto",
+  "logo": "covers/megadrive/sensible-soccer-logo.png",
+  "lomo": "covers/megadrive/sensible-soccer-lomo.png",
+  "extras": true,
+  "g": "covers/megadrive/sensible-soccer.webp",
+  "p": "covers/megadrive/sensible-soccer-p.webp",
+  "lw": "covers/megadrive/sensible-soccer-lomo.webp"
  },
  "megadrive|shadow dancer": {
   "archivo": "covers/megadrive/shadow-dancer.jpg",
