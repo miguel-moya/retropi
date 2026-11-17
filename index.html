@@ -782,6 +782,7 @@ function bfActivos() {
   if (F.emin !== '' || F.emax !== '') out.push(['estado', '', `${F.parte} ${F.emin !== '' ? nfmt(+F.emin) : '0,5'}–${F.emax !== '' ? nfmt(+F.emax) : '5'}${F.sinParte ? ` o sin ${F.parte.toLowerCase()}` : ''}`]);
   if (F.vmin !== '' || F.vmax !== '') out.push(['valor', '', `Valor ${F.vmin || 0}–${F.vmax || '∞'} €`]);
   if (F.cmin !== '' || F.cmax !== '') out.push(['compra', '', `Compra ${F.cmin || 0}–${F.cmax || '∞'} €`]);
+  if (F.sinColgador) out.push(['colgador', '', 'Caja sin colgador']);
   return out;
 }
 function filtrarBusqueda() {
@@ -795,7 +796,8 @@ function filtrarBusqueda() {
     (!F.formatos.length || F.formatos.includes(g['Formato'])) &&
     (enRango(n(g[kN]), F.emin, F.emax) || (F.sinParte && (F.emin !== '' || F.emax !== '') && !isNum(n(g[kN])))) &&
     enRango(n(g['Valor']), F.vmin, F.vmax) &&
-    enRango(n(g['Compra + Envío']), F.cmin, F.cmax));
+    enRango(n(g['Compra + Envío']), F.cmin, F.cmax) &&
+    (!F.sinColgador || SIN_COLGADOR.test(g['Comentarios'] || '')));
   const val = (g, k) => { const v = n(g[k]); return isNum(v) ? v : null; };
   const por = (k, dir) => (a, b) => { const x = val(a, k), y = val(b, k); if (x == null) return 1; if (y == null) return -1; return dir * (x - y); };
   if (F.orden === 'estado-asc') l.sort(por(kN, 1)); else if (F.orden === 'estado-desc') l.sort(por(kN, -1));
@@ -826,6 +828,7 @@ function htmlBuscar() {
       <button class="secbtn glass" data-act="preset" data-v="cajasMD">Cajas Mega Drive 3,5 o menos</button>
       <button class="secbtn glass" data-act="preset" data-v="cajasMS">Cajas Master System 3,5 o menos</button>
       <button class="secbtn glass" data-act="preset" data-v="manuales">Manuales muy mejorables</button>
+      <button class="secbtn glass" data-act="preset" data-v="colgador">Cajas sin colgador</button>
       <button class="secbtn glass" data-act="preset" data-v="venta">Todo lo que tengo en venta</button></div>`;
   const l = filtrarBusqueda();
   S.ctx = l.slice(0, 150).map(g => g.ID);
@@ -864,11 +867,14 @@ function refrescarBuscar() {
   const nr = $('#nres'); if (nr) nr.textContent = filtrarBusqueda().length;
   document.querySelectorAll('.cab [data-act="bf"][data-k="sits"]').forEach(b => b.classList.toggle('on', S.bf.sits.includes(b.dataset.v)));
 }
+// en Comentarios se escribe siempre «Caja sin colgador.» para las cajas sin pestaña colgadora
+const SIN_COLGADOR = /sin colgador/i;
 const PRESETS = {
   cajasMD: { sits: ['En colección'], consolas: ['megadrive'], parte: 'Caja', emax: '3.5', orden: 'estado-asc' },
   cajasMS: { sits: ['En colección'], consolas: ['mastersystem'], parte: 'Caja', emax: '3.5', orden: 'estado-asc' },
   manuales: { sits: ['En colección'], parte: 'Manual', emax: '2.5', sinParte: true, orden: 'estado-asc' },
   venta: { sits: ['En venta'], orden: 'hoja' },
+  colgador: { sits: ['En colección'], sinColgador: true, orden: 'hoja' },
 };
 
 // Balance: lee la pestaña Finanzas tal cual (la app no recalcula esas cifras)
@@ -1218,7 +1224,7 @@ document.addEventListener('click', e => {
   else if (act === 'bfparte') { S.bf.parte = v; document.querySelectorAll('[data-act="bfparte"]').forEach(b => b.classList.toggle('on', b.dataset.v === v)); refrescarBuscar(); }
   else if (act === 'bfquita') { const k = t.dataset.k, F = S.bf;
     if (Array.isArray(F[k])) F[k] = F[k].filter(x => x !== v);
-    else if (k === 'estado') { F.emin = ''; F.emax = ''; F.sinParte = false; } else if (k === 'valor') { F.vmin = ''; F.vmax = ''; } else if (k === 'compra') { F.cmin = ''; F.cmax = ''; }
+    else if (k === 'estado') { F.emin = ''; F.emax = ''; F.sinParte = false; } else if (k === 'valor') { F.vmin = ''; F.vmax = ''; } else if (k === 'compra') { F.cmin = ''; F.cmax = ''; } else if (k === 'colgador') { F.sinColgador = false; }
     render(); }
   else if (act === 'bflimpiar') { if (!t.closest('.hoja-panel')) S.gq = ''; S.bf = { sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }; render(); }
   else if (act === 'preset') { S.bf = Object.assign({ sits: [], consolas: [], formatos: [], parte: 'General', emin: '', emax: '', vmin: '', vmax: '', cmin: '', cmax: '', orden: 'hoja' }, JSON.parse(JSON.stringify(PRESETS[v]))); render(); }
