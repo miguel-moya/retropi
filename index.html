@@ -958,11 +958,18 @@ function vBalanceConsola(sis) {
   </div>`;
 }
 
+// Siguiente ID libre de una consola: el número más alto de la pestaña + 1 (las filas están ordenadas a mano, así que no vale mirar la última)
+function siguienteId(c) {
+  let pre = '', max = 0, dig = 4;
+  c.juegos.forEach(g => { const m = /^([A-Za-z]+-)(\d+)/.exec(String(g.ID)); if (!m) return; const v = +m[2]; if (v >= max) { max = v; pre = m[1]; dig = Math.max(4, m[2].length); } });
+  return pre ? pre + String(max + 1).padStart(dig, '0') : '';
+}
 function vAjustes() {
   const u = S.cfg ? S.cfg.url : '', gen = S.data && S.data.generado;
   const tema = S.ui.tema || 'auto';
   const exacta = gen ? new Date(gen).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
-  const porConsola = IDX.consolas.map(c => `<div><span>${esc(c.nombre)}</span><b>${c.juegos.filter(g => g['Situación'] === 'En colección').length} en colección · ${c.juegos.length} ${c.juegos.length === 1 ? "unidad" : "unidades"}</b></div>`).join('');
+  const porConsola = IDX.consolas.map(c => { const sig = siguienteId(c);
+    return `<div><span>${esc(c.nombre)}</span><b>${c.juegos.filter(g => g['Situación'] === 'En colección').length} en colección · ${c.juegos.length} ${c.juegos.length === 1 ? "unidad" : "unidades"}${sig ? `<br><small class="muted" style="font-weight:500">Siguiente ID: ${esc(sig)}</small>` : ''}</b></div>`; }).join('');
   return `<div class="wrap pg stack" style="gap:18px">
     ${cab({ titulo: 'Ajustes', volver: '#/' })}
     <section class="stack" style="gap:8px"><h2 class="eyebrow">Apariencia</h2>
@@ -981,17 +988,18 @@ function vAjustes() {
       <button class="btn" data-act="sync">${S.cargando ? 'Actualizando…' : 'Actualizar datos de la hoja'}</button>
       <p class="muted" style="margin:0 4px;font-size:12px;line-height:1.5">Para recargar la app, desliza hacia abajo desde arriba en cualquier pantalla.</p></section>
     <section class="stack" style="gap:8px"><h2 class="eyebrow">Conexión</h2>
-      <div class="card kv"><div><span>Apps Script</span><b style="font-size:12px;word-break:break-all">${esc(u.replace(/^https:\/\/script\.google\.com\/macros\/s\/(.{6}).+(.{4})\/exec$/, '…/s/$1…$2/exec'))}</b></div>
+      <div class="card kv">
+        <div><span>Apps Script</span><b style="font-size:12px;word-break:break-all">${esc(u.replace(/^https:\/\/script\.google\.com\/macros\/s\/(.{6}).+(.{4})\/exec$/, '…/s/$1…$2/exec'))}</b></div>
         <div><span>Clave</span><b>Guardada en este dispositivo</b></div>
-        <div><span>Token de GitHub</span><b>${S.ui.ghToken ? 'Guardado' : 'Sin configurar'}</b></div></div>
-      <form id="fgh" class="stack" style="gap:8px" autocomplete="off">
-        <label class="f">Token de GitHub (para el botón «Buscar portada» de la ficha)<input id="ghtok" name="tok" type="password" spellcheck="false" placeholder="${S.ui.ghToken ? '•••••••• (guardado)' : 'github_pat_…'}"></label>
-        <div style="display:flex;gap:8px"><button class="secbtn glass" type="submit" style="flex:1">Guardar token</button>${S.ui.ghToken ? '<button class="secbtn glass" type="button" data-act="ghborrar" style="flex:1;color:var(--red)">Quitar token</button>' : ''}</div>
-        <p class="muted" style="margin:0 4px;font-size:12px;line-height:1.5">Se guarda solo en este dispositivo. Usa un token «fine-grained» limitado al repositorio retropi con el permiso Actions: lectura y escritura.</p></form>
-      <a class="secbtn glass" href="#/conectar">Cambiar URL o clave</a>
-      <button class="secbtn glass" data-act="olvidar" style="color:var(--red);width:100%">Olvidar la clave en este dispositivo</button></section>
+        <div><span>Token de GitHub<br><small class="muted" style="font-weight:500">para «Buscar portada» en la ficha</small></span><b>${S.ui.ghToken ? 'Guardado en este dispositivo' : 'Sin configurar'}</b></div></div>
+      ${S.tokForm || !S.ui.ghToken ? `<form id="fgh" class="card stack" style="gap:8px;padding:14px 16px" autocomplete="off">
+        <label class="f">${S.ui.ghToken ? 'Nuevo token de GitHub' : 'Token de GitHub'}<input id="ghtok" name="tok" type="password" spellcheck="false" placeholder="github_pat_…"></label>
+        <button class="btn" type="submit">Guardar token</button>
+        <p class="muted" style="margin:0 2px;font-size:12px;line-height:1.5">Se guarda solo en este dispositivo. Usa un token «fine-grained» limitado al repositorio retropi con el permiso Actions: lectura y escritura.</p></form>` : ''}
+      <div style="display:flex;gap:8px"><a class="secbtn glass" href="#/conectar" style="flex:1">Cambiar URL o clave</a>${S.ui.ghToken && !S.tokForm ? '<button class="secbtn glass" type="button" data-act="ghform" style="flex:1">Cambiar token</button>' : ''}</div>
+      <div style="display:flex;gap:8px"><button class="secbtn glass" data-act="olvidar" style="flex:1;color:var(--red)">Olvidar la clave</button>${S.ui.ghToken ? '<button class="secbtn glass" type="button" data-act="ghborrar" style="flex:1;color:var(--red)">Quitar token</button>' : ''}</div></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v50 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v53 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
@@ -1233,7 +1241,8 @@ document.addEventListener('click', e => {
   else if (act === 'view') { S.ui.view = v; LS.set('rp.ui', S.ui); render(); }
   else if (act === 'mas') { const c = t.closest('.clamp'); c.classList.toggle('open'); t.textContent = c.classList.contains('open') ? 'Menos' : 'Más'; }
   else if (act === 'back') volver(v);
-  else if (act === 'ghborrar') { delete S.ui.ghToken; LS.set('rp.ui', S.ui); toast('Token quitado'); render(); }
+  else if (act === 'ghform') { S.tokForm = true; render(); setTimeout(() => { const i = $('#ghtok'); if (i) i.focus(); }, 50); }
+  else if (act === 'ghborrar') { S.tokForm = false; delete S.ui.ghToken; LS.set('rp.ui', S.ui); toast('Token quitado'); render(); }
   else if (act === 'rescrapear') rescrapear(v, t);
   else if (act === 'limpiar' && t.closest('.search').querySelector('#qg')) {
     // en Buscar, la X vuelve al inicio: borra el texto y también los filtros y atajos aplicados
@@ -1253,7 +1262,7 @@ document.addEventListener('input', e => {
   else if (e.target.dataset && e.target.dataset.bf && e.target.tagName === 'INPUT') { S.bf[e.target.dataset.bf] = e.target.value; refrescarBuscar(); }
 });
 document.addEventListener('submit', async e => {
-  if (e.target.id === 'fgh') { e.preventDefault(); const v = $('#ghtok').value.trim(); if (!v) return; S.ui.ghToken = v; LS.set('rp.ui', S.ui); toast('Token guardado'); render(); return; }
+  if (e.target.id === 'fgh') { e.preventDefault(); const v = $('#ghtok').value.trim(); if (!v) return; S.ui.ghToken = v; S.tokForm = false; LS.set('rp.ui', S.ui); toast('Token guardado'); render(); return; }
   if (e.target.id !== 'fsetup') return;
   e.preventDefault();
   const fd = new FormData(e.target);
