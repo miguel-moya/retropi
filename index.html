@@ -269,6 +269,7 @@ html.en-transicion .cab:not(.flota),html.en-transicion .cab.flota.solida{backgro
 .grid2 > div{padding:8px 16px;display:flex;flex-direction:column;gap:2px}
 .grid2 > div > span{font-size:11px;color:var(--mut)}
 .grid2 b{font-size:14px;font-weight:600}
+.pventa{border-top:1px solid var(--gline)}.pventa .grid2 b{font-size:16px}.pventa p{margin:0;padding:0 16px 12px;font-size:11.5px;line-height:1.45}
 .bars{display:flex;flex-direction:column;gap:12px;padding:16px}
 .barrow{display:grid;grid-template-columns:74px 1fr 30px;align-items:center;gap:12px;font-size:12px}
 .bar{height:8px;background:rgba(var(--ink),.08);border-radius:999px;overflow:hidden}
@@ -700,6 +701,15 @@ document.addEventListener('input', e => {
   document.querySelectorAll('.tienda[data-t]').forEach(a => { a.href = u[a.dataset.t]; });
 });
 
+// Norma de precios para vender (Wallapop/Vinted): se calcula siempre con el Valor y la Compra + envío actuales de la hoja
+const PARA_VENDER = ['En venta', 'En espera', 'Reservado'];
+function precioVenta(g) {
+  const V = n(g['Valor']); if (V == null || !(V > 0)) return null;
+  let a = Math.ceil(V * 1.15); while (a % 10 !== 4 && a % 10 !== 9) a++;
+  const C = n(g['Compra + Envío']);
+  const m = Math.min(V, Math.max(Math.ceil(V * 0.95), C != null ? Math.ceil(C + 5) : 0));
+  return { anuncio: a, minimo: m };
+}
 function vJuego(gid) {
   const g = IDX.porId[gid];
   if (!g) return vNoEncontrado();
@@ -719,12 +729,15 @@ function vJuego(gid) {
   if (vend || n(g['Venta']) != null) celdas.push(['Venta', eur(g['Venta'], 2)]);
   celdas.push([vend ? 'Beneficio' : 'Plusvalía', p == null ? '—' : `${p >= 0 ? '+' : ''}${eur(p, 2)}`, p == null ? '' : (p < 0 ? 'neg' : 'pos')]);
   if (celdas.length % 2) celdas.push(['', '']);
+  const pv = PARA_VENDER.includes(g['Situación']) ? precioVenta(g) : null;
+  const venta = pv ? `<div class="pventa"><div class="grid2"><div><span>Precio del anuncio</span><b>${eur(pv.anuncio)}</b></div><div><span>Mínimo que aceptas</span><b>${eur(pv.minimo)}</b></div></div>
+      <p class="muted">Anuncio: tu valor + 15 %, acabado en 4 o 9. Mínimo: lo más alto entre tu valor − 5 % y compra + envío + 5 €, sin pasar de tu valor.${pv.minimo < (n(g['Compra + Envío']) || 0) ? ' Con este mínimo pierdes dinero.' : ''}</p></div>` : '';
   const dinero = `<div class="card">
     <div class="vbig"><div><span class="muted" style="font-size:12px">${vend ? 'Vendido por' : 'Tu valor'}</span><div class="disp" style="font-size:27px;color:var(--amb)">${eur(vend ? g['Venta'] : g['Valor'])}</div></div>
       ${pcVal != null ? (g['Url Price Charting']
         ? `<a class="pclink" href="${esc(g['Url Price Charting'])}" target="_blank" rel="noopener" aria-label="Abrir en PriceCharting"><span class="muted" style="font-size:12px">PriceCharting ${ICON.ext}</span><b style="font-size:14px;font-weight:600">${eur(pcVal, 2)}</b></a>`
         : `<div class="pclink"><span class="muted" style="font-size:12px">PriceCharting</span><b style="font-size:14px;font-weight:600">${eur(pcVal, 2)}</b></div>`) : ''}</div>
-    <div class="grid2">${celdas.map(([k, v, c]) => `<div>${k ? `<span>${k}</span><b class="${c || ''}">${v}</b>` : ''}</div>`).join('')}</div></div>`;
+    <div class="grid2">${celdas.map(([k, v, c]) => `<div>${k ? `<span>${k}</span><b class="${c || ''}">${v}</b>` : ''}</div>`).join('')}</div>${venta}</div>`;
 
   // Estado
   const estados = Object.keys(g).filter(k => /^Estado /.test(k) && k !== 'Estado General').concat(g['Estado General'] !== undefined ? ['Estado General'] : []);
@@ -999,7 +1012,7 @@ function vAjustes() {
       <div style="display:flex;gap:8px"><a class="secbtn glass" href="#/conectar" style="flex:1">Cambiar URL o clave</a>${S.ui.ghToken && !S.tokForm ? '<button class="secbtn glass" type="button" data-act="ghform" style="flex:1">Cambiar token</button>' : ''}</div>
       <div style="display:flex;gap:8px"><button class="secbtn glass" data-act="olvidar" style="flex:1;color:var(--red)">Olvidar la clave</button>${S.ui.ghToken ? '<button class="secbtn glass" type="button" data-act="ghborrar" style="flex:1;color:var(--red)">Quitar token</button>' : ''}</div></section>
     <a class="secbtn glass" href="#/estilos">Guía de estilos</a>
-    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v53 · solo lectura · para editar, usa la hoja</p>
+    <p class="muted" style="font-size:12px;line-height:1.5;text-align:center">RetroPi v54 · solo lectura · para editar, usa la hoja</p>
   </div>`;
 }
 
