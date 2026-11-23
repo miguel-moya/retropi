@@ -1118,6 +1118,21 @@
   "p": "covers/mastersystem/super-kick-off-p.webp",
   "lw": "covers/mastersystem/super-kick-off-lomo.webp"
  },
+ "mastersystem|super off road": {
+  "archivo": "covers/mastersystem/super-off-road.jpg",
+  "t": 1795444908360,
+  "ssid": 44288,
+  "nombre": "Super Off Road",
+  "region": "eu",
+  "buscado": "Super Off Road",
+  "estado": "auto",
+  "logo": "covers/mastersystem/super-off-road-logo.png",
+  "lomo": "covers/mastersystem/super-off-road-lomo.png",
+  "extras": true,
+  "g": "covers/mastersystem/super-off-road.webp",
+  "p": "covers/mastersystem/super-off-road-p.webp",
+  "lw": "covers/mastersystem/super-off-road-lomo.webp"
+ },
  "mastersystem|taz-mania": {
   "archivo": "covers/mastersystem/taz-mania.jpg",
   "ssid": 836,
