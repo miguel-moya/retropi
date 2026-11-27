@@ -351,6 +351,21 @@
   "p": "covers/mastersystem/enduro-racer-p.webp",
   "lw": "covers/mastersystem/enduro-racer-lomo.webp"
  },
+ "mastersystem|fantastic dizzy": {
+  "archivo": "covers/mastersystem/fantastic-dizzy.jpg",
+  "t": 1795787618806,
+  "ssid": 990,
+  "nombre": "Fantastic Dizzy",
+  "region": "eu",
+  "buscado": "Fantastic Dizzy",
+  "estado": "auto",
+  "logo": "covers/mastersystem/fantastic-dizzy-logo.png",
+  "lomo": "covers/mastersystem/fantastic-dizzy-lomo.png",
+  "extras": true,
+  "g": "covers/mastersystem/fantastic-dizzy.webp",
+  "p": "covers/mastersystem/fantastic-dizzy-p.webp",
+  "lw": "covers/mastersystem/fantastic-dizzy-lomo.webp"
+ },
  "mastersystem|fantasy zone": {
   "archivo": "covers/mastersystem/fantasy-zone.jpg",
   "ssid": 801,
